@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #14213d;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.dark body {
+  background: #020617;
+  color: #f8fafc;
+}
+
+.theme-ready body,
+.theme-ready section,
+.theme-ready article,
+.theme-ready div,
+.theme-ready header,
+.theme-ready footer,
+.theme-ready nav,
+.theme-ready a,
+.theme-ready button,
+.theme-ready input,
+.theme-ready textarea {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+::selection {
+  background: #f2b705;
+  color: #0b3558;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  outline-color: #f2b705;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-brand-green dark:text-brand-gold;
+  }
+
+  .card {
+    @apply rounded-lg border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-soft dark:border-slate-700 dark:bg-slate-900 dark:shadow-none dark:hover:shadow-none;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold;
+  }
+
+  .site-header {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-color: #e2e8f0;
+    color: #0b3558;
+  }
+
+  .dark .site-header {
+    background-color: rgba(2, 6, 23, 0.96);
+    border-color: #1e293b;
+    color: #f8fafc;
+  }
+
+  .site-header-logo {
+    background: transparent;
+  }
+
+  .site-header-link,
+  .site-header-icon-button {
+    border-color: #e2e8f0;
+    color: #0b3558;
+  }
+
+  .site-header-link:hover,
+  .site-header-icon-button:hover {
+    background-color: #eaf2f8;
+    color: #0b3558;
+  }
+
+  .dark .site-header-link,
+  .dark .site-header-icon-button {
+    border-color: #334155;
+    color: #f1f5f9;
+  }
+
+  .dark .site-header-link:hover,
+  .dark .site-header-icon-button:hover {
+    background-color: #1e293b;
+    color: #ffffff;
+  }
+
+  .site-header-dropdown,
+  .site-mobile-menu {
+    background-color: #ffffff;
+    border-color: #e2e8f0;
+  }
+
+  .dark .site-header-dropdown,
+  .dark .site-mobile-menu {
+    background-color: #0f172a;
+    border-color: #334155;
+  }
+
+  .site-header-dropdown-link,
+  .site-mobile-menu-link,
+  .site-mobile-menu-group {
+    border-color: #e2e8f0;
+    color: #334155;
+  }
+
+  .site-header-dropdown-link:hover,
+  .site-mobile-menu-link:hover {
+    background-color: #eaf2f8;
+    color: #0b3558;
+  }
+
+  .dark .site-header-dropdown-link,
+  .dark .site-mobile-menu-link,
+  .dark .site-mobile-menu-group {
+    border-color: #334155;
+    color: #e2e8f0;
+  }
+
+  .dark .site-header-dropdown-link:hover,
+  .dark .site-mobile-menu-link:hover {
+    background-color: #1e293b;
+    color: #f2b705;
+  }
+}
+
+main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.eyebrow):not([class*="text-center"]):not([class*="inline-flex"]) {
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+  -webkit-hyphens: auto;
+  word-break: normal;
+}
+
+@media (max-width: 640px) {
+  main#contenu > :not(.min-h-screen) :where(section, article) p:not(.eyebrow):not(.flex):not([class*="inline-flex"]):not([class*="text-center"]):not([class*="text-xs"]):not([class*="text-3xl"]):not([class*="text-4xl"]):not([class*="font-bold"]):not([class*="font-black"]):not([class*="uppercase"]),
+  main#contenu > :not(.min-h-screen) :where(section, article) li:not([class*="text-center"]):not([class*="font-bold"]):not([class*="font-black"]):not([class*="uppercase"]) {
+    text-align: left;
+    text-align-last: auto;
+  }
+}
+
+@media (min-width: 641px) {
+  main#contenu > :not(.min-h-screen) :where(section, article) p[class*="leading-7"]:not(.eyebrow):not([class*="text-center"]):not([class*="font-bold"]):not([class*="font-black"]):not([class*="uppercase"]) {
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-word;
+  }
+}
+
+@layer utilities {
+  .dark .bg-white {
+    background-color: #0f172a;
+  }
+
+  .dark .bg-brand-mist {
+    background-color: #020617;
+  }
+
+  .dark .bg-brand-blueSoft {
+    background-color: rgba(30, 64, 105, 0.55);
+  }
+
+  .dark .bg-brand-greenSoft {
+    background-color: rgba(22, 122, 84, 0.2);
+  }
+
+  .dark .bg-brand-goldSoft {
+    background-color: rgba(242, 183, 5, 0.16);
+  }
+
+  .dark .bg-brand-blue {
+    background-color: #08243c;
+  }
+
+  .dark .bg-brand-green {
+    background-color: #0d5f43;
+  }
+
+  .dark .border-slate-200 {
+    border-color: #334155;
+  }
+
+  .dark .border-slate-300 {
+    border-color: #475569;
+  }
+
+  .dark .border-dashed.border-slate-300 {
+    border-color: #64748b;
+  }
+
+  .dark .text-slate-500,
+  .dark .text-slate-600 {
+    color: #cbd5e1;
+  }
+
+  .dark .text-slate-700 {
+    color: #e2e8f0;
+  }
+
+  .dark h1.text-brand-blue,
+  .dark h2.text-brand-blue,
+  .dark h3.text-brand-blue,
+  .dark h4.text-brand-blue,
+  .dark p.text-brand-blue,
+  .dark span.text-brand-blue,
+  .dark a.text-brand-blue,
+  .dark button.text-brand-blue,
+  .dark label.text-brand-blue,
+  .dark summary.text-brand-blue,
+  .dark div.text-brand-blue {
+    color: #dbeafe;
+  }
+
+  .dark .text-brand-ink {
+    color: #f8fafc;
+  }
+
+  .dark .text-brand-green {
+    color: #86efac;
+  }
+
+  .dark .text-brand-blue.bg-brand-gold,
+  .dark .bg-brand-gold.text-brand-blue,
+  .dark a.bg-brand-gold,
+  .dark button.bg-brand-gold {
+    color: #0b3558;
+  }
+
+  .dark input,
+  .dark textarea,
+  .dark select {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border-color: #475569;
+  }
+
+  .dark input::placeholder,
+  .dark textarea::placeholder {
+    color: #94a3b8;
+  }
+
+  .dark .shadow-soft {
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.65s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
