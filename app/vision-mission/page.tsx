@@ -7,7 +7,7 @@ import { home, strategicPlan } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Vision & Mission",
-  description: "Vision, mission et espace plan stratégique de la DDC RDC ASBL."
+  description: "Vision, mission et espace plan stratégique de la DDC RDC."
 };
 
 export default function VisionMissionPage() {
@@ -16,7 +16,7 @@ export default function VisionMissionPage() {
       <PageHero
         kicker="Vision & Mission"
         title="Former une génération consciente, compétente et engagée."
-        description="La DDC RDC ASBL articule son action autour d'une vision de transformation démocratique, sociale, économique, culturelle et environnementale."
+        description="La DDC RDC articule son action autour d'une vision de transformation démocratique, sociale, économique, culturelle et environnementale."
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="section-shell grid gap-8 lg:grid-cols-2">

@@ -11,7 +11,7 @@ import { getPublicSiteConfig } from "@/lib/site-settings";
 
 export const metadata: Metadata = {
   title: "Faire un don",
-  description: "Soutenir les actions citoyennes, économiques, environnementales et communautaires de la DDC RDC ASBL."
+  description: "Soutenir les actions citoyennes, économiques, environnementales et communautaires de la DDC RDC."
 };
 
 export const dynamic = "force-dynamic";
@@ -90,7 +90,7 @@ export default async function DonatePage() {
             <SectionHeading
               eyebrow="Transparence et redevabilité"
               title="Des documents publics à consolider."
-              description="La DDC RDC ASBL prévoit de renforcer progressivement ses mécanismes de suivi, documentation, rapportage et redevabilité."
+              description="La DDC RDC prévoit de renforcer progressivement ses mécanismes de suivi, documentation, rapportage et redevabilité."
             />
             <div className="mt-8 grid gap-3">
               {donationPage.transparency.map((item) => (

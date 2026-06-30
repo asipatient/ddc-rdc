@@ -4,14 +4,14 @@ import { publishedActivityArticles } from "./articles";
 const institutionalPublications: Publication[] = [
   {
     slug: "lancement-officiel-ddc-rdc-asbl",
-    title: "Lancement officiel de la DDC RDC ASBL",
+    title: "Lancement officiel de la DDC RDC",
     date: "2026-05-17",
     category: "Actualités",
     accent: "blue",
     excerpt:
       "La Dynamique Debout Congolais présente son cadre d'action citoyenne au service des jeunes, des femmes et des communautés.",
     body: [
-      "La DDC RDC ASBL inaugure officiellement son cadre institutionnel autour d'une conviction simple : les jeunes et les femmes doivent être au centre de la transformation durable du pays.",
+      "La DDC RDC inaugure officiellement son cadre institutionnel autour d'une conviction simple : les jeunes et les femmes doivent être au centre de la transformation durable du pays.",
       "Cette étape marque le début d'un programme de mobilisation, de formation et d'accompagnement communautaire fondé sur la citoyenneté responsable, l'intégrité et la solidarité."
     ]
   },

@@ -5,7 +5,7 @@ export const transparencyDocuments: DocumentItem[] = [
     title: "Rapport annuel à publier",
     category: "Rapports d'activités",
     status: "À publier",
-    description: "Espace réservé aux rapports annuels de la DDC RDC ASBL."
+    description: "Espace réservé aux rapports annuels de la DDC RDC."
   },
   {
     title: "Rapport financier à publier",
@@ -61,7 +61,7 @@ export const protectionEthicsDocuments: DocumentItem[] = [
 ];
 
 export const pressResources: DocumentItem[] = [
-  { title: "Communiqués", category: "Presse", status: "À publier", description: "Communiqués officiels de la DDC RDC ASBL." },
+  { title: "Communiqués", category: "Presse", status: "À publier", description: "Communiqués officiels de la DDC RDC." },
   { title: "Dossiers de presse", category: "Presse", status: "À compléter", description: "Dossier institutionnel, éléments de langage et informations clés." },
   { title: "Photos officielles", category: "Médias", status: "À ajouter", description: "Photos validées pour usage presse et communication." },
   { title: "Contacts presse", category: "Médias", status: "Disponible via contact officiel", description: "Canal de contact pour journalistes et médias." },

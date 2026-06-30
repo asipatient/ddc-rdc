@@ -4,11 +4,11 @@ export const paypalDonationUrl =
   process.env.NEXT_PUBLIC_PAYPAL_DONATION_URL || "https://www.paypal.com/donate/?hosted_button_id=DN5YLHV58TCDE";
 
 export const donationPage = {
-  title: "Soutenir la DDC RDC ASBL",
+  title: "Soutenir la DDC RDC",
   trustMessage:
-    "Soutenir la DDC RDC ASBL, c’est investir dans une jeunesse responsable, des femmes autonomes, des communautés résilientes, une culture démocratique forte et un Congo plus juste, inclusif et durable.",
+    "Soutenir la DDC RDC, c’est investir dans une jeunesse responsable, des femmes autonomes, des communautés résilientes, une culture démocratique forte et un Congo plus juste, inclusif et durable.",
   description:
-    "Chaque contribution aide la DDC RDC ASBL à renforcer ses programmes de citoyenneté, leadership, autonomisation économique, protection, culture, environnement, recherche citoyenne et développement communautaire.",
+    "Chaque contribution aide la DDC RDC à renforcer ses programmes de citoyenneté, leadership, autonomisation économique, protection, culture, environnement, recherche citoyenne et développement communautaire.",
   fundUse:
     "Les fonds mobilisés servent à organiser des formations, accompagner des initiatives locales, produire des contenus de plaidoyer, documenter les résultats, soutenir les activités communautaires et renforcer progressivement les mécanismes de suivi, transparence et redevabilité.",
   uses: [
@@ -35,7 +35,7 @@ export const donationPage = {
     "Mécanismes de suivi et redevabilité à renforcer progressivement."
   ],
   institutionalPartnership:
-    "Pour les dons institutionnels, appuis techniques, subventions, conventions ou partenariats pluriannuels, la DDC RDC ASBL invite les organisations intéressées à prendre contact avec l'équipe de coordination."
+    "Pour les dons institutionnels, appuis techniques, subventions, conventions ou partenariats pluriannuels, la DDC RDC invite les organisations intéressées à prendre contact avec l'équipe de coordination."
 };
 
 export const whySupportDdc: SupportArgument[] = [

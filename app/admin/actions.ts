@@ -109,7 +109,7 @@ function contentClassificationFromForm(formData: FormData) {
     impact: String(formData.get("impact") || ""),
     relatedAxis,
     relatedProgram,
-    author: String(formData.get("author") || "DDC RDC ASBL"),
+    author: String(formData.get("author") || "DDC RDC"),
     partners: String(formData.get("partners") || ""),
     location: String(formData.get("location") || ""),
     gallery: linesFromForm(formData, "gallery"),

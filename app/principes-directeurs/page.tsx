@@ -5,7 +5,7 @@ import { principles } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Principes directeurs",
-  description: "Principes directeurs et valeurs institutionnelles de la DDC RDC ASBL."
+  description: "Principes directeurs et valeurs institutionnelles de la DDC RDC."
 };
 
 export default function PrinciplesPage() {
@@ -13,7 +13,7 @@ export default function PrinciplesPage() {
     <>
       <PageHero
         kicker="Principes directeurs"
-        title="Les repères éthiques qui guident l'action de la DDC RDC ASBL."
+        title="Les repères éthiques qui guident l'action de la DDC RDC."
         description="Chaque initiative doit respecter la dignité humaine, l'inclusion, la transparence, la paix, la justice sociale et la neutralité politique partisane."
       />
       <section className="bg-brand-mist py-16 sm:py-20">

@@ -1,3 +1,12 @@
+-- Schéma MySQL — DDC RDC
+-- Compatible Congo Cloud (cPanel / phpMyAdmin)
+-- Import recommandé en utf8mb4 pour préserver les accents et caractères spéciaux.
+
+CREATE DATABASE IF NOT EXISTS ddc_rdc_db
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE ddc_rdc_db;
+
 CREATE TABLE IF NOT EXISTS ddc_admin_content_items (
   collection_key VARCHAR(64) NOT NULL,
   item_id VARCHAR(191) NOT NULL,

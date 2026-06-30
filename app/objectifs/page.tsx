@@ -6,7 +6,7 @@ import { home, specificObjectives } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Objectifs",
-  description: "Objectif général et objectifs spécifiques de la DDC RDC ASBL."
+  description: "Objectif général et objectifs spécifiques de la DDC RDC."
 };
 
 export default function ObjectivesPage() {
@@ -15,7 +15,7 @@ export default function ObjectivesPage() {
       <PageHero
         kicker="Objectifs"
         title="Des objectifs clairs pour relier la conscience citoyenne à l'impact local."
-        description="La DDC RDC ASBL structure son action autour d'un objectif général et de huit objectifs spécifiques."
+        description="La DDC RDC structure son action autour d'un objectif général et de huit objectifs spécifiques."
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="section-shell">

@@ -20,7 +20,7 @@ export default function NewImpactMetricPage() {
           { name: "isVisible", label: "Afficher sur le site", type: "checkbox", defaultValue: true },
           { name: "description", label: "Description", type: "textarea" },
           { name: "internalNotes", label: "Notes internes", type: "textarea", defaultValue: "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs." },
-          { name: "source", label: "Source", defaultValue: "Archives internes DDC RDC ASBL." },
+          { name: "source", label: "Source", defaultValue: "Archives internes DDC RDC." },
           { name: "internalComment", label: "Commentaire interne", type: "textarea", defaultValue: "Ne pas utiliser dans les supports officiels avant validation." }
         ]}
         showImageUpload={false}

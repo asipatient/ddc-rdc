@@ -18,7 +18,7 @@ export default async function AdminArticlesPage({ searchParams }: Props) {
     <AdminPage>
       <AdminPageHeader
         title="Articles"
-        description="Créer, modifier, publier, archiver et relire les articles d'activités de la DDC RDC ASBL."
+        description="Créer, modifier, publier, archiver et relire les articles d'activités de la DDC RDC."
         actionHref="/admin/articles/new"
         actionLabel="Ajouter un article"
       />

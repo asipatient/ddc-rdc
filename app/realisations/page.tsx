@@ -7,7 +7,7 @@ import { getPublicRealisations } from "@/lib/realisations";
 
 export const metadata: Metadata = {
   title: "Nos réalisations",
-  description: "Réalisations de la DDC RDC ASBL présentées sous forme de timeline et de cartes."
+  description: "Réalisations de la DDC RDC présentées sous forme de timeline et de cartes."
 };
 
 export const dynamic = "force-dynamic";
@@ -20,7 +20,7 @@ export default async function RealisationsPage() {
       <PageHero
         kicker="Nos réalisations"
         title="Des activités documentées au service de la citoyenneté, des droits, de la culture et de l'inclusion."
-        description="Cette page rassemble les actions déjà menées par la DDC RDC ASBL avec les communautés, les jeunes, les femmes, les enfants et les organisations de la société civile."
+        description="Cette page rassemble les actions déjà menées par la DDC RDC avec les communautés, les jeunes, les femmes, les enfants et les organisations de la société civile."
         cta={{ label: "Agir avec nous", href: "/partenaires" }}
       />
       <section className="bg-white py-16 sm:py-20">

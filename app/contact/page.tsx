@@ -28,7 +28,7 @@ export default async function ContactPage() {
     <>
       <PageHero
         kicker="Contact"
-        title="Entrer en relation avec la DDC RDC ASBL."
+        title="Entrer en relation avec la DDC RDC."
         description={contactIntro}
         cta={{ label: "Faire un don", href: site.donationUrl }}
       />

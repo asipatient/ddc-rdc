@@ -2,7 +2,7 @@ import type { PartnerCategory } from "./types";
 
 export const partnersPage = {
   intro:
-    "La DDC RDC ASBL est ouverte aux partenariats avec les institutions publiques, les organisations de la société civile, les agences de coopération, les bailleurs de fonds, les universités, les médias, les entreprises sociales, les acteurs culturels, les structures communautaires et les organisations internationales partageant ses valeurs.",
+    "La DDC RDC est ouverte aux partenariats avec les institutions publiques, les organisations de la société civile, les agences de coopération, les bailleurs de fonds, les universités, les médias, les entreprises sociales, les acteurs culturels, les structures communautaires et les organisations internationales partageant ses valeurs.",
   promise:
     "Chaque partenariat recherché doit renforcer l'impact local, la transparence, la participation inclusive et la capacité des jeunes, des femmes et des communautés à agir durablement."
 };

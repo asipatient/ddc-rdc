@@ -19,4 +19,4 @@ export const contactRequestTypes = [
 ];
 
 export const contactIntro =
-  "La DDC RDC ASBL reçoit les demandes liées aux partenariats, dons, adhésions, bénévolat, presse, projets communautaires et collaborations institutionnelles.";
+  "La DDC RDC reçoit les demandes liées aux partenariats, dons, adhésions, bénévolat, presse, projets communautaires et collaborations institutionnelles.";

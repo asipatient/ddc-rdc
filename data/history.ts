@@ -7,7 +7,7 @@ export const founderProfile = {
   fullBio: [
     "Patient Asifiwe est un communicateur, entrepreneur social et acteur communautaire basé à Bukavu, en République Démocratique du Congo. Son parcours associe l'éducation, la communication, l'entrepreneuriat social, l'engagement citoyen et la mobilisation communautaire.",
     "Son engagement s'est construit progressivement à travers des expériences d'enseignement, de communication, de formation de jeunes, d'initiatives communautaires et de plaidoyer local. Cette trajectoire a nourri la vision d'une plateforme capable de former, connecter et accompagner les jeunes, les femmes et les communautés.",
-    "À travers la DDC RDC ASBL, il œuvre pour l'éveil citoyen, le leadership responsable, l'autonomisation des jeunes et des femmes, la cohésion sociale, l'innovation locale, la culture et la transformation durable des communautés."
+    "À travers la DDC RDC, il œuvre pour l'éveil citoyen, le leadership responsable, l'autonomisation des jeunes et des femmes, la cohésion sociale, l'innovation locale, la culture et la transformation durable des communautés."
   ],
   orientations: [
     "Communicateur et mobilisateur communautaire",
@@ -18,7 +18,7 @@ export const founderProfile = {
 };
 
 export const historyIntro =
-  "L'histoire de la DDC RDC ASBL s'inscrit dans un parcours d'engagement citoyen, éducatif, communautaire et entrepreneurial progressivement structuré autour des jeunes, des femmes et des communautés locales.";
+  "L'histoire de la DDC RDC s'inscrit dans un parcours d'engagement citoyen, éducatif, communautaire et entrepreneurial progressivement structuré autour des jeunes, des femmes et des communautés locales.";
 
 export const historyTimeline = [
   {
@@ -67,6 +67,6 @@ export const historyTimeline = [
     period: "2026 et suite",
     title: "Vers une plateforme institutionnelle complète",
     description:
-      "La DDC RDC ASBL consolide progressivement ses axes : citoyenneté, leadership féminin, entrepreneuriat, culture, environnement, recherche, protection communautaire et innovation locale."
+      "La DDC RDC consolide progressivement ses axes : citoyenneté, leadership féminin, entrepreneuriat, culture, environnement, recherche, protection communautaire et innovation locale."
   }
 ];

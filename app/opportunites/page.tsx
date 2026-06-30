@@ -7,7 +7,7 @@ import { opportunities } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Appels à projets / Opportunités",
-  description: "Appels à candidatures, formations, bénévolat, partenariats, consultations communautaires et événements de la DDC RDC ASBL."
+  description: "Appels à candidatures, formations, bénévolat, partenariats, consultations communautaires et événements de la DDC RDC."
 };
 
 export default function OpportunitiesPage() {

@@ -7,7 +7,7 @@ import { beneficiaries } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Bénéficiaires",
-  description: "Publics cibles et accompagnements proposés par la DDC RDC ASBL."
+  description: "Publics cibles et accompagnements proposés par la DDC RDC."
 };
 
 export default function BeneficiariesPage() {
@@ -16,7 +16,7 @@ export default function BeneficiariesPage() {
       <PageHero
         kicker="Bénéficiaires"
         title="Accompagner les personnes, organisations et communautés porteuses de changement."
-        description="La DDC RDC ASBL cible les jeunes, les femmes, les enfants, les groupes vulnérables et les structures locales de participation citoyenne."
+        description="La DDC RDC cible les jeunes, les femmes, les enfants, les groupes vulnérables et les structures locales de participation citoyenne."
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="section-shell">

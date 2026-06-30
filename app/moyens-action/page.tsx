@@ -7,7 +7,7 @@ import { actionMeans, interventionApproach } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Moyens d'action",
-  description: "Moyens d'action de la DDC RDC ASBL : formations, plaidoyer, recherche, partenariats et mobilisation communautaire."
+  description: "Moyens d'action de la DDC RDC : formations, plaidoyer, recherche, partenariats et mobilisation communautaire."
 };
 
 export default function MoyensActionPage() {
@@ -16,12 +16,12 @@ export default function MoyensActionPage() {
       <PageHero
         kicker="Moyens d'action"
         title="Des outils concrets pour passer de l'idée à l'action communautaire."
-        description="La DDC RDC ASBL mobilise plusieurs moyens complémentaires pour former, documenter, accompagner, sensibiliser et soutenir les initiatives locales."
+        description="La DDC RDC mobilise plusieurs moyens complémentaires pour former, documenter, accompagner, sensibiliser et soutenir les initiatives locales."
         cta={{ label: "Proposer une initiative", href: "/contact?type=Projet%20communautaire" }}
       />
       <section className="bg-brand-mist py-16 sm:py-20">
         <div className="section-shell">
-          <SectionHeading eyebrow="Méthodes" title="Les leviers opérationnels de la DDC RDC ASBL." />
+          <SectionHeading eyebrow="Méthodes" title="Les leviers opérationnels de la DDC RDC." />
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {actionMeans.map((mean) => (
               <div key={mean} className="flex gap-3 rounded-lg bg-white p-5 shadow-sm">

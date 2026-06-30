@@ -18,7 +18,7 @@ export default async function AdminProgrammesPage({ searchParams }: Props) {
     <AdminPage>
       <AdminPageHeader
         title="Programmes"
-        description="Ajouter, modifier, publier ou dépublier les programmes structurants de la DDC RDC ASBL."
+        description="Ajouter, modifier, publier ou dépublier les programmes structurants de la DDC RDC."
         actionHref="/admin/programmes/new"
         actionLabel="Ajouter un programme"
       />

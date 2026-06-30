@@ -19,7 +19,7 @@ const variants = {
 export function ButtonLink({ href, children, variant = "primary", className }: ButtonLinkProps) {
   const isExternal = /^https?:\/\//.test(href);
   const classes = cn(
-    "focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-bold transition",
+    "focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-bold transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-soft active:translate-y-0",
     variants[variant],
     className
   );

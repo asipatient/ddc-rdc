@@ -7,7 +7,7 @@ import { officialContact, pressResources } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Presse",
-  description: "Communiqués, dossiers de presse, photos officielles et contacts médias de la DDC RDC ASBL."
+  description: "Communiqués, dossiers de presse, photos officielles et contacts médias de la DDC RDC."
 };
 
 export default function PressPage() {
@@ -15,7 +15,7 @@ export default function PressPage() {
     <>
       <PageHero
         kicker="Presse et médias"
-        title="Un espace média pour suivre les prises de parole de la DDC RDC ASBL."
+        title="Un espace média pour suivre les prises de parole de la DDC RDC."
         description="Cette page pourra accueillir les communiqués, dossiers de presse, photos officielles, contacts presse, interventions médiatiques et articles parlant de la DDC."
       />
       <section className="bg-white py-16 sm:py-20">
@@ -40,7 +40,7 @@ export default function PressPage() {
             <SectionHeading
               eyebrow="Contact presse"
               title="Canal officiel pour les demandes médias."
-              description="Les journalistes, médias et plateformes de communication peuvent écrire à la DDC RDC ASBL via le contact officiel."
+              description="Les journalistes, médias et plateformes de communication peuvent écrire à la DDC RDC via le contact officiel."
             />
             <div className="mt-7 rounded-lg bg-white p-6 shadow-sm">
               <p className="flex items-center gap-3 text-sm font-bold text-brand-blue">

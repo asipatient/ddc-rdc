@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "db:migrate:admin": "node scripts/migrate-admin-json-to-mysql.mjs"
+    "db:migrate:admin": "node scripts/migrate-admin-json-to-mysql.mjs",
+    "package": "node scripts/package-for-deployment.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

@@ -9,7 +9,7 @@ import { getPublicProgramContent } from "@/lib/program-content";
 
 export const metadata: Metadata = {
   title: "Axes d'intervention",
-  description: "Les trois axes d'intervention de la DDC RDC ASBL et les programmes associés."
+  description: "Les trois axes d'intervention de la DDC RDC et les programmes associés."
 };
 
 export const dynamic = "force-dynamic";
@@ -21,7 +21,7 @@ export default async function AxesInterventionPage() {
     <>
       <PageHero
         kicker="Axes d'intervention"
-        title="Trois axes pour structurer l'action de la DDC RDC ASBL."
+        title="Trois axes pour structurer l'action de la DDC RDC."
         description="Ces axes organisent les interventions autour de la gouvernance citoyenne, de la résilience économique et du développement du capital humain."
         cta={{ label: "Voir les programmes", href: "/programmes" }}
       />

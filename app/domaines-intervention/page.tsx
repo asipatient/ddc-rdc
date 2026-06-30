@@ -7,7 +7,7 @@ import { axes, flagshipPrograms, interventionAreas } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Domaines d'intervention",
-  description: "Les domaines d'intervention de la DDC RDC ASBL : citoyenneté, leadership, autonomisation, environnement, paix et culture."
+  description: "Les domaines d'intervention de la DDC RDC : citoyenneté, leadership, autonomisation, environnement, paix et culture."
 };
 
 export default function DomainsPage() {
@@ -16,7 +16,7 @@ export default function DomainsPage() {
       <PageHero
         kicker="Ce que nous faisons"
         title="Onze domaines d'intervention pour une action communautaire intégrée."
-        description="La DDC RDC ASBL relie éducation civique, leadership, autonomisation économique, environnement, droits, recherche et cohésion sociale."
+        description="La DDC RDC relie éducation civique, leadership, autonomisation économique, environnement, droits, recherche et cohésion sociale."
         cta={{ label: "Proposer une initiative communautaire", href: "/contact?type=Projet%20communautaire" }}
       />
       <section className="bg-brand-mist py-16 sm:py-20">

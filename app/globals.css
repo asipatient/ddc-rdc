@@ -67,7 +67,7 @@ textarea {
   }
 
   .card {
-    @apply rounded-lg border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-soft dark:border-slate-700 dark:bg-slate-900 dark:shadow-none dark:hover:shadow-none;
+    @apply rounded-lg border border-slate-200 bg-white shadow-sm transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-brand-gold/40 hover:shadow-soft dark:border-slate-700 dark:bg-slate-900 dark:shadow-none dark:hover:border-brand-gold/30 dark:hover:shadow-none;
   }
 
   .focus-ring {
@@ -112,6 +112,28 @@ textarea {
   .dark .site-header-icon-button:hover {
     background-color: #1e293b;
     color: #ffffff;
+  }
+
+  .site-header-nav-link {
+    position: relative;
+  }
+
+  .site-header-nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background-color: #f2b705;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms ease;
+  }
+
+  .site-header-nav-link:hover::after,
+  .site-header-nav-link[aria-current="page"]::after {
+    transform: scaleX(1);
   }
 
   .site-header-dropdown,
@@ -191,7 +213,7 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   }
 
   .dark .bg-brand-greenSoft {
-    background-color: rgba(22, 122, 84, 0.2);
+    background-color: rgba(166, 121, 10, 0.2);
   }
 
   .dark .bg-brand-goldSoft {
@@ -203,7 +225,7 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   }
 
   .dark .bg-brand-green {
-    background-color: #0d5f43;
+    background-color: #6b4e07;
   }
 
   .dark .border-slate-200 {
@@ -227,17 +249,7 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
     color: #e2e8f0;
   }
 
-  .dark h1.text-brand-blue,
-  .dark h2.text-brand-blue,
-  .dark h3.text-brand-blue,
-  .dark h4.text-brand-blue,
-  .dark p.text-brand-blue,
-  .dark span.text-brand-blue,
-  .dark a.text-brand-blue,
-  .dark button.text-brand-blue,
-  .dark label.text-brand-blue,
-  .dark summary.text-brand-blue,
-  .dark div.text-brand-blue {
+  .dark :is(h1, h2, h3, h4, p, span, a, button, label, summary, div).text-brand-blue {
     color: #dbeafe;
   }
 
@@ -246,13 +258,12 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   }
 
   .dark .text-brand-green {
-    color: #86efac;
+    color: #f2b705;
   }
 
   .dark .text-brand-blue.bg-brand-gold,
   .dark .bg-brand-gold.text-brand-blue,
-  .dark a.bg-brand-gold,
-  .dark button.bg-brand-gold {
+  .dark :is(a, button).bg-brand-gold {
     color: #0b3558;
   }
 

@@ -13,10 +13,12 @@ const config: Config = {
         brand: {
           blue: "#0B3558",
           blueSoft: "#EAF2F8",
+          blueLight: "#1A6BBF",
           gold: "#F2B705",
           goldSoft: "#FFF6D8",
-          green: "#167A54",
-          greenSoft: "#E9F6EF",
+          goldDeep: "#A6790A",
+          green: "#A6790A",
+          greenSoft: "#FFF6D8",
           red: "#B42318",
           ink: "#14213D",
           mist: "#F7FAFC"

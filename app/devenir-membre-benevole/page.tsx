@@ -7,7 +7,7 @@ import { memberVolunteerIntro, membershipInterestDomains } from "@/lib/site-data
 
 export const metadata: Metadata = {
   title: "Devenir membre / bénévole",
-  description: "Rejoindre la DDC RDC ASBL comme membre, bénévole ou citoyen engagé."
+  description: "Rejoindre la DDC RDC comme membre, bénévole ou citoyen engagé."
 };
 
 export default function MemberVolunteerPage() {

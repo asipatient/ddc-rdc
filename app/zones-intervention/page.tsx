@@ -8,7 +8,7 @@ import { zonesIntervention } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Zones d'intervention",
-  description: "Ancrage territorial de la DDC RDC ASBL à Bukavu, Sud-Kivu, et vocation d'expansion."
+  description: "Ancrage territorial de la DDC RDC à Bukavu, Sud-Kivu, et vocation d'expansion."
 };
 
 export default function ZonesInterventionPage() {
@@ -35,7 +35,7 @@ export default function ZonesInterventionPage() {
             <SectionHeading
               eyebrow="Ancrage territorial"
               title="Des initiatives adaptées aux réalités locales."
-              description="La DDC RDC ASBL part de l'expérience communautaire locale pour construire des actions extensibles, documentées et partenaires."
+              description="La DDC RDC part de l'expérience communautaire locale pour construire des actions extensibles, documentées et partenaires."
             />
             <div className="mt-8 grid gap-4">
               {zonesIntervention.levels.map((level) => (

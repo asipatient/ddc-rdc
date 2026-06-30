@@ -7,7 +7,7 @@ import { aboutIntro, founderProfile, historyTimeline, site } from "@/lib/site-da
 
 export const metadata: Metadata = {
   title: "À propos",
-  description: "Origine, vocation institutionnelle et engagement communautaire de la DDC RDC ASBL."
+  description: "Origine, vocation institutionnelle et engagement communautaire de la DDC RDC."
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHero
         kicker="À propos"
         title="Une dynamique citoyenne née des défis et des forces du Congo."
-        description="La DDC RDC ASBL crée un cadre structuré pour permettre aux jeunes et aux femmes de réfléchir, se former, entreprendre, innover et agir dans leurs communautés."
+        description="La DDC RDC crée un cadre structuré pour permettre aux jeunes et aux femmes de réfléchir, se former, entreprendre, innover et agir dans leurs communautés."
         cta={{ label: "Rejoindre la DDC", href: "/devenir-membre-benevole" }}
       />
       <section className="bg-white py-16 sm:py-20">

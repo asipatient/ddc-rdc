@@ -9,6 +9,7 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { ProgramCard } from "@/components/ProgramCard";
 import { PublicationCard } from "@/components/PublicationCard";
 import { RealisationCard } from "@/components/RealisationCard";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import {
   axes,
@@ -89,23 +90,25 @@ export default async function HomePage() {
       </section>
 
       <section id="positionnement" className="bg-white py-16 sm:py-20">
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <ScrollReveal className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <SectionHeading eyebrow="Plateforme institutionnelle" title="Une organisation congolaise crédible, citoyenne et orientée impact." />
           <div className="space-y-5 text-base leading-8 text-slate-600">
             <p>{home.reason}</p>
             <p>{home.reasonFollowUp}</p>
           </div>
-        </div>
+        </ScrollReveal>
         <div className="section-shell mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {priorityAudiences.map((audience) => (
-            <IconCard key={audience.title} title={audience.title} description={audience.description} icon={audience.icon} />
+          {priorityAudiences.map((audience, index) => (
+            <ScrollReveal key={audience.title} delayMs={index * 80}>
+              <IconCard title={audience.title} description={audience.description} icon={audience.icon} />
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
       <section id="impact" className="bg-brand-mist py-16 sm:py-20">
         <div className="section-shell">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <ScrollReveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <SectionHeading
               eyebrow={impactSection.title}
               title={impactSection.subtitle}
@@ -114,10 +117,10 @@ export default async function HomePage() {
             <ButtonLink href={impactSection.buttonHref} variant="secondary">
               {impactSection.buttonLabel}
             </ButtonLink>
-          </div>
+          </ScrollReveal>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {impactIndicators.map((indicator) => (
-              <article key={indicator.label} className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+            {impactIndicators.map((indicator, index) => (
+              <ScrollReveal key={indicator.label} delayMs={index * 80} className="card p-6">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex h-11 w-11 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue">
                     <IconRenderer icon={indicator.icon} className="h-5 w-5" />
@@ -131,7 +134,7 @@ export default async function HomePage() {
                   </p>
                 ) : null}
                 <p className="mt-2 text-sm leading-6 text-slate-500">{indicator.note}</p>
-              </article>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -139,7 +142,7 @@ export default async function HomePage() {
 
       <section id="axes" className="bg-white py-16 sm:py-20">
         <div className="section-shell">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <ScrollReveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <SectionHeading
               eyebrow="Axes d'intervention"
               title="Trois axes pour organiser les programmes et clarifier les priorités."
@@ -148,14 +151,15 @@ export default async function HomePage() {
             <ButtonLink href="/axes-intervention" variant="secondary">
               Explorer les axes
             </ButtonLink>
-          </div>
+          </ScrollReveal>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {axes.map((axis) => (
-              <AxisCard
-                key={axis.slug}
-                axis={axis}
-                programs={flagshipPrograms.filter((program) => axis.programSlugs.includes(program.slug))}
-              />
+            {axes.map((axis, index) => (
+              <ScrollReveal key={axis.slug} delayMs={index * 100}>
+                <AxisCard
+                  axis={axis}
+                  programs={flagshipPrograms.filter((program) => axis.programSlugs.includes(program.slug))}
+                />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -173,8 +177,10 @@ export default async function HomePage() {
             </ButtonLink>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {flagshipPrograms.map((program) => (
-              <ProgramCard key={program.slug} program={program} />
+            {flagshipPrograms.map((program, index) => (
+              <ScrollReveal key={program.slug} delayMs={index * 80}>
+                <ProgramCard program={program} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -182,7 +188,7 @@ export default async function HomePage() {
 
       <section id="realisations" className="bg-white py-16 sm:py-20">
         <div className="section-shell">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <ScrollReveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <SectionHeading
               eyebrow="Réalisations"
               title="Des activités documentées auprès des jeunes, femmes, enfants et communautés."
@@ -190,10 +196,12 @@ export default async function HomePage() {
             <ButtonLink href="/realisations" variant="secondary">
               Voir nos réalisations
             </ButtonLink>
-          </div>
+          </ScrollReveal>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {realisations.slice(0, 3).map((realisation) => (
-              <RealisationCard key={realisation.slug} realisation={realisation} compact />
+            {realisations.slice(0, 3).map((realisation, index) => (
+              <ScrollReveal key={realisation.slug} delayMs={index * 100}>
+                <RealisationCard realisation={realisation} compact />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -201,7 +209,7 @@ export default async function HomePage() {
 
       <section id="soutenir" className="bg-brand-blue py-16 text-white sm:py-20">
         <div className="section-shell">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <ScrollReveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <SectionHeading
               eyebrow="Pourquoi soutenir la DDC ?"
               title="Un appui à la citoyenneté, au leadership, à la paix et à la résilience."
@@ -209,14 +217,18 @@ export default async function HomePage() {
               className="[&_h2]:text-white [&_p:not(.eyebrow)]:text-white/75"
             />
             <ButtonLink href={site.donationUrl}>Faire un don</ButtonLink>
-          </div>
+          </ScrollReveal>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {whySupportDdc.map((argument) => (
-              <article key={argument.title} className="rounded-lg border border-white/10 bg-white/10 p-5">
+            {whySupportDdc.map((argument, index) => (
+              <ScrollReveal
+                key={argument.title}
+                delayMs={index * 80}
+                className="rounded-lg border border-white/10 bg-white/10 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/40 hover:bg-white/[0.14]"
+              >
                 <IconRenderer icon={argument.icon} className="h-6 w-6 text-brand-gold" />
                 <h2 className="mt-4 text-lg font-black text-white">{argument.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-white/75">{argument.description}</p>
-              </article>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -224,7 +236,7 @@ export default async function HomePage() {
 
       <section id="approche" className="bg-white py-16 sm:py-20">
         <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
+          <ScrollReveal direction="left">
             <SectionHeading
               eyebrow="Approche d'intervention"
               title="Une méthode de travail proche des réalités locales."
@@ -237,22 +249,26 @@ export default async function HomePage() {
                 <p className="mt-3 text-sm leading-7 text-slate-600">Bukavu, Sud-Kivu, RDC - expansion locale, nationale et africaine.</p>
               </div>
             </div>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {interventionApproach.slice(0, 12).map((item) => (
-              <div key={item.title} className="rounded-lg border border-slate-200 p-5">
+          </ScrollReveal>
+          <ScrollReveal direction="right" className="grid gap-4 sm:grid-cols-2">
+            {interventionApproach.slice(0, 12).map((item, index) => (
+              <div
+                key={item.title}
+                className="rounded-lg border border-slate-200 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/40 hover:shadow-soft"
+                style={{ transitionDelay: `${(index % 4) * 40}ms` }}
+              >
                 <IconRenderer icon={item.icon} className="h-5 w-5 text-brand-green" />
                 <h3 className="mt-3 text-base font-black text-brand-blue">{item.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">{item.description}</p>
               </div>
             ))}
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       <section id="transparence" className="bg-brand-mist py-16 sm:py-20">
         <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
+          <ScrollReveal direction="left">
             <SectionHeading
               eyebrow="Transparence et redevabilité"
               title="Un espace prêt pour les rapports, politiques et documents publics."
@@ -266,10 +282,10 @@ export default async function HomePage() {
                 Suivi-évaluation
               </ButtonLink>
             </div>
-          </div>
-          <div className="grid gap-3">
+          </ScrollReveal>
+          <ScrollReveal direction="right" className="grid gap-3">
             {transparencyDocuments.slice(0, 6).map((document) => (
-              <div key={document.title} className="flex items-start gap-3 rounded-lg bg-white p-5 shadow-sm">
+              <div key={document.title} className="flex items-start gap-3 rounded-lg bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-soft">
                 <CheckCircle2 aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
                 <div>
                   <h3 className="text-base font-black text-brand-blue">{document.title}</h3>
@@ -277,22 +293,24 @@ export default async function HomePage() {
                 </div>
               </div>
             ))}
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       <section id="temoignages" className="bg-white py-16 sm:py-20">
         <div className="section-shell">
-          <SectionHeading
-            eyebrow="Témoignages"
-            title="Des récits à documenter avec les bénéficiaires, partenaires et leaders communautaires."
-          />
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="Témoignages"
+              title="Des récits à documenter avec les bénéficiaires, partenaires et leaders communautaires."
+            />
+          </ScrollReveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
-            {testimonials.map((testimonial) => (
-              <article key={testimonial.title} className="rounded-lg border border-slate-200 p-5">
+            {testimonials.map((testimonial, index) => (
+              <ScrollReveal key={testimonial.title} delayMs={index * 70} className="card p-5">
                 <h2 className="text-base font-black text-brand-blue">{testimonial.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{testimonial.text}</p>
-              </article>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -300,16 +318,18 @@ export default async function HomePage() {
 
       <section id="beneficiaires" className="bg-brand-mist py-16 sm:py-20">
         <div className="section-shell">
-          <SectionHeading
-            eyebrow="Publics cibles"
-            title="Des jeunes, femmes, enfants et communautés au coeur de la transformation."
-          />
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="Publics cibles"
+              title="Des jeunes, femmes, enfants et communautés au coeur de la transformation."
+            />
+          </ScrollReveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {beneficiaries.slice(0, 6).map((beneficiary) => (
-              <article key={beneficiary.title} className="rounded-lg bg-white p-6 shadow-sm">
+            {beneficiaries.slice(0, 6).map((beneficiary, index) => (
+              <ScrollReveal key={beneficiary.title} delayMs={index * 80} className="card p-6">
                 <h3 className="text-lg font-black text-brand-blue">{beneficiary.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{beneficiary.description}</p>
-              </article>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -317,22 +337,24 @@ export default async function HomePage() {
 
       <section id="publications" className="bg-white py-16 sm:py-20">
         <div className="section-shell">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <ScrollReveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <SectionHeading eyebrow="Publications" title="Actualités, rapports, notes de plaidoyer et documents à suivre." />
             <ButtonLink href="/publications" variant="secondary">
               Lire nos publications
             </ButtonLink>
-          </div>
+          </ScrollReveal>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {publications.slice(0, 3).map((publication) => (
-              <PublicationCard key={publication.slug} publication={publication} />
+            {publications.slice(0, 3).map((publication, index) => (
+              <ScrollReveal key={publication.slug} delayMs={index * 100}>
+                <PublicationCard publication={publication} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
       <section id="newsletter" className="bg-brand-green py-16 text-white sm:py-20">
-        <div className="section-shell grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+        <ScrollReveal className="section-shell grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Newsletter</p>
             <h2 className="mt-3 text-3xl font-black sm:text-4xl">Suivre les programmes, opportunités et rapports.</h2>
@@ -346,12 +368,12 @@ export default async function HomePage() {
             </div>
           </div>
           <NewsletterForm />
-        </div>
+        </ScrollReveal>
       </section>
 
       <section id="contact" className="bg-white py-16 sm:py-20">
         <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
+          <ScrollReveal direction="left">
             <SectionHeading eyebrow="Contact" title="Nous contacter, proposer une initiative ou devenir partenaire." />
             <div className="mt-8 space-y-4 text-sm text-slate-700">
               <p className="flex items-center gap-3">
@@ -367,8 +389,10 @@ export default async function HomePage() {
                 {site.contact.email}
               </p>
             </div>
-          </div>
-          <ContactForm title="Envoyer un message" idPrefix="home-contact" />
+          </ScrollReveal>
+          <ScrollReveal direction="right">
+            <ContactForm title="Envoyer un message" idPrefix="home-contact" />
+          </ScrollReveal>
         </div>
       </section>
     </>

@@ -17,7 +17,7 @@ export function ArticleForm({ action, article, submitLabel = "Enregistrer l'arti
         <TextField name="slug" label="Slug" defaultValue={article?.slug} placeholder="genere automatiquement si vide" />
         <TextField name="category" label="Catégorie" required defaultValue={article?.category} placeholder="Citoyenneté, Leadership..." />
         <TextField name="date" label="Date" type="date" required defaultValue={article?.date} />
-        <TextField name="author" label="Auteur" defaultValue={article?.author || "DDC RDC ASBL"} />
+        <TextField name="author" label="Auteur" defaultValue={article?.author || "DDC RDC"} />
         <TextField name="image" label="Image principale" defaultValue={article?.image} placeholder="/images/ddc/photo.jpg ou URL" />
         <FileField name="imageUpload" label="Remplacer l'image principale" accept="image/*" />
         <TextField name="location" label="Lieu" defaultValue={article?.location} placeholder="Bukavu, RDC" />

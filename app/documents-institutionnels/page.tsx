@@ -9,7 +9,7 @@ import type { DocumentItem } from "@/data/types";
 
 export const metadata: Metadata = {
   title: "Documents institutionnels",
-  description: "Statuts, règlement intérieur, rapports, politiques internes, plans stratégiques et documents de plaidoyer de la DDC RDC ASBL."
+  description: "Statuts, règlement intérieur, rapports, politiques internes, plans stratégiques et documents de plaidoyer de la DDC RDC."
 };
 
 function DocumentGrid({ documents }: { documents: DocumentItem[] }) {

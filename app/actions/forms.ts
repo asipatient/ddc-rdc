@@ -10,7 +10,7 @@ export type PublicFormState = {
   message: string;
 };
 
-const successMessage = "Votre message a bien été envoyé. L'équipe de la DDC RDC ASBL vous répondra dès que possible.";
+const successMessage = "Votre message a bien été envoyé. L'équipe de la DDC RDC vous répondra dès que possible.";
 
 function value(formData: FormData, key: string) {
   return String(formData.get(key) || "").trim();
@@ -135,7 +135,7 @@ export async function submitMembershipForm(_previousState: PublicFormState, form
   await persistMessage(message);
   await notifyMessage(message);
 
-  return { ok: true, message: "Votre candidature a bien été envoyée. L'équipe de la DDC RDC ASBL vous répondra dès que possible." };
+  return { ok: true, message: "Votre candidature a bien été envoyée. L'équipe de la DDC RDC vous répondra dès que possible." };
 }
 
 export async function submitNewsletterForm(_previousState: PublicFormState, formData: FormData): Promise<PublicFormState> {
@@ -190,7 +190,7 @@ export async function submitNewsletterForm(_previousState: PublicFormState, form
     confirmed_at: subscriber.confirmedAt
   });
   await sendAdminEmail({
-    subject: "Nouvelle inscription newsletter - DDC RDC ASBL",
+    subject: "Nouvelle inscription newsletter - DDC RDC",
     text: [`Email : ${subscriber.email}`, `Nom : ${subscriber.name || "À compléter"}`, `Source : ${subscriber.source}`, `Date : ${subscriber.createdAt}`].join("\n")
   });
 

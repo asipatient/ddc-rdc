@@ -2,17 +2,17 @@
   "articles": [
     {
       "id": "1779135073551",
-      "title": "La DDC RDC ASBL renforce sa plateforme numérique",
+      "title": "La DDC RDC renforce sa plateforme numérique",
       "slug": "ddc-renforce-sa-plateforme-numerique",
       "excerpt": "La DDC RDC poursuit sa structuration institutionnelle à travers la mise en place d’un site web moderne destiné à informer, mobiliser et renforcer la visibilité de ses actions.",
-      "content": "Dans le cadre de son développement institutionnel, la DDC RDC ASBL met en place une plateforme numérique destinée à présenter sa vision, ses programmes, ses réalisations, ses publications et ses opportunités de partenariat.\r\n\r\nCe site permettra aux jeunes, aux femmes, aux communautés, aux partenaires et aux donateurs de mieux comprendre les actions de l’association et de contribuer à ses initiatives en faveur de la citoyenneté, de l’autonomisation, de la culture, de l’environnement et du développement communautaire durable.",
+      "content": "Dans le cadre de son développement institutionnel, la DDC RDC met en place une plateforme numérique destinée à présenter sa vision, ses programmes, ses réalisations, ses publications et ses opportunités de partenariat.\r\n\r\nCe site permettra aux jeunes, aux femmes, aux communautés, aux partenaires et aux donateurs de mieux comprendre les actions de l’association et de contribuer à ses initiatives en faveur de la citoyenneté, de l’autonomisation, de la culture, de l’environnement et du développement communautaire durable.",
       "category": "Institutionnel",
       "image": "",
       "date": "2026-05-18",
       "status": "published",
       "createdAt": "2026-05-18T20:11:13.551Z",
       "updatedAt": "2026-05-18T20:11:43.104Z",
-      "author": "DDC RDC ASBL",
+      "author": "DDC RDC",
       "period": "",
       "objectives": "",
       "targetAudience": "",
@@ -32,7 +32,7 @@
   "newsPosts": [
     {
       "id": "news-001",
-      "title": "Lancement officiel de la DDC RDC ASBL",
+      "title": "Lancement officiel de la DDC RDC",
       "slug": "lancement-officiel-ddc-rdc-asbl",
       "excerpt": "La Dynamique Debout Congolais presente son cadre d'action citoyenne au service des jeunes, des femmes et des communautes.",
       "content": "Contenu complet a enrichir depuis l'administration.",
@@ -46,7 +46,7 @@
       "createdAt": "2026-05-17T00:00:00.000Z",
       "updatedAt": "2026-05-20T10:26:11.598Z",
       "publishedAt": "2026-05-20T10:26:11.598Z",
-      "author": "DDC RDC ASBL",
+      "author": "DDC RDC",
       "partners": "",
       "location": "",
       "gallery": [],
@@ -275,7 +275,7 @@
       "status": "published",
       "updatedAt": "2026-05-18T00:00:00.000Z",
       "internalNotes": "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs.",
-      "source": "Archives internes DDC RDC ASBL.",
+      "source": "Archives internes DDC RDC.",
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     },
     {
@@ -291,7 +291,7 @@
       "status": "published",
       "updatedAt": "2026-05-18T00:00:00.000Z",
       "internalNotes": "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs.",
-      "source": "Archives internes DDC RDC ASBL.",
+      "source": "Archives internes DDC RDC.",
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     },
     {
@@ -307,7 +307,7 @@
       "status": "published",
       "updatedAt": "2026-05-18T00:00:00.000Z",
       "internalNotes": "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs.",
-      "source": "Archives internes DDC RDC ASBL.",
+      "source": "Archives internes DDC RDC.",
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     },
     {
@@ -323,7 +323,7 @@
       "status": "published",
       "updatedAt": "2026-05-18T00:00:00.000Z",
       "internalNotes": "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs.",
-      "source": "Archives internes DDC RDC ASBL.",
+      "source": "Archives internes DDC RDC.",
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     },
     {
@@ -339,7 +339,7 @@
       "status": "published",
       "updatedAt": "2026-05-20T09:44:00.067Z",
       "internalNotes": "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs.",
-      "source": "Archives internes DDC RDC ASBL.",
+      "source": "Archives internes DDC RDC.",
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     },
     {
@@ -355,7 +355,7 @@
       "status": "published",
       "updatedAt": "2026-05-20T00:00:00.000Z",
       "internalNotes": "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs.",
-      "source": "Archives internes DDC RDC ASBL.",
+      "source": "Archives internes DDC RDC.",
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     },
     {
@@ -371,7 +371,7 @@
       "status": "published",
       "updatedAt": "2026-05-20T00:00:00.000Z",
       "internalNotes": "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs.",
-      "source": "Archives internes DDC RDC ASBL.",
+      "source": "Archives internes DDC RDC.",
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     },
     {
@@ -387,7 +387,7 @@
       "status": "published",
       "updatedAt": "2026-05-20T00:00:00.000Z",
       "internalNotes": "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs.",
-      "source": "Archives internes DDC RDC ASBL.",
+      "source": "Archives internes DDC RDC.",
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     },
     {
@@ -403,7 +403,7 @@
       "status": "published",
       "updatedAt": "2026-05-20T00:00:00.000Z",
       "internalNotes": "Donnée à consolider avec les rapports d’activités, listes de présence, photos, comptes rendus ou documents administratifs.",
-      "source": "Archives internes DDC RDC ASBL.",
+      "source": "Archives internes DDC RDC.",
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     }
   ],
@@ -439,13 +439,13 @@
   ],
   "newsletterSubscribers": [],
   "siteSettings": {
-    "siteName": "DDC RDC ASBL",
+    "siteName": "DDC RDC",
     "email": "ddc.democratie@gmail.com",
     "phone": "+243 992 588 137",
     "address": "Ave Nyarwizimya No 19, Quartier Panzi, Commune Ibanda, Bukavu, RDC",
     "paypalUrl": "https://www.paypal.com/donate/?hosted_button_id=DN5YLHV58TCDE",
     "slogan": "Jeunesse, femmes et communautes debout pour un Congo juste, inclusif et durable.",
-    "shortDescription": "La DDC RDC ASBL mobilise la jeunesse et les femmes congolaises pour construire des communautes responsables, resilientes, creatives et inclusives.",
+    "shortDescription": "La DDC RDC mobilise la jeunesse et les femmes congolaises pour construire des communautes responsables, resilientes, creatives et inclusives.",
     "logo": "/images/logos/logo-ddc.png",
     "favicon": "/favicon.png",
     "footerText": "Tous droits reserves.",

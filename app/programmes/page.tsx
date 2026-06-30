@@ -8,7 +8,7 @@ import { getPublicProgramContent } from "@/lib/program-content";
 
 export const metadata: Metadata = {
   title: "Programmes",
-  description: "Programmes phares et moyens d'action de la DDC RDC ASBL."
+  description: "Programmes phares et moyens d'action de la DDC RDC."
 };
 
 export const dynamic = "force-dynamic";
@@ -21,7 +21,7 @@ export default async function ProgramsPage() {
       <PageHero
         kicker="Programmes"
         title="Huit programmes phares alignés sur les trois axes d'intervention."
-        description="Les programmes de la DDC RDC ASBL transforment les priorités institutionnelles en parcours de formation, recherche, incubation, alerte, culture, inclusion et action communautaire."
+        description="Les programmes de la DDC RDC transforment les priorités institutionnelles en parcours de formation, recherche, incubation, alerte, culture, inclusion et action communautaire."
         cta={{ label: "Soutenir nos actions", href: paypalDonationUrl }}
       />
       <section className="bg-brand-mist py-16 sm:py-20">

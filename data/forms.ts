@@ -19,7 +19,7 @@ export const availabilityOptions = [
 ];
 
 export const memberVolunteerIntro =
-  "La DDC RDC ASBL accueille les jeunes, femmes et citoyens qui souhaitent contribuer à l'éveil citoyen, au leadership, à l'autonomisation, à la culture, à l'environnement, à la protection et au développement communautaire.";
+  "La DDC RDC accueille les jeunes, femmes et citoyens qui souhaitent contribuer à l'éveil citoyen, au leadership, à l'autonomisation, à la culture, à l'environnement, à la protection et au développement communautaire.";
 
 export const newsletterBenefits = [
   "Recevoir les actualités",

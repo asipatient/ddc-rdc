@@ -47,7 +47,7 @@ export async function createArticle(article: Partial<AdminArticle>) {
     content: article.content || "",
     image: article.image || "",
     gallery: article.gallery || [],
-    author: article.author || "DDC RDC ASBL",
+    author: article.author || "DDC RDC",
     impact: article.impact || "",
     location: article.location || "",
     partners: article.partners || "",

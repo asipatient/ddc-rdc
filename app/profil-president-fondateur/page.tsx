@@ -8,7 +8,7 @@ import { activityArticles, founderProfile, historyTimeline } from "@/lib/site-da
 
 export const metadata: Metadata = {
   title: "Profil du Président Fondateur",
-  description: "Profil institutionnel de Patient Asifiwe, Président Fondateur de la DDC RDC ASBL."
+  description: "Profil institutionnel de Patient Asifiwe, Président Fondateur de la DDC RDC."
 };
 
 export default function FounderProfilePage() {
@@ -16,7 +16,7 @@ export default function FounderProfilePage() {
     <>
       <PageHero
         kicker="Profil institutionnel"
-        title="Patient Asifiwe, Président Fondateur de la DDC RDC ASBL."
+        title="Patient Asifiwe, Président Fondateur de la DDC RDC."
         description={founderProfile.shortBio}
         cta={{ label: "Contacter la DDC", href: "/contact" }}
       />

@@ -6,7 +6,7 @@ import { getPublicPublicationCategories, getPublicPublications } from "@/lib/pub
 
 export const metadata: Metadata = {
   title: "Actualités / Publications",
-  description: "Actualités, rapports, études, notes de plaidoyer, communiqués et événements de la DDC RDC ASBL."
+  description: "Actualités, rapports, études, notes de plaidoyer, communiqués et événements de la DDC RDC."
 };
 
 export const dynamic = "force-dynamic";
@@ -32,7 +32,7 @@ export default async function PublicationsPage({
         <div className="section-shell">
           <SectionHeading
             eyebrow="Bibliothèque"
-            title="Explorer les contenus publiés par la DDC RDC ASBL."
+            title="Explorer les contenus publiés par la DDC RDC."
             description="Les articles issus des données annexes sont marqués à relire lorsque les chiffres, photos, partenaires ou documents doivent encore être consolidés."
           />
           <div className="mt-10">

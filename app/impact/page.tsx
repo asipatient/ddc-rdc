@@ -8,7 +8,7 @@ import { getImpactVerificationBadge, getPublicImpactIndicators, getPublicImpactS
 
 export const metadata: Metadata = {
   title: "Impact",
-  description: "Indicateurs, suivi-évaluation, apprentissage et témoignages de la DDC RDC ASBL."
+  description: "Indicateurs, suivi-évaluation, apprentissage et témoignages de la DDC RDC."
 };
 
 export const dynamic = "force-dynamic";

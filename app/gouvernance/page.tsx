@@ -6,7 +6,7 @@ import { governanceItems, principles } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Gouvernance interne",
-  description: "Structure de gouvernance interne prévue pour la DDC RDC ASBL."
+  description: "Structure de gouvernance interne prévue pour la DDC RDC."
 };
 
 export default function GovernancePage() {
@@ -15,7 +15,7 @@ export default function GovernancePage() {
       <PageHero
         kicker="Gouvernance interne"
         title="Une structure institutionnelle claire, modifiable et prête à documenter."
-        description="La DDC RDC ASBL prévoit un espace de gouvernance pouvant accueillir les organes, responsabilités, politiques et documents validés."
+        description="La DDC RDC prévoit un espace de gouvernance pouvant accueillir les organes, responsabilités, politiques et documents validés."
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="section-shell">

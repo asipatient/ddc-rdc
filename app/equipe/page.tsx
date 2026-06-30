@@ -8,7 +8,7 @@ import { getPublicTeamMembers } from "@/lib/team";
 
 export const metadata: Metadata = {
   title: "Notre équipe",
-  description: "Équipe dirigeante de la DDC RDC ASBL."
+  description: "Équipe dirigeante de la DDC RDC."
 };
 
 export const dynamic = "force-dynamic";
@@ -21,7 +21,7 @@ export default async function TeamPage() {
       <PageHero
         kicker="Notre équipe"
         title="Une équipe engagée pour structurer, accompagner et rendre compte."
-        description="Cette page présente les responsabilités clés de la DDC RDC ASBL. Les biographies, photos et liens de contact peuvent être complétés progressivement."
+        description="Cette page présente les responsabilités clés de la DDC RDC. Les biographies, photos et liens de contact peuvent être complétés progressivement."
         cta={{ label: "Contacter l'équipe", href: "/contact" }}
       />
       <section className="bg-white py-16 sm:py-20">

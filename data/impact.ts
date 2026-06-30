@@ -46,7 +46,7 @@ export const interventionApproach: SupportArgument[] = [
 
 export const monitoringLearning = {
   intro:
-    "La DDC RDC ASBL entend renforcer progressivement ses mécanismes de suivi, d'évaluation, d'apprentissage et de redevabilité afin de mesurer les résultats de ses actions, capitaliser les expériences, documenter les changements et améliorer continuellement ses programmes.",
+    "La DDC RDC entend renforcer progressivement ses mécanismes de suivi, d'évaluation, d'apprentissage et de redevabilité afin de mesurer les résultats de ses actions, capitaliser les expériences, documenter les changements et améliorer continuellement ses programmes.",
   blocks: [
     { title: "Indicateurs d'impact", description: "Tableaux de suivi à compléter au fur et à mesure de la consolidation des données.", icon: "chart" },
     { title: "Rapports périodiques", description: "Rapports d'activités, notes de synthèse et bilans de programmes à publier.", icon: "file" },
@@ -69,7 +69,7 @@ export const testimonials = [
 export const zonesIntervention = {
   title: "Ancrage à Bukavu, ambition nationale et africaine",
   description:
-    "Ancrée à Bukavu, au Sud-Kivu, la DDC RDC ASBL développe des initiatives adaptées aux réalités locales tout en portant une ambition nationale et africaine en matière de citoyenneté, leadership, innovation sociale, culture, environnement et développement communautaire.",
+    "Ancrée à Bukavu, au Sud-Kivu, la DDC RDC développe des initiatives adaptées aux réalités locales tout en portant une ambition nationale et africaine en matière de citoyenneté, leadership, innovation sociale, culture, environnement et développement communautaire.",
   levels: [
     "Bukavu et Sud-Kivu",
     "Expansion locale et provinciale",

@@ -12,7 +12,7 @@ import { getPublicSiteConfig } from "@/lib/site-settings";
 
 export const metadata: Metadata = {
   title: "Partenaires",
-  description: "Partenariats institutionnels, techniques, financiers, académiques et communautaires de la DDC RDC ASBL."
+  description: "Partenariats institutionnels, techniques, financiers, académiques et communautaires de la DDC RDC."
 };
 
 export const dynamic = "force-dynamic";
@@ -79,7 +79,7 @@ export default async function PartnersPage() {
         <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Contact institutionnel</p>
-            <h2 className="mt-3 text-3xl font-black sm:text-4xl">Échanger avec la DDC RDC ASBL.</h2>
+            <h2 className="mt-3 text-3xl font-black sm:text-4xl">Échanger avec la DDC RDC.</h2>
             <div className="mt-6 grid gap-3 text-sm text-white/80">
               <p className="flex items-center gap-3">
                 <MapPin aria-hidden="true" className="h-4 w-4 text-brand-gold" />
