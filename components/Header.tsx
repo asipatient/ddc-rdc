@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { navigation, site } from "@/lib/site-data";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -13,14 +13,27 @@ type HeaderSiteConfig = typeof site;
 function DropdownMenu({ item }: { item: Extract<(typeof navigation)[number], { items: unknown[] }> }) {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const close = useCallback(() => {
     setOpen(false);
     buttonRef.current?.focus();
   }, []);
 
+  // Fermer si clic en dehors
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [open]);
+
   return (
-    <div className="relative">
+    <div ref={containerRef} className="relative">
       <button
         ref={buttonRef}
         type="button"
@@ -28,9 +41,7 @@ function DropdownMenu({ item }: { item: Extract<(typeof navigation)[number], { i
         aria-haspopup="true"
         className="site-header-link focus-ring inline-flex min-h-11 items-center gap-1 rounded-md px-3 text-sm font-bold transition"
         onClick={() => setOpen((v) => !v)}
-        onKeyDown={(e) => {
-          if (e.key === "Escape") close();
-        }}
+        onKeyDown={(e) => { if (e.key === "Escape") close(); }}
       >
         {item.label}
         <ChevronDown
@@ -43,9 +54,7 @@ function DropdownMenu({ item }: { item: Extract<(typeof navigation)[number], { i
         <div
           role="menu"
           className="site-header-dropdown absolute left-0 top-full z-50 mt-1 w-64 rounded-lg border p-2 shadow-soft"
-          onKeyDown={(e) => {
-            if (e.key === "Escape") close();
-          }}
+          onKeyDown={(e) => { if (e.key === "Escape") close(); }}
         >
           {item.items.map((subItem, idx) =>
             subItem.external ? (
@@ -55,8 +64,8 @@ function DropdownMenu({ item }: { item: Extract<(typeof navigation)[number], { i
                 target="_blank"
                 rel="noopener noreferrer"
                 role="menuitem"
-                tabIndex={0}
                 className="site-header-dropdown-link focus-ring block rounded-md px-3 py-2 text-sm font-semibold transition"
+                onClick={() => setOpen(false)}
                 onKeyDown={(e) => {
                   if (e.key === "Escape") close();
                   if (e.key === "Tab" && idx === item.items.length - 1 && !e.shiftKey) close();
@@ -69,7 +78,6 @@ function DropdownMenu({ item }: { item: Extract<(typeof navigation)[number], { i
                 key={subItem.href}
                 href={subItem.href}
                 role="menuitem"
-                tabIndex={0}
                 className="site-header-dropdown-link focus-ring block rounded-md px-3 py-2 text-sm font-semibold transition"
                 onClick={() => setOpen(false)}
                 onKeyDown={(e) => {
