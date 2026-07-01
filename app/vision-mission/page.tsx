@@ -38,8 +38,8 @@ export default function VisionMissionPage() {
           <div>
             <SectionHeading
               eyebrow="Plan stratégique"
-              title="Une structure prête pour le plan stratégique complet."
-              description="Le contenu détaillé pourra être ajouté sans modifier l'architecture du site."
+              title="Un plan stratégique structuré autour de trois axes et sept dimensions clés."
+              description="Chaque axe et chaque dimension sont documentés pour orienter l'action de la DDC RDC et informer ses partenaires."
             />
             <div className="mt-7">
               <ButtonLink href="/documents-institutionnels" variant="secondary">
@@ -49,8 +49,9 @@ export default function VisionMissionPage() {
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {[...strategicPlan.axes, ...strategicPlan.sections].map((item) => (
-              <div key={item} className="rounded-lg bg-white p-5 text-sm font-bold leading-7 text-brand-blue shadow-sm">
-                {item}
+              <div key={item.title} className="rounded-lg bg-white p-5 shadow-sm">
+                <p className="text-sm font-bold leading-7 text-brand-blue">{item.title}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{item.description}</p>
               </div>
             ))}
           </div>
