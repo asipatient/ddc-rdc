@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/metadata";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Facebook, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
@@ -32,6 +33,8 @@ export default async function ContactPage() {
         title="Entrer en relation avec la DDC RDC."
         description={contactIntro}
         cta={{ label: "Faire un don", href: site.donationUrl }}
+      
+        image="/images/ddc/hero-reel-ddc.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { UsersRound } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
@@ -17,8 +18,11 @@ export default function BeneficiariesPage() {
         kicker="Bénéficiaires"
         title="Accompagner les personnes, organisations et communautés porteuses de changement."
         description="La DDC RDC cible les jeunes, les femmes, les enfants, les groupes vulnérables et les structures locales de participation citoyenne."
+      
+        image="/images/ddc/talents-enfance.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading eyebrow="Publics cibles" title="Des accompagnements adaptés aux réalités locales." />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -42,6 +46,8 @@ export default function BeneficiariesPage() {
             </div>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 
 type PageHeroProps = {
@@ -5,14 +6,46 @@ type PageHeroProps = {
   title: string;
   description: string;
   cta?: { label: string; href: string };
+  image?: string;
 };
 
-export function PageHero({ kicker, title, description, cta }: PageHeroProps) {
+/**
+ * Mapping page → image DDC RDC pertinente.
+ * Utilisé si aucune image n'est passée explicitement.
+ */
+const DEFAULT_IMAGE = "/images/ddc/hero-reel-ddc.jpg";
+
+export function PageHero({ kicker, title, description, cta, image = DEFAULT_IMAGE }: PageHeroProps) {
   return (
-    <section className="bg-brand-blue text-white">
-      <div className="section-shell py-16 sm:py-20 lg:py-24">
+    <section className="relative isolate overflow-hidden bg-brand-blue text-white">
+      {/* Image de fond avec faible opacité */}
+      <Image
+        src={image}
+        alt=""
+        aria-hidden="true"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center opacity-20"
+      />
+
+      {/* Dégradé bleu marine → violet indigo */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(11,53,88,0.97) 0%, rgba(30,20,80,0.93) 50%, rgba(45,27,105,0.88) 100%)"
+        }}
+      />
+
+      {/* Grain subtil pour profondeur */}
+      <div className="absolute inset-0 opacity-[0.03]"
+        style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E\")" }}
+      />
+
+      <div className="section-shell relative py-16 sm:py-20 lg:py-24">
         <div className="max-w-4xl animate-fade-up">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">{kicker}</p>
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold">{kicker}</p>
           <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
           <p className="mt-6 max-w-3xl text-lg leading-9 text-white/80">{description}</p>
           {cta ? (
@@ -22,6 +55,9 @@ export function PageHero({ kicker, title, description, cta }: PageHeroProps) {
           ) : null}
         </div>
       </div>
+
+      {/* Liseré doré en bas */}
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-gold/40 to-transparent" />
     </section>
   );
 }

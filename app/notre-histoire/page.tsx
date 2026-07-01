@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
@@ -18,8 +19,10 @@ export default function HistoryPage() {
         title="De l'engagement communautaire à une plateforme institutionnelle."
         description={historyIntro}
         cta={{ label: "Voir les réalisations", href: "/realisations" }}
+      image="/images/ddc/activisme-vbg.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <div className="relative overflow-hidden rounded-lg bg-brand-mist">
@@ -59,8 +62,11 @@ export default function HistoryPage() {
             </div>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <SectionHeading
             eyebrow="Structuration"
@@ -76,6 +82,8 @@ export default function HistoryPage() {
             </ButtonLink>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

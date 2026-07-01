@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -27,8 +28,11 @@ export default async function DonatePage() {
         title={donationPage.title}
         description={donationPage.trustMessage}
         cta={{ label: "Faire un don via PayPal", href: "#paypal" }}
+      
+        image="/images/ddc/activisme-vbg.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="relative min-h-96 overflow-hidden rounded-lg bg-brand-blueSoft">
             <Image
@@ -53,8 +57,11 @@ export default async function DonatePage() {
             </div>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading eyebrow="Votre contribution peut soutenir" title="Des domaines liés aux priorités institutionnelles." />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -69,8 +76,11 @@ export default async function DonatePage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-2">
           <div>
             <SectionHeading
@@ -106,8 +116,11 @@ export default async function DonatePage() {
             </div>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-blue py-16 text-white sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Partenariats institutionnels</p>
@@ -135,6 +148,8 @@ export default async function DonatePage() {
             </ButtonLink>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

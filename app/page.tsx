@@ -45,8 +45,8 @@ export default async function HomePage() {
               Jeunesse et femmes debout pour transformer le Congo.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-white/80 sm:text-lg">
-              La DDC RDC éveille, forme et mobilise les jeunes, les femmes et les communautés de Bukavu pour bâtir
-              un Congo plus juste, inclusif et durable.
+              La DDC RDC éveille, forme et mobilise les jeunes, les femmes et les communautés congolaises
+              pour bâtir un Congo plus juste, inclusif et durable.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href="/a-propos">Qui sommes-nous ?</ButtonLink>

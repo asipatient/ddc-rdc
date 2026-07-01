@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/metadata";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { RealisationCard } from "@/components/RealisationCard";
@@ -23,8 +24,10 @@ export default async function RealisationsPage() {
         title="Des activités documentées au service de la citoyenneté, des droits, de la culture et de l'inclusion."
         description="Cette page rassemble les actions déjà menées par la DDC RDC avec les communautés, les jeunes, les femmes, les enfants et les organisations de la société civile."
         cta={{ label: "Agir avec nous", href: "/partenaires" }}
+      image="/images/ddc/jifa-2025.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Timeline"
@@ -67,8 +70,11 @@ export default async function RealisationsPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading eyebrow="Galerie d'activités" title="Cartes de réalisations avec photos disponibles." />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -85,6 +91,8 @@ export default async function RealisationsPage() {
             </ButtonLink>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

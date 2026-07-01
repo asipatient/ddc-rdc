@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -16,8 +17,11 @@ export default function GovernancePage() {
         kicker="Gouvernance interne"
         title="Une structure institutionnelle claire, modifiable et prête à documenter."
         description="La DDC RDC prévoit un espace de gouvernance pouvant accueillir les organes, responsabilités, politiques et documents validés."
+      
+        image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Structure"
@@ -34,8 +38,11 @@ export default function GovernancePage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <SectionHeading
@@ -56,6 +63,8 @@ export default function GovernancePage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

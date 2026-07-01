@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/metadata";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { ProgramCard } from "@/components/ProgramCard";
@@ -24,8 +25,11 @@ export default async function ProgramsPage() {
         title="Huit programmes phares alignés sur les trois axes d'intervention."
         description="Les programmes de la DDC RDC transforment les priorités institutionnelles en parcours de formation, recherche, incubation, alerte, culture, inclusion et action communautaire."
         cta={{ label: "Soutenir nos actions", href: paypalDonationUrl }}
+      
+        image="/images/ddc/atelier-scientifique-vbg.jpg"
       />
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell space-y-12">
           {axes.map((axis) => {
             const axisPrograms = programs.filter((program) => program.axisSlug === axis.slug || axis.programSlugs.includes(program.slug));
@@ -42,8 +46,11 @@ export default async function ProgramsPage() {
             );
           })}
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <SectionHeading
@@ -67,6 +74,8 @@ export default async function ProgramsPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

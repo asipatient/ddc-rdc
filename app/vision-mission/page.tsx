@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/metadata";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Eye, MapPin, Target } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
@@ -20,6 +21,8 @@ export default function VisionMissionPage() {
         kicker="Vision & Mission"
         title="Former une génération consciente, compétente et engagée."
         description="La DDC RDC articule son action autour d'une vision de transformation démocratique, sociale, économique, culturelle et environnementale."
+      
+        image="/images/ddc/conference-citoyenne.jpg"
       />
 
       <section className="bg-white py-16 sm:py-20">

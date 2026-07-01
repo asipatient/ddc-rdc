@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/metadata";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
@@ -19,8 +20,10 @@ export default function AboutPage() {
         title="Une dynamique citoyenne née des défis et des forces du Congo."
         description="La DDC RDC crée un cadre structuré pour permettre aux jeunes et aux femmes de réfléchir, se former, entreprendre, innover et agir dans leurs communautés."
         cta={{ label: "Rejoindre la DDC", href: "/devenir-membre-benevole" }}
+      image="/images/ddc/conference-citoyenne.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden rounded-lg bg-brand-blueSoft">
             <Image src="/images/logo-ddc-card.jpg" alt={`Identité visuelle ${site.shortName}`} width={900} height={900} className="aspect-square w-full object-cover" />
@@ -34,8 +37,11 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div className="relative overflow-hidden rounded-lg bg-brand-mist">
             <Image
@@ -71,8 +77,11 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-6 md:grid-cols-3">
           {[
             ["Notre posture", "Institutionnelle, citoyenne, non partisane, inclusive et orientée vers les solutions locales."],
@@ -93,6 +102,8 @@ export default function AboutPage() {
             Voir l&apos;équipe
           </ButtonLink>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

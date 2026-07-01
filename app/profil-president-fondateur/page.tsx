@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -19,6 +20,7 @@ export default function FounderProfilePage() {
         title="Patient Asifiwe, Président Fondateur de la DDC RDC."
         description={founderProfile.shortBio}
         cta={{ label: "Contacter la DDC", href: "/contact" }}
+      image="/images/ddc/hero-reel-ddc.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">

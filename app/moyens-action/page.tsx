@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { CircleDot } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
@@ -18,8 +19,10 @@ export default function MoyensActionPage() {
         title="Des outils concrets pour passer de l'idée à l'action communautaire."
         description="La DDC RDC mobilise plusieurs moyens complémentaires pour former, documenter, accompagner, sensibiliser et soutenir les initiatives locales."
         cta={{ label: "Proposer une initiative", href: "/contact?type=Projet%20communautaire" }}
+      image="/images/ddc/atelier-scientifique-vbg.jpg"
       />
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading eyebrow="Méthodes" title="Les leviers opérationnels de la DDC RDC." />
           <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -36,8 +39,11 @@ export default function MoyensActionPage() {
             </ButtonLink>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading eyebrow="Approche d'intervention" title="Formation, recherche, incubation, plaidoyer, partenariats et suivi-évaluation." />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -49,6 +55,8 @@ export default function MoyensActionPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

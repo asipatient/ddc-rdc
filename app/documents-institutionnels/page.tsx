@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { FileText } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
@@ -45,8 +46,11 @@ export default async function InstitutionalDocumentsPage() {
         title="Un espace de transparence pour les textes, rapports et politiques de la DDC."
         description="Les documents officiels seront publiés progressivement. Les emplacements actuels indiquent clairement les contenus à ajouter ou compléter."
         cta={{ label: "Faire un don", href: paypalDonationUrl }}
+      
+        image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Documentation"
@@ -56,8 +60,11 @@ export default async function InstitutionalDocumentsPage() {
             <DocumentGrid documents={documents.length ? documents : institutionalDocuments} />
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Transparence et redevabilité"
@@ -68,8 +75,11 @@ export default async function InstitutionalDocumentsPage() {
             <DocumentGrid documents={transparencyDocuments} />
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <SectionHeading
@@ -91,8 +101,11 @@ export default async function InstitutionalDocumentsPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-blue py-16 text-white sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Protection et éthique"
@@ -109,6 +122,8 @@ export default async function InstitutionalDocumentsPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

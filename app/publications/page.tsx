@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { PageHero } from "@/components/PageHero";
 import { PublicationFilters } from "@/components/PublicationFilters";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -27,8 +28,10 @@ export default async function PublicationsPage({
         title="Articles d'activités, rapports, études et notes de plaidoyer."
         description="Un espace de diffusion pour documenter les initiatives, partager les apprentissages, suivre les activités réalisées et soutenir le plaidoyer citoyen."
         cta={{ label: "Documents institutionnels", href: "/documents-institutionnels" }}
+      image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Bibliothèque"
@@ -39,6 +42,8 @@ export default async function PublicationsPage({
             <PublicationFilters initialCategory={initialCategory} publications={publications} publicationCategories={publicationCategories} />
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

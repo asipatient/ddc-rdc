@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -28,8 +29,11 @@ export default async function PartnersPage() {
         title="Construire des partenariats sérieux, transparents et orientés impact."
         description={partnersPage.intro}
         cta={{ label: "Proposer un partenariat", href: "#formulaire-partenaire" }}
+      
+        image="/images/ddc/jifa-2025.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Catégories de partenariat"
@@ -46,8 +50,11 @@ export default async function PartnersPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading eyebrow="Partenaires et bailleurs" title="Espace réservé aux logos et références validées." />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -74,8 +81,11 @@ export default async function PartnersPage() {
                 ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-blue py-16 text-white sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Contact institutionnel</p>
@@ -102,8 +112,11 @@ export default async function PartnersPage() {
             </ButtonLink>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section id="formulaire-partenaire" className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <SectionHeading
@@ -119,6 +132,8 @@ export default async function PartnersPage() {
           </div>
           <ContactForm title="Demande de partenariat" defaultType="Partenariat" idPrefix="partner-contact" />
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

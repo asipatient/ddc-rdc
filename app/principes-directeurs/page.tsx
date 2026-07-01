@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { principles } from "@/lib/site-data";
@@ -15,8 +16,11 @@ export default function PrinciplesPage() {
         kicker="Principes directeurs"
         title="Les repères éthiques qui guident l'action de la DDC RDC."
         description="Chaque initiative doit respecter la dignité humaine, l'inclusion, la transparence, la paix, la justice sociale et la neutralité politique partisane."
+      
+        image="/images/ddc/conference-citoyenne.jpg"
       />
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {principles.map((principle) => (
             <div key={principle} className="flex items-start gap-3 rounded-lg bg-white p-5 shadow-sm">
@@ -25,6 +29,8 @@ export default function PrinciplesPage() {
             </div>
           ))}
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

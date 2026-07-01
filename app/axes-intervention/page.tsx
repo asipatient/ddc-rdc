@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
@@ -24,8 +25,10 @@ export default async function AxesInterventionPage() {
         title="Trois axes pour structurer l'action de la DDC RDC."
         description="Ces axes organisent les interventions autour de la gouvernance citoyenne, de la résilience économique et du développement du capital humain."
         cta={{ label: "Voir les programmes", href: "/programmes" }}
+      image="/images/ddc/activisme-vbg.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell space-y-12">
           {axes.map((axis, index) => {
             const axisPrograms = programs.filter((program) => program.axisSlug === axis.slug || axis.programSlugs.includes(program.slug));
@@ -61,8 +64,11 @@ export default async function AxesInterventionPage() {
             );
           })}
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading eyebrow="Programmes phares" title="Les huit programmes associés aux axes." />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -76,6 +82,8 @@ export default async function AxesInterventionPage() {
             </ButtonLink>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

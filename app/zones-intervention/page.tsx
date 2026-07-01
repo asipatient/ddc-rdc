@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { MapPin } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
@@ -19,8 +20,10 @@ export default function ZonesInterventionPage() {
         title={zonesIntervention.title}
         description={zonesIntervention.description}
         cta={{ label: "Proposer une initiative", href: "/contact?type=Projet%20communautaire" }}
+      image="/images/ddc/hero-reel-ddc.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="flex min-h-96 items-center justify-center rounded-lg border border-dashed border-slate-300 bg-brand-mist p-8 text-center">
             <div>
@@ -55,6 +58,8 @@ export default function ZonesInterventionPage() {
             </div>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

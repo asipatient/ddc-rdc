@@ -107,7 +107,7 @@ export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig })
             alt="Logo DDC RDC"
             width={56}
             height={56}
-            className="site-header-logo h-12 w-12 object-contain sm:h-14 sm:w-14"
+            className="site-header-logo h-12 w-12 object-contain sm:h-14 sm:w-14 dark:brightness-0 dark:invert"
             priority
           />
         </Link>

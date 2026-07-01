@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/metadata";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
@@ -25,8 +26,11 @@ export default async function ImpactPage() {
         title={impactSection.subtitle}
         description={impactSection.text}
         cta={{ label: "Soutenir l'impact", href: paypalDonationUrl }}
+      
+        image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Indicateurs"
@@ -51,8 +55,11 @@ export default async function ImpactPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionHeading
             eyebrow="Base documentaire"
@@ -67,8 +74,11 @@ export default async function ImpactPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Suivi, évaluation et apprentissage"
@@ -85,8 +95,11 @@ export default async function ImpactPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading eyebrow="Pourquoi soutenir la DDC ?" title="Des priorités lisibles pour orienter les appuis." />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -107,8 +120,11 @@ export default async function ImpactPage() {
             </ButtonLink>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-blue py-16 text-white sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Témoignages"
@@ -124,6 +140,8 @@ export default async function ImpactPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

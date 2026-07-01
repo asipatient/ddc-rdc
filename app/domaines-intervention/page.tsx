@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { AxisCard } from "@/components/AxisCard";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconCard } from "@/components/IconCard";
@@ -18,8 +19,10 @@ export default function DomainsPage() {
         title="Onze domaines d'intervention pour une action communautaire intégrée."
         description="La DDC RDC relie éducation civique, leadership, autonomisation économique, environnement, droits, recherche et cohésion sociale."
         cta={{ label: "Proposer une initiative communautaire", href: "/contact?type=Projet%20communautaire" }}
+      image="/images/ddc/activisme-vbg.jpg"
       />
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {interventionAreas.map((area) => (
             <IconCard key={area.title} {...area} />
@@ -38,8 +41,11 @@ export default function DomainsPage() {
             </div>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
@@ -62,6 +68,8 @@ export default function DomainsPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

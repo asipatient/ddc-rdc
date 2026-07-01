@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Mail, Newspaper } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
@@ -17,8 +18,11 @@ export default function PressPage() {
         kicker="Presse et médias"
         title="Un espace média pour suivre les prises de parole de la DDC RDC."
         description="Cette page pourra accueillir les communiqués, dossiers de presse, photos officielles, contacts presse, interventions médiatiques et articles parlant de la DDC."
+      
+        image="/images/ddc/conference-citoyenne.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading eyebrow="Ressources presse" title="Éléments à publier ou compléter." />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -33,8 +37,11 @@ export default function PressPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <SectionHeading
@@ -62,6 +69,8 @@ export default function PressPage() {
             </div>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

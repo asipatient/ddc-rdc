@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import Image from "next/image";
 import { Mail } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -23,8 +24,10 @@ export default async function TeamPage() {
         title="Une équipe engagée pour structurer, accompagner et rendre compte."
         description="Cette page présente les responsabilités clés de la DDC RDC. Les biographies, photos et liens de contact peuvent être complétés progressivement."
         cta={{ label: "Contacter l'équipe", href: "/contact" }}
+      image="/images/ddc/jifa-2025.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Leadership institutionnel"
@@ -69,6 +72,8 @@ export default async function TeamPage() {
             </ButtonLink>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { CalendarDays } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
@@ -18,8 +19,10 @@ export default function OpportunitiesPage() {
         title="Appels, formations, bénévolat, partenariats et événements."
         description="Cette page permettra de publier les opportunités pour les jeunes, les femmes, les bénévoles, les partenaires et les communautés locales."
         cta={{ label: "Rejoindre la DDC", href: "/devenir-membre-benevole" }}
+      image="/images/ddc/talents-enfance.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Appels à projets / Opportunités"
@@ -46,6 +49,8 @@ export default function OpportunitiesPage() {
             </ButtonLink>
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

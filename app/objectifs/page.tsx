@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -16,8 +17,11 @@ export default function ObjectivesPage() {
         kicker="Objectifs"
         title="Des objectifs clairs pour relier la conscience citoyenne à l'impact local."
         description="La DDC RDC structure son action autour d'un objectif général et de huit objectifs spécifiques."
+      
+        image="/images/ddc/conference-citoyenne.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell">
           <div className="rounded-lg bg-brand-blue p-8 text-white sm:p-10">
             <SectionHeading
@@ -42,6 +46,8 @@ export default function ObjectivesPage() {
             ))}
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

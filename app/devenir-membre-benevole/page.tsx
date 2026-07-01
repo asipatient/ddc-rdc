@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { CheckCircle2 } from "lucide-react";
 import { MembershipForm } from "@/components/MembershipForm";
 import { PageHero } from "@/components/PageHero";
@@ -18,8 +19,11 @@ export default function MemberVolunteerPage() {
         title="Devenir membre, bénévole ou porteur d'initiative citoyenne."
         description={memberVolunteerIntro}
         cta={{ label: "Remplir le formulaire", href: "#candidature" }}
+      
+        image="/images/ddc/jifa-2025.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
+        <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <SectionHeading
@@ -40,6 +44,8 @@ export default function MemberVolunteerPage() {
             <MembershipForm />
           </div>
         </div>
+      </ScrollReveal>
+
       </section>
     </>
   );

@@ -38,7 +38,7 @@ export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig })
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1.8fr]">
           <div>
             <div className="flex items-center gap-3">
-              <Image src={siteConfig.logo} alt="Logo DDC RDC" width={64} height={64} className="h-16 w-16 rounded-md bg-[#ffffff] object-contain p-1" />
+              <Image src={siteConfig.logo} alt="Logo DDC RDC" width={64} height={64} className="h-16 w-16 rounded-md object-contain brightness-0 invert" />
               <div>
                 <p className="text-lg font-black">{siteConfig.shortName}</p>
                 <p className="text-sm font-semibold text-white/70">{siteConfig.legalName}</p>
