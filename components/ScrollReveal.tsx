@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ElementType, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 type ScrollRevealDirection = "up" | "left" | "right";
@@ -10,7 +10,7 @@ type ScrollRevealProps = {
   className?: string;
   direction?: ScrollRevealDirection;
   delayMs?: number;
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
 };
 
 const directionClasses: Record<ScrollRevealDirection, string> = {
@@ -20,19 +20,17 @@ const directionClasses: Record<ScrollRevealDirection, string> = {
 };
 
 /**
- * Anime légèrement l'entrée d'un bloc lorsqu'il devient visible au scroll
- * (fade-in + léger déplacement). Respecte automatiquement
- * prefers-reduced-motion via la classe globale .animate-fade-up
- * désactivée dans globals.css.
+ * Anime l'entrée d'un bloc au scroll (fade-in + déplacement léger).
+ * Respecte prefers-reduced-motion via motion-reduce:*.
  */
 export function ScrollReveal({
   children,
   className,
   direction = "up",
   delayMs = 0,
-  as = "div"
+  as: Component = "div"
 }: ScrollRevealProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -48,24 +46,28 @@ export function ScrollReveal({
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -32px 0px" }
     );
 
     observer.observe(node);
     return () => observer.disconnect();
   }, []);
 
-  const Component = as as any;
-
   return (
     <Component
       ref={ref}
       className={cn(
         "transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none",
-        isVisible ? "translate-x-0 translate-y-0 opacity-100" : `opacity-0 ${directionClasses[direction]}`,
+        isVisible
+          ? "translate-x-0 translate-y-0 opacity-100"
+          : `opacity-0 ${directionClasses[direction]}`,
         className
       )}
-      style={delayMs ? { transitionDelay: `${delayMs}ms` } : undefined}
+      style={
+        delayMs && !isVisible
+          ? { transitionDelay: `${delayMs}ms` }
+          : undefined
+      }
     >
       {children}
     </Component>

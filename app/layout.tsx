@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SiteChrome } from "@/components/SiteChrome";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { site } from "@/lib/site-data";
 import { getPublicSiteConfig } from "@/lib/site-settings";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-jakarta",
+  display: "swap"
+});
 
 const themeInitScript = `
 (function () {
@@ -58,11 +66,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const siteConfig = await getPublicSiteConfig();
 
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning className={plusJakartaSans.variable}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body>
+      <body className={plusJakartaSans.className}>
         <ThemeProvider>
           <a
             href="#contenu"

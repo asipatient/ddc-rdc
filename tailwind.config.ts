@@ -25,7 +25,7 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "Arial", "sans-serif"]
+        sans: ["var(--font-jakarta)", "Plus Jakarta Sans", "ui-sans-serif", "system-ui", "Arial", "sans-serif"]
       },
       boxShadow: {
         soft: "0 18px 50px rgba(11, 53, 88, 0.12)"
