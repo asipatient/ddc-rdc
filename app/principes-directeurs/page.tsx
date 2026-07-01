@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { principles } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/principes-directeurs/", {
   title: "Principes directeurs",
   description:
     "Intégrité, inclusion, redevabilité : découvrez les principes directeurs et valeurs institutionnelles qui guident l'action de la DDC RDC au Sud-Kivu."
-};
+});
 
 export default function PrinciplesPage() {
   return (

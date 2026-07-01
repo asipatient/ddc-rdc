@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -6,11 +6,11 @@ import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { activityArticles, founderProfile, historyTimeline } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/profil-president-fondateur/", {
   title: "Profil du Président Fondateur",
   description:
     "Patient Asifiwe, Président Fondateur de la DDC RDC à Bukavu : parcours, engagement citoyen et vision pour la jeunesse et les femmes du Sud-Kivu."
-};
+});
 
 export default function FounderProfilePage() {
   return (

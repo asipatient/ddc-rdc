@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { FileText } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
@@ -7,11 +7,11 @@ import { institutionalDocuments, paypalDonationUrl, protectionEthicsDocuments, s
 import { getPublicDocuments } from "@/lib/document-content";
 import type { DocumentItem } from "@/data/types";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/documents-institutionnels/", {
   title: "Documents institutionnels",
   description:
     "Statuts, règlement intérieur, rapports et plans stratégiques de la DDC RDC, ASBL congolaise basée à Bukavu, engagée pour la transparence institutionnelle."
-};
+});
 
 function DocumentGrid({ documents }: { documents: DocumentItem[] }) {
   return (

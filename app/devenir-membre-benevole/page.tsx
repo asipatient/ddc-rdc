@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { CheckCircle2 } from "lucide-react";
 import { MembershipForm } from "@/components/MembershipForm";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { memberVolunteerIntro, membershipInterestDomains } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/devenir-membre-benevole/", {
   title: "Devenir membre / bénévole",
   description:
     "Devenez membre ou bénévole de la DDC RDC à Bukavu : rejoignez une communauté engagée pour la citoyenneté, le leadership et le développement du Sud-Kivu."
-};
+});
 
 export default function MemberVolunteerPage() {
   return (

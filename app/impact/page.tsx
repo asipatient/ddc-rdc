@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
@@ -6,11 +6,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { documentedImpactFacts, monitoringLearning, paypalDonationUrl, testimonials, whySupportDdc } from "@/lib/site-data";
 import { getImpactVerificationBadge, getPublicImpactIndicators, getPublicImpactSection } from "@/lib/impact-content";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/impact/", {
   title: "Impact",
   description:
     "Indicateurs, suivi-évaluation et témoignages : mesurez l'impact des programmes de la DDC RDC auprès des jeunes, des femmes et des communautés du Sud-Kivu."
-};
+});
 
 export const dynamic = "force-dynamic";
 

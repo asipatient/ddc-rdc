@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays } from "lucide-react";
-import { site } from "@/lib/site-data";
+import { buildMetadata } from "@/lib/metadata";
 import { getPublicPublicationBySlug } from "@/lib/publications";
 
 type Props = {
@@ -20,15 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Publication introuvable" };
   }
 
-  return {
+  return buildMetadata(`/publications/${slug}/`, {
     title: publication.title,
     description: publication.excerpt,
-    openGraph: {
-      title: `${publication.title} | ${site.shortName}`,
-      description: publication.excerpt,
-      images: [{ url: publication.image || "/images/ddc/hero-reel-ddc.jpg", width: 1600, height: 900 }]
-    }
-  };
+    ogImage: publication.image || undefined
+  });
 }
 
 export default async function PublicationDetailPage({ params }: Props) {

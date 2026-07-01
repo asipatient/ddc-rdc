@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { MapPin } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
@@ -6,11 +6,11 @@ import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { zonesIntervention } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/zones-intervention/", {
   title: "Zones d'intervention",
   description:
     "La DDC RDC intervient à Bukavu et dans le Sud-Kivu, avec une vocation d'expansion vers d'autres provinces de la République Démocratique du Congo."
-};
+});
 
 export default function ZonesInterventionPage() {
   return (

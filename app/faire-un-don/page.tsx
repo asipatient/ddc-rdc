@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -9,11 +9,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { donationPage } from "@/lib/site-data";
 import { getPublicSiteConfig } from "@/lib/site-settings";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/faire-un-don/", {
   title: "Faire un don",
   description:
     "Soutenez les programmes de la DDC RDC en faveur de la jeunesse, des femmes et des communautés de Bukavu, Sud-Kivu, engagées pour un Congo plus juste."
-};
+});
 
 export const dynamic = "force-dynamic";
 

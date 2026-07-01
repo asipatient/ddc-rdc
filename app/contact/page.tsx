@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
@@ -7,11 +7,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { contactIntro } from "@/lib/site-data";
 import { getPublicSiteConfig } from "@/lib/site-settings";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/contact/", {
   title: "Contact",
   description:
     "Contactez la DDC RDC à Bukavu, Sud-Kivu. Avenue Nyarwizimia N°19, Commune Ibanda. Téléphone, email et formulaire en ligne disponibles."
-};
+});
 
 const socialIcons = {
   Facebook,

@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { UsersRound } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { beneficiaries } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/beneficiaires/", {
   title: "Bénéficiaires",
   description:
     "Jeunes, femmes, enfants et communautés vulnérables de Bukavu et du Sud-Kivu : découvrez les publics accompagnés par la DDC RDC dans ses programmes citoyens."
-};
+});
 
 export default function BeneficiariesPage() {
   return (

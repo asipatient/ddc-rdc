@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { RealisationCard } from "@/components/RealisationCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getPublicRealisations } from "@/lib/realisations";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/realisations/", {
   title: "Nos réalisations",
   description:
     "Découvrez les réalisations de la DDC RDC auprès des jeunes, des femmes et des communautés de Bukavu et du Sud-Kivu, présentées en timeline détaillée."
-};
+});
 
 export const dynamic = "force-dynamic";
 

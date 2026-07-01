@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { Eye, Target } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { home, strategicPlan } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/vision-mission/", {
   title: "Vision & Mission",
   description:
     "Découvrez la vision et la mission de la DDC RDC : former une génération consciente, compétente et engagée au service de la transformation démocratique et sociale du Congo."
-};
+});
 
 export default function VisionMissionPage() {
   return (

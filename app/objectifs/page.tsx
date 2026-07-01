@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { home, specificObjectives } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/objectifs/", {
   title: "Objectifs",
   description:
     "Objectif général et objectifs spécifiques de la DDC RDC : citoyenneté, leadership, autonomisation économique et résilience des communautés du Sud-Kivu."
-};
+});
 
 export default function ObjectivesPage() {
   return (

@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { AxisCard } from "@/components/AxisCard";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconCard } from "@/components/IconCard";
 import { PageHero } from "@/components/PageHero";
 import { axes, flagshipPrograms, interventionAreas } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/domaines-intervention/", {
   title: "Domaines d'intervention",
   description:
     "Éducation civique, leadership, autonomisation économique, environnement et paix : les domaines d'intervention de la DDC RDC au Sud-Kivu, RDC."
-};
+});
 
 export default function DomainsPage() {
   return (

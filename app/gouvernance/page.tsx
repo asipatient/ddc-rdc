@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { governanceItems, principles } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/gouvernance/", {
   title: "Gouvernance interne",
   description:
     "Assemblée Générale, Conseil d'Administration, Coordination : découvrez la gouvernance interne de la DDC RDC, ASBL congolaise basée à Bukavu, Sud-Kivu."
-};
+});
 
 export default function GovernancePage() {
   return (

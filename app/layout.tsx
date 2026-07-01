@@ -52,13 +52,6 @@ export const metadata: Metadata = {
   icons: {
     icon: site.favicon,
     apple: site.logo
-  },
-  alternates: {
-    canonical: "/",
-    languages: {
-      fr: "/",
-      en: "/en"
-    }
   }
 };
 

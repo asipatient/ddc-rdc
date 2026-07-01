@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { CircleDot } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { actionMeans, interventionApproach } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/moyens-action/", {
   title: "Moyens d'action",
   description:
     "Formations, plaidoyer, recherche et mobilisation communautaire : découvrez les moyens d'action de la DDC RDC pour transformer les communautés du Congo."
-};
+});
 
 export default function MoyensActionPage() {
   return (

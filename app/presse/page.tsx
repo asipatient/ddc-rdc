@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { Mail, Newspaper } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { officialContact, pressResources } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/presse/", {
   title: "Presse",
   description:
     "Communiqués, dossiers de presse et contacts médias de la DDC RDC, association congolaise basée à Bukavu engagée pour la jeunesse et les femmes du Congo."
-};
+});
 
 export default function PressPage() {
   return (

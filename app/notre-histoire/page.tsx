@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { founderProfile, historyIntro, historyTimeline } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/notre-histoire/", {
   title: "Notre histoire",
   description:
     "De l'engagement citoyen individuel à la structuration institutionnelle : retracez l'histoire de la DDC RDC, née à Bukavu au service du Sud-Kivu."
-};
+});
 
 export default function HistoryPage() {
   return (

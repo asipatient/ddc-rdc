@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -10,11 +10,11 @@ import { partnerCategories, partnerPlaceholders, partnersPage } from "@/lib/site
 import { getPublicPartners } from "@/lib/partner-content";
 import { getPublicSiteConfig } from "@/lib/site-settings";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/partenaires/", {
   title: "Partenaires",
   description:
     "Partenaires institutionnels, techniques, financiers et académiques accompagnant la DDC RDC dans ses actions citoyennes à Bukavu et au Sud-Kivu."
-};
+});
 
 export const dynamic = "force-dynamic";
 

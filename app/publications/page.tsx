@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { PageHero } from "@/components/PageHero";
 import { PublicationFilters } from "@/components/PublicationFilters";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getPublicPublicationCategories, getPublicPublications } from "@/lib/publications";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/publications/", {
   title: "Actualités / Publications",
   description:
     "Actualités, rapports, études et notes de plaidoyer de la DDC RDC sur la citoyenneté, le leadership et le développement communautaire à Bukavu, RDC."
-};
+});
 
 export const dynamic = "force-dynamic";
 

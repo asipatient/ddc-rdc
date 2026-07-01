@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
@@ -7,11 +7,11 @@ import { ProgramCard } from "@/components/ProgramCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getPublicProgramContent } from "@/lib/program-content";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/axes-intervention/", {
   title: "Axes d'intervention",
   description:
     "La DDC RDC structure son action autour de trois axes : gouvernance citoyenne, autonomisation économique et inclusion, au service des communautés du Congo."
-};
+});
 
 export const dynamic = "force-dynamic";
 

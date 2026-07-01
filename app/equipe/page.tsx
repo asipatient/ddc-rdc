@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { Mail } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -6,11 +6,11 @@ import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getPublicTeamMembers } from "@/lib/team";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata("/equipe/", {
   title: "Notre équipe",
   description:
     "Découvrez l'équipe dirigeante de la DDC RDC à Bukavu : coordination, direction financière et responsables de programmes pour la jeunesse et les femmes."
-};
+});
 
 export const dynamic = "force-dynamic";
 

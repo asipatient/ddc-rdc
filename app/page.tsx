@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
+import { buildMetadata } from "@/lib/metadata";
 import { AxisCard } from "@/components/AxisCard";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ContactForm } from "@/components/ContactForm";
@@ -28,6 +29,8 @@ import {
 } from "@/lib/site-data";
 import { getImpactVerificationBadge, getPublicImpactIndicators, getPublicImpactSection } from "@/lib/impact-content";
 import { getPublicSiteConfig } from "@/lib/site-settings";
+
+export const metadata = buildMetadata("/");
 
 const priorityAudiences = [
   {
