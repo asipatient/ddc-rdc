@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { Facebook, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
@@ -7,10 +7,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { contactIntro } from "@/lib/site-data";
 import { getPublicSiteConfig } from "@/lib/site-settings";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Contact",
-  description: "Contacter la DDC RDC, proposer une initiative communautaire, devenir membre, bénévole, donateur ou partenaire."
-};
+  description: "Contactez la DDC RDC à Bukavu, Sud-Kivu. Avenue Nyarwizimia N°19, Commune Ibanda. Téléphone, email et formulaire en ligne disponibles.",
+  path: "/contact/"
+});
 
 const socialIcons = {
   Facebook,
@@ -53,20 +54,21 @@ export default async function ContactPage() {
             <div className="mt-8">
               <h2 className="text-lg font-black text-brand-blue">Réseaux sociaux</h2>
               <div className="mt-4 flex gap-3">
-                {site.contact.social.map((social) => {
-                  const Icon = socialIcons[social.label as keyof typeof socialIcons] ?? Mail;
-                  return (
-                    <Link
-                      key={social.label}
-                      href={social.href}
+                {(site.contact.social as import("@/data/site").SocialLink[])
+                  .filter((s) => s.active)
+                  .map((social) => (
+                    <a
+                      key={social.platform}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-md border border-slate-200 text-brand-blue transition hover:bg-brand-blue hover:text-white"
                       aria-label={social.label}
                       title={social.label}
                     >
-                      <Icon aria-hidden="true" className="h-5 w-5" />
-                    </Link>
-                  );
-                })}
+                      <Mail aria-hidden="true" className="h-5 w-5" />
+                    </a>
+                  ))}
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { ProgramCard } from "@/components/ProgramCard";
@@ -6,10 +6,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { actionMeans, paypalDonationUrl } from "@/lib/site-data";
 import { getPublicProgramContent } from "@/lib/program-content";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Programmes",
-  description: "Programmes phares et moyens d'action de la DDC RDC."
-};
+  description: "JASIRI, PROJEC, École Citoyenne, Alerte Précoce — découvrez les 8 programmes fondateurs de la DDC RDC pour la jeunesse, les femmes et les communautés du Congo.",
+  path: "/programmes/"
+});
 
 export const dynamic = "force-dynamic";
 

@@ -1,19 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { footerColumns, site } from "@/lib/site-data";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import type { SocialLink } from "@/data/site";
 
-const socialIcons = {
-  Facebook,
-  LinkedIn: Linkedin,
-  X: Mail,
-  YouTube: Youtube
+// Icône X (Twitter) — Lucide n'a pas d'icône X native, on utilise un SVG inline léger
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
+const socialIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  facebook: Facebook,
+  x: XIcon,
+  youtube: Youtube,
+  linkedin: Linkedin,
+  instagram: Instagram,
+  tiktok: ({ className }) => (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.21 8.21 0 004.84 1.56V6.84a4.85 4.85 0 01-1.07-.15z" />
+    </svg>
+  )
 };
 
 type FooterSiteConfig = typeof site & { footerText?: string };
 
 export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig }) {
+  const activeSocials = (siteConfig.contact.social as SocialLink[]).filter((s) => s.active);
+
   return (
     <footer className="bg-brand-blue text-white">
       <div className="section-shell py-14">
@@ -83,25 +101,31 @@ export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig })
         <div className="mt-12 grid gap-8 border-t border-white/20 pt-8 lg:grid-cols-[1fr_0.9fr]">
           <NewsletterForm compact />
           <div className="lg:text-right">
-            <p className="text-sm font-bold">Réseaux sociaux</p>
-            <div className="mt-4 flex gap-3 lg:justify-end">
-              {siteConfig.contact.social.map((social) => {
-                const Icon = socialIcons[social.label as keyof typeof socialIcons] ?? Mail;
-                return (
-                  <Link
-                    key={social.label}
-                    href={social.href}
-                    className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 text-white transition hover:bg-white hover:text-brand-blue"
-                    aria-label={social.label}
-                    title={social.label}
-                  >
-                    <Icon aria-hidden="true" className="h-4 w-4" />
-                  </Link>
-                );
-              })}
-            </div>
+            {activeSocials.length > 0 && (
+              <>
+                <p className="text-sm font-bold">Réseaux sociaux</p>
+                <div className="mt-4 flex gap-3 lg:justify-end">
+                  {activeSocials.map((social) => {
+                    const Icon = socialIconMap[social.platform] ?? Mail;
+                    return (
+                      <a
+                        key={social.platform}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={social.label}
+                        title={social.label}
+                        className="focus-ring inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                      >
+                        <Icon className="h-4 w-4" />
+                      </a>
+                    );
+                  })}
+                </div>
+              </>
+            )}
             <p className="mt-5 text-xs text-white/60">
-              © {new Date().getFullYear()} {siteConfig.legalName} - {siteConfig.footerText || "Tous droits réservés."}
+              © {new Date().getFullYear()} {siteConfig.legalName} — {siteConfig.footerText ?? "Tous droits réservés."}
             </p>
           </div>
         </div>

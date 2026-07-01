@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { aboutIntro, founderProfile, historyTimeline, site } from "@/lib/site-data";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "À propos",
-  description: "Origine, vocation institutionnelle et engagement communautaire de la DDC RDC."
-};
+  description: "La Dynamique Debout Congolais (DDC RDC) est fondée à Bukavu, Sud-Kivu, engagée pour l'autonomisation des jeunes, des femmes et des communautés congolaises.",
+  path: "/a-propos/"
+});
 
 export default function AboutPage() {
   return (

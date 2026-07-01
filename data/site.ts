@@ -1,6 +1,15 @@
 import { officialContact } from "./contact";
 import { paypalDonationUrl } from "./donation";
 
+export type SocialPlatform = "facebook" | "x" | "youtube" | "linkedin" | "instagram" | "tiktok";
+
+export type SocialLink = {
+  platform: SocialPlatform;
+  label: string;
+  url: string;
+  active: boolean;
+};
+
 export const site = {
   name: "Dynamique Debout Congolais",
   shortName: "DDC RDC",
@@ -14,6 +23,7 @@ export const site = {
   logo: "/images/logos/logo-ddc.png",
   logoMark: "/images/logos/logo-ddc-mark.png",
   favicon: "/favicon.png",
+  footerText: "Tous droits réservés.",
   donationUrl: paypalDonationUrl,
   donationPageUrl: "/faire-un-don",
   contact: {
@@ -21,11 +31,13 @@ export const site = {
     phone: officialContact.phone,
     email: officialContact.email,
     social: [
-      { label: "Facebook", href: "#" },
-      { label: "LinkedIn", href: "#" },
-      { label: "X", href: "#" },
-      { label: "YouTube", href: "#" }
-    ]
+      { platform: "facebook" as SocialPlatform, label: "Facebook DDC RDC", url: "https://www.facebook.com/ddcrdc", active: true },
+      { platform: "x" as SocialPlatform, label: "X (Twitter) DDC RDC", url: "https://x.com/ddcrdc", active: true },
+      { platform: "youtube" as SocialPlatform, label: "YouTube DDC RDC", url: "https://www.youtube.com/@ddcrdc", active: false },
+      { platform: "linkedin" as SocialPlatform, label: "LinkedIn DDC RDC", url: "https://www.linkedin.com/company/ddcrdc", active: false },
+      { platform: "instagram" as SocialPlatform, label: "Instagram DDC RDC", url: "https://www.instagram.com/ddcrdc", active: false },
+      { platform: "tiktok" as SocialPlatform, label: "TikTok DDC RDC", url: "https://www.tiktok.com/@ddcrdc", active: false }
+    ] satisfies SocialLink[]
   }
 };
 

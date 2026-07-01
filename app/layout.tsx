@@ -26,39 +26,70 @@ const themeInitScript = `
 })();
 `;
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  name: "Dynamique Debout Congolais",
+  alternateName: "DDC RDC",
+  url: "https://ddcrdc.org",
+  logo: "https://ddcrdc.org/images/logos/logo-ddc.png",
+  description:
+    "Association congolaise engagée pour l'autonomisation des jeunes, des femmes et des communautés au Sud-Kivu, RDC.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Avenue Nyarwizimia N°19",
+    addressLocality: "Bukavu",
+    addressRegion: "Sud-Kivu",
+    addressCountry: "CD"
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+243992588137",
+    email: "ddc.democratie@gmail.com"
+  },
+  sameAs: ["https://www.facebook.com/ddcrdc", "https://x.com/ddcrdc"]
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.shortName} - ${site.slogan}`,
+    default: `${site.shortName} — ${site.slogan}`,
     template: `%s | ${site.shortName}`
   },
-  description: site.description,
+  description:
+    "La DDC RDC mobilise la jeunesse et les femmes de Bukavu pour bâtir des communautés responsables, inclusives et engagées dans la transformation de la RDC.",
   keywords: [
     "DDC RDC",
     "Dynamique Debout Congolais",
     "jeunesse congolaise",
-    "femmes",
+    "femmes autonomisation",
     "citoyenneté",
-    "développement communautaire",
-    "ASBL RDC"
+    "Bukavu",
+    "Sud-Kivu",
+    "développement communautaire RDC"
   ],
+  robots: { index: true, follow: true },
   openGraph: {
-    title: `${site.shortName} - ${site.slogan}`,
+    title: `${site.shortName} — ${site.slogan}`,
     description: site.description,
     locale: "fr_CD",
+    type: "website",
     siteName: site.shortName,
-    images: [{ url: "/images/ddc/hero-reel-ddc.jpg", width: 1600, height: 900 }]
+    images: [{ url: "/images/ddc/hero-reel-ddc.jpg", width: 1600, height: 900, alt: "DDC RDC" }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@ddcrdc",
+    title: `${site.shortName} — ${site.slogan}`,
+    description: site.description
   },
   icons: {
     icon: site.favicon,
     apple: site.logo
   },
   alternates: {
-    canonical: "/",
-    languages: {
-      fr: "/",
-      en: "/en"
-    }
+    canonical: site.url,
+    languages: { fr: site.url }
   }
 };
 
@@ -69,6 +100,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="fr" suppressHydrationWarning className={plusJakartaSans.variable}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className={plusJakartaSans.className}>
         <ThemeProvider>

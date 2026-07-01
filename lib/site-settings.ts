@@ -1,11 +1,18 @@
 import "server-only";
 
 import { site } from "@/data/site";
+import type { SocialLink } from "@/data/site";
 import { readAdminStore } from "@/lib/admin/content-store";
 
 export async function getPublicSiteConfig() {
   const store = await readAdminStore();
   const settings = store.siteSettings;
+
+  // Les socialLinks du store admin peuvent encore être dans l'ancien format {label, href}
+  // On normalise vers le nouveau format SocialLink si nécessaire
+  const socialLinks: SocialLink[] = settings.socialLinks?.length
+    ? (settings.socialLinks as unknown as SocialLink[])
+    : (site.contact.social as SocialLink[]);
 
   return {
     ...site,
@@ -20,7 +27,7 @@ export async function getPublicSiteConfig() {
       address: settings.address || site.contact.address,
       phone: settings.phone || site.contact.phone,
       email: settings.email || site.contact.email,
-      social: settings.socialLinks?.length ? settings.socialLinks : site.contact.social
+      social: socialLinks
     },
     footerText: settings.footerText || "Tous droits réservés."
   };

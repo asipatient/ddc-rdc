@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
@@ -6,10 +6,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { documentedImpactFacts, monitoringLearning, paypalDonationUrl, testimonials, whySupportDdc } from "@/lib/site-data";
 import { getImpactVerificationBadge, getPublicImpactIndicators, getPublicImpactSection } from "@/lib/impact-content";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Impact",
-  description: "Indicateurs, suivi-évaluation, apprentissage et témoignages de la DDC RDC."
-};
+  description: "Découvrez les résultats d'impact de la DDC RDC : bénéficiaires formés, femmes autonomisées, enfants sensibilisés et initiatives communautaires réalisées à Bukavu.",
+  path: "/impact/"
+});
 
 export const dynamic = "force-dynamic";
 

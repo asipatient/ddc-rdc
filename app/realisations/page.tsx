@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { RealisationCard } from "@/components/RealisationCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getPublicRealisations } from "@/lib/realisations";
 
-export const metadata: Metadata = {
-  title: "Nos réalisations",
-  description: "Réalisations de la DDC RDC présentées sous forme de timeline et de cartes."
-};
+export const metadata = buildMetadata({
+  title: "Réalisations",
+  description: "Les réalisations documentées de la DDC RDC : ateliers interculturels, activités citoyennes, sensibilisation des enfants et mobilisation communautaire à Bukavu.",
+  path: "/realisations/"
+});
 
 export const dynamic = "force-dynamic";
 
