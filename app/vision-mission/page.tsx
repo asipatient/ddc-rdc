@@ -17,6 +17,7 @@ export default function VisionMissionPage() {
       <PageHero
         kicker="Vision & Mission"
         title="Former une génération consciente, compétente et engagée."
+        location="Bukavu · Sud-Kivu · République Démocratique du Congo"
         description="La DDC RDC articule son action autour d'une vision de transformation démocratique, sociale, économique, culturelle et environnementale."
       />
       <section className="bg-white py-16 sm:py-20">

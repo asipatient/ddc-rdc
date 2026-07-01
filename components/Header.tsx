@@ -3,12 +3,95 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navigation, site } from "@/lib/site-data";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { cn } from "@/lib/utils";
+import type { NavLink } from "@/data/types";
 
 type HeaderSiteConfig = typeof site;
+
+function NavDropdown({ label, items }: { label: string; items: NavLink[] }) {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    function handlePointerDown(event: PointerEvent) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, [open]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onKeyDown={(event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          buttonRef.current?.focus();
+        }
+      }}
+      onBlur={(event) => {
+        if (!containerRef.current?.contains(event.relatedTarget as Node)) {
+          setOpen(false);
+        }
+      }}
+    >
+      <button
+        ref={buttonRef}
+        type="button"
+        className="site-header-link focus-ring inline-flex min-h-11 items-center gap-1 rounded-md px-3 text-sm font-bold transition"
+        aria-haspopup="true"
+        aria-expanded={open}
+        onClick={() => setOpen((value) => !value)}
+      >
+        {label}
+        <ChevronDown aria-hidden="true" className="h-4 w-4" />
+      </button>
+      <div
+        className={cn(
+          "site-header-dropdown absolute left-0 top-full w-64 rounded-lg border p-2 shadow-soft transition",
+          open ? "visible translate-y-0 opacity-100" : "invisible translate-y-2 opacity-0"
+        )}
+      >
+        {items.map((subItem) =>
+          subItem.external ? (
+            <a
+              key={subItem.href}
+              href={subItem.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-header-dropdown-link focus-ring block rounded-md px-3 py-2 text-sm font-semibold transition"
+              onClick={() => setOpen(false)}
+            >
+              {subItem.label}
+            </a>
+          ) : (
+            <Link
+              key={subItem.href}
+              href={subItem.href}
+              className="site-header-dropdown-link focus-ring block rounded-md px-3 py-2 text-sm font-semibold transition"
+              onClick={() => setOpen(false)}
+            >
+              {subItem.label}
+            </Link>
+          )
+        )}
+      </div>
+    </div>
+  );
+}
 
 export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,35 +113,7 @@ export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig })
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigation principale">
           {navigation.map((item) =>
             "items" in item ? (
-              <div key={item.label} className="group relative">
-                <button className="site-header-link focus-ring inline-flex min-h-11 items-center gap-1 rounded-md px-3 text-sm font-bold transition">
-                  {item.label}
-                  <ChevronDown aria-hidden="true" className="h-4 w-4" />
-                </button>
-                <div className="site-header-dropdown invisible absolute left-0 top-full w-64 translate-y-2 rounded-lg border p-2 opacity-0 shadow-soft transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                  {item.items.map((subItem) =>
-                    subItem.external ? (
-                      <a
-                        key={subItem.href}
-                        href={subItem.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="site-header-dropdown-link focus-ring block rounded-md px-3 py-2 text-sm font-semibold transition"
-                      >
-                        {subItem.label}
-                      </a>
-                    ) : (
-                      <Link
-                        key={subItem.href}
-                        href={subItem.href}
-                        className="site-header-dropdown-link focus-ring block rounded-md px-3 py-2 text-sm font-semibold transition"
-                      >
-                        {subItem.label}
-                      </Link>
-                    )
-                  )}
-                </div>
-              </div>
+              <NavDropdown key={item.label} label={item.label} items={item.items} />
             ) : (
               <Link
                 key={item.href}
