@@ -20,11 +20,12 @@ export const site = {
     address: officialContact.address,
     phone: officialContact.phone,
     email: officialContact.email,
+    // À confirmer avec l'équipe DDC RDC
     social: [
-      { label: "Facebook", href: "#" },
-      { label: "LinkedIn", href: "#" },
-      { label: "X", href: "#" },
-      { label: "YouTube", href: "#" }
+      { label: "Facebook", href: "https://www.facebook.com/ddcrdc" },
+      { label: "YouTube", href: "https://www.youtube.com/@ddcrdc" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/ddcrdc" },
+      { label: "X", href: "https://x.com/ddcrdc" }
     ]
   }
 };

@@ -35,11 +35,19 @@ export const metadata: Metadata = {
     "ASBL RDC"
   ],
   openGraph: {
+    type: "website",
     title: `${site.shortName} - ${site.slogan}`,
     description: site.description,
     locale: "fr_CD",
     siteName: site.shortName,
     images: [{ url: "/images/ddc/hero-reel-ddc.jpg", width: 1600, height: 900 }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@ddcrdc",
+    title: `${site.shortName} - ${site.slogan}`,
+    description: site.description,
+    images: ["/images/ddc/hero-reel-ddc.jpg"]
   },
   icons: {
     icon: site.favicon,

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Facebook, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const socialIcons = {
   Facebook,
   LinkedIn: Linkedin,
-  X: Mail,
+  X: Twitter,
   YouTube: Youtube
 };
 
@@ -60,6 +60,8 @@ export default async function ContactPage() {
                     <Link
                       key={social.label}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-md border border-slate-200 text-brand-blue transition hover:bg-brand-blue hover:text-white"
                       aria-label={social.label}
                       title={social.label}

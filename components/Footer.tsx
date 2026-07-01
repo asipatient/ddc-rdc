@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
 import { footerColumns, site } from "@/lib/site-data";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
 const socialIcons = {
   Facebook,
   LinkedIn: Linkedin,
-  X: Mail,
+  X: Twitter,
   YouTube: Youtube
 };
 
@@ -35,6 +35,24 @@ export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig })
             >
               Faire un don
             </a>
+            <div className="mt-5 flex gap-2">
+              {siteConfig.contact.social.map((social) => {
+                const Icon = socialIcons[social.label as keyof typeof socialIcons] ?? Mail;
+                return (
+                  <Link
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="focus-ring flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                    aria-label={social.label}
+                    title={social.label}
+                  >
+                    <Icon aria-hidden="true" className="h-4 w-4" />
+                  </Link>
+                );
+              })}
+            </div>
             <div className="mt-6 grid gap-3 text-sm text-white/75">
               <p className="flex items-center gap-3">
                 <MapPin aria-hidden="true" className="h-4 w-4 text-brand-gold" />
@@ -83,24 +101,7 @@ export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig })
         <div className="mt-12 grid gap-8 border-t border-white/20 pt-8 lg:grid-cols-[1fr_0.9fr]">
           <NewsletterForm compact />
           <div className="lg:text-right">
-            <p className="text-sm font-bold">Réseaux sociaux</p>
-            <div className="mt-4 flex gap-3 lg:justify-end">
-              {siteConfig.contact.social.map((social) => {
-                const Icon = socialIcons[social.label as keyof typeof socialIcons] ?? Mail;
-                return (
-                  <Link
-                    key={social.label}
-                    href={social.href}
-                    className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 text-white transition hover:bg-white hover:text-brand-blue"
-                    aria-label={social.label}
-                    title={social.label}
-                  >
-                    <Icon aria-hidden="true" className="h-4 w-4" />
-                  </Link>
-                );
-              })}
-            </div>
-            <p className="mt-5 text-xs text-white/60">
+            <p className="text-xs text-white/60">
               © {new Date().getFullYear()} {siteConfig.legalName} - {siteConfig.footerText || "Tous droits réservés."}
             </p>
           </div>
