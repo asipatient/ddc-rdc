@@ -9,7 +9,8 @@ import type { DocumentItem } from "@/data/types";
 
 export const metadata: Metadata = {
   title: "Documents institutionnels",
-  description: "Statuts, règlement intérieur, rapports, politiques internes, plans stratégiques et documents de plaidoyer de la DDC RDC."
+  description:
+    "Statuts, règlement intérieur, rapports et plans stratégiques de la DDC RDC, ASBL congolaise basée à Bukavu, engagée pour la transparence institutionnelle."
 };
 
 function DocumentGrid({ documents }: { documents: DocumentItem[] }) {

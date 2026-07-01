@@ -8,7 +8,8 @@ import { activityArticles, founderProfile, historyTimeline } from "@/lib/site-da
 
 export const metadata: Metadata = {
   title: "Profil du Président Fondateur",
-  description: "Profil institutionnel de Patient Asifiwe, Président Fondateur de la DDC RDC."
+  description:
+    "Patient Asifiwe, Président Fondateur de la DDC RDC à Bukavu : parcours, engagement citoyen et vision pour la jeunesse et les femmes du Sud-Kivu."
 };
 
 export default function FounderProfilePage() {

@@ -7,7 +7,8 @@ import { opportunities } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Appels à projets / Opportunités",
-  description: "Appels à candidatures, formations, bénévolat, partenariats, consultations communautaires et événements de la DDC RDC."
+  description:
+    "Appels à candidatures, formations, bénévolat et partenariats : consultez les opportunités proposées par la DDC RDC aux jeunes et femmes de Bukavu, RDC."
 };
 
 export default function OpportunitiesPage() {

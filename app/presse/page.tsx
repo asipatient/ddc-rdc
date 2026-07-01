@@ -7,7 +7,8 @@ import { officialContact, pressResources } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Presse",
-  description: "Communiqués, dossiers de presse, photos officielles et contacts médias de la DDC RDC."
+  description:
+    "Communiqués, dossiers de presse et contacts médias de la DDC RDC, association congolaise basée à Bukavu engagée pour la jeunesse et les femmes du Congo."
 };
 
 export default function PressPage() {

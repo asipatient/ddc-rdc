@@ -9,7 +9,7 @@ export const site = {
   futureLocales: ["en"],
   slogan: "Jeunesse, femmes et communautés debout pour un Congo juste, inclusif et durable.",
   description:
-    "La DDC RDC mobilise la jeunesse et les femmes congolaises pour construire des communautés responsables, résilientes, créatives, inclusives et engagées dans la transformation démocratique, sociale, économique, culturelle et environnementale de la République Démocratique du Congo.",
+    "La DDC RDC mobilise la jeunesse et les femmes de Bukavu pour bâtir des communautés responsables, inclusives et engagées dans la transformation de la RDC.",
   url: "https://ddcrdc.org",
   logo: "/images/logos/logo-ddc.png",
   logoMark: "/images/logos/logo-ddc-mark.png",

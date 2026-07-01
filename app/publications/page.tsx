@@ -6,7 +6,8 @@ import { getPublicPublicationCategories, getPublicPublications } from "@/lib/pub
 
 export const metadata: Metadata = {
   title: "Actualités / Publications",
-  description: "Actualités, rapports, études, notes de plaidoyer, communiqués et événements de la DDC RDC."
+  description:
+    "Actualités, rapports, études et notes de plaidoyer de la DDC RDC sur la citoyenneté, le leadership et le développement communautaire à Bukavu, RDC."
 };
 
 export const dynamic = "force-dynamic";

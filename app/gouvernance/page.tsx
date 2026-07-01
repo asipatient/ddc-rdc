@@ -6,7 +6,8 @@ import { governanceItems, principles } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Gouvernance interne",
-  description: "Structure de gouvernance interne prévue pour la DDC RDC."
+  description:
+    "Assemblée Générale, Conseil d'Administration, Coordination : découvrez la gouvernance interne de la DDC RDC, ASBL congolaise basée à Bukavu, Sud-Kivu."
 };
 
 export default function GovernancePage() {

@@ -6,7 +6,8 @@ import { home, specificObjectives } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Objectifs",
-  description: "Objectif général et objectifs spécifiques de la DDC RDC."
+  description:
+    "Objectif général et objectifs spécifiques de la DDC RDC : citoyenneté, leadership, autonomisation économique et résilience des communautés du Sud-Kivu."
 };
 
 export default function ObjectivesPage() {

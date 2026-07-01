@@ -7,7 +7,8 @@ import { actionMeans, interventionApproach } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Moyens d'action",
-  description: "Moyens d'action de la DDC RDC : formations, plaidoyer, recherche, partenariats et mobilisation communautaire."
+  description:
+    "Formations, plaidoyer, recherche et mobilisation communautaire : découvrez les moyens d'action de la DDC RDC pour transformer les communautés du Congo."
 };
 
 export default function MoyensActionPage() {

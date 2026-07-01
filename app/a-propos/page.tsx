@@ -7,7 +7,8 @@ import { aboutIntro, founderProfile, historyTimeline, site } from "@/lib/site-da
 
 export const metadata: Metadata = {
   title: "À propos",
-  description: "Origine, vocation institutionnelle et engagement communautaire de la DDC RDC."
+  description:
+    "La Dynamique Debout Congolais (DDC RDC) est une ASBL fondée à Bukavu, Sud-Kivu, engagée pour l'autonomisation des jeunes, des femmes et des communautés congolaises."
 };
 
 export default function AboutPage() {

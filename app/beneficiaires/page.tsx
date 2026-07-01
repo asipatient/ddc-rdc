@@ -7,7 +7,8 @@ import { beneficiaries } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Bénéficiaires",
-  description: "Publics cibles et accompagnements proposés par la DDC RDC."
+  description:
+    "Jeunes, femmes, enfants et communautés vulnérables de Bukavu et du Sud-Kivu : découvrez les publics accompagnés par la DDC RDC dans ses programmes citoyens."
 };
 
 export default function BeneficiariesPage() {

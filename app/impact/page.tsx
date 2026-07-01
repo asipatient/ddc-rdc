@@ -8,7 +8,8 @@ import { getImpactVerificationBadge, getPublicImpactIndicators, getPublicImpactS
 
 export const metadata: Metadata = {
   title: "Impact",
-  description: "Indicateurs, suivi-évaluation, apprentissage et témoignages de la DDC RDC."
+  description:
+    "Indicateurs, suivi-évaluation et témoignages : mesurez l'impact des programmes de la DDC RDC auprès des jeunes, des femmes et des communautés du Sud-Kivu."
 };
 
 export const dynamic = "force-dynamic";

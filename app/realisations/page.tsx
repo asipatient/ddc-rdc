@@ -7,7 +7,8 @@ import { getPublicRealisations } from "@/lib/realisations";
 
 export const metadata: Metadata = {
   title: "Nos réalisations",
-  description: "Réalisations de la DDC RDC présentées sous forme de timeline et de cartes."
+  description:
+    "Découvrez les réalisations de la DDC RDC auprès des jeunes, des femmes et des communautés de Bukavu et du Sud-Kivu, présentées en timeline détaillée."
 };
 
 export const dynamic = "force-dynamic";

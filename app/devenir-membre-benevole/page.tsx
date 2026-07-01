@@ -7,7 +7,8 @@ import { memberVolunteerIntro, membershipInterestDomains } from "@/lib/site-data
 
 export const metadata: Metadata = {
   title: "Devenir membre / bénévole",
-  description: "Rejoindre la DDC RDC comme membre, bénévole ou citoyen engagé."
+  description:
+    "Devenez membre ou bénévole de la DDC RDC à Bukavu : rejoignez une communauté engagée pour la citoyenneté, le leadership et le développement du Sud-Kivu."
 };
 
 export default function MemberVolunteerPage() {

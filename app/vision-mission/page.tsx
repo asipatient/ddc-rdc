@@ -7,7 +7,8 @@ import { home, strategicPlan } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Vision & Mission",
-  description: "Vision, mission et espace plan stratégique de la DDC RDC."
+  description:
+    "Découvrez la vision et la mission de la DDC RDC : former une génération consciente, compétente et engagée au service de la transformation démocratique et sociale du Congo."
 };
 
 export default function VisionMissionPage() {

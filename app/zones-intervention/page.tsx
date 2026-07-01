@@ -8,7 +8,8 @@ import { zonesIntervention } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Zones d'intervention",
-  description: "Ancrage territorial de la DDC RDC à Bukavu, Sud-Kivu, et vocation d'expansion."
+  description:
+    "La DDC RDC intervient à Bukavu et dans le Sud-Kivu, avec une vocation d'expansion vers d'autres provinces de la République Démocratique du Congo."
 };
 
 export default function ZonesInterventionPage() {

@@ -8,7 +8,8 @@ import { getPublicTeamMembers } from "@/lib/team";
 
 export const metadata: Metadata = {
   title: "Notre équipe",
-  description: "Équipe dirigeante de la DDC RDC."
+  description:
+    "Découvrez l'équipe dirigeante de la DDC RDC à Bukavu : coordination, direction financière et responsables de programmes pour la jeunesse et les femmes."
 };
 
 export const dynamic = "force-dynamic";

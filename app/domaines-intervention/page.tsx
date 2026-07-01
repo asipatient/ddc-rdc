@@ -7,7 +7,8 @@ import { axes, flagshipPrograms, interventionAreas } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Domaines d'intervention",
-  description: "Les domaines d'intervention de la DDC RDC : citoyenneté, leadership, autonomisation, environnement, paix et culture."
+  description:
+    "Éducation civique, leadership, autonomisation économique, environnement et paix : les domaines d'intervention de la DDC RDC au Sud-Kivu, RDC."
 };
 
 export default function DomainsPage() {

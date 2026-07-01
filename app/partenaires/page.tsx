@@ -12,7 +12,8 @@ import { getPublicSiteConfig } from "@/lib/site-settings";
 
 export const metadata: Metadata = {
   title: "Partenaires",
-  description: "Partenariats institutionnels, techniques, financiers, académiques et communautaires de la DDC RDC."
+  description:
+    "Partenaires institutionnels, techniques, financiers et académiques accompagnant la DDC RDC dans ses actions citoyennes à Bukavu et au Sud-Kivu."
 };
 
 export const dynamic = "force-dynamic";

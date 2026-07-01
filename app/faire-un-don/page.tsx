@@ -11,7 +11,8 @@ import { getPublicSiteConfig } from "@/lib/site-settings";
 
 export const metadata: Metadata = {
   title: "Faire un don",
-  description: "Soutenir les actions citoyennes, économiques, environnementales et communautaires de la DDC RDC."
+  description:
+    "Soutenez les programmes de la DDC RDC en faveur de la jeunesse, des femmes et des communautés de Bukavu, Sud-Kivu, engagées pour un Congo plus juste."
 };
 
 export const dynamic = "force-dynamic";

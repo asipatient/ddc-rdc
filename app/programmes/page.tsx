@@ -8,7 +8,8 @@ import { getPublicProgramContent } from "@/lib/program-content";
 
 export const metadata: Metadata = {
   title: "Programmes",
-  description: "Programmes phares et moyens d'action de la DDC RDC."
+  description:
+    "JASIRI, PROJEC, École Citoyenne, Alerte Précoce — découvrez les 8 programmes fondateurs de la DDC RDC pour la jeunesse, les femmes et les communautés du Congo."
 };
 
 export const dynamic = "force-dynamic";

@@ -5,7 +5,8 @@ import { principles } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Principes directeurs",
-  description: "Principes directeurs et valeurs institutionnelles de la DDC RDC."
+  description:
+    "Intégrité, inclusion, redevabilité : découvrez les principes directeurs et valeurs institutionnelles qui guident l'action de la DDC RDC au Sud-Kivu."
 };
 
 export default function PrinciplesPage() {

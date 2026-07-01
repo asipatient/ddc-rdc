@@ -9,7 +9,8 @@ import { getPublicProgramContent } from "@/lib/program-content";
 
 export const metadata: Metadata = {
   title: "Axes d'intervention",
-  description: "Les trois axes d'intervention de la DDC RDC et les programmes associés."
+  description:
+    "La DDC RDC structure son action autour de trois axes : gouvernance citoyenne, autonomisation économique et inclusion, au service des communautés du Congo."
 };
 
 export const dynamic = "force-dynamic";

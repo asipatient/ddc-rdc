@@ -9,7 +9,8 @@ import { getPublicSiteConfig } from "@/lib/site-settings";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contacter la DDC RDC, proposer une initiative communautaire, devenir membre, bénévole, donateur ou partenaire."
+  description:
+    "Contactez la DDC RDC à Bukavu, Sud-Kivu. Avenue Nyarwizimia N°19, Commune Ibanda. Téléphone, email et formulaire en ligne disponibles."
 };
 
 const socialIcons = {
