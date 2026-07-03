@@ -1,6 +1,6 @@
 import "server-only";
 
-import { createHmac, timingSafeEqual } from "crypto";
+import { createHmac, randomBytes, scryptSync, timingSafeEqual } from "crypto";
 import { cookies } from "next/headers";
 import type { AdminSession, UserRole } from "@/lib/admin/types";
 
@@ -41,8 +41,41 @@ function decodeSession(value: string): AdminSession | null {
   }
 }
 
-function hashPassword(password: string) {
+const SCRYPT_KEYLEN = 64;
+const SCRYPT_PREFIX = "scrypt:";
+
+function legacyHashPassword(password: string) {
   return createHmac("sha256", getSecret()).update(password).digest("hex");
+}
+
+/**
+ * Génère un hash scrypt salé au format `scrypt:<salt_hex>:<hash_hex>`.
+ * Utilisé par scripts/generate-admin-hash.mjs pour produire ADMIN_PASSWORD_HASH.
+ */
+export function hashPasswordScrypt(password: string, salt?: Buffer) {
+  const usedSalt = salt ?? randomBytes(16);
+  const derived = scryptSync(password, usedSalt, SCRYPT_KEYLEN);
+  return `${SCRYPT_PREFIX}${usedSalt.toString("hex")}:${derived.toString("hex")}`;
+}
+
+function safeEqualHex(a: string, b: string) {
+  const bufferA = Buffer.from(a, "hex");
+  const bufferB = Buffer.from(b, "hex");
+  return bufferA.length === bufferB.length && timingSafeEqual(bufferA, bufferB);
+}
+
+function verifyPassword(password: string, expectedHash: string) {
+  if (expectedHash.startsWith(SCRYPT_PREFIX)) {
+    const [saltHex, hashHex] = expectedHash.slice(SCRYPT_PREFIX.length).split(":");
+    if (!saltHex || !hashHex) {
+      return false;
+    }
+    const derived = scryptSync(password, Buffer.from(saltHex, "hex"), SCRYPT_KEYLEN);
+    return safeEqualHex(derived.toString("hex"), hashHex);
+  }
+
+  // Rétrocompatibilité avec les hash HMAC-SHA256 existants.
+  return safeEqualHex(legacyHashPassword(password), expectedHash);
 }
 
 export function verifyAdminCredentials(email: string, password: string) {
@@ -55,10 +88,11 @@ export function verifyAdminCredentials(email: string, password: string) {
     return null;
   }
 
-  const expectedHash = adminPasswordHash || hashPassword(adminPassword || "");
-  const passwordHash = hashPassword(password);
+  const expectedHash = adminPasswordHash || legacyHashPassword(adminPassword || "");
+  const emailMatches = email.trim().toLowerCase() === adminEmail.trim().toLowerCase();
+  const passwordMatches = verifyPassword(password, expectedHash);
 
-  if (email.trim().toLowerCase() !== adminEmail.trim().toLowerCase() || passwordHash !== expectedHash) {
+  if (!emailMatches || !passwordMatches) {
     return null;
   }
 

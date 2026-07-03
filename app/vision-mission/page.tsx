@@ -77,8 +77,8 @@ export default function VisionMissionPage() {
               <div>
                 <h3 className="text-lg font-black text-brand-blue">Présence à Bukavu et au-delà</h3>
                 <p className="mt-3 text-base leading-8 text-slate-600">
-                  Présente dans l'ensemble de la ville de Bukavu, la DDC RDC compte des membres actifs dans au moins
-                  8 provinces de la RDC, avec l'ouverture prochaine de bureaux provinciaux.
+                  Présente dans l&apos;ensemble de la ville de Bukavu, la DDC RDC compte des membres actifs dans au moins
+                  8 provinces de la RDC, avec l&apos;ouverture prochaine de bureaux provinciaux.
                 </p>
                 <div className="mt-5">
                   <ButtonLink href="/zones-intervention" variant="secondary">

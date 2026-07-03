@@ -34,7 +34,11 @@ export default async function AdminLoginPage({
             <input id="password" name="password" type="password" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-slate-300 px-4" />
           </div>
         </div>
-        {params?.error ? (
+        {params?.error === "blocked" ? (
+          <p className="mt-4 rounded-md bg-red-50 p-4 text-sm font-semibold text-red-700">
+            Trop de tentatives échouées. Réessayez dans 15 minutes.
+          </p>
+        ) : params?.error ? (
           <p className="mt-4 rounded-md bg-red-50 p-4 text-sm font-semibold text-red-700">
             Identifiants incorrects ou compte non configuré.
           </p>

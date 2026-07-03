@@ -2,7 +2,9 @@
 
 import { promises as fs } from "fs";
 import path from "path";
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { isLoginBlocked, registerFailedLogin, resetLoginAttempts } from "@/lib/admin/rate-limit";
 import {
   canPublish,
   clearAdminSession,
@@ -52,15 +54,29 @@ const collectionPaths: Record<CollectionKey, string> = {
   newsletterSubscribers: "/admin/newsletter"
 };
 
+async function getClientIp() {
+  const headerStore = await headers();
+  const forwarded = headerStore.get("x-forwarded-for");
+  return forwarded?.split(",")[0]?.trim() || headerStore.get("x-real-ip") || "unknown";
+}
+
 export async function loginAction(formData: FormData) {
+  const ip = await getClientIp();
+
+  if (isLoginBlocked(ip)) {
+    redirect("/admin/login?error=blocked");
+  }
+
   const email = String(formData.get("email") || "");
   const password = String(formData.get("password") || "");
   const session = verifyAdminCredentials(email, password);
 
   if (!session) {
+    registerFailedLogin(ip);
     redirect("/admin/login?error=1");
   }
 
+  resetLoginAttempts(ip);
   await setAdminSession(session);
   redirect("/admin/dashboard");
 }

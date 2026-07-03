@@ -407,36 +407,7 @@
       "internalComment": "Ne pas utiliser dans les supports officiels avant validation."
     }
   ],
-  "messages": [
-    {
-      "id": "msg-1779272226893-ytjzhg",
-      "name": "Patient Asifiwe",
-      "email": "asipatient@gmail.com",
-      "phone": "+243992588137",
-      "organization": "Secours aux Initiatives",
-      "requestType": "Projet communautaire",
-      "subject": "Recherche de matières premières pour les billets événementiels.",
-      "message": "Bonjour, les amis.\r\n\r\nJe vais être heureux de collaborer avec vous.\r\n\r\nCordialement.\r\n\r\n(C'est juste un essaie)",
-      "sourceForm": "Formulaire de contact",
-      "status": "traite",
-      "createdAt": "2026-05-20T10:17:06.893Z",
-      "readAt": "2026-05-30T19:14:34.853Z"
-    },
-    {
-      "id": "msg-1779135319087-dme3lo",
-      "name": "Patient Asifiwe",
-      "email": "patientbasirwa@gmail.com",
-      "phone": "+243992588137",
-      "organization": "Secours aux Initiatives",
-      "requestType": "Presse",
-      "subject": "Demande d'adhésion",
-      "message": "Bonjour, test.",
-      "sourceForm": "Formulaire de contact",
-      "status": "lu",
-      "createdAt": "2026-05-18T20:15:19.087Z",
-      "readAt": "2026-05-20T10:17:59.270Z"
-    }
-  ],
+  "messages": [],
   "newsletterSubscribers": [],
   "siteSettings": {
     "siteName": "DDC RDC",
