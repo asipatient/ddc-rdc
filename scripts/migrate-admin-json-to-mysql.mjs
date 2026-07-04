@@ -93,7 +93,7 @@ function createPool() {
   const url = getEnv("DATABASE_URL", "MYSQL_URL");
 
   if (url) {
-    return mysql.createPool(url);
+    return mysql.createPool({ uri: url, ...sslOption() });
   }
 
   const host = getEnv("MYSQL_HOST", "DB_HOST");
@@ -113,7 +113,8 @@ function createPool() {
     waitForConnections: true,
     connectionLimit: Number(getEnv("MYSQL_CONNECTION_LIMIT") || 10),
     charset: "utf8mb4",
-    timezone: "Z"
+    timezone: "Z",
+    ...sslOption()
   });
 }
 
@@ -175,4 +176,14 @@ function toMysqlDate(value) {
   const date = value ? new Date(value) : new Date();
   const safeDate = Number.isNaN(date.getTime()) ? new Date() : date;
   return safeDate.toISOString().slice(0, 23).replace("T", " ");
+}
+
+function sslOption() {
+  const mode = process.env.MYSQL_SSL;
+
+  if (mode !== "true" && mode !== "no-verify") {
+    return {};
+  }
+
+  return { ssl: { minVersion: "TLSv1.2", rejectUnauthorized: mode === "true" } };
 }

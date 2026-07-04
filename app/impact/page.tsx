@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/metadata";
+import { CountUp } from "@/components/CountUp";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
@@ -43,7 +44,7 @@ export default async function ImpactPage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue">
                   <IconRenderer icon={indicator.icon} className="h-6 w-6" />
                 </div>
-                <p className="mt-5 text-4xl font-black text-brand-blue">{indicator.value}</p>
+                <p className="mt-5 text-4xl font-black text-brand-blue"><CountUp value={indicator.value} /></p>
                 <h2 className="mt-2 text-base font-black text-brand-blue">{indicator.label}</h2>
                 {getImpactVerificationBadge(indicator.verificationStatus) ? (
                   <p className="mt-3 inline-flex rounded-full bg-amber-100 px-3 py-1 text-xs font-black text-amber-800 dark:bg-amber-900/40 dark:text-amber-200">

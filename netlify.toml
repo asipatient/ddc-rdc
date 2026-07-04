@@ -1,0 +1,7 @@
+﻿# Configuration Netlify — site DDC RDC (Next.js 16, adaptateur OpenNext auto)
+[build]
+  command = "next build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"

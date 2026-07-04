@@ -1,4 +1,4 @@
-import "server-only";
+﻿import "server-only";
 
 import mysql, { type Pool, type PoolOptions } from "mysql2/promise";
 
@@ -17,7 +17,9 @@ export function getMysqlPool() {
 
   if (!globalThis.ddcMysqlPool) {
     const url = getMysqlUrl();
-    globalThis.ddcMysqlPool = url ? mysql.createPool(url) : mysql.createPool(getMysqlOptions());
+    globalThis.ddcMysqlPool = url
+      ? mysql.createPool({ uri: url, ...getSslOption() })
+      : mysql.createPool(getMysqlOptions());
   }
 
   return globalThis.ddcMysqlPool;
@@ -37,8 +39,24 @@ function getMysqlOptions(): PoolOptions {
     waitForConnections: true,
     connectionLimit: Number(getEnv("MYSQL_CONNECTION_LIMIT") || 10),
     charset: "utf8mb4",
-    timezone: "Z"
+    timezone: "Z",
+    ...getSslOption()
   };
+}
+
+/**
+ * TLS pour les MySQL manages :
+ * - MYSQL_SSL=true      -> verification stricte du certificat (TiDB Cloud)
+ * - MYSQL_SSL=no-verify -> chiffrement sans verification (Aiven, CA auto-signee)
+ */
+function getSslOption(): Pick<PoolOptions, "ssl"> {
+  const mode = process.env.MYSQL_SSL;
+
+  if (mode !== "true" && mode !== "no-verify") {
+    return {};
+  }
+
+  return { ssl: { minVersion: "TLSv1.2", rejectUnauthorized: mode === "true" } };
 }
 
 function getEnv(...keys: string[]) {

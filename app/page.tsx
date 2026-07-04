@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { AxisCard } from "@/components/AxisCard";
 import { ButtonLink } from "@/components/ButtonLink";
+import { CountUp } from "@/components/CountUp";
 import { ContactForm } from "@/components/ContactForm";
 import { PublicationCard } from "@/components/PublicationCard";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -82,7 +83,7 @@ export default async function HomePage() {
             }
           ].map((item, i) => (
             <ScrollReveal key={item.stat} delayMs={i * 100} className="rounded-lg bg-brand-mist p-8">
-              <p className="text-4xl font-black text-brand-blue">{item.stat}</p>
+              <p className="text-4xl font-black text-brand-blue"><CountUp value={item.stat} /></p>
               <p className="mt-2 text-lg font-black text-brand-blue">{item.label}</p>
               <p className="mt-3 text-sm leading-7 text-slate-600">{item.detail}</p>
             </ScrollReveal>
