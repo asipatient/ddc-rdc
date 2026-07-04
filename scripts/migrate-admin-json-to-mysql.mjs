@@ -115,6 +115,7 @@ function createPool() {
     charset: "utf8mb4",
     timezone: "Z",
     ...sslOption(),
+    ...sslOption(),
     ...sslOption()
   });
 }
@@ -177,6 +178,16 @@ function toMysqlDate(value) {
   const date = value ? new Date(value) : new Date();
   const safeDate = Number.isNaN(date.getTime()) ? new Date() : date;
   return safeDate.toISOString().slice(0, 23).replace("T", " ");
+}
+
+function sslOption() {
+  const mode = process.env.MYSQL_SSL;
+
+  if (mode !== "true" && mode !== "no-verify") {
+    return {};
+  }
+
+  return { ssl: { minVersion: "TLSv1.2", rejectUnauthorized: mode === "true" } };
 }
 
 function sslOption() {

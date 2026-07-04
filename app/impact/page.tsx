@@ -1,6 +1,7 @@
 import { buildMetadata } from "@/lib/metadata";
 import { CountUp } from "@/components/CountUp";
 import { CountUp } from "@/components/CountUp";
+import { CountUp } from "@/components/CountUp";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
