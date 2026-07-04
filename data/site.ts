@@ -22,6 +22,7 @@ export const site = {
   url: "https://ddcrdc.org",
   logo: "/images/logos/logo-ddc.png",
   logoMark: "/images/logos/logo-ddc-mark.png",
+  logoHorizontal: "/images/logos/logo-ddc-horizontal.png",
   favicon: "/favicon.png",
   footerText: "Tous droits réservés.",
   donationUrl: paypalDonationUrl,

@@ -45,7 +45,7 @@ function DropdownMenu({ item }: { item: Extract<(typeof navigation)[number], { i
       >
         {item.label}
         <ChevronDown
-          aria-hidden="true"
+         
           className={`h-4 w-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
@@ -101,13 +101,13 @@ export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig })
   return (
     <header className="site-header sticky top-0 z-40 border-b backdrop-blur">
       <div className="section-shell flex min-h-20 items-center justify-between gap-3">
-        <Link href="/" className="focus-ring flex shrink-0 items-center rounded-md" aria-label="Accueil DDC RDC">
+        <Link href="/" className="focus-ring flex shrink-0 items-center gap-3 rounded-md" aria-label="Accueil DDC RDC - Dynamique Debout Congolais">
           <Image
-            src={siteConfig.logo}
-            alt="Logo DDC RDC"
-            width={56}
-            height={56}
-            className="site-header-logo h-12 w-12 object-contain sm:h-14 sm:w-14 dark:brightness-0 dark:invert"
+            src={siteConfig.logoHorizontal ?? siteConfig.logo}
+            alt="Logo DDC RDC - Dynamique Debout Congolais"
+            width={220}
+            height={88}
+            className="site-header-logo h-11 w-auto object-contain sm:h-12 dark:brightness-0 dark:invert"
             priority
           />
         </Link>

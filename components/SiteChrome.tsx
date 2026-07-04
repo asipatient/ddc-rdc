@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { BackToTop } from "@/components/BackToTop";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
@@ -17,6 +18,7 @@ export function SiteChrome({ children, siteConfig }: { children: React.ReactNode
       <Header siteConfig={siteConfig} />
       <main id="contenu">{children}</main>
       <Footer siteConfig={siteConfig} />
+      <BackToTop />
     </>
   );
 }
