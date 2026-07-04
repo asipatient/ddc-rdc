@@ -26,7 +26,7 @@ export function PageHero({ kicker, title, description, cta, image = DEFAULT_IMAG
         fill
         priority
         sizes="100vw"
-        className="object-cover object-center opacity-20"
+        className="hero-kenburns object-cover object-center"
       />
 
       {/* Dégradé bleu marine → violet indigo */}
@@ -34,7 +34,7 @@ export function PageHero({ kicker, title, description, cta, image = DEFAULT_IMAG
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, rgba(11,53,88,0.97) 0%, rgba(30,20,80,0.93) 50%, rgba(45,27,105,0.88) 100%)"
+            "linear-gradient(105deg, rgba(11,53,88,0.95) 0%, rgba(13,48,92,0.86) 42%, rgba(23,32,86,0.68) 72%, rgba(30,20,80,0.55) 100%)"
         }}
       />
 
