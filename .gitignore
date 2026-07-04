@@ -21,3 +21,7 @@ export/
 
 # Artefacts de build TypeScript
 tsconfig.tsbuildinfo
+
+# Fichiers de travail
+*.patch
+*.ps1
