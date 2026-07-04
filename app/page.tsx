@@ -1,11 +1,8 @@
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { AxisCard } from "@/components/AxisCard";
+import { CountUp } from "@/components/CountUp";
 import { ButtonLink } from "@/components/ButtonLink";
-import { CountUp } from "@/components/CountUp";
-import { CountUp } from "@/components/CountUp";
-import { CountUp } from "@/components/CountUp";
-import { CountUp } from "@/components/CountUp";
 import { ContactForm } from "@/components/ContactForm";
 import { PublicationCard } from "@/components/PublicationCard";
 import { ScrollReveal } from "@/components/ScrollReveal";
