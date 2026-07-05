@@ -354,10 +354,17 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   }
 }
 
-/* Plus Jakarta Sans Light pour les grands paragraphes */
-p.text-lg:not([class*="font-"]),
-p.text-xl:not([class*="font-"]),
-.lead {
-  font-weight: 300;
-  letter-spacing: 0.005em;
+/* Apparition automatique des images au scroll (ScrollRevealAuto) */
+.sr-auto {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.sr-auto.sr-auto-in {
+  opacity: 1;
+  transform: none;
 }
