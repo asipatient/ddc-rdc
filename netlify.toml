@@ -1,6 +1,6 @@
-﻿# Configuration Netlify — site DDC RDC (Next.js 16, adaptateur OpenNext auto)
+﻿# Configuration Netlify - site DDC RDC (Next.js 16, adaptateur OpenNext auto)
 [build]
-  command = "next build"
+  command = "node scripts/netlify-migrate.mjs && next build"
   publish = ".next"
 
 [build.environment]

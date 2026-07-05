@@ -90,7 +90,7 @@ try {
 }
 
 function createPool() {
-  const url = getEnv("DATABASE_URL", "MYSQL_URL");
+  const url = getEnv("DATABASE_URL", "MYSQL_URL").replace(/\?ssl-mode=.*$/i, "");
 
   if (url) {
     return mysql.createPool({ uri: url, ...sslOption() });

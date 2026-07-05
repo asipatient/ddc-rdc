@@ -1,4 +1,4 @@
-﻿import "server-only";
+import "server-only";
 
 import mysql, { type Pool, type PoolOptions } from "mysql2/promise";
 
@@ -26,7 +26,7 @@ export function getMysqlPool() {
 }
 
 function getMysqlUrl() {
-  return getEnv("DATABASE_URL", "MYSQL_URL");
+  return getEnv("DATABASE_URL", "MYSQL_URL").replace(/\?ssl-mode=.*$/i, "");
 }
 
 function getMysqlOptions(): PoolOptions {
