@@ -4,10 +4,10 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 /**
- * Anime automatiquement les images du contenu (fondu + légère montée)
- * lorsqu'elles entrent dans le viewport, sur tout le site.
- * Exclut les héros (déjà animés), respecte prefers-reduced-motion.
- */
+* Anime automatiquement les images du contenu (fondu + légère montée)
+* lorsqu'elles entrent dans le viewport, sur tout le site.
+* Exclut les héros (déjà animés), respecte prefers-reduced-motion.
+*/
 export function ScrollRevealAuto() {
   const pathname = usePathname();
 
@@ -17,7 +17,7 @@ export function ScrollRevealAuto() {
     }
 
     const targets = Array.from(
-      document.querySelectorAll("main img:not(.hero-kenburns)")
+      document.querySelectorAll<HTMLElement>("main img:not(.hero-kenburns)")
     ).filter((el) => !el.classList.contains("sr-auto-in"));
 
     if (targets.length === 0) return;
@@ -29,7 +29,7 @@ export function ScrollRevealAuto() {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
 
-          const el = entry.target;
+          const el = entry.target as HTMLElement;
           el.style.transitionDelay = Math.min(batchIndex * 70, 350) + "ms";
           el.classList.add("sr-auto-in");
           batchIndex += 1;
