@@ -4,7 +4,7 @@ import { paypalDonationUrl } from "./donation";
 export const navigation: NavItem[] = [
   { label: "Accueil", href: "/" },
   {
-    label: "Qui sommes-nous ?",
+    label: "Qui sommes-nous ?",
     items: [
       { label: "À propos", href: "/a-propos" },
       { label: "Notre histoire", href: "/notre-histoire" },
@@ -50,7 +50,7 @@ export const navigation: NavItem[] = [
 
 export const footerColumns: Array<{ title: string; links: NavLink[] }> = [
   {
-    title: "Qui sommes-nous ?",
+    title: "Qui sommes-nous ?",
     links: [
       { label: "À propos", href: "/a-propos" },
       { label: "Notre histoire", href: "/notre-histoire" },

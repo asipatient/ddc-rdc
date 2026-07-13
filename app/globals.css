@@ -520,41 +520,6 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   }
 }
 
-/* Titres de section « fantôme » : le mot-clé en grand filigrane derrière le titre */
-.section-heading {
-  position: relative;
-}
-
-.section-heading-ghost {
-  position: absolute;
-  top: -0.35em;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  overflow: hidden;
-  color: rgba(11, 53, 88, 0.055);
-  font-weight: 800;
-  font-size: clamp(40px, 7vw, 68px);
-  text-transform: uppercase;
-  line-height: 1;
-  white-space: nowrap;
-  pointer-events: none;
-  user-select: none;
-}
-
-.dark .section-heading-ghost {
-  color: rgba(248, 250, 252, 0.05);
-}
-
-.section-heading--center .section-heading-ghost {
-  text-align: center;
-}
-
-.section-heading > :not(.section-heading-ghost) {
-  position: relative;
-  z-index: 2;
-}
-
 /* Apparition automatique des images au scroll (ScrollRevealAuto) */
 .sr-auto {
   opacity: 0;

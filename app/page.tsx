@@ -53,7 +53,7 @@ export default async function HomePage() {
               pour bâtir un Congo plus juste, inclusif et durable.
             </p>
             <div className="anim-fade-up anim-delay-400 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <ButtonLink href="/a-propos">Qui sommes-nous ?</ButtonLink>
+              <ButtonLink href="/a-propos">Qui sommes-nous&nbsp;?</ButtonLink>
               <ButtonLink href="/axes-intervention" variant="outline">
                 Nos axes d&apos;intervention
               </ButtonLink>
