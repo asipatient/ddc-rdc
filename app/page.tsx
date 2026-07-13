@@ -5,6 +5,7 @@ import { CountUp } from "@/components/CountUp";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ContactForm } from "@/components/ContactForm";
 import { PublicationCard } from "@/components/PublicationCard";
+import { PulsatingPlayButton } from "@/components/PulsatingPlayButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { axes, flagshipPrograms, publications } from "@/lib/site-data";
@@ -38,25 +39,37 @@ export default async function HomePage() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(11,53,88,0.97)_0%,rgba(11,53,88,0.82)_55%,rgba(11,53,88,0.20)_100%)]" />
         <div className="section-shell relative flex min-h-[88svh] items-center py-24">
-          <div className="max-w-2xl animate-fade-up">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold">
-              Bukavu · Sud-Kivu · RDC
-            </p>
-            <h1 className="mt-5 text-4xl font-black leading-[1.1] sm:text-5xl lg:text-6xl">
-              Jeunesse et femmes debout pour transformer le Congo.
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-8 text-white/80 sm:text-lg">
+          <div className="max-w-2xl">
+            <div className="anim-fade-down">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold">
+                Bukavu · Sud-Kivu · RDC
+              </p>
+              <h1 className="mt-5 text-4xl font-black leading-[1.1] sm:text-5xl lg:text-6xl">
+                Jeunesse et femmes debout pour transformer le Congo.
+              </h1>
+            </div>
+            <p className="anim-fade-down anim-delay-200 mt-6 max-w-xl text-base leading-8 text-white/80 sm:text-lg">
               La DDC RDC éveille, forme et mobilise les jeunes, les femmes et les communautés congolaises
               pour bâtir un Congo plus juste, inclusif et durable.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <ButtonLink href="/a-propos">Qui sommes-nous ?</ButtonLink>
+            <div className="anim-fade-up anim-delay-400 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <ButtonLink href="/a-propos">Qui sommes-nous&nbsp;?</ButtonLink>
               <ButtonLink href="/axes-intervention" variant="outline">
                 Nos axes d&apos;intervention
               </ButtonLink>
               <ButtonLink href={siteConfig.donationUrl} variant="outline">
                 Soutenir la DDC
               </ButtonLink>
+            </div>
+            <div className="anim-fade-up anim-delay-600 mt-10 flex items-center gap-5">
+              <PulsatingPlayButton
+                href="https://www.youtube.com/@ddcrdc"
+                label="Découvrir la DDC RDC en vidéo"
+                size={72}
+              />
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-white/85">
+                Découvrir la DDC en vidéo
+              </p>
             </div>
           </div>
         </div>

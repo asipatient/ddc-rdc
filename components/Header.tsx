@@ -39,7 +39,7 @@ function DropdownMenu({ item }: { item: Extract<(typeof navigation)[number], { i
         type="button"
         aria-expanded={open}
         aria-haspopup="true"
-        className="site-header-link focus-ring inline-flex min-h-11 items-center gap-1 rounded-md px-3 text-sm font-bold transition"
+        className="site-header-link focus-ring inline-flex min-h-11 items-center gap-1 whitespace-nowrap rounded-md px-3 text-sm font-bold transition"
         onClick={() => setOpen((v) => !v)}
         onKeyDown={(e) => { if (e.key === "Escape") close(); }}
       >
@@ -120,7 +120,7 @@ export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig })
               <Link
                 key={item.href}
                 href={item.href}
-                className="site-header-link site-header-nav-link focus-ring inline-flex min-h-11 items-center rounded-md px-3 text-sm font-bold transition"
+                className="site-header-link site-header-nav-link focus-ring inline-flex min-h-11 items-center whitespace-nowrap rounded-md px-3 text-sm font-bold transition"
               >
                 {item.label}
               </Link>
