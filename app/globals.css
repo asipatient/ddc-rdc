@@ -354,6 +354,207 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   }
 }
 
+/* --- Animations reprises du thème MyBiz (BootstrapMade), adaptées à la charte DDC --- */
+
+/* Entrée du hero : titre et texte descendent en fondu, boutons remontent en fondu */
+@keyframes anim-fade-in-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes anim-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.anim-fade-down {
+  animation: anim-fade-in-down 1s both;
+}
+
+.anim-fade-up {
+  animation: anim-fade-in-up 1s both;
+}
+
+.anim-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.anim-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.anim-delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* Preloader : anneau qui tourne pendant le chargement, puis disparition en fondu */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: #ffffff;
+  transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+}
+
+.dark #preloader {
+  background: #020617;
+}
+
+#preloader::before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid transparent;
+  border-color: #f2b705 transparent #0b3558 transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1.5s linear infinite;
+}
+
+.dark #preloader::before {
+  border-color: #f2b705 transparent #dbeafe transparent;
+}
+
+#preloader.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bouton play pulsant : onde continue autour du bouton de lecture */
+.pulsating-play-btn {
+  --play-btn-size: 94px;
+  width: var(--play-btn-size);
+  height: var(--play-btn-size);
+  background: radial-gradient(#f2b705 50%, rgba(242, 183, 5, 0.25) 52%);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.pulsating-play-btn::before {
+  content: "";
+  position: absolute;
+  width: calc(var(--play-btn-size) * 1.28);
+  height: calc(var(--play-btn-size) * 1.28);
+  animation: pulsate-play-btn 2s linear infinite;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(242, 183, 5, 0.7);
+  top: -14%;
+  left: -14%;
+  background: transparent;
+}
+
+.pulsating-play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #0b3558;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.pulsating-play-btn:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #0b3558;
+  z-index: 200;
+  animation: none;
+  border-radius: 0;
+}
+
+.pulsating-play-btn:hover::after {
+  border-left: 15px solid #f2b705;
+  transform: scale(20);
+}
+
+@keyframes pulsate-play-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/* Titres de section « fantôme » : le mot-clé en grand filigrane derrière le titre */
+.section-heading {
+  position: relative;
+}
+
+.section-heading-ghost {
+  position: absolute;
+  top: -0.35em;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  color: rgba(11, 53, 88, 0.055);
+  font-weight: 800;
+  font-size: clamp(40px, 7vw, 68px);
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dark .section-heading-ghost {
+  color: rgba(248, 250, 252, 0.05);
+}
+
+.section-heading--center .section-heading-ghost {
+  text-align: center;
+}
+
+.section-heading > :not(.section-heading-ghost) {
+  position: relative;
+  z-index: 2;
+}
+
 /* Apparition automatique des images au scroll (ScrollRevealAuto) */
 .sr-auto {
   opacity: 0;
