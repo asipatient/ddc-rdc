@@ -1,7 +1,10 @@
 # Configuration Netlify - site DDC RDC (Next.js 16, adaptateur OpenNext auto)
+# Ne PAS definir "publish" : l'adaptateur Next.js de Netlify gere lui-meme
+# le dossier de publication et le routage SSR. Le forcer sur ".next" fait
+# servir le dossier de build brut comme fichiers statiques, ce qui casse
+# le routage (404 Netlify sur toutes les routes, meme sur *.netlify.app).
 [build]
   command = "node scripts/netlify-migrate.mjs && next build"
-  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "22"
