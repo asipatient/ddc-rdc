@@ -1,7 +1,7 @@
 export const officialContact = {
   email: "ddc.democratie@gmail.com",
   phone: "+243 992 588 137",
-  address: "Ave Nyarwizimya No 19, Quartier Panzi, Commune Ibanda, Bukavu, RDC",
+  address: "Av. Nyarwizimia 019, Quartier Panzi, Commune d'Ibanda, Bukavu, Sud-Kivu, RDC",
   city: "Bukavu",
   province: "Sud-Kivu",
   country: "République Démocratique du Congo"

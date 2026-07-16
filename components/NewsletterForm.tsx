@@ -31,7 +31,7 @@ export function NewsletterForm({ compact = false }: { compact?: boolean }) {
         <SubmitButton />
       </div>
       {state.message ? (
-        <p className={`mt-3 rounded-md p-3 text-sm font-semibold ${state.ok ? "bg-white/15 text-white" : "bg-red-50 text-red-800"}`}>
+        <p className={`animate-fade-up mt-3 rounded-md p-3 text-sm font-semibold ${state.ok ? "bg-white/15 text-white" : "bg-red-50 text-red-800"}`}>
           {state.message}
         </p>
       ) : null}
@@ -48,7 +48,7 @@ function SubmitButton() {
       disabled={pending}
       className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-brand-gold px-4 py-3 text-sm font-bold text-brand-blue transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"
     >
-      <Send aria-hidden="true" className="h-4 w-4" />
+      {pending ? <span className="form-spinner" aria-hidden="true" /> : <Send aria-hidden="true" className="h-4 w-4" />}
       {pending ? "Envoi..." : "S'inscrire"}
     </button>
   );

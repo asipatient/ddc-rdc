@@ -19,11 +19,17 @@ export function PublicationCard({ publication }: { publication: Publication }) {
   }).format(new Date(publication.date));
 
   return (
-    <article className="card flex h-full flex-col overflow-hidden">
+    <article className="card group flex h-full flex-col overflow-hidden">
       <div className={cn("relative flex aspect-[16/10] items-end overflow-hidden p-5 text-white", !publication.image && `bg-gradient-to-br ${accentClasses[publication.accent]}`)}>
         {publication.image ? (
           <>
-            <Image src={publication.image} alt={publication.title} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />
+            <Image
+              src={publication.image}
+              alt={publication.title}
+              fill
+              sizes="(min-width: 1024px) 33vw, 100vw"
+              className="object-cover transition duration-500 group-hover:scale-105"
+            />
             <div className="absolute inset-0 bg-brand-blue/55" />
           </>
         ) : null}

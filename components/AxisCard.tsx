@@ -6,13 +6,19 @@ import type { Axis, Program } from "@/lib/site-data";
 
 export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }) {
   return (
-    <article className="card flex h-full flex-col overflow-hidden">
+    <article className="card group flex h-full flex-col overflow-hidden">
       <div className="relative aspect-[16/10] overflow-hidden">
-        <Image src={axis.image} alt={axis.title} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />
+        <Image
+          src={axis.image}
+          alt={axis.title}
+          fill
+          sizes="(min-width: 1024px) 33vw, 100vw"
+          className="object-cover transition duration-500 group-hover:scale-105"
+        />
         <div className="absolute inset-0 bg-brand-blue/25" />
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue">
+        <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue transition-colors duration-300 group-hover:bg-brand-gold group-hover:text-white">
           <IconRenderer icon={axis.icon} className="h-6 w-6" />
         </div>
         <h3 className="mt-5 text-xl font-black leading-tight text-brand-blue">{axis.title}</h3>

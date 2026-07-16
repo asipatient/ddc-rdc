@@ -30,14 +30,16 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NGO",
   name: "Dynamique Debout Congolais",
+  legalName: "Dynamique Debout Congolais",
   alternateName: "DDC RDC",
+  foundingDate: "2022-01-05",
   url: "https://ddcrdc.org",
   logo: "https://ddcrdc.org/images/logos/logo-ddc.png",
   description:
-    "Association congolaise engagée pour l'autonomisation des jeunes, des femmes et des communautés au Sud-Kivu, RDC.",
+    "Association Sans But Lucratif (ASBL) de droit congolais, engagée pour l'autonomisation des jeunes, des femmes et des communautés au Sud-Kivu, RDC.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Avenue Nyarwizimia N°19",
+    streetAddress: "Av. Nyarwizimia 019, Quartier Panzi, Commune d'Ibanda",
     addressLocality: "Bukavu",
     addressRegion: "Sud-Kivu",
     addressCountry: "CD"

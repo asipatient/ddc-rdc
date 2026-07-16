@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
-import { founderProfile, historyIntro, historyTimeline } from "@/lib/site-data";
+import { founderProfile, foundingQuote, historyIntro, historyTimeline } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Notre histoire",
@@ -21,6 +21,18 @@ export default function HistoryPage() {
         cta={{ label: "Voir les réalisations", href: "/realisations" }}
       image="/images/ddc/culture-africaine.jpg"
       />
+      <section className="bg-brand-blue py-16 text-white sm:py-20">
+        <ScrollReveal className="section-shell max-w-3xl">
+          <p className="eyebrow text-brand-gold">Notre origine</p>
+          <blockquote className="mt-5 text-2xl font-black leading-tight sm:text-3xl">
+            « {foundingQuote.text} »
+          </blockquote>
+          <p className="mt-6 border-t border-white/20 pt-4 text-sm font-bold">
+            {foundingQuote.author}
+            <span className="ml-2 font-semibold text-white/70">{foundingQuote.role}</span>
+          </p>
+        </ScrollReveal>
+      </section>
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">

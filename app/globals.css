@@ -534,6 +534,24 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   opacity: 1;
   transform: none;
 }
+/* Spinner de soumission de formulaire, repris du loader MyBiz (BootstrapMade), adapté à la charte DDC */
+.form-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  animation: form-spinner-rotate 0.7s linear infinite;
+}
+
+@keyframes form-spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes kenburns {
   0% {
     transform: scale(1);

@@ -1,6 +1,6 @@
 export const founderProfile = {
   name: "Patient Asifiwe",
-  role: "Président Fondateur",
+  role: "Président Fondateur & Coordonnateur National",
   photo: "/images/team/patient-asifiwe.jpg",
   shortBio:
     "Patient Asifiwe est un communicateur, entrepreneur social et acteur communautaire basé à Bukavu. Son parcours associe l'éducation, la communication, l'entrepreneuriat, l'engagement citoyen et la mobilisation communautaire.",
@@ -19,6 +19,13 @@ export const founderProfile = {
 
 export const historyIntro =
   "L'histoire de la DDC RDC s'inscrit dans un parcours d'engagement citoyen, éducatif, communautaire et entrepreneurial progressivement structuré autour des jeunes, des femmes et des communautés locales.";
+
+export const foundingQuote = {
+  text:
+    "Quand nous avons fondé la Dynamique Debout Congolais le 5 janvier 2022, nous n'avions pas d'argent. Nous avions quelque chose de plus rare et de plus puissant : la conviction que notre pays méritait mieux.",
+  author: "Patient Asifiwe",
+  role: "Président Fondateur & Coordonnateur National"
+};
 
 export const historyTimeline = [
   {
@@ -44,6 +51,12 @@ export const historyTimeline = [
     title: "Engagement communautaire de proximité",
     description:
       "À Panzi, l'engagement communautaire s'est orienté vers la mobilisation citoyenne, l'amélioration du cadre de vie, la prévention, le plaidoyer et le dialogue entre acteurs locaux."
+  },
+  {
+    period: "5 janvier 2022",
+    title: "Fondation officielle de la DDC RDC en Association Sans But Lucratif",
+    description:
+      "La Dynamique Debout Congolais est officiellement fondée à Bukavu, Sud-Kivu, en tant qu'ASBL de droit congolais, sous la présidence fondatrice de Patient Asifiwe."
   },
   {
     period: "2023",

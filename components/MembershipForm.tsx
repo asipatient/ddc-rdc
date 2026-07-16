@@ -120,7 +120,7 @@ export function MembershipForm() {
       </div>
       <SubmitButton />
       {state.message ? (
-        <p className={`mt-4 rounded-md p-4 text-sm font-semibold ${state.ok ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800"}`}>
+        <p className={`animate-fade-up mt-4 rounded-md p-4 text-sm font-semibold ${state.ok ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800"}`}>
           {state.message}
         </p>
       ) : null}
@@ -138,8 +138,9 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="focus-ring mt-5 inline-flex min-h-11 items-center justify-center rounded-md bg-brand-blue px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-green disabled:cursor-not-allowed disabled:opacity-60"
+      className="focus-ring mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-brand-blue px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-green disabled:cursor-not-allowed disabled:opacity-60"
     >
+      {pending ? <span className="form-spinner" aria-hidden="true" /> : null}
       {pending ? "Envoi en cours..." : "Envoyer ma candidature"}
     </button>
   );

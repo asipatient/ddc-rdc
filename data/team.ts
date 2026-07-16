@@ -3,18 +3,18 @@ import type { TeamMember } from "./types";
 export const teamMembers: TeamMember[] = [
   {
     name: "Patient Asifiwe",
-    role: "Président Fondateur",
+    role: "Président Fondateur & Coordonnateur National",
     photo: "/images/team/patient-asifiwe.jpg",
     bio:
       "Communicateur, entrepreneur social et acteur communautaire basé à Bukavu, il mobilise les jeunes et les femmes autour de la citoyenneté, du leadership, de l'innovation locale, de la culture et du développement communautaire.",
     roleDescription:
-      "Orientation stratégique, mobilisation institutionnelle, plaidoyer, développement des programmes et partenariats.",
+      "Rôle statutaire de garant de la mission : statut permanent et protégé par les Statuts, droit de veto suspensif et certification de la conformité des programmes avec la vision de l'association.",
     profileHref: "/profil-president-fondateur",
     contactLabel: "Voir le profil",
     contactHref: "/profil-president-fondateur"
   },
   {
-    name: "Immaculée Ngongo",
+    name: "Immaculée Maombi",
     role: "Coordonnatrice",
     photo: "/images/team/immaculee-ngongo.jpg",
     bio: "Biographie à compléter.",
@@ -35,11 +35,21 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Adrienne Mapendo",
-    role: "Trésorière",
+    role: "Trésorière Générale",
     photo: "/images/team/adrienne-mapendo.jpg",
     bio: "Biographie à compléter.",
     roleDescription:
       "Suivi de trésorerie, appui à la gestion administrative et contribution à la transparence financière de l'association.",
+    contactLabel: "Profil à compléter",
+    contactHref: "#"
+  },
+  {
+    name: "Taylor Imani",
+    role: "Chargé des programmes",
+    photo: "",
+    bio: "Biographie à compléter.",
+    roleDescription:
+      "Suivi de la mise en œuvre des programmes, appui méthodologique aux équipes de terrain et remontée des résultats.",
     contactLabel: "Profil à compléter",
     contactHref: "#"
   }

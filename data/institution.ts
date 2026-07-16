@@ -128,20 +128,22 @@ export const specificObjectives = [
 ] satisfies Array<{ title: string; icon: IconKey; description: string }>;
 
 export const principles = [
+  "Apolitisme : aucune affiliation, instruction ou financement partisan",
+  "Non-confessionnalisme : ouverte à toutes les croyances, sans en promouvoir aucune",
+  "Non-discrimination : égale dignité pour toutes et tous",
+  "Indépendance : liberté totale vis-à-vis de tout pouvoir extérieur",
+  "Transparence & redevabilité : comptes ouverts à nos membres et partenaires",
+  "Inclusion & équité de genre : priorité aux femmes et aux jeunes dans nos organes",
   "Dignité humaine",
-  "Égalité entre les femmes et les hommes",
-  "Non-discrimination",
   "Participation inclusive",
   "Responsabilité citoyenne",
-  "Intégrité et transparence",
-  "Redevabilité",
+  "Intégrité",
   "Solidarité",
   "Justice sociale",
   "Paix et cohésion sociale",
   "Protection de l'environnement",
   "Innovation",
   "Respect des lois et institutions de la République",
-  "Neutralité politique partisane",
   "Respect des cultures, identités locales et savoirs communautaires compatibles avec les droits humains"
 ];
 
@@ -197,40 +199,41 @@ export const actionMeans = [
   "Mobilisation de ressources financières, matérielles, techniques et humaines"
 ];
 
+export const legalIdentity = {
+  denomination: "Dynamique Debout Congolais",
+  sigle: "DDC RDC",
+  statutJuridique: "Association Sans But Lucratif (ASBL) — Droit congolais",
+  dateFondation: "5 janvier 2022",
+  siegeSocial: "Av. Nyarwizimia 019, Quartier Panzi, Commune d'Ibanda, Bukavu, Sud-Kivu",
+  zoneIntervention: "Ensemble du territoire de la République Démocratique du Congo — ancrage prioritaire au Sud-Kivu"
+};
+
 export const governanceItems: GovernanceItem[] = [
   {
-    title: "Assemblée Générale",
-    description: "Espace institutionnel à documenter selon les statuts et décisions internes.",
-    status: "Structure modifiable"
+    title: "Assemblée générale",
+    description: "Organe souverain de l'association, elle réunit les membres et statue sur les orientations majeures de la DDC RDC.",
+    status: "Organe souverain"
   },
   {
-    title: "Conseil d'Administration",
-    description: "Organe à préciser selon les documents institutionnels validés.",
-    status: "À compléter"
+    title: "Président Fondateur",
+    description:
+      "Garant de la mission : statut permanent et protégé par les Statuts, droit de veto suspensif et certification de la conformité des programmes avec la vision de l'association.",
+    status: "Garant de la mission"
   },
   {
-    title: "Coordination",
-    description: "Fonction de coordination opérationnelle et suivi des programmes.",
-    status: "Structure modifiable"
+    title: "Conseil d'administration",
+    description: "Organe de direction de l'association, il oriente et supervise la mise en œuvre des programmes.",
+    status: "Organe de direction"
   },
   {
-    title: "Direction financière",
-    description: "Suivi financier, budgets, redevabilité et documentation des appuis reçus.",
-    status: "Structure modifiable"
+    title: "Bureau exécutif",
+    description:
+      "Organe d'exécution : assure la gestion quotidienne et la représentation légale. Ses membres sont élus par le Conseil d'administration pour un mandat de trois (3) ans renouvelable.",
+    status: "Organe d'exécution"
   },
   {
-    title: "Trésorerie",
-    description: "Gestion de trésorerie et appui à la transparence financière.",
-    status: "Structure modifiable"
-  },
-  {
-    title: "Commissions ou départements thématiques",
-    description: "Citoyenneté, femmes, enfants, culture, environnement, recherche, communication ou autres pôles à formaliser.",
-    status: "À compléter"
-  },
-  {
-    title: "Antennes ou représentations locales",
-    description: "Espace prévu pour les futures représentations locales, provinciales ou nationales.",
-    status: "À compléter si nécessaire"
+    title: "Commissaires aux comptes",
+    description: "Contrôle financier de l'association et vérification de la bonne tenue des comptes.",
+    status: "Contrôle financier"
   }
 ];

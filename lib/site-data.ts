@@ -23,6 +23,7 @@ export {
   beneficiaries,
   governanceItems,
   interventionAreas,
+  legalIdentity,
   principles,
   specificObjectives
 } from "@/data/institution";
@@ -33,7 +34,7 @@ export { publicationCategories, publications } from "@/data/publications";
 export { realisations } from "@/data/realisations";
 export { donationPage, paypalDonationUrl, whySupportDdc } from "@/data/donation";
 export { teamMembers } from "@/data/team";
-export { founderProfile, historyIntro, historyTimeline } from "@/data/history";
+export { founderProfile, foundingQuote, historyIntro, historyTimeline } from "@/data/history";
 export {
   documentedImpactFacts,
   impactIndicators,
