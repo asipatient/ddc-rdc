@@ -23,8 +23,10 @@ export function HeroSlider() {
   }, []);
 
   return (
-    // Conteneur principal : plein écran
-    <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(11,53,88,0.94)_0%,rgba(11,53,88,0.75)_45%,rgba(11,53,88,0.30)_75%,rgba(11,53,88,0.12)_100%)]" >
+    // Conteneur principal : plein écran. Le dégradé de marque est appliqué
+    // une seule fois, par le parent (voir app/page.tsx), pour éviter de
+    // superposer deux calques identiques au-dessus des photos.
+    <div className="absolute inset-0">
       {heroImages.map((image, index) => (
         <div
           key={image}
@@ -39,7 +41,7 @@ export function HeroSlider() {
             className="object-cover object-[50%_40%]"
             priority={index === 0}
             sizes="100vw"
-            // quality retiré pour éviter l'avertissement
+            quality={85}
           />
         </div>
       ))}

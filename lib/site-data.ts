@@ -41,7 +41,6 @@ export {
   interventionApproach,
   monitoringLearning,
   strategicPlan,
-  testimonials,
   zonesIntervention
 } from "@/data/impact";
 export {

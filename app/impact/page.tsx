@@ -5,8 +5,9 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
-import { documentedImpactFacts, monitoringLearning, paypalDonationUrl, testimonials, whySupportDdc } from "@/lib/site-data";
+import { documentedImpactFacts, monitoringLearning, paypalDonationUrl, whySupportDdc } from "@/lib/site-data";
 import { getImpactVerificationBadge, getPublicImpactIndicators, getPublicImpactSection } from "@/lib/impact-content";
+import { getPublicTestimonials } from "@/lib/testimonials-content";
 
 export const metadata = buildMetadata({
   title: "Impact",
@@ -19,6 +20,7 @@ export const dynamic = "force-dynamic";
 export default async function ImpactPage() {
   const impactIndicators = await getPublicImpactIndicators();
   const impactSection = await getPublicImpactSection();
+  const testimonials = await getPublicTestimonials();
 
   return (
     <>
@@ -124,26 +126,29 @@ export default async function ImpactPage() {
       </ScrollReveal>
 
       </section>
-      <section className="bg-brand-blue py-16 text-white sm:py-20">
-        <ScrollReveal>
-        <div className="section-shell">
-          <SectionHeading
-            eyebrow="Témoignages"
-            title="Paroles à documenter auprès des bénéficiaires et partenaires."
-            className="[&_h2]:text-white"
-          />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
-            {testimonials.map((testimonial) => (
-              <article key={testimonial.title} className="rounded-lg border border-white/10 bg-white/10 p-5">
-                <h2 className="text-base font-black text-white">{testimonial.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-white/75">{testimonial.text}</p>
-              </article>
-            ))}
+      {testimonials.length > 0 ? (
+        <section className="bg-brand-blue py-16 text-white sm:py-20">
+          <ScrollReveal>
+          <div className="section-shell">
+            <SectionHeading
+              eyebrow="Témoignages"
+              title="Ce que disent les bénéficiaires et partenaires de la DDC RDC."
+              className="[&_h2]:text-white"
+            />
+            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+              {testimonials.map((testimonial) => (
+                <article key={testimonial.name} className="rounded-lg border border-white/10 bg-white/10 p-5">
+                  <h2 className="text-base font-black text-white">{testimonial.name}</h2>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.1em] text-white/60">{testimonial.role}</p>
+                  <p className="mt-3 text-sm leading-7 text-white/75">{testimonial.quote}</p>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </ScrollReveal>
+        </ScrollReveal>
 
-      </section>
+        </section>
+      ) : null}
     </>
   );
 }

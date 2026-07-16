@@ -11,11 +11,7 @@ export const impactIndicators: ImpactIndicator[] = [
   { label: "Jeunes formés", value: "+20", note: "Donnée historique 2016 à consolider avec les archives.", icon: "graduation" },
   { label: "Femmes accompagnées", value: "+50", note: "Femmes formées à l'entrepreneuriat local en 2024.", icon: "users" },
   { label: "Enfants sensibilisés", value: "+300", note: "Élèves sensibilisés entre octobre et novembre 2025.", icon: "child" },
-  { label: "Activités réalisées", value: "+000", note: "Données en cours de consolidation", icon: "calendar" },
-  { label: "Communautés touchées", value: "+000", note: "Données en cours de consolidation", icon: "map" },
-  { label: "Partenaires mobilisés", value: "+000", note: "Données en cours de consolidation", icon: "handshake" },
-  { label: "Publications produites", value: "+000", note: "Données en cours de consolidation", icon: "file" },
-  { label: "Initiatives communautaires soutenues", value: "+000", note: "Données en cours de consolidation", icon: "sparkles" }
+  { label: "Activités réalisées", value: "+10", note: "Données en cours de consolidation.", icon: "calendar" }
 ];
 
 export const documentedImpactFacts = [
@@ -57,14 +53,6 @@ export const monitoringLearning = {
     { title: "Capitalisation", description: "Analyse des apprentissages pour améliorer les actions futures.", icon: "layers" }
   ] satisfies SupportArgument[]
 };
-
-export const testimonials = [
-  { title: "Jeune bénéficiaire", text: "Témoignage à compléter." },
-  { title: "Femme accompagnée", text: "Témoignage à compléter." },
-  { title: "Partenaire", text: "Témoignage à compléter." },
-  { title: "Participant à une activité", text: "Témoignage à compléter." },
-  { title: "Leader communautaire", text: "Témoignage à compléter." }
-];
 
 export const zonesIntervention = {
   title: "Ancrage à Bukavu, ambition nationale et africaine",

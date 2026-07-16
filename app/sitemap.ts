@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { publications, site } from "@/lib/site-data";
+import { site } from "@/lib/site-data";
+import { getPublicPublications } from "@/lib/publications";
 
 const staticRoutes = [
   "",
@@ -28,8 +29,9 @@ const staticRoutes = [
   "/contact"
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const publications = await getPublicPublications();
 
   return [
     ...staticRoutes.map((route) => ({
