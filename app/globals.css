@@ -534,3 +534,16 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   opacity: 1;
   transform: none;
 }
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+
+100% {
+    transform: scale(1.06);
+}
+}
+
+.animate-kenburns {
+  animation: kenburns 8s ease-in-out forwards;
+}

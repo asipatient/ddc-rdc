@@ -1,3 +1,4 @@
+import { HeroSlider } from "@/components/HeroSlider";
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { AxisCard } from "@/components/AxisCard";
@@ -29,16 +30,9 @@ export default async function HomePage() {
     <>
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative isolate min-h-[88svh] overflow-hidden bg-brand-blue text-white">
-        <Image
-          src="/images/ddc/hero-reel-ddc.jpg"
-          alt="Membres de la DDC RDC réunis lors d'une activité citoyenne à Bukavu"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(11,53,88,0.97)_0%,rgba(11,53,88,0.82)_55%,rgba(11,53,88,0.20)_100%)]" />
-        <div className="section-shell relative flex min-h-[88svh] items-center py-24">
+      <HeroSlider />
+<div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(11,53,88,0.94)_0%,rgba(11,53,88,0.75)_45%,rgba(11,53,88,0.30)_75%,rgba(11,53,88,0.12)_100%)]" />
+<div className="section-shell relative flex min-h-[88svh] items-center py-24">
           <div className="max-w-2xl">
             <div className="anim-fade-down">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold">
