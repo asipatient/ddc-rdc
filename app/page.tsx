@@ -42,7 +42,7 @@ export default async function HomePage() {
           <div className="max-w-2xl">
             <div className="anim-fade-down">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold">
-                Bukavu · Sud-Kivu · RDC
+                DDC RDC · DYNAMIQUE DEBOUT CONGOLAIS
               </p>
               <h1 className="mt-5 text-4xl font-black leading-[1.1] sm:text-5xl lg:text-6xl">
                 Jeunesse et femmes debout pour transformer le Congo.
