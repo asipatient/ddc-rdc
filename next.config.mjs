@@ -5,6 +5,11 @@ const nextConfig = {
   ...(process.env.NETLIFY ? {} : { output: "standalone" }),
   images: {
     formats: ["image/avif", "image/webp"]
+  },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "4mb"
+    }
   }
 };
 
