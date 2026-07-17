@@ -94,9 +94,10 @@ export default async function InstitutionalDocumentsPage() {
             </div>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            {[...strategicPlan.axes, ...strategicPlan.sections].map((item) => (
-              <div key={item} className="rounded-lg border border-slate-200 p-5 text-sm font-bold leading-7 text-brand-blue">
-                {item}
+            {strategicPlan.items.map((item) => (
+              <div key={item.title} className="rounded-lg border border-slate-200 p-5">
+                <p className="text-sm font-black leading-6 text-brand-blue">{item.title}</p>
+                <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
               </div>
             ))}
           </div>

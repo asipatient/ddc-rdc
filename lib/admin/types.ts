@@ -56,6 +56,7 @@ export type AdminProgram = BaseContent & {
   activities?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  icon?: string;
   order?: number;
 };
 

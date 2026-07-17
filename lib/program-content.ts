@@ -33,7 +33,7 @@ export async function getPublicProgramContent() {
       shortTitle: program.title,
       description: program.content || program.excerpt || "Description à compléter.",
       excerpt: program.excerpt,
-      icon: "book",
+      icon: normalizeIcon(program.icon, "book"),
       axisSlug: axisSlugByKey.get(slugify(program.axisId || "")) || slugify(program.axisId || ""),
       objectives: splitList(program.objectives),
       targetAudience: splitList(program.targetAudience || program.beneficiaries),

@@ -67,20 +67,58 @@ export const zonesIntervention = {
 };
 
 export const strategicPlan = {
-  title: "Plan stratégique à consolider",
-  axes: [
-    "Gouvernance, citoyenneté et transformation sociale",
-    "Autonomisation économique et résilience",
-    "Identité, inclusion et capital humain"
-  ],
-  sections: [
-    "Priorités stratégiques",
-    "Résultats attendus",
-    "Indicateurs",
-    "Zones d'intervention",
-    "Publics cibles",
-    "Approche méthodologique",
-    "Partenaires recherchés"
-  ],
-  note: "Structure prête pour l'intégration du plan stratégique complet."
+  title: "Plan stratégique 2026–2029",
+  note: "Dix priorités qui structurent la feuille de route triennale de la DDC RDC.",
+  items: [
+    {
+      title: "Gouvernance, citoyenneté et transformation sociale",
+      description:
+        "Renforcer la culture démocratique, la participation citoyenne et la redevabilité au sein des communautés congolaises."
+    },
+    {
+      title: "Autonomisation économique et résilience",
+      description:
+        "Développer l'entrepreneuriat jeune, la production locale et les capacités économiques des femmes via les programmes PROJEC et JASIRI."
+    },
+    {
+      title: "Identité, inclusion et capital humain",
+      description:
+        "Valoriser la culture congolaise, promouvoir l'inclusion et investir dans la formation des ressources humaines de l'association."
+    },
+    {
+      title: "Priorités stratégiques",
+      description:
+        "Jeunesse, femmes, environnement, citoyenneté et alerte communautaire — cinq axes au cœur de l'action 2026–2029."
+    },
+    {
+      title: "Résultats attendus",
+      description:
+        "Des communautés plus résilientes, des jeunes autonomes, des femmes leaders et un tissu associatif renforcé à Bukavu et au-delà."
+    },
+    {
+      title: "Indicateurs",
+      description:
+        "Nombre de bénéficiaires formés, initiatives créées, alertes traitées, femmes autonomisées et partenariats conclus."
+    },
+    {
+      title: "Zones d'intervention",
+      description:
+        "Présente dans l'ensemble de la ville de Bukavu, la DDC RDC compte des membres actifs dans au moins 8 provinces de la RDC, avec l'ouverture prochaine de bureaux provinciaux."
+    },
+    {
+      title: "Publics cibles",
+      description:
+        "Jeunes de 15 à 35 ans, femmes leaders communautaires, membres d'OSC, enseignants et acteurs de la société civile."
+    },
+    {
+      title: "Approche méthodologique",
+      description:
+        "Participation communautaire, formation par les pairs, ancrage local, suivi-évaluation rigoureux et apprentissage continu."
+    },
+    {
+      title: "Partenaires recherchés",
+      description:
+        "Coopération internationale, ONGs, institutions publiques, secteur privé local et diaspora congolaise engagée."
+    }
+  ]
 };
