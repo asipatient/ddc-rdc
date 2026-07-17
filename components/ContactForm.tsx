@@ -103,7 +103,7 @@ export function ContactForm({
         </p>
       ) : null}
       <p className="mt-3 text-xs leading-6 text-slate-500">
-        Les messages sont enregistrés pour suivi interne et transmis à l&apos;adresse officielle de la DDC lorsque l&apos;envoi email est configuré.
+        Nous vous répondrons dans les meilleurs délais à l&apos;adresse email fournie.
       </p>
     </form>
   );

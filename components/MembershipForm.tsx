@@ -125,7 +125,7 @@ export function MembershipForm() {
         </p>
       ) : null}
       <p className="mt-3 text-xs leading-6 text-slate-500">
-        La candidature est enregistrée et transmise à l&apos;adresse officielle de la DDC lorsque l&apos;envoi email est configuré.
+        Nous reviendrons vers vous dans les meilleurs délais à l&apos;adresse email fournie.
       </p>
     </form>
   );

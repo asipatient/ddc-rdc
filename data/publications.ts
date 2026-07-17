@@ -24,8 +24,9 @@ const institutionalPublications: Publication[] = [
     excerpt:
       "Un cycle de rencontres pour renforcer la participation des jeunes à la vie publique locale et nationale.",
     body: [
-      "Le programme propose des ateliers pratiques sur les droits et devoirs citoyens, le fonctionnement des institutions et les mécanismes de participation.",
-      "Il privilégie une approche communautaire, accessible et orientée action afin que chaque participant puisse devenir relais de civisme dans son environnement."
+      "Depuis 2023, la DDC RDC anime un cycle de formations et de sensibilisations civiques à Bukavu : formation sur les droits et devoirs du citoyen en janvier 2023 (plus de 50 jeunes et femmes), puis sensibilisation au processus électoral et à l'importance du vote en septembre 2023 (plus de 300 jeunes et femmes).",
+      "Ce travail s'est poursuivi le 30 juin 2025 avec la Conférence citoyenne « Mémoire, lucidité et renaissance citoyenne », qui a mobilisé 120 jeunes, autorités locales et leaders d'opinion autour des mêmes enjeux de participation démocratique.",
+      "Porté par le programme École Citoyenne, ce cycle privilégie une approche communautaire, accessible et orientée action afin que chaque participant devienne relais de civisme dans son environnement."
     ]
   },
   {
@@ -37,8 +38,9 @@ const institutionalPublications: Publication[] = [
     excerpt:
       "Une initiative dédiée au leadership féminin, au mentorat et au développement de projets économiques locaux.",
     body: [
-      "L'initiative réunit formation, mentorat, accompagnement de projets et accès à des réseaux de solidarité économique.",
-      "Elle vise à renforcer la confiance, les compétences et l'influence positive des femmes dans leurs communautés."
+      "En 2024, la DDC RDC a formé 50 femmes à l'entrepreneuriat local à Bukavu, notamment à la fabrication de savons et de briquettes écologiques — un premier pas concret vers l'autonomie économique.",
+      "Cette dynamique a débouché, en juillet 2025, sur le lancement du programme JASIRI, dédié au leadership et à l'autonomisation des femmes congolaises, qui a mobilisé et sensibilisé plus de 100 femmes, jeunes filles et hommes dès son lancement.",
+      "JASIRI réunit aujourd'hui formation, mentorat, accompagnement de projets et mise en réseau, pour renforcer la confiance, les compétences et l'influence des femmes dans leurs communautés."
     ]
   },
   {

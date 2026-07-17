@@ -8,7 +8,7 @@ export const impactIndicators: ImpactIndicator[] = [
       "Estimation minimale basée uniquement sur les données chiffrées fournies. Données en cours de consolidation.",
     icon: "chart"
   },
-  { label: "Jeunes formés", value: "+20", note: "Donnée historique 2016 à consolider avec les archives.", icon: "graduation" },
+  { label: "Jeunes formés", value: "+20", note: "Première cohorte formée en 2016 à Bukavu, incluse dans le total de +970 bénéficiaires documentés depuis.", icon: "graduation" },
   { label: "Femmes accompagnées", value: "+50", note: "Femmes formées à l'entrepreneuriat local en 2024.", icon: "users" },
   { label: "Enfants sensibilisés", value: "+300", note: "Élèves sensibilisés entre octobre et novembre 2025.", icon: "child" },
   { label: "Activités réalisées", value: "+10", note: "Données en cours de consolidation.", icon: "calendar" }

@@ -76,7 +76,7 @@ export default async function HomePage() {
             {
               stat: "2016",
               label: "Premières formations",
-              detail: "20 jeunes formés dès 2016 à Bukavu — le point de départ d'un engagement structuré."
+              detail: "20 jeunes formés dès 2016 à Bukavu — le point de départ d'un engagement qui a réuni depuis plus de 970 bénéficiaires."
             },
             {
               stat: "11",
