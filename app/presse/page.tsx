@@ -32,7 +32,7 @@ export default function PressPage() {
                 <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">{resource.category}</p>
                 <h2 className="mt-2 text-lg font-black text-brand-blue">{resource.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{resource.description}</p>
-                <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-black text-brand-blue">{resource.status}</p>
+                <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">{resource.status}</p>
               </article>
             ))}
           </div>

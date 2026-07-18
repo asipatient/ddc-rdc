@@ -27,6 +27,22 @@ body {
   color: #f8fafc;
 }
 
+/*
+ * Hiérarchie typographique des sous-titres. Les composants posent leur poids
+ * via des classes Tailwind (font-black, font-extrabold...) directement sur
+ * h2/h3 ; !important force la hiérarchie voulue sans devoir reprendre chaque
+ * composant.
+ */
+h2,
+h3 {
+  font-weight: 600 !important;
+}
+
+p,
+li {
+  font-weight: 400;
+}
+
 .theme-ready body,
 .theme-ready section,
 .theme-ready article,

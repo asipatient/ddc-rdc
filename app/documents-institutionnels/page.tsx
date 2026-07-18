@@ -22,7 +22,7 @@ function DocumentGrid({ documents }: { documents: DocumentItem[] }) {
           <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">{document.category}</p>
           <h2 className="mt-2 text-lg font-black text-brand-blue">{document.title}</h2>
           <p className="mt-3 text-sm leading-7 text-slate-600">{document.description}</p>
-          <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-black text-brand-blue">{document.status}</p>
+          <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">{document.status}</p>
           {document.href ? (
             <a href={document.href} className="focus-ring mt-4 block w-fit rounded-md text-sm font-bold text-brand-green hover:text-brand-blue">
               Ouvrir le document
