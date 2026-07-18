@@ -44,21 +44,21 @@ export function PublicationCard({ publication }: { publication: Publication }) {
         <div className="relative flex flex-wrap gap-2">
           <span
             className={cn(
-              "rounded-md px-3 py-2 text-xs font-bold uppercase tracking-[0.16em] shadow-sm",
+              "rounded-md px-3 py-2 text-xs font-medium uppercase tracking-[0.16em] shadow-sm",
               categoryBadgeClasses[publication.category] || "bg-white/20 backdrop-blur"
             )}
           >
             {publication.category}
           </span>
           {publication.needsReview ? (
-            <span className="rounded-md bg-brand-gold px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-brand-blue">
+            <span className="rounded-md bg-brand-gold px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-brand-blue">
               À relire
             </span>
           ) : null}
         </div>
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
+        <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
           <CalendarDays aria-hidden="true" className="h-4 w-4" />
           <time dateTime={publication.date}>{publication.period || date}</time>
         </div>

@@ -76,22 +76,22 @@ export default async function PublicationDetailPage({ params }: Props) {
             Retour aux publications
           </Link>
           <div className="mt-8 max-w-4xl">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">{publication.category}</p>
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-brand-gold">{publication.category}</p>
             <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl">{publication.title}</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-white/80">{publication.excerpt}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {publication.needsReview ? (
-                <span className="rounded-md bg-brand-gold px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-brand-blue">
+                <span className="rounded-md bg-brand-gold px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-brand-blue">
                   À relire et valider
                 </span>
               ) : null}
               {publication.status ? (
-                <span className="rounded-md bg-white/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-white">
+                <span className="rounded-md bg-white/10 px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-white">
                   {publication.status === "published" ? "Publié" : "Brouillon"}
                 </span>
               ) : null}
             </div>
-            <p className="mt-6 flex items-center gap-2 text-sm font-semibold text-white/70">
+            <p className="mt-6 flex items-center gap-2 text-sm font-medium text-white/70">
               <CalendarDays aria-hidden="true" className="h-4 w-4" />
               <time dateTime={publication.date}>{displayDate}</time>
             </p>

@@ -21,11 +21,11 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
         />
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-brand-green">
+        <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-brand-green">
           <CalendarDays aria-hidden="true" className="h-4 w-4" />
           {realisation.dateLabel}
         </p>
-        <p className="mt-3 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">{realisation.category}</p>
+        <p className="mt-3 text-xs font-medium uppercase tracking-[0.14em] text-slate-500">{realisation.category}</p>
         <h3 className="mt-3 text-xl font-black leading-tight text-brand-blue">{realisation.title}</h3>
         <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">{realisation.description}</p>
         {realisation.relatedProgram || realisation.relatedAxis ? (
