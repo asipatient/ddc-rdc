@@ -4,7 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays } from "lucide-react";
 import { site } from "@/lib/site-data";
-import { getPublicPublicationBySlug } from "@/lib/publications";
+import { getPublicPublicationBySlug, getPublicPublications } from "@/lib/publications";
+import { PublicationCard } from "@/components/PublicationCard";
+import { ShareButtons } from "@/components/ShareButtons";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -33,7 +35,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PublicationDetailPage({ params }: Props) {
   const { slug } = await params;
-  const publication = await getPublicPublicationBySlug(slug);
+  const [publication, allPublications] = await Promise.all([
+    getPublicPublicationBySlug(slug),
+    getPublicPublications()
+  ]);
 
   if (!publication) {
     notFound();
@@ -58,6 +63,10 @@ export default async function PublicationDetailPage({ params }: Props) {
   if (publication.impact) {
     infoBlocks.push({ title: "Résultats / impact", items: publication.impact });
   }
+
+  const similarPublications = allPublications
+    .filter((p) => p.slug !== slug && p.category === publication.category)
+    .slice(0, 3);
 
   return (
     <article>
@@ -124,7 +133,7 @@ export default async function PublicationDetailPage({ params }: Props) {
             </div>
           ) : null}
 
-          {publication.location || publication.partners || publication.relatedAxis || publication.relatedProgram ? (
+          {publication.location || publication.partners?.length || publication.relatedAxis || publication.relatedProgram ? (
             <div className="mt-8 rounded-lg border border-slate-200 p-6">
               <h2 className="text-xl font-black text-brand-blue">Informations de référence</h2>
               <dl className="mt-5 grid gap-4 text-sm leading-7 text-slate-600 md:grid-cols-2">
@@ -156,14 +165,30 @@ export default async function PublicationDetailPage({ params }: Props) {
             </div>
           ) : null}
 
-          <div className="mt-10 rounded-lg bg-brand-mist p-6">
-            <h2 className="text-xl font-black text-brand-blue">Pour aller plus loin</h2>
-            <p className="mt-3 leading-8 text-slate-600">
-              Cette page est prête pour recevoir des contenus détaillés, images, documents PDF, témoignages et liens de téléchargement lorsque les documents officiels seront disponibles.
-            </p>
+          {/* Share buttons */}
+          <div className="mt-10 border-t border-slate-100 pt-8">
+            <p className="mb-4 text-sm font-bold text-slate-500 uppercase tracking-[0.12em]">Partager cet article</p>
+            <ShareButtons title={publication.title} slug={publication.slug} />
           </div>
         </div>
       </section>
+
+      {/* Similar articles */}
+      {similarPublications.length > 0 ? (
+        <section className="bg-brand-mist py-16 sm:py-20">
+          <div className="section-shell">
+            <h2 className="text-2xl font-black text-brand-blue">Articles similaires</h2>
+            <p className="mt-2 text-sm text-slate-500">
+              D&apos;autres contenus dans la catégorie &laquo;&nbsp;{publication.category}&nbsp;&raquo;
+            </p>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {similarPublications.map((p) => (
+                <PublicationCard key={p.slug} publication={p} />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
     </article>
   );
 }

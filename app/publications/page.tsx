@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { PageHero } from "@/components/PageHero";
 import { PublicationFilters } from "@/components/PublicationFilters";
@@ -39,7 +40,9 @@ export default async function PublicationsPage({
             description="Les articles issus des données annexes sont marqués à relire lorsque les chiffres, photos, partenaires ou documents doivent encore être consolidés."
           />
           <div className="mt-10">
-            <PublicationFilters initialCategory={initialCategory} publications={publications} publicationCategories={publicationCategories} />
+            <Suspense fallback={<div className="h-32 rounded-lg bg-brand-mist animate-pulse" />}>
+              <PublicationFilters initialCategory={initialCategory} publications={publications} publicationCategories={publicationCategories} />
+            </Suspense>
           </div>
         </div>
       </ScrollReveal>

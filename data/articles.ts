@@ -9,7 +9,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "formation-droits-devoirs-citoyen-janvier-2023",
     date: "2023-01-03",
     period: "03 - 04 janvier 2023",
-    category: "Citoyenneté et éducation civique",
+    category: "Événements",
     excerpt:
       "Formation de deux jours à Bukavu destinée aux jeunes et aux femmes, portant sur les droits, devoirs citoyens et mécanismes de participation responsable à la vie communautaire.",
     content: [
@@ -41,7 +41,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "sensibilisation-processus-electoral-vote-septembre-2023",
     date: "2023-09-03",
     period: "03 septembre 2023",
-    category: "Participation citoyenne et démocratie",
+    category: "Événements",
     excerpt:
       "Conférence de sensibilisation organisée à Panzi pour renforcer la compréhension du processus électoral et encourager la participation citoyenne responsable.",
     content: [
@@ -77,7 +77,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "initiative-securite-protection-populations-panzi-2024",
     date: "2024-01-01",
     period: "2024",
-    category: "Protection communautaire, veille citoyenne et résilience",
+    category: "Événements",
     excerpt:
       "Mobilisation de jeunes leaders, sages, notables, acteurs de la société civile et autorités locales autour de la protection communautaire et de l'amélioration des conditions de vie à Panzi.",
     content: [
@@ -109,7 +109,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "avenir-panzi-potentiels-prospective-2024-2028",
     date: "2024-05-17",
     period: "17 mai 2024",
-    category: "Développement local, plaidoyer et gouvernance",
+    category: "Rapports",
     excerpt:
       "Conférence magistrale organisée autour des perspectives de développement du quartier Panzi et d'un plaidoyer sur les services essentiels, les infrastructures et la reconnaissance institutionnelle.",
     content: [
@@ -144,7 +144,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "participation-transformative-impact-summit-africa-2024",
     date: "2024-06-07",
     period: "07 - 09 juin 2024",
-    category: "Leadership, réseau international et transformation sociale",
+    category: "Événements",
     excerpt:
       "Participation à un sommet africain consacré à l'impact, au leadership, aux enjeux socioéconomiques, climatiques, technologiques et à l'innovation sociale.",
     content: [
@@ -171,7 +171,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "formation-femmes-entrepreneuriat-local-2024",
     date: "2024-06-01",
     period: "Juin - août 2024",
-    category: "Autonomisation économique des femmes",
+    category: "Événements",
     excerpt:
       "Sessions de formation des femmes à l'entrepreneuriat local, notamment dans la fabrication de savons bleus et de briquettes écologiques.",
     content: [
@@ -203,7 +203,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "assainissement-communautaire-panzi-septembre-2024",
     date: "2024-09-01",
     period: "Septembre 2024",
-    category: "Environnement, assainissement et mobilisation communautaire",
+    category: "Événements",
     excerpt:
       "Mobilisation communautaire pour le débouchage des caniveaux, l'amélioration du cadre de vie, la prévention des risques d'inondation et la sensibilisation environnementale.",
     content: [
@@ -235,7 +235,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "atelier-osc-droits-socioeconomiques-crise-juin-2025",
     date: "2025-06-20",
     period: "20 juin 2025",
-    category: "Société civile, droits socio-économiques et gouvernance",
+    category: "Événements",
     excerpt:
       "Atelier destiné à renforcer les capacités des organisations de la société civile dans la défense des droits socio-économiques en contexte de crise institutionnelle.",
     content: [
@@ -267,7 +267,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "conference-citoyenne-30-juin-2025",
     date: "2025-06-30",
     period: "30 juin 2025",
-    category: "Mémoire, citoyenneté et gouvernance responsable",
+    category: "Événements",
     excerpt:
       "Conférence-débat organisée à l'occasion de la Journée nationale de l'indépendance de la RDC, autour de la paix, de la mémoire nationale et de la responsabilité générationnelle.",
     content: [
@@ -299,7 +299,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "panel-expo-jifa-2025",
     date: "2025-07-31",
     period: "31 juillet 2025",
-    category: "Leadership féminin, culture et entrepreneuriat",
+    category: "Événements",
     excerpt:
       "Lancement du Programme JASIRI à travers une conférence, un panel et une exposition valorisant l'apport économique, culturel et social des femmes entrepreneures congolaises.",
     content: [
@@ -331,7 +331,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "atelier-cooperation-chercheurs-osc-vbg-septembre-2025",
     date: "2025-09-12",
     period: "12 septembre 2025",
-    category: "Recherche, société civile et lutte contre les VBG",
+    category: "Événements",
     excerpt:
       "Atelier de coopération entre chercheurs, scientifiques et acteurs de la société civile pour renforcer l'action collective contre les violences basées sur le genre.",
     content: [
@@ -363,7 +363,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "formation-plan-protection-communautaire-octobre-2025",
     date: "2025-10-14",
     period: "14 - 15 octobre 2025",
-    category: "Protection communautaire et gouvernance locale",
+    category: "Événements",
     excerpt:
       "Participation à une formation sur le Plan de Protection Communautaire organisée par le HCR et exécutée par INTERSOS, visant le renforcement des compétences en protection communautaire et gouvernance locale.",
     content: [
@@ -390,7 +390,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "sensibilisation-talents-creatifs-innovants-enfants-2025",
     date: "2025-10-30",
     period: "30 octobre - 20 novembre 2025",
-    category: "Enfants, créativité et innovation",
+    category: "Événements",
     excerpt:
       "Projet de sensibilisation sur la valorisation des talents créatifs et innovants des jeunes dès l'enfance, mené dans des écoles de Bukavu.",
     content: [
@@ -422,7 +422,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "activite-culturelle-scientifique-vbg-technologie-decembre-2025",
     date: "2025-12-05",
     period: "05 décembre 2025",
-    category: "Droits des femmes, VBG et numérique",
+    category: "Événements",
     excerpt:
       "Activité culturelle et scientifique organisée pendant les 16 jours d'activisme contre les violences basées sur le genre, portant sur les violences facilitées par la technologie.",
     content: [
@@ -454,7 +454,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "atelier-interculturel-journee-mondiale-culture-africaine-2026",
     date: "2026-01-24",
     period: "24 - 25 janvier 2026",
-    category: "Culture, paix et cohésion sociale",
+    category: "Événements",
     excerpt:
       "Atelier de deux jours organisé à Bukavu pour renforcer le dialogue interculturel et intergénérationnel, valoriser la mémoire collective et promouvoir la culture comme levier de paix.",
     content: [
@@ -486,7 +486,7 @@ export const activityArticles: ActivityArticle[] = [
     slug: "mise-en-place-prose-digital-fevrier-2026",
     date: "2026-02-01",
     period: "Février 2026",
-    category: "Digital, innovation et intelligence artificielle",
+    category: "Actualités",
     excerpt:
       "Initiative orientée vers la formation des jeunes et des femmes au digital, au e-commerce, au marketing digital, aux solutions technologiques et à l'intelligence artificielle adaptée aux réalités africaines.",
     content: [
