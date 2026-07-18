@@ -27,6 +27,14 @@ export const axisOptions = [
   }
 ];
 
+export const publicationCategoryOptions = [
+  { label: "Actualités", value: "Actualités" },
+  { label: "Événements", value: "Événements" },
+  { label: "Rapports", value: "Rapports" },
+  { label: "Notes de plaidoyer", value: "Notes de plaidoyer" },
+  { label: "Communiqués", value: "Communiqués" }
+];
+
 export const iconOptions = [
   { label: "Graphique", value: "chart" },
   { label: "Diplôme", value: "graduation" },

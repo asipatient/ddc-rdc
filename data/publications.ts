@@ -73,7 +73,7 @@ const institutionalPublications: Publication[] = [
     slug: "etude-resilience-communautaire",
     title: "Étude exploratoire sur la résilience communautaire",
     date: "2025-12-15",
-    category: "Études",
+    category: "Rapports",
     accent: "green",
     excerpt:
       "Une analyse des besoins locaux en matière de prévention des risques, cohésion sociale et solidarité communautaire.",
@@ -110,4 +110,4 @@ export const publications: Publication[] = [...activityPublications, ...institut
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 );
 
-export const publicationCategories = ["Toutes", ...Array.from(new Set(publications.map((publication) => publication.category)))];
+export const publicationCategories = ["Toutes", "Actualités", "Événements", "Rapports", "Notes de plaidoyer", "Communiqués"];

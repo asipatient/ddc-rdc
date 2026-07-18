@@ -4,7 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays } from "lucide-react";
 import { site } from "@/lib/site-data";
-import { getPublicPublicationBySlug } from "@/lib/publications";
+import { getPublicPublicationBySlug, getPublicPublications } from "@/lib/publications";
+import { PublicationCard } from "@/components/PublicationCard";
+import { ShareButtons } from "@/components/ShareButtons";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -38,6 +40,12 @@ export default async function PublicationDetailPage({ params }: Props) {
   if (!publication) {
     notFound();
   }
+
+  const allPublications = await getPublicPublications();
+  const relatedPublications = allPublications
+    .filter((item) => item.slug !== publication.slug && item.category === publication.category)
+    .slice(0, 3);
+  const shareUrl = `${site.url}/publications/${publication.slug}`;
 
   const date = new Intl.DateTimeFormat("fr-CD", {
     day: "2-digit",
@@ -162,8 +170,25 @@ export default async function PublicationDetailPage({ params }: Props) {
               Cette page est prête pour recevoir des contenus détaillés, images, documents PDF, témoignages et liens de téléchargement lorsque les documents officiels seront disponibles.
             </p>
           </div>
+
+          <div className="mt-10 border-t border-slate-200 pt-8">
+            <ShareButtons url={shareUrl} title={publication.title} />
+          </div>
         </div>
       </section>
+
+      {relatedPublications.length ? (
+        <section className="bg-brand-mist py-16 sm:py-20">
+          <div className="section-shell">
+            <h2 className="text-2xl font-black text-brand-blue">Articles similaires</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {relatedPublications.map((related) => (
+                <PublicationCard key={related.slug} publication={related} />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
     </article>
   );
 }

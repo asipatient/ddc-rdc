@@ -6,6 +6,28 @@ import { readAdminStore } from "@/lib/admin/content-store";
 
 const accents = ["blue", "green", "gold", "red"] as const;
 
+export const PUBLICATION_CATEGORIES = ["Actualités", "Événements", "Rapports", "Notes de plaidoyer", "Communiqués"] as const;
+
+const DIACRITICS_PATTERN = /[\u0300-\u036f]/g;
+
+function stripDiacritics(value: string): string {
+  return value.normalize("NFD").replace(DIACRITICS_PATTERN, "").toLowerCase().trim();
+}
+
+function normalizeCategory(value?: string): string {
+  const normalized = stripDiacritics(String(value || ""));
+
+  if (normalized.includes("plaidoyer")) return "Notes de plaidoyer";
+  if (normalized.includes("communique")) return "Communiqués";
+  if (normalized.includes("rapport") || normalized.includes("etude") || normalized.includes("recherche")) return "Rapports";
+  if (normalized.includes("evenement")) return "Événements";
+  if (normalized.includes("actualite")) return "Actualités";
+
+  return (
+    (PUBLICATION_CATEGORIES as readonly string[]).find((category) => stripDiacritics(category) === normalized) || "Actualités"
+  );
+}
+
 export async function getPublicPublications() {
   const store = await readAdminStore();
   const adminArticles = store.articles
@@ -17,7 +39,7 @@ export async function getPublicPublications() {
         slug: article.slug,
         title: article.title,
         date: article.date || article.publishedAt || article.createdAt,
-        category: article.category || "Articles",
+        category: normalizeCategory(article.category),
         excerpt: article.excerpt || "Résumé à compléter.",
         body: body.length ? body : ["Contenu à compléter."],
         accent: accents[index % accents.length],
@@ -43,7 +65,7 @@ export async function getPublicPublications() {
         slug: post.slug,
         title: post.title,
         date: post.date || post.publishedAt || post.createdAt,
-        category: post.category || "Actualités",
+        category: normalizeCategory(post.category),
         excerpt: post.excerpt || "Résumé à compléter.",
         body: body.length ? body : ["Contenu à compléter."],
         accent: accents[(index + adminArticles.length) % accents.length],
@@ -67,7 +89,7 @@ export async function getPublicPublications() {
         slug: realisation.slug,
         title: realisation.title,
         date: realisation.date || realisation.publishedAt || realisation.createdAt,
-        category: realisation.category || "Réalisations",
+        category: normalizeCategory(realisation.category),
         excerpt: realisation.excerpt || "Résumé à compléter.",
         body: body.length ? body : ["Contenu à compléter."],
         accent: accents[(index + adminArticles.length + adminNews.length) % accents.length],
@@ -87,7 +109,7 @@ export async function getPublicPublications() {
   const bySlug = new Map<string, Publication>();
   [...adminPublications, ...staticPublications].forEach((publication) => {
     if (!bySlug.has(publication.slug)) {
-      bySlug.set(publication.slug, publication);
+      bySlug.set(publication.slug, { ...publication, category: normalizeCategory(publication.category) });
     }
   });
 
@@ -100,8 +122,7 @@ export async function getPublicPublicationBySlug(slug: string) {
 }
 
 export async function getPublicPublicationCategories() {
-  const publications = await getPublicPublications();
-  return ["Toutes", ...Array.from(new Set(publications.map((publication) => publication.category)))];
+  return ["Toutes", ...PUBLICATION_CATEGORIES];
 }
 
 function splitParagraphs(value?: string) {

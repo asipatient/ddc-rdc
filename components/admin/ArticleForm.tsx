@@ -1,5 +1,5 @@
 import type { AdminArticle } from "@/lib/admin/types";
-import { axisOptions, programOptions } from "@/lib/admin/content-options";
+import { axisOptions, programOptions, publicationCategoryOptions } from "@/lib/admin/content-options";
 
 type ArticleFormProps = {
   action: (formData: FormData) => Promise<void>;
@@ -15,7 +15,7 @@ export function ArticleForm({ action, article, submitLabel = "Enregistrer l'arti
       <div className="grid gap-5 md:grid-cols-2">
         <TextField name="title" label="Titre" required defaultValue={article?.title} placeholder="Titre de l'article" />
         <TextField name="slug" label="Slug" defaultValue={article?.slug} placeholder="genere automatiquement si vide" />
-        <TextField name="category" label="Catégorie" required defaultValue={article?.category} placeholder="Citoyenneté, Leadership..." />
+        <SelectField name="category" label="Catégorie" defaultValue={article?.category} options={publicationCategoryOptions} />
         <TextField name="date" label="Date" type="date" required defaultValue={article?.date} />
         <TextField name="author" label="Auteur" defaultValue={article?.author || "DDC RDC"} />
         <TextField name="image" label="Image principale" defaultValue={article?.image} placeholder="/images/ddc/photo.jpg ou URL" />

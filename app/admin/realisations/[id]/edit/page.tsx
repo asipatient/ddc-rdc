@@ -5,7 +5,7 @@ import { ContentForm } from "@/components/admin/ContentForm";
 import { AdminPageHeader } from "@/components/admin/AdminPageHeader";
 import { DeleteItemForm } from "@/components/admin/DeleteItemForm";
 import { StatusBadge } from "@/components/admin/StatusBadge";
-import { axisOptions, programOptions } from "@/lib/admin/content-options";
+import { axisOptions, programOptions, publicationCategoryOptions } from "@/lib/admin/content-options";
 import { readAdminStore } from "@/lib/admin/content-store";
 import { AdminPage } from "@/lib/admin/page";
 
@@ -69,7 +69,7 @@ export default async function EditRealisationPage({ params, searchParams }: Prop
         fields={[
           { name: "title", label: "Titre", required: true },
           { name: "slug", label: "Slug" },
-          { name: "category", label: "Catégorie", required: true },
+          { name: "category", label: "Catégorie", type: "select", options: publicationCategoryOptions, required: true },
           { name: "date", label: "Date", type: "date", required: true },
           { name: "author", label: "Auteur" },
           { name: "location", label: "Lieu" },
