@@ -20,7 +20,7 @@ export default function MemberVolunteerPage() {
         description={memberVolunteerIntro}
         cta={{ label: "Remplir le formulaire", href: "#candidature" }}
       
-        image="/images/ddc/jifa-2025.jpg"
+        image="/images/ddc/IMG-20260131-WA0150.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>

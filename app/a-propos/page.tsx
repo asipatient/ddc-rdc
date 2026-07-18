@@ -20,7 +20,7 @@ export default function AboutPage() {
         title="Une dynamique citoyenne née des défis et des forces du Congo."
         description="La DDC RDC crée un cadre structuré pour permettre aux jeunes et aux femmes de réfléchir, se former, entreprendre, innover et agir dans leurs communautés."
         cta={{ label: "Rejoindre la DDC", href: "/devenir-membre-benevole" }}
-      image="/images/ddc/conference-citoyenne.jpg"
+      image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>

@@ -24,14 +24,14 @@ export default async function TeamPage() {
         title="Une équipe engagée pour structurer, accompagner et rendre compte."
         description="Cette page présente les responsabilités clés de la DDC RDC. Les biographies, photos et liens de contact peuvent être complétés progressivement."
         cta={{ label: "Contacter l'équipe", href: "/contact" }}
-      image="/images/ddc/jifa-2025.jpg"
+      image="/images/ddc/IMG-20260131-WA0150.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>
         <div className="section-shell">
           <SectionHeading
             eyebrow="Leadership institutionnel"
-            title="Une équipe identifiée, avec des rôles clairs et des profils à compléter."
+            title="Une équipe identifiée, avec des rôles clairs au sein de l'association."
             description="Les photos officielles fournies sont intégrées. Les biographies détaillées et liens personnels pourront être enrichis progressivement."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">

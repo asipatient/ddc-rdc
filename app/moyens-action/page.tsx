@@ -19,7 +19,7 @@ export default function MoyensActionPage() {
         title="Des outils concrets pour passer de l'idée à l'action communautaire."
         description="La DDC RDC mobilise plusieurs moyens complémentaires pour former, documenter, accompagner, sensibiliser et soutenir les initiatives locales."
         cta={{ label: "Proposer une initiative", href: "/contact?type=Projet%20communautaire" }}
-      image="/images/ddc/atelier-scientifique-vbg.jpg"
+      image="/images/ddc/activisme-vbg.jpg"
       />
       <section className="bg-brand-mist py-16 sm:py-20">
         <ScrollReveal>

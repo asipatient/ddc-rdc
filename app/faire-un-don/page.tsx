@@ -36,7 +36,7 @@ export default async function DonatePage() {
         <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="relative min-h-96 overflow-hidden rounded-lg bg-brand-blueSoft">
             <Image
-              src="/images/ddc/jifa-2025.jpg"
+              src="/images/ddc/IMG-20260131-WA0150.jpg"
               alt="Activité DDC RDC avec des femmes et jeunes entrepreneurs"
               fill
               sizes="(min-width: 1024px) 45vw, 100vw"

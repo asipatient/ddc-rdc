@@ -19,7 +19,7 @@ export default function BeneficiariesPage() {
         title="Accompagner les personnes, organisations et communautés porteuses de changement."
         description="La DDC RDC cible les jeunes, les femmes, les enfants, les groupes vulnérables et les structures locales de participation citoyenne."
       
-        image="/images/ddc/talents-enfance.jpg"
+        image="/images/ddc/IMG-20260131-WA0181.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>

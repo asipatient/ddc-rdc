@@ -19,7 +19,7 @@ export default function HistoryPage() {
         title="De l'engagement communautaire à une plateforme institutionnelle."
         description={historyIntro}
         cta={{ label: "Voir les réalisations", href: "/realisations" }}
-      image="/images/ddc/culture-africaine.jpg"
+      image="/images/ddc/jeunesse-culture-echange.jpg"
       />
       <section className="bg-brand-blue py-16 text-white sm:py-20">
         <ScrollReveal className="section-shell max-w-3xl">

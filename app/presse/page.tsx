@@ -19,7 +19,7 @@ export default function PressPage() {
         title="Un espace média pour suivre les prises de parole de la DDC RDC."
         description="Cette page pourra accueillir les communiqués, dossiers de presse, photos officielles, contacts presse, interventions médiatiques et articles parlant de la DDC."
       
-        image="/images/ddc/conference-citoyenne.jpg"
+        image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { MapPin } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
-import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ZonesMapLoader } from "@/components/ZonesMapLoader";
 import { zonesIntervention } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -25,14 +25,8 @@ export default function ZonesInterventionPage() {
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>
         <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="flex min-h-96 items-center justify-center rounded-lg border border-dashed border-slate-300 bg-brand-mist p-8 text-center">
-            <div>
-              <IconRenderer icon="map" className="mx-auto h-12 w-12 text-brand-green" />
-              <h2 className="mt-4 text-2xl font-black text-brand-blue">Carte placeholder</h2>
-              <p className="mt-3 max-w-md text-sm leading-7 text-slate-600">
-                Carte de la République Démocratique du Congo, de Bukavu et du Sud-Kivu à intégrer.
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-lg border border-slate-200 shadow-sm">
+            <ZonesMapLoader />
           </div>
           <div>
             <SectionHeading

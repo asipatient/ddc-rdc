@@ -26,7 +26,7 @@ export default async function ProgramsPage() {
         description="Les programmes de la DDC RDC transforment les priorités institutionnelles en parcours de formation, recherche, incubation, alerte, culture, inclusion et action communautaire."
         cta={{ label: "Soutenir nos actions", href: paypalDonationUrl }}
       
-        image="/images/ddc/atelier-scientifique-vbg.jpg"
+        image="/images/ddc/activisme-vbg.jpg"
       />
       <section className="bg-brand-mist py-16 sm:py-20">
         <ScrollReveal>

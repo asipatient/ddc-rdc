@@ -19,7 +19,7 @@ export default function OpportunitiesPage() {
         title="Appels, formations, bénévolat, partenariats et événements."
         description="Cette page permettra de publier les opportunités pour les jeunes, les femmes, les bénévoles, les partenaires et les communautés locales."
         cta={{ label: "Rejoindre la DDC", href: "/devenir-membre-benevole" }}
-      image="/images/ddc/talents-enfance.jpg"
+      image="/images/ddc/IMG-20260131-WA0181.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>

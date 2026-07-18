@@ -14,27 +14,27 @@ export const transparencyDocuments: DocumentItem[] = [
     description: "Espace réservé aux rapports financiers et états de redevabilité."
   },
   {
-    title: "Notes de plaidoyer à compléter",
+    title: "Notes de plaidoyer",
     category: "Notes de plaidoyer",
-    status: "À compléter",
+    status: "À venir",
     description: "Espace réservé aux analyses et recommandations institutionnelles."
   },
   {
-    title: "Comptes rendus d'activités à compléter",
+    title: "Comptes rendus d'activités",
     category: "Comptes rendus",
-    status: "À compléter",
+    status: "À venir",
     description: "Espace destiné aux comptes rendus publics des activités réalisées."
   },
   {
-    title: "Documents institutionnels à compléter",
+    title: "Documents institutionnels",
     category: "Documentation institutionnelle",
-    status: "À compléter",
+    status: "À venir",
     description: "Statuts, règlement intérieur, brochures et documents de présentation."
   },
   {
-    title: "Politique de protection à compléter",
+    title: "Politique de protection",
     category: "Politiques internes",
-    status: "À compléter",
+    status: "À venir",
     description: "Espace réservé aux politiques de sauvegarde et protection."
   }
 ];
@@ -42,31 +42,31 @@ export const transparencyDocuments: DocumentItem[] = [
 export const institutionalDocuments: DocumentItem[] = [
   { title: "Statuts", category: "Gouvernance", status: "Document à ajouter", description: "Statuts officiels de l'association." },
   { title: "Règlement intérieur", category: "Gouvernance", status: "Document à ajouter", description: "Règles internes de fonctionnement." },
-  { title: "Rapports", category: "Redevabilité", status: "Dossier à compléter", description: "Rapports d'activités, financiers et thématiques." },
+  { title: "Rapports", category: "Redevabilité", status: "À venir", description: "Rapports d'activités, financiers et thématiques." },
   { title: "Plans stratégiques", category: "Stratégie", status: "Document à publier", description: "Plan stratégique et priorités programmatiques." },
-  { title: "Politiques internes", category: "Éthique", status: "Dossier à compléter", description: "Politiques de protection, données, anti-corruption et sauvegarde." },
-  { title: "Documents de plaidoyer", category: "Plaidoyer", status: "Dossier à compléter", description: "Notes, recommandations et propositions de politiques publiques." },
+  { title: "Politiques internes", category: "Éthique", status: "À venir", description: "Politiques de protection, données, anti-corruption et sauvegarde." },
+  { title: "Documents de plaidoyer", category: "Plaidoyer", status: "À venir", description: "Notes, recommandations et propositions de politiques publiques." },
   { title: "Brochures", category: "Communication", status: "Fichiers à ajouter", description: "Brochures institutionnelles et supports de présentation." },
   { title: "Communiqués", category: "Presse", status: "À publier", description: "Communiqués officiels et déclarations publiques." }
 ];
 
 export const protectionEthicsDocuments: DocumentItem[] = [
-  { title: "Politique de protection de l'enfant", category: "Protection", status: "À compléter", description: "Document interne à développer." },
-  { title: "Politique de prévention des VBG", category: "Protection", status: "À compléter", description: "Référentiel de prévention et réponse aux violences basées sur le genre." },
-  { title: "Politique de protection des données", category: "Données", status: "À compléter", description: "Cadre de gestion responsable des données collectées." },
-  { title: "Code d'éthique", category: "Éthique", status: "À compléter", description: "Principes de conduite des membres, bénévoles et partenaires." },
-  { title: "Politique anti-corruption", category: "Redevabilité", status: "À compléter", description: "Mécanismes de prévention des conflits d'intérêts et abus." },
-  { title: "Mécanisme de signalement", category: "Signalement", status: "À compléter", description: "Canaux et procédures de signalement sécurisé." },
-  { title: "Politique de sauvegarde", category: "Sauvegarde", status: "À compléter", description: "Cadre global de protection des bénéficiaires et équipes." }
+  { title: "Politique de protection de l'enfant", category: "Protection", status: "À venir", description: "Document interne à développer." },
+  { title: "Politique de prévention des VBG", category: "Protection", status: "À venir", description: "Référentiel de prévention et réponse aux violences basées sur le genre." },
+  { title: "Politique de protection des données", category: "Données", status: "À venir", description: "Cadre de gestion responsable des données collectées." },
+  { title: "Code d'éthique", category: "Éthique", status: "À venir", description: "Principes de conduite des membres, bénévoles et partenaires." },
+  { title: "Politique anti-corruption", category: "Redevabilité", status: "À venir", description: "Mécanismes de prévention des conflits d'intérêts et abus." },
+  { title: "Mécanisme de signalement", category: "Signalement", status: "À venir", description: "Canaux et procédures de signalement sécurisé." },
+  { title: "Politique de sauvegarde", category: "Sauvegarde", status: "À venir", description: "Cadre global de protection des bénéficiaires et équipes." }
 ];
 
 export const pressResources: DocumentItem[] = [
   { title: "Communiqués", category: "Presse", status: "À publier", description: "Communiqués officiels de la DDC RDC." },
-  { title: "Dossiers de presse", category: "Presse", status: "À compléter", description: "Dossier institutionnel, éléments de langage et informations clés." },
+  { title: "Dossiers de presse", category: "Presse", status: "À venir", description: "Dossier institutionnel, éléments de langage et informations clés." },
   { title: "Photos officielles", category: "Médias", status: "À ajouter", description: "Photos validées pour usage presse et communication." },
   { title: "Contacts presse", category: "Médias", status: "Disponible via contact officiel", description: "Canal de contact pour journalistes et médias." },
   { title: "Interventions médiatiques", category: "Médias", status: "À documenter", description: "Radio, télévision, presse écrite, podcasts et plateformes numériques." },
-  { title: "Articles parlant de la DDC", category: "Revue de presse", status: "À compléter", description: "Liens et références aux mentions médiatiques." }
+  { title: "Articles parlant de la DDC", category: "Revue de presse", status: "À venir", description: "Liens et références aux mentions médiatiques." }
 ];
 
 export const opportunities: Opportunity[] = [
@@ -85,13 +85,13 @@ export const opportunities: Opportunity[] = [
   {
     title: "Opportunités pour jeunes",
     audience: "Jeunes leaders",
-    status: "À compléter",
+    status: "À venir",
     description: "Mentorat, clubs citoyens, initiatives locales, volontariat et propositions d'actions."
   },
   {
     title: "Opportunités pour femmes",
     audience: "Femmes leaders",
-    status: "À compléter",
+    status: "À venir",
     description: "Leadership, autonomisation économique, protection, plaidoyer et participation citoyenne."
   },
   {

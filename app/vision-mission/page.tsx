@@ -11,7 +11,7 @@ export const metadata = buildMetadata({
   description:
     "Découvrez la vision et la mission de la DDC RDC : former une génération consciente, compétente et engagée au service de la transformation démocratique et sociale du Congo.",
   path: "/vision-mission/",
-  ogImage: "/images/ddc/conference-citoyenne.jpg"
+  ogImage: "/images/ddc/osc-droits-socioeconomiques.jpg"
 });
 
 export default function VisionMissionPage() {
@@ -22,7 +22,7 @@ export default function VisionMissionPage() {
         title="Former une génération consciente, compétente et engagée."
         description="La DDC RDC articule son action autour d'une vision de transformation démocratique, sociale, économique, culturelle et environnementale."
       
-        image="/images/ddc/conference-citoyenne.jpg"
+        image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
 
       <section className="bg-white py-16 sm:py-20">

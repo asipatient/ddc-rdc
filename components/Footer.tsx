@@ -37,13 +37,9 @@ export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig })
       <div className="section-shell py-14">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1.8fr]">
           <div>
-            <div className="flex items-center gap-3">
+            <Link href="/" className="focus-ring inline-flex rounded-md" aria-label="Accueil DDC RDC">
               <Image src={siteConfig.logo} alt="Logo DDC RDC" width={64} height={64} className="h-16 w-16 rounded-md object-contain brightness-0 invert" />
-              <div>
-                <p className="text-lg font-black">{siteConfig.shortName}</p>
-                <p className="text-sm font-semibold text-white/70">{siteConfig.legalName}</p>
-              </div>
-            </div>
+            </Link>
             <p className="mt-5 max-w-md text-sm leading-7 text-white/80">{siteConfig.slogan}</p>
             <a
               href={siteConfig.donationUrl}

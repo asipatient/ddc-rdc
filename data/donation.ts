@@ -31,7 +31,7 @@ export const donationPage = {
     "Rapports d'activités à publier.",
     "Rapports financiers à publier.",
     "Comptes rendus d'activités à consolider.",
-    "Documentation institutionnelle à compléter.",
+    "Documentation institutionnelle en cours de publication.",
     "Mécanismes de suivi et redevabilité à renforcer progressivement."
   ],
   institutionalPartnership:

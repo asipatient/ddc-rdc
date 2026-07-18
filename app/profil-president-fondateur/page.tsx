@@ -59,7 +59,7 @@ export default function FounderProfilePage() {
         <div className="section-shell">
           <SectionHeading
             eyebrow="Parcours"
-            title="Repères à compléter avec les documents et archives disponibles."
+            title="Repères construits à partir des documents et archives disponibles."
             description="Cette synthèse reste volontairement sobre et modifiable, afin de garder une présentation institutionnelle vérifiable."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">

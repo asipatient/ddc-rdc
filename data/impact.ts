@@ -44,7 +44,7 @@ export const monitoringLearning = {
   intro:
     "La DDC RDC entend renforcer progressivement ses mécanismes de suivi, d'évaluation, d'apprentissage et de redevabilité afin de mesurer les résultats de ses actions, capitaliser les expériences, documenter les changements et améliorer continuellement ses programmes.",
   blocks: [
-    { title: "Indicateurs d'impact", description: "Tableaux de suivi à compléter au fur et à mesure de la consolidation des données.", icon: "chart" },
+    { title: "Indicateurs d'impact", description: "Tableaux de suivi mis à jour au fil de la consolidation des données.", icon: "chart" },
     { title: "Rapports périodiques", description: "Rapports d'activités, notes de synthèse et bilans de programmes à publier.", icon: "file" },
     { title: "Témoignages", description: "Récits de jeunes, femmes, partenaires et leaders communautaires à documenter.", icon: "users" },
     { title: "Études de cas", description: "Capitalisation des initiatives porteuses de changement local.", icon: "search" },

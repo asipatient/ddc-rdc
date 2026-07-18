@@ -15,7 +15,7 @@ export const activityArticles: ActivityArticle[] = [
     content: [
       "Cette activité a permis d'ouvrir un espace d'éducation civique destiné aux jeunes et aux femmes de Bukavu. Elle a porté sur les droits, les devoirs et les formes de participation responsable à la vie communautaire.",
       "La démarche a privilégié un langage accessible, des échanges directs et une orientation pratique afin d'encourager les participants à devenir des relais de citoyenneté dans leurs milieux de vie.",
-      "Les informations chiffrées disponibles indiquent que plus de 50 jeunes et femmes ont été outillés. Les supports, photos et rapports détaillés restent à compléter."
+      "Les informations chiffrées disponibles indiquent que plus de 50 jeunes et femmes ont été outillés. Les supports, photos et rapports détaillés seront publiés au fil de la consolidation des archives."
     ],
     objectives: [
       "Renforcer la compréhension des droits et devoirs citoyens.",
@@ -25,11 +25,11 @@ export const activityArticles: ActivityArticle[] = [
     targetAudience: ["Jeunes", "Femmes", "Citoyens engagés"],
     impact: ["Plus de 50 jeunes et femmes outillés.", "Données en cours de consolidation."],
     location: "Bukavu, RDC",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Gouvernance, citoyenneté et transformation sociale",
     relatedProgram: "École Citoyenne",
-    image: "/images/ddc/conference-citoyenne.jpg",
-    gallery: ["/images/ddc/conference-citoyenne.jpg"],
+    image: "/images/ddc/osc-droits-socioeconomiques.jpg",
+    gallery: ["/images/ddc/osc-droits-socioeconomiques.jpg"],
     status: "published",
     needsReview: true,
     createdAt: reviewDate,
@@ -47,7 +47,7 @@ export const activityArticles: ActivityArticle[] = [
     content: [
       "La conférence a réuni des jeunes et des femmes autour des enjeux de participation électorale, de responsabilité citoyenne et de compréhension du processus démocratique.",
       "L'activité a été menée dans une logique non partisane, centrée sur l'information, la citoyenneté et l'importance d'un vote responsable.",
-      "Les données disponibles mentionnent plus de 300 jeunes et femmes sensibilisés. Les éléments de rapportage, listes de présence et visuels restent à compléter."
+      "Les données disponibles mentionnent plus de 300 jeunes et femmes sensibilisés. Les éléments de rapportage, listes de présence et visuels seront ajoutés au fil de la consolidation des archives."
     ],
     objectives: [
       "Renforcer la compréhension du processus électoral.",
@@ -64,8 +64,8 @@ export const activityArticles: ActivityArticle[] = [
     ],
     relatedAxis: "Gouvernance, citoyenneté et transformation sociale",
     relatedProgram: "École Citoyenne",
-    image: "/images/ddc/conference-citoyenne.jpg",
-    gallery: ["/images/ddc/conference-citoyenne.jpg"],
+    image: "/images/ddc/osc-droits-socioeconomiques.jpg",
+    gallery: ["/images/ddc/osc-droits-socioeconomiques.jpg"],
     status: "published",
     needsReview: true,
     createdAt: reviewDate,
@@ -83,7 +83,7 @@ export const activityArticles: ActivityArticle[] = [
     content: [
       "Cette initiative a mobilisé des jeunes leaders, sages, notables, acteurs de la société civile et autorités locales autour des défis de protection communautaire à Panzi.",
       "La démarche a mis l'accent sur la prévention, le dialogue, le plaidoyer, la collaboration communautaire et la recherche de solutions adaptées aux réalités locales.",
-      "Les aspects sensibles liés à l'insécurité communautaire sont abordés avec prudence et dignité. Les détails opérationnels, les chiffres et les documents de suivi restent à compléter."
+      "Les aspects sensibles liés à l'insécurité communautaire sont abordés avec prudence et dignité. Les détails opérationnels, les chiffres et les documents de suivi seront publiés progressivement."
     ],
     objectives: [
       "Renforcer la mobilisation citoyenne autour de la protection des populations.",
@@ -91,7 +91,7 @@ export const activityArticles: ActivityArticle[] = [
       "Porter un plaidoyer sobre sur les besoins prioritaires de Panzi."
     ],
     targetAudience: ["Communautés locales", "Jeunes leaders", "Autorités locales", "Société civile"],
-    impact: ["Mobilisation communautaire documentée.", "Chiffres à compléter."],
+    impact: ["Mobilisation communautaire documentée.", "Chiffres en cours de consolidation."],
     location: "Panzi, Bukavu",
     partners: ["Acteurs communautaires à documenter", "Autorités locales à documenter"],
     relatedAxis: "Gouvernance, citoyenneté et transformation sociale",
@@ -128,9 +128,9 @@ export const activityArticles: ActivityArticle[] = [
       "Information sur le statut institutionnel de Panzi à vérifier/documenter."
     ],
     location: "Centre d'Excellence Denis Mukwege, Panzi",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Gouvernance, citoyenneté et transformation sociale",
-    relatedProgram: "À compléter",
+    relatedProgram: "",
     image: "/images/ddc/hero-reel-ddc.jpg",
     gallery: ["/images/ddc/hero-reel-ddc.jpg"],
     status: "published",
@@ -153,9 +153,9 @@ export const activityArticles: ActivityArticle[] = [
     ],
     objectives: ["Renforcer l'ouverture vers les réseaux africains d'impact.", "Capitaliser des apprentissages utiles à l'action citoyenne locale."],
     targetAudience: ["Profil du Président Fondateur"],
-    impact: ["À compléter"],
+    impact: ["Impact en cours de documentation."],
     location: "Zanzibar, Tanzanie",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "À clarifier",
     relatedProgram: "À clarifier",
     image: "/images/team/patient-asifiwe.jpg",
@@ -177,7 +177,7 @@ export const activityArticles: ActivityArticle[] = [
     content: [
       "Cette activité a accompagné des femmes dans l'apprentissage de pratiques d'entrepreneuriat local et de production à petite échelle.",
       "Les sessions ont notamment abordé la fabrication de savons bleus et de briquettes écologiques, en lien avec l'autonomisation économique et les solutions locales durables.",
-      "Les données disponibles indiquent 50 femmes formées. Les fiches techniques, témoignages et photos restent à compléter."
+      "Les données disponibles indiquent 50 femmes formées. Les fiches techniques, témoignages et photos seront ajoutés progressivement."
     ],
     objectives: [
       "Renforcer les compétences entrepreneuriales des femmes.",
@@ -187,11 +187,11 @@ export const activityArticles: ActivityArticle[] = [
     targetAudience: ["Femmes", "Jeunes femmes", "Porteuses d'initiatives locales"],
     impact: ["50 femmes formées.", "Données en cours de consolidation."],
     location: "Bukavu, RDC",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Autonomisation économique et résilience",
     relatedProgram: "PROJEC / Programme Vert et Climat",
-    image: "/images/ddc/jifa-2025.jpg",
-    gallery: ["/images/ddc/jifa-2025.jpg"],
+    image: "/images/ddc/IMG-20260131-WA0150.jpg",
+    gallery: ["/images/ddc/IMG-20260131-WA0150.jpg"],
     status: "published",
     needsReview: true,
     createdAt: reviewDate,
@@ -219,7 +219,7 @@ export const activityArticles: ActivityArticle[] = [
     targetAudience: ["Communautés locales", "Jeunes", "Leaders communautaires"],
     impact: ["Plusieurs centaines de personnes potentiellement protégées.", "Données à consolider."],
     location: "Panzi, Bukavu",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Autonomisation économique et résilience",
     relatedProgram: "Programme Vert et Climat",
     image: "/images/ddc/hero-reel-ddc.jpg",
@@ -251,7 +251,7 @@ export const activityArticles: ActivityArticle[] = [
     targetAudience: ["Organisations de la société civile", "Chercheurs", "Acteurs communautaires"],
     impact: ["50 acteurs de la société civile capacités.", "Données en cours de consolidation."],
     location: "Bukavu, RDC",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Gouvernance, citoyenneté et transformation sociale",
     relatedProgram: "Think Tank DDC",
     image: "/images/ddc/osc-droits-socioeconomiques.jpg",
@@ -283,11 +283,11 @@ export const activityArticles: ActivityArticle[] = [
     targetAudience: ["Jeunes", "Autorités locales", "Leaders d'opinion"],
     impact: ["120 jeunes, autorités locales et leaders d'opinion mobilisés.", "Données en cours de consolidation."],
     location: "Bukavu, RDC",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Gouvernance, citoyenneté et transformation sociale",
     relatedProgram: "École Citoyenne",
-    image: "/images/ddc/conference-citoyenne.jpg",
-    gallery: ["/images/ddc/conference-citoyenne.jpg"],
+    image: "/images/ddc/osc-droits-socioeconomiques.jpg",
+    gallery: ["/images/ddc/osc-droits-socioeconomiques.jpg"],
     status: "published",
     needsReview: true,
     createdAt: reviewDate,
@@ -315,11 +315,11 @@ export const activityArticles: ActivityArticle[] = [
     targetAudience: ["Femmes", "Jeunes filles", "Hommes alliés", "Entrepreneures"],
     impact: ["Plus de 100 femmes, jeunes filles et hommes mobilisés et sensibilisés.", "Données en cours de consolidation."],
     location: "Bukavu, RDC",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Identité, inclusion et capital humain",
     relatedProgram: "JASIRI",
-    image: "/images/ddc/jifa-2025.jpg",
-    gallery: ["/images/ddc/jifa-2025.jpg"],
+    image: "/images/ddc/IMG-20260131-WA0150.jpg",
+    gallery: ["/images/ddc/IMG-20260131-WA0150.jpg"],
     status: "published",
     needsReview: true,
     createdAt: reviewDate,
@@ -337,7 +337,7 @@ export const activityArticles: ActivityArticle[] = [
     content: [
       "Cet atelier a créé un cadre de dialogue entre chercheurs, scientifiques et acteurs de la société civile autour de la prévention et de la lutte contre les violences basées sur le genre.",
       "La démarche a privilégié la coopération, la production de connaissances utiles et le renforcement des stratégies d'action collective.",
-      "Les informations d'impact restent à compléter avec les données validées, supports et comptes rendus."
+      "Les informations d'impact seront enrichies au fil des données validées, supports et comptes rendus."
     ],
     objectives: [
       "Renforcer la coopération entre recherche et société civile.",
@@ -345,13 +345,13 @@ export const activityArticles: ActivityArticle[] = [
       "Encourager une approche fondée sur les données et la dignité des personnes."
     ],
     targetAudience: ["Chercheurs", "Organisations de la société civile", "Acteurs communautaires"],
-    impact: ["À compléter", "Données en cours de consolidation."],
+    impact: ["Données en cours de consolidation."],
     location: "Bukavu, RDC",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Gouvernance, citoyenneté et transformation sociale / Identité, inclusion et capital humain",
     relatedProgram: "Think Tank DDC / JASIRI",
-    image: "/images/ddc/atelier-scientifique-vbg.jpg",
-    gallery: ["/images/ddc/atelier-scientifique-vbg.jpg"],
+    image: "/images/ddc/activisme-vbg.jpg",
+    gallery: ["/images/ddc/activisme-vbg.jpg"],
     status: "published",
     needsReview: true,
     createdAt: reviewDate,
@@ -372,7 +372,7 @@ export const activityArticles: ActivityArticle[] = [
     ],
     objectives: ["Renforcer les compétences en protection communautaire.", "Capitaliser les apprentissages utiles à l'action locale."],
     targetAudience: ["Leadership institutionnel"],
-    impact: ["À compléter"],
+    impact: ["Impact en cours de documentation."],
     location: "Bukavu, RDC",
     partners: ["HCR", "INTERSOS"],
     relatedAxis: "Gouvernance, citoyenneté et transformation sociale",
@@ -409,8 +409,8 @@ export const activityArticles: ActivityArticle[] = [
     partners: ["Écoles à documenter"],
     relatedAxis: "Identité, inclusion et capital humain",
     relatedProgram: "Creative Child",
-    image: "/images/ddc/talents-enfance.jpg",
-    gallery: ["/images/ddc/talents-enfance.jpg"],
+    image: "/images/ddc/IMG-20260131-WA0181.jpg",
+    gallery: ["/images/ddc/IMG-20260131-WA0181.jpg"],
     status: "published",
     needsReview: true,
     createdAt: reviewDate,
@@ -428,7 +428,7 @@ export const activityArticles: ActivityArticle[] = [
     content: [
       "Organisée dans le cadre des 16 jours d'activisme contre les violences basées sur le genre, cette activité a abordé les formes de violences facilitées par la technologie.",
       "La rencontre a mis l'accent sur la prévention, la dignité, l'adaptation des mécanismes de protection et la compréhension des réalités numériques en RDC.",
-      "Les données d'impact restent à compléter à partir des rapports et supports validés."
+      "Les données d'impact seront enrichies à partir des rapports et supports validés."
     ],
     objectives: [
       "Sensibiliser sur les risques de violences facilitées par la technologie.",
@@ -436,9 +436,9 @@ export const activityArticles: ActivityArticle[] = [
       "Renforcer le dialogue entre culture, recherche et protection."
     ],
     targetAudience: ["Femmes", "Jeunes filles", "Jeunes", "Acteurs de protection"],
-    impact: ["À compléter", "Données en cours de consolidation."],
+    impact: ["Données en cours de consolidation."],
     location: "Bukavu, RDC",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Identité, inclusion et capital humain",
     relatedProgram: "JASIRI",
     image: "/images/ddc/activisme-vbg.jpg",
@@ -460,7 +460,7 @@ export const activityArticles: ActivityArticle[] = [
     content: [
       "Cet atelier de deux jours a réuni des participants autour du dialogue interculturel et intergénérationnel.",
       "L'activité a valorisé la mémoire collective, les identités positives et la culture comme levier de paix, de cohésion sociale et de vivre-ensemble communautaire.",
-      "Les données d'impact restent à compléter à partir des rapports, photos et témoignages."
+      "Les données d'impact seront enrichies à partir des rapports, photos et témoignages."
     ],
     objectives: [
       "Renforcer le dialogue interculturel et intergénérationnel.",
@@ -468,13 +468,13 @@ export const activityArticles: ActivityArticle[] = [
       "Promouvoir la culture comme levier de paix et de cohésion sociale."
     ],
     targetAudience: ["Jeunes", "Acteurs culturels", "Leaders communautaires", "Communautés locales"],
-    impact: ["À compléter", "Données en cours de consolidation."],
+    impact: ["Données en cours de consolidation."],
     location: "Bukavu, RDC",
-    partners: ["À compléter"],
+    partners: [],
     relatedAxis: "Identité, inclusion et capital humain",
     relatedProgram: "Kongo Culture",
-    image: "/images/ddc/culture-africaine.jpg",
-    gallery: ["/images/ddc/culture-africaine.jpg"],
+    image: "/images/ddc/jeunesse-culture-echange.jpg",
+    gallery: ["/images/ddc/jeunesse-culture-echange.jpg"],
     status: "published",
     needsReview: true,
     createdAt: reviewDate,
@@ -500,8 +500,8 @@ export const activityArticles: ActivityArticle[] = [
       "Identifier les contenus de formation à documenter."
     ],
     targetAudience: ["Jeunes", "Femmes", "Entrepreneurs locaux"],
-    impact: ["À compléter", "Statut à clarifier."],
-    location: "À compléter",
+    impact: ["Statut à clarifier."],
+    location: "",
     partners: ["PROSE DIGITAL - statut à clarifier"],
     relatedAxis: "À clarifier",
     relatedProgram: "Initiative à clarifier",

@@ -18,7 +18,7 @@ export default function ObjectivesPage() {
         title="Des objectifs clairs pour relier la conscience citoyenne à l'impact local."
         description="La DDC RDC structure son action autour d'un objectif général et de huit objectifs spécifiques."
       
-        image="/images/ddc/conference-citoyenne.jpg"
+        image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>

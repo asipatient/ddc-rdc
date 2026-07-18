@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
 import type { Realisation } from "@/lib/site-data";
 
 export function RealisationCard({ realisation, compact = false }: { realisation: Realisation; compact?: boolean }) {
+  const { ref, isVisible } = useReveal<HTMLDivElement>();
+
   return (
     <article id={realisation.slug} className="card flex h-full flex-col overflow-hidden">
-      <div className="relative aspect-[16/10] overflow-hidden bg-brand-blueSoft">
+      <div ref={ref} className={`img-reveal relative aspect-[16/10] overflow-hidden bg-brand-blueSoft ${isVisible ? "visible" : ""}`}>
         <Image
           src={realisation.image}
           alt={realisation.title}
@@ -42,7 +47,7 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
         {realisation.impact ? (
           <p className="mt-4 rounded-md bg-brand-mist p-3 text-xs font-semibold leading-6 text-slate-600">
             <span className="font-black text-brand-blue">Impact : </span>
-            {realisation.impact.length ? realisation.impact.join(" ") : "À compléter"}
+            {realisation.impact.length ? realisation.impact.join(" ") : "Impact en cours de documentation."}
           </p>
         ) : null}
         <Link

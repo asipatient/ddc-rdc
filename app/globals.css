@@ -535,6 +535,17 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   opacity: 1;
   transform: none;
 }
+.img-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.img-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Spinner de soumission de formulaire, repris du loader MyBiz (BootstrapMade), adapté à la charte DDC */
 .form-spinner {
   display: inline-block;

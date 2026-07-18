@@ -30,7 +30,7 @@ export default async function PartnersPage() {
         description={partnersPage.intro}
         cta={{ label: "Proposer un partenariat", href: "#formulaire-partenaire" }}
       
-        image="/images/ddc/jifa-2025.jpg"
+        image="/images/ddc/IMG-20260131-WA0150.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>

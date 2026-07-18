@@ -17,7 +17,7 @@ export default function PrinciplesPage() {
         title="Les repères éthiques qui guident l'action de la DDC RDC."
         description="Chaque initiative doit respecter la dignité humaine, l'inclusion, la transparence, la paix, la justice sociale et la neutralité politique partisane."
       
-        image="/images/ddc/conference-citoyenne.jpg"
+        image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
       <section className="bg-brand-mist py-16 sm:py-20">
         <ScrollReveal>
