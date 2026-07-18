@@ -27,7 +27,7 @@ export default function OpportunitiesPage() {
           <SectionHeading
             eyebrow="Appels à projets / Opportunités"
             title="Espaces prêts pour les publications à venir."
-            description="Les statuts indiquent clairement les contenus ouverts, à annoncer ou à compléter."
+            description="Aucune opportunité ouverte en ce moment. Suivez-nous sur Facebook et X (@ddcrdc) pour être informé en premier des prochaines opportunités."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {opportunities.map((opportunity) => (

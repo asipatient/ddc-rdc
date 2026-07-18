@@ -58,9 +58,9 @@ export default function PressPage() {
           </div>
           <div className="rounded-lg border border-dashed border-slate-300 bg-white p-8 text-center">
             <Newspaper aria-hidden="true" className="mx-auto h-10 w-10 text-brand-green" />
-            <h2 className="mt-4 text-2xl font-black text-brand-blue">Dossier média à compléter</h2>
+            <h2 className="mt-4 text-2xl font-black text-brand-blue">Dossier de presse</h2>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              Logos, photos officielles, biographie institutionnelle, fiches programmes et communiqués pourront être ajoutés ici.
+              Dossier de presse disponible sur demande. Pour toute demande médiatique, contactez-nous à {officialContact.email} ou au {officialContact.phone}.
             </p>
             <div className="mt-6">
               <ButtonLink href="/contact?type=Presse" variant="secondary">
