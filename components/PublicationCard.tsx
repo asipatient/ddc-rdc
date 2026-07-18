@@ -11,6 +11,14 @@ const accentClasses = {
   red: "from-brand-red to-brand-blue"
 };
 
+const categoryBadgeClasses: Record<string, string> = {
+  "Actualités": "bg-brand-blue text-white",
+  "Événements": "bg-brand-green text-white",
+  Rapports: "bg-brand-blueLight text-white",
+  "Notes de plaidoyer": "bg-brand-red text-white",
+  "Communiqués": "bg-brand-gold text-brand-blue"
+};
+
 export function PublicationCard({ publication }: { publication: Publication }) {
   const date = new Intl.DateTimeFormat("fr-CD", {
     day: "2-digit",
@@ -34,7 +42,12 @@ export function PublicationCard({ publication }: { publication: Publication }) {
           </>
         ) : null}
         <div className="relative flex flex-wrap gap-2">
-          <span className="rounded-md bg-white/20 px-3 py-2 text-xs font-bold uppercase tracking-[0.16em] backdrop-blur">
+          <span
+            className={cn(
+              "rounded-md px-3 py-2 text-xs font-bold uppercase tracking-[0.16em] shadow-sm",
+              categoryBadgeClasses[publication.category] || "bg-white/20 backdrop-blur"
+            )}
+          >
             {publication.category}
           </span>
           {publication.needsReview ? (
@@ -49,13 +62,14 @@ export function PublicationCard({ publication }: { publication: Publication }) {
           <CalendarDays aria-hidden="true" className="h-4 w-4" />
           <time dateTime={publication.date}>{publication.period || date}</time>
         </div>
-        <h3 className="mt-3 text-xl font-black leading-tight text-brand-blue">{publication.title}</h3>
-        <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">{publication.excerpt}</p>
+        <h3 className="mt-3 line-clamp-2 text-xl font-black leading-tight text-brand-blue">{publication.title}</h3>
+        <p className="mt-3 line-clamp-2 flex-1 text-sm leading-7 text-slate-600">{publication.excerpt}</p>
         <Link
           href={`/publications/${publication.slug}`}
-          className="focus-ring mt-5 inline-flex w-fit rounded-md text-sm font-bold text-brand-green hover:text-brand-blue"
+          className="focus-ring mt-5 inline-flex w-fit items-center gap-1 rounded-md text-sm font-bold text-brand-green hover:text-brand-blue"
         >
-          Lire l&apos;article
+          Lire
+          <span aria-hidden="true">→</span>
         </Link>
       </div>
     </article>
