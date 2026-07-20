@@ -34,7 +34,7 @@ export default async function ContactPage() {
         description={contactIntro}
         cta={{ label: "Faire un don", href: site.donationUrl }}
       
-        image="/images/ddc/hero-reel-ddc.jpg"
+        image="/images/ddc/hero3.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">

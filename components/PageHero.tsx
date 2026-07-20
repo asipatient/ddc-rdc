@@ -13,7 +13,7 @@ type PageHeroProps = {
  * Mapping page → image DDC RDC pertinente.
  * Utilisé si aucune image n'est passée explicitement.
  */
-const DEFAULT_IMAGE = "/images/ddc/hero-reel-ddc.jpg";
+const DEFAULT_IMAGE = "/images/ddc/hero3.jpg";
 
 export function PageHero({ kicker, title, description, cta, image = DEFAULT_IMAGE }: PageHeroProps) {
   return (

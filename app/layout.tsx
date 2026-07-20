@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     locale: "fr_CD",
     type: "website",
     siteName: site.shortName,
-    images: [{ url: "/images/ddc/hero-reel-ddc.jpg", width: 1600, height: 900, alt: "DDC RDC" }]
+    images: [{ url: "/images/ddc/hero3.jpg", width: 1600, height: 900, alt: "DDC RDC" }]
   },
   twitter: {
     card: "summary_large_image",

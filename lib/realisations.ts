@@ -15,7 +15,7 @@ export async function getPublicRealisations() {
       title: realisation.title,
       category: realisation.category || "Réalisations",
       description: realisation.excerpt || "Résumé à compléter.",
-      image: realisation.image || "/images/ddc/hero-reel-ddc.jpg",
+      image: realisation.image || "/images/ddc/hero3.jpg",
       impact: splitList(realisation.impact),
       relatedAxis: realisation.relatedAxis || realisation.axisId,
       relatedProgram: realisation.relatedProgram || realisation.programId
