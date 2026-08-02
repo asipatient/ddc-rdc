@@ -16,7 +16,7 @@ export const axes: Axis[] = [
     icon: "briefcase",
     image: "/images/ddc/salongo-communautaire.jpg",
     description:
-      "Entreprendre à Bukavu, produire local, protéger son environnement. Parce que la richesse du Congo doit d'abord profiter aux Congolais.",
+      "Entreprendre local, produire congolais, protéger son environnement. Parce que la richesse du Congo doit d'abord profiter aux Congolais.",
     programSlugs: ["projec", "programme-vert-climat"]
   },
   {

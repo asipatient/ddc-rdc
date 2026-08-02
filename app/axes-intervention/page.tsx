@@ -4,8 +4,6 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { ContentImage } from "@/components/ContentImage";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
-import { ProgramCard } from "@/components/ProgramCard";
-import { SectionHeading } from "@/components/SectionHeading";
 import { getPublicProgramContent } from "@/lib/program-content";
 
 export const metadata: Metadata = {
@@ -69,21 +67,12 @@ export default async function AxesInterventionPage() {
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
         <ScrollReveal>
-        <div className="section-shell">
-          <SectionHeading eyebrow="Programmes phares" title="Les huit programmes associés aux axes." />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {programs.map((program) => (
-              <ProgramCard key={program.slug} program={program} />
-            ))}
-          </div>
-          <div className="mt-10">
+          <div className="section-shell">
             <ButtonLink href="/contact?type=Projet%20communautaire" variant="secondary">
               Proposer une initiative communautaire
             </ButtonLink>
           </div>
-        </div>
-      </ScrollReveal>
-
+        </ScrollReveal>
       </section>
     </>
   );
