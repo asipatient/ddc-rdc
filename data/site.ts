@@ -51,9 +51,9 @@ export const home = {
   reasonFollowUp:
     "Elle agit au plus près des réalités locales afin de permettre aux jeunes, aux femmes, aux enfants et aux communautés de réfléchir, se former, proposer des initiatives et participer activement à la construction de solutions durables.",
   vision:
-    "La DDC RDC porte la vision d'une République Démocratique du Congo dans laquelle la jeunesse et les femmes sont responsables, compétentes, conscientes de leurs droits et devoirs, pleinement engagées dans la consolidation de la démocratie, la promotion de la justice sociale, le développement économique, la préservation de la culture, la protection de l'environnement et la transformation durable des communautés.",
+    "Un Congo où chaque jeune est compétent et a sa chance ; où chaque femme peut entreprendre, diriger et décider ; où les communautés ne subissent plus, mais elles agissent. Ce Congo-là existe. Il commence ici, avec nous.",
   mission:
-    "La mission de la DDC RDC est d'éveiller, former, encadrer, accompagner, connecter et mobiliser la jeunesse et les femmes congolaises autour des valeurs de citoyenneté responsable, de civisme, d'éthique, de discipline, de solidarité, de culture démocratique, de créativité, d'esprit d'initiative et d'engagement communautaire.",
+    "La DDC RDC forme des citoyens qui pensent, accompagne des femmes qui entreprennent, et mobilise des communautés qui refusent la résignation.",
   generalObjective:
     "L'objectif général de la DDC RDC est de faire émerger une jeunesse et une femme congolaise responsables, compétentes, engagées et conscientes de leur rôle dans la consolidation de la démocratie, capables de contribuer activement au développement économique, social, institutionnel, environnemental et culturel de la République Démocratique du Congo.",
   partnership:

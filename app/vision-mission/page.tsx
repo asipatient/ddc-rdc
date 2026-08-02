@@ -19,7 +19,7 @@ export default function VisionMissionPage() {
     <>
       <PageHero
         kicker="Vision & Mission"
-        title="Former une génération consciente, compétente et engagée."
+        title="Debout pour le Congo. Maintenant."
         description="La DDC RDC articule son action autour d'une vision de transformation démocratique, sociale, économique, culturelle et environnementale."
       
         image="/images/ddc/osc-droits-socioeconomiques.jpg"
