@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
-import { founderProfile, foundingQuote, historyIntro, historyTimeline } from "@/lib/site-data";
+import { foundingQuote, historyIntro, historyTimeline } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Notre histoire",
@@ -16,11 +15,12 @@ export default function HistoryPage() {
     <>
       <PageHero
         kicker="Notre histoire"
-        title="De l'engagement communautaire à une plateforme institutionnelle."
+        title="Une organisation née d'une conviction, construite par des actes."
         description={historyIntro}
         cta={{ label: "Voir les réalisations", href: "/realisations" }}
-      image="/images/ddc/jeunesse-culture-echange.jpg"
+        image="/images/ddc/jeunesse-culture-echange.jpg"
       />
+
       <section className="bg-brand-blue py-16 text-white sm:py-20">
         <ScrollReveal className="section-shell max-w-3xl">
           <p className="eyebrow text-brand-gold">Notre origine</p>
@@ -28,40 +28,15 @@ export default function HistoryPage() {
             « {foundingQuote.text} »
           </blockquote>
           <p className="mt-6 border-t border-white/20 pt-4 text-sm font-bold">
-            {foundingQuote.author}
-            <span className="ml-2 font-semibold text-white/70">{foundingQuote.role}</span>
+            — {foundingQuote.author}, Fondateur
           </p>
         </ScrollReveal>
       </section>
+
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <div className="relative overflow-hidden rounded-lg bg-brand-mist">
-              <Image
-                src={founderProfile.photo}
-                alt={founderProfile.name}
-                width={900}
-                height={1125}
-                className="aspect-[4/5] w-full object-cover"
-                priority
-              />
-            </div>
-            <div className="mt-6 rounded-lg bg-brand-blue p-6 text-white">
-              <h2 className="text-2xl font-black">{founderProfile.name}</h2>
-              <p className="mt-1 text-sm font-bold text-brand-gold">{founderProfile.role}</p>
-              <p className="mt-4 text-sm leading-7 text-white/80">{founderProfile.shortBio}</p>
-              <div className="mt-5">
-                <ButtonLink href="/profil-president-fondateur">Voir le profil</ButtonLink>
-              </div>
-            </div>
-          </div>
-          <div>
-            <SectionHeading
-              eyebrow="Timeline"
-              title="Une trajectoire construite par étapes."
-              description="La chronologie reste modifiable et pourra être complétée avec des dates, documents, photos et témoignages validés."
-            />
+          <div className="section-shell max-w-3xl">
+            <SectionHeading eyebrow="Timeline" title="Une trajectoire construite par étapes." />
             <div className="mt-10 border-l-2 border-brand-gold pl-6">
               {historyTimeline.map((item) => (
                 <article key={`${item.period}-${item.title}`} className="relative pb-8 last:pb-0">
@@ -73,29 +48,27 @@ export default function HistoryPage() {
               ))}
             </div>
           </div>
-        </div>
-      </ScrollReveal>
-
+        </ScrollReveal>
       </section>
+
       <section className="bg-brand-mist py-16 sm:py-20">
         <ScrollReveal>
-        <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-          <SectionHeading
-            eyebrow="Structuration"
-            title="Des initiatives vers des programmes durables."
-            description="La DDC organise progressivement ses actions autour de la citoyenneté, du leadership féminin, de l'entrepreneuriat, de la culture, de l'environnement, de la recherche, de la protection communautaire et de l'innovation locale."
-          />
-          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <ButtonLink href="/programmes" variant="secondary">
-              Découvrir les programmes
-            </ButtonLink>
-            <ButtonLink href="/impact" variant="ghost">
-              Voir l&apos;impact
-            </ButtonLink>
+          <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <SectionHeading
+              eyebrow="Structuration"
+              title="Des initiatives vers des programmes durables."
+              description="La DDC organise progressivement ses actions autour de la citoyenneté, du leadership féminin, de l'entrepreneuriat, de la culture, de l'environnement, de la recherche, de la protection communautaire et de l'innovation locale."
+            />
+            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <ButtonLink href="/programmes" variant="secondary">
+                Découvrir les programmes
+              </ButtonLink>
+              <ButtonLink href="/impact" variant="ghost">
+                Voir l&apos;impact
+              </ButtonLink>
+            </div>
           </div>
-        </div>
-      </ScrollReveal>
-
+        </ScrollReveal>
       </section>
     </>
   );

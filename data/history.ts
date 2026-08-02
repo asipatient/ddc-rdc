@@ -21,28 +21,16 @@ export const founderProfile = {
 };
 
 export const historyIntro =
-  "L'histoire de la DDC RDC s'inscrit dans un parcours d'engagement citoyen, éducatif, communautaire et entrepreneurial progressivement structuré autour des jeunes, des femmes et des communautés locales.";
+  "Depuis 2022, la DDC RDC construit pas à pas une réponse citoyenne aux défis de la jeunesse et des femmes congolaises.";
 
 export const foundingQuote = {
   text:
     "Quand nous avons fondé la Dynamique Debout Congolais le 5 janvier 2022, nous n'avions pas d'argent. Nous avions quelque chose de plus rare et de plus puissant : la conviction que notre pays méritait mieux.",
   author: "Patient Asifiwe",
-  role: "Président Fondateur & Coordonnateur National"
+  role: "Fondateur"
 };
 
 export const historyTimeline = [
-  {
-    period: "Parcours éducatif",
-    title: "Premiers engagements dans l'enseignement et la formation",
-    description:
-      "L'engagement ayant conduit à la DDC s'est construit à travers l'éducation, la transmission de connaissances et l'accompagnement des jeunes dans leur progression personnelle et citoyenne."
-  },
-  {
-    period: "Communication et médias",
-    title: "Expériences en communication, médias et production",
-    description:
-      "Les expériences en communication ont renforcé la capacité à mobiliser, formuler des messages publics, structurer des campagnes et valoriser les initiatives locales."
-  },
   {
     period: "2016",
     title: "Premières initiatives de formation des jeunes",
@@ -71,7 +59,7 @@ export const historyTimeline = [
     period: "2024",
     title: "Autonomisation, protection communautaire et développement local",
     description:
-      "Les initiatives se sont élargies vers l'entrepreneuriat local des femmes, l'assainissement communautaire, la protection des populations et le plaidoyer sur les priorités de développement de Panzi."
+      "Les initiatives se sont élargies vers l'entrepreneuriat local des femmes, l'assainissement communautaire, la protection des populations et le plaidoyer sur les priorités de développement local."
   },
   {
     period: "2025",
