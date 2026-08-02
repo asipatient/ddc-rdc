@@ -50,10 +50,7 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <SectionHeading
-              eyebrow="Origine et leadership"
-              title="Patient Asifiwe, Président Fondateur de la DDC RDC."
-            />
+            <SectionHeading title="Origine et leadership" />
             <div className="mt-7 space-y-5 text-base leading-8 text-slate-600">
               {founderProfile.fullBio.map((paragraph) => (
                 <p key={paragraph.slice(0, 48)}>{paragraph}</p>

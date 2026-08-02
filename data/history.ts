@@ -7,8 +7,8 @@ export const founderProfile = {
   shortBio:
     "Leader communautaire de Bukavu, fondateur de PROSE MEDIA CD et co-initiateur de PANZI FM — il a créé la Dynamique Debout Congolais en 2022 pour former des acteurs et construire des réponses avec les jeunes et les femmes de la RDC.",
   fullBio: [
-    "Patient Asifiwe est un leader communautaire de Bukavu, diplômé en Sciences de l'Information et de la Communication, option Éditions Multimédia. Entrepreneur dans l'imprimerie et les solutions digitales, il est fondateur de PROSE MEDIA CD et PROSE DIGITAL — une entreprise dont la réputation dans la ville lui a valu le surnom de Prose, par lequel beaucoup le connaissent encore aujourd'hui.",
-    "Homme de terrain et de réflexion, il est co-initiateur de PANZI FM et figure reconnue du quartier Panzi, où jeunes et anciens le sollicitent pour des initiatives jugées sérieuses.",
+    "Patient Asifiwe est un leader communautaire de Bukavu, diplômé en Sciences de l'Information et de la Communication, option Éditions Multimédia. Entrepreneur dans l'imprimerie et les solutions digitales, il est fondateur de PROSE MEDIA CD et PROSE DIGITAL, deux entreprises dont la réputation lui a valu le surnom de Prose, par lequel beaucoup le connaissent encore aujourd'hui.",
+    "Homme de terrain et de réflexion, il est co-initiateur de PANZI FM et figure reconnue, sollicité par jeunes et anciens pour des initiatives jugées sérieuses.",
     "Mais c'est une question profonde qui a orienté toute sa trajectoire : pourquoi, dans un pays aux ressources immenses, la pauvreté et le chômage persistent-ils après de longues années d'études ? Pourquoi n'y a-t-il pas d'industries, pas de routes, pas de productions locales — alors que les ressources existent, que la main d'œuvre est là ? Les habits que nous portons, les radios, les véhicules — tout ça vient des hommes. Pourquoi pas nous ?",
     "Cette interrogation — pas résignée, mais exigeante — l'a conduit à créer la Dynamique Debout Congolais en 2022 : un cadre pour transformer les consciences, former des acteurs et construire, avec les jeunes et les femmes de la RDC, les réponses que les institutions n'ont pas encore données."
   ],
@@ -47,13 +47,13 @@ export const historyTimeline = [
     period: "2016",
     title: "Premières initiatives de formation des jeunes",
     description:
-      "Dès 2016, avant même la fondation officielle de l'association, Patient Asifiwe organisait les premières formations pour les jeunes de son quartier — informatique, anglais, prise de responsabilité. Vingt jeunes formés. Une graine plantée."
+      "Dès 2016, avant même la fondation officielle de l'association, Patient Asifiwe organisait les premières formations pour les jeunes de sa communauté — informatique, anglais, prise de responsabilité. Vingt jeunes formés. Une graine plantée."
   },
   {
-    period: "Panzi",
-    title: "Engagement communautaire de proximité",
+    period: "Engagement communautaire de proximité",
+    title: "Mobilisation citoyenne et dialogue local",
     description:
-      "À Panzi, l'engagement communautaire s'est orienté vers la mobilisation citoyenne, l'amélioration du cadre de vie, la prévention, le plaidoyer et le dialogue entre acteurs locaux."
+      "L'engagement communautaire s'est orienté vers la mobilisation citoyenne, l'amélioration du cadre de vie, la prévention, le plaidoyer et le dialogue entre acteurs locaux."
   },
   {
     period: "5 janvier 2022",
