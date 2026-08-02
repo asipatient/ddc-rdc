@@ -17,8 +17,8 @@ export default function AboutPage() {
     <>
       <PageHero
         kicker="À propos"
-        title="Une dynamique citoyenne née des défis et des forces du Congo."
-        description="La DDC RDC crée un cadre structuré pour permettre aux jeunes et aux femmes de réfléchir, se former, entreprendre, innover et agir dans leurs communautés."
+        title="Née d'une conviction. Portée par une génération."
+        description="La DDC RDC est une réponse citoyenne à une question simple : pourquoi pas nous ?"
         cta={{ label: "Rejoindre la DDC", href: "/devenir-membre-benevole" }}
       image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
@@ -28,13 +28,10 @@ export default function AboutPage() {
           <div className="relative overflow-hidden rounded-lg bg-brand-blueSoft">
             <Image src="/images/logo-ddc-card.jpg" alt={`Identité visuelle ${site.shortName}`} width={900} height={900} className="aspect-square w-full object-cover" />
           </div>
-          <div>
-            <SectionHeading eyebrow="Préambule" title="Répondre à la marginalisation par l'organisation, la formation et l'action." />
-            <div className="mt-7 space-y-5 text-base leading-8 text-slate-600">
-              {aboutIntro.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
+          <div className="space-y-5 text-base leading-8 text-slate-600">
+            {aboutIntro.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </ScrollReveal>
