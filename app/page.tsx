@@ -43,8 +43,8 @@ export default async function HomePage() {
               </h1>
             </div>
             <p className="anim-fade-down anim-delay-200 mt-6 max-w-xl text-base leading-8 text-white/80 sm:text-lg">
-              La DDC RDC éveille, forme et mobilise les jeunes, les femmes et les communautés congolaises
-              pour bâtir un Congo plus juste, inclusif et durable.
+              Depuis Bukavu, la DDC RDC rassemble des jeunes et des femmes qui refusent la résignation —
+              et qui construisent, ensemble, le Congo qu&apos;ils méritent.
             </p>
             <div className="anim-fade-up anim-delay-400 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href="/a-propos">Qui sommes-nous&nbsp;?</ButtonLink>
@@ -71,28 +71,28 @@ export default async function HomePage() {
 
       {/* ── POSITIONNEMENT RAPIDE ────────────────────────────────────── */}
       <section className="bg-white py-14 sm:py-16">
-        <ScrollReveal className="section-shell grid gap-8 lg:grid-cols-3">
+        <ScrollReveal className="section-shell grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             {
               stat: "2016",
-              label: "Premières formations",
-              detail: "20 jeunes formés dès 2016 à Bukavu — le point de départ d'un engagement qui a réuni depuis plus de 970 bénéficiaires."
+              label: "Premières formations"
             },
             {
-              stat: "11",
-              label: "Domaines d'action",
-              detail: "Citoyenneté, leadership, VBG, environnement, culture, recherche, enfance et plus."
+              stat: "970+",
+              label: "Bénéficiaires rejoints"
             },
             {
-              stat: "3",
-              label: "Axes stratégiques",
-              detail: "Trois axes complémentaires pour organiser les programmes et mesurer l'impact."
+              stat: "8",
+              label: "Programmes actifs"
+            },
+            {
+              stat: "26",
+              label: "Provinces — notre horizon"
             }
           ].map((item, i) => (
-            <ScrollReveal key={item.stat} delayMs={i * 100} className="rounded-lg bg-brand-mist p-8">
+            <ScrollReveal key={item.label} delayMs={i * 100} className="rounded-lg bg-brand-mist p-8">
               <p className="text-4xl font-black text-brand-blue"><CountUp value={item.stat} /></p>
               <p className="mt-2 text-lg font-black text-brand-blue">{item.label}</p>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{item.detail}</p>
             </ScrollReveal>
           ))}
         </ScrollReveal>

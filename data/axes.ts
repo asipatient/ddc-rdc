@@ -7,7 +7,7 @@ export const axes: Axis[] = [
     icon: "landmark",
     image: "/images/ddc/osc-droits-socioeconomiques.jpg",
     description:
-      "Cet axe renforce la culture démocratique, l'engagement citoyen, le leadership responsable, la veille citoyenne, la recherche et la capacité des communautés à prévenir et gérer les crises.",
+      "Des jeunes qui comprennent leurs droits, qui surveillent leurs élus, qui prennent la parole. La démocratie ne s'apprend pas dans les livres — elle se vit dans les quartiers.",
     programSlugs: ["ecole-citoyenne", "think-tank-ddc", "programme-alerte-communautaire"]
   },
   {
@@ -16,7 +16,7 @@ export const axes: Axis[] = [
     icon: "briefcase",
     image: "/images/ddc/salongo-communautaire.jpg",
     description:
-      "Cet axe promeut la production locale, l'innovation, l'entrepreneuriat, l'apprentissage professionnel, la protection de l'environnement et la résilience économique des jeunes et des femmes.",
+      "Entreprendre à Bukavu, produire local, protéger son environnement. Parce que la richesse du Congo doit d'abord profiter aux Congolais.",
     programSlugs: ["projec", "programme-vert-climat"]
   },
   {
@@ -25,7 +25,7 @@ export const axes: Axis[] = [
     icon: "handshake",
     image: "/images/ddc/jeunesse-culture-echange.jpg",
     description:
-      "Cet axe renforce la cohésion sociale, la valorisation culturelle, l'inclusion, la protection, l'encadrement des enfants et le développement du capital humain.",
+      "Des enfants qui créent, des femmes qui dirigent, une culture qui rayonne. Le Congo a une âme — la DDC RDC l'entretient.",
     programSlugs: ["jasiri-leadership-feminin", "kongo-culture", "creative-child"]
   }
 ];

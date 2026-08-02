@@ -270,7 +270,7 @@
       "title": "Gouvernance, citoyenneté et transformation sociale",
       "slug": "gouvernance-citoyennete-transformation-sociale",
       "excerpt": "Culture démocratique, leadership responsable et prévention des crises.",
-      "content": "Cet axe renforce la culture démocratique, l'engagement citoyen, le leadership responsable, la veille citoyenne, la recherche et la capacité des communautés à prévenir et gérer les crises.",
+      "content": "Des jeunes qui comprennent leurs droits, qui surveillent leurs élus, qui prennent la parole. La démocratie ne s'apprend pas dans les livres — elle se vit dans les quartiers.",
       "category": "Axe stratégique",
       "image": "/images/ddc/osc-droits-socioeconomiques.jpg",
       "date": "2026-01-01",
@@ -283,7 +283,7 @@
       "icon": "landmark",
       "order": 1,
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "updatedAt": "2026-07-17T00:00:00.000Z",
+      "updatedAt": "2026-08-02T13:23:30.223Z",
       "publishedAt": "2026-01-01T00:00:00.000Z"
     },
     {
@@ -291,7 +291,7 @@
       "title": "Autonomisation économique et résilience",
       "slug": "autonomisation-economique-resilience",
       "excerpt": "Entrepreneuriat jeune, production locale et résilience environnementale.",
-      "content": "Cet axe promeut la production locale, l'innovation, l'entrepreneuriat, l'apprentissage professionnel, la protection de l'environnement et la résilience économique des jeunes et des femmes.",
+      "content": "Entreprendre à Bukavu, produire local, protéger son environnement. Parce que la richesse du Congo doit d'abord profiter aux Congolais.",
       "category": "Axe stratégique",
       "image": "/images/ddc/salongo-communautaire.jpg",
       "date": "2026-01-01",
@@ -303,7 +303,7 @@
       "icon": "briefcase",
       "order": 2,
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "updatedAt": "2026-07-17T00:00:00.000Z",
+      "updatedAt": "2026-08-02T13:23:30.223Z",
       "publishedAt": "2026-01-01T00:00:00.000Z"
     },
     {
@@ -311,7 +311,7 @@
       "title": "Identité, inclusion et capital humain",
       "slug": "identite-inclusion-capital-humain",
       "excerpt": "Cohésion sociale, valorisation culturelle et développement du capital humain.",
-      "content": "Cet axe renforce la cohésion sociale, la valorisation culturelle, l'inclusion, la protection, l'encadrement des enfants et le développement du capital humain.",
+      "content": "Des enfants qui créent, des femmes qui dirigent, une culture qui rayonne. Le Congo a une âme — la DDC RDC l'entretient.",
       "category": "Axe stratégique",
       "image": "/images/ddc/jeunesse-culture-echange.jpg",
       "date": "2026-01-01",
@@ -324,7 +324,7 @@
       "icon": "handshake",
       "order": 3,
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "updatedAt": "2026-07-17T00:00:00.000Z",
+      "updatedAt": "2026-08-02T13:23:30.223Z",
       "publishedAt": "2026-01-01T00:00:00.000Z"
     }
   ],
