@@ -90,7 +90,7 @@ export function ContentForm({
               className="focus-ring mt-2 w-full rounded-md border border-slate-300 px-4 py-3 text-sm dark:border-slate-700 dark:bg-slate-950"
             />
             <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
-              Les fichiers sont sauvegardés dans public/uploads/documents en mode local.
+              En local : public/uploads/documents. Sur Vercel/Netlify : fichier embarqué (data URL, max 2 Mo) si MySQL est configuré.
             </p>
           </div>
         ) : null}

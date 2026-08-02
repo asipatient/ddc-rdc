@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { ContentImage } from "@/components/ContentImage";
 import { IconRenderer } from "@/components/IconRenderer";
 import { useReveal } from "@/hooks/useReveal";
 import type { Axis, Program } from "@/lib/site-data";
@@ -13,7 +13,7 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
   return (
     <article className="card group flex h-full flex-col overflow-hidden">
       <div ref={ref} className={`img-reveal relative aspect-[16/10] overflow-hidden ${isVisible ? "visible" : ""}`}>
-        <Image
+        <ContentImage
           src={axis.image}
           alt={axis.title}
           fill

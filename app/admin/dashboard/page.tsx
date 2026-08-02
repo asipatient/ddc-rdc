@@ -31,7 +31,7 @@ export default async function AdminDashboardPage() {
         ))}
       </div>
       <div className="mt-8 rounded-lg border border-amber-200 bg-amber-50 p-6 text-sm leading-7 text-amber-900">
-        Version actuelle : sauvegarde locale durable dans `data/admin-store.json`, upload local dans `public/uploads`, et préparation Supabase/Resend via variables d&apos;environnement.
+        En local / Congo Cloud : sauvegarde dans `data/admin-store.json` et uploads dans `public/uploads`. Sur Vercel/Netlify (FS en lecture seule) : MySQL obligatoire (`DATABASE_URL` ou `MYSQL_*`) ; les fichiers uploadés sont embarqués en data URL (max 2&nbsp;Mo).
       </div>
     </AdminPage>
   );

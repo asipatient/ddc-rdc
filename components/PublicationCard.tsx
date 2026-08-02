@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { CalendarDays } from "lucide-react";
+import { ContentImage } from "@/components/ContentImage";
 import type { Publication } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
@@ -31,7 +31,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
       <div className={cn("relative flex aspect-[16/10] items-end overflow-hidden p-5 text-white", !publication.image && `bg-gradient-to-br ${accentClasses[publication.accent]}`)}>
         {publication.image ? (
           <>
-            <Image
+            <ContentImage
               src={publication.image}
               alt={publication.title}
               fill

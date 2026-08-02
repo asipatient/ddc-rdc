@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays } from "lucide-react";
+import { ContentImage } from "@/components/ContentImage";
 import { useReveal } from "@/hooks/useReveal";
 import type { Realisation } from "@/lib/site-data";
 
@@ -12,7 +12,7 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
   return (
     <article id={realisation.slug} className="card flex h-full flex-col overflow-hidden">
       <div ref={ref} className={`img-reveal relative aspect-[16/10] overflow-hidden bg-brand-blueSoft ${isVisible ? "visible" : ""}`}>
-        <Image
+        <ContentImage
           src={realisation.image}
           alt={realisation.title}
           fill
