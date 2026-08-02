@@ -6,9 +6,9 @@ export const teamMembers: TeamMember[] = [
     role: "Président Fondateur & Coordonnateur National",
     photo: "/images/team/patient-asifiwe.jpg",
     bio:
-      "Leader communautaire de Bukavu, fondateur de PROSE MEDIA CD et co-initiateur de PANZI FM. Il a créé la Dynamique Debout Congolais en 2022 pour former des acteurs et construire des réponses avec les jeunes et les femmes de la RDC.",
+      "Leader communautaire ville de Bukavu et expert en Communication, Patient Asifiwe est fondateur de PROSE MEDIA CD et PROSE DIGITAL, ainsi que de la Dynamique Debout Congolais. Surnommé Prose par ses pairs, il est co-initiateur de PANZI FM et figure reconnue de l'engagement citoyen à Bukavu.",
     roleDescription:
-      "Rôle statutaire de garant de la mission : statut permanent et protégé par les Statuts, droit de veto suspensif et certification de la conformité des programmes avec la vision de l'association.",
+      "Garant de la mission : statut permanent et protégé par les Statuts, droit de veto suspensif et certification des programmes.",
     profileHref: "/profil-president-fondateur",
     contactLabel: "Voir le profil",
     contactHref: "/profil-president-fondateur"
@@ -17,9 +17,9 @@ export const teamMembers: TeamMember[] = [
     name: "Immaculée Maombi",
     role: "Coordonnatrice",
     photo: "/images/team/immaculee-ngongo.jpg",
-    bio: "Membre actif de la DDC RDC.",
-    roleDescription:
-      "Coordination opérationnelle, suivi des activités, mobilisation des équipes et accompagnement de la mise en œuvre des programmes.",
+    bio:
+      "Actrice sociale et femme leader, Immaculée est entrepreneure dans la transformation agro-alimentaire. Elle apporte à la DDC RDC une connaissance fine du terrain et une capacité à mobiliser les femmes autour de projets concrets.",
+    roleDescription: "Coordination opérationnelle et suivi des activités.",
     contactLabel: "Voir le profil",
     contactHref: "#"
   },
@@ -27,9 +27,9 @@ export const teamMembers: TeamMember[] = [
     name: "Ghislain Ciza",
     role: "Directeur Financier",
     photo: "/images/team/ghislain-ciza.jpg",
-    bio: "Membre actif de la DDC RDC.",
-    roleDescription:
-      "Gestion financière, suivi budgétaire, documentation des ressources et appui aux mécanismes de transparence et redevabilité.",
+    bio:
+      "Économiste titulaire d'un Master en Sciences Économiques et de Gestion, Ghislain assure la rigueur financière de l'association et veille à la transparence dans la gestion des ressources.",
+    roleDescription: "Gestion financière et suivi budgétaire.",
     contactLabel: "Voir le profil",
     contactHref: "#"
   },
@@ -37,9 +37,9 @@ export const teamMembers: TeamMember[] = [
     name: "Adrienne Mapendo",
     role: "Trésorière Générale",
     photo: "/images/team/adrienne-mapendo.jpg",
-    bio: "Membre actif de la DDC RDC.",
-    roleDescription:
-      "Suivi de trésorerie, appui à la gestion administrative et contribution à la transparence financière de l'association.",
+    bio:
+      "Diplômée en Sciences Sociales et actrice sociale engagée, Adrienne contribue à l'ancrage communautaire de la DDC RDC et assure le suivi rigoureux de la trésorerie.",
+    roleDescription: "Suivi de trésorerie et appui administratif.",
     contactLabel: "Voir le profil",
     contactHref: "#"
   },
@@ -47,9 +47,10 @@ export const teamMembers: TeamMember[] = [
     name: "Taylor Imani",
     role: "Chargé des programmes",
     photo: "",
-    bio: "Membre actif de la DDC RDC.",
+    bio:
+      "Expert en planification et gestion de projets, Taylor capitalise plusieurs années d'expérience terrain pour assurer la mise en œuvre efficace des programmes de la DDC RDC.",
     roleDescription:
-      "Suivi de la mise en œuvre des programmes, appui méthodologique aux équipes de terrain et remontée des résultats.",
+      "Suivi de la mise en œuvre des programmes et appui méthodologique aux équipes de terrain.",
     contactLabel: "Voir le profil",
     contactHref: "#"
   }

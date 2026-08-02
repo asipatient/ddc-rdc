@@ -42,10 +42,10 @@ export default function AboutPage() {
         <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div className="relative overflow-hidden rounded-lg bg-brand-mist">
             <Image
-              src={founderProfile.photo}
-              alt={founderProfile.name}
-              width={900}
-              height={1125}
+              src={founderProfile.leadershipImage || founderProfile.photo}
+              alt={founderProfile.leadershipImageAlt || founderProfile.name}
+              width={1200}
+              height={1500}
               className="aspect-[4/5] w-full object-cover"
             />
           </div>
