@@ -51,5 +51,12 @@ export {
   transparencyDocuments
 } from "@/data/documents";
 export { partnerCategories, partnerPlaceholders, partnersPage } from "@/data/partners";
-export { availabilityOptions, memberVolunteerIntro, membershipInterestDomains, newsletterBenefits } from "@/data/forms";
+export {
+  availabilityOptions,
+  founderCallout,
+  memberVolunteerIntro,
+  memberVolunteerLetter,
+  membershipInterestDomains,
+  newsletterBenefits
+} from "@/data/forms";
 export { home, site } from "@/data/site";

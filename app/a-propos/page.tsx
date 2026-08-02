@@ -55,9 +55,13 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               eyebrow="Origine et leadership"
-              title="Un engagement progressivement structuré autour des jeunes, des femmes et des communautés."
-              description={founderProfile.shortBio}
+              title="Patient Asifiwe, Président Fondateur de la DDC RDC."
             />
+            <div className="mt-7 space-y-5 text-base leading-8 text-slate-600">
+              {founderProfile.fullBio.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+              ))}
+            </div>
             <div className="mt-7 grid gap-3">
               {historyTimeline.slice(2, 6).map((item) => (
                 <div key={item.period} className="rounded-lg border border-slate-200 p-4">
@@ -84,9 +88,9 @@ export default function AboutPage() {
         <ScrollReveal>
         <div className="section-shell grid gap-6 md:grid-cols-3">
           {[
-            ["Notre posture", "Institutionnelle, citoyenne, non partisane, inclusive et orientée vers les solutions locales."],
-            ["Notre méthode", "Former, connecter, documenter, accompagner, mobiliser et valoriser les initiatives communautaires."],
-            ["Notre ambition", "Contribuer à l'émergence d'un Congo juste, démocratique, solidaire, créatif et durable."]
+            ["Notre posture", "La DDC RDC ne fait pas de politique. Elle forme des citoyens qui, eux, transforment la politique."],
+            ["Notre méthode", "On ne vient pas avec des solutions toutes faites. On travaille avec les communautés pour qu'elles construisent les leurs."],
+            ["Notre ambition", "Un Congo où un jeune diplômé de Bukavu a autant de chances qu'ailleurs. Pas dans cinquante ans. Maintenant."]
           ].map(([title, text]) => (
             <article key={title} className="rounded-lg bg-white p-6 shadow-sm">
               <h2 className="text-xl font-black text-brand-blue">{title}</h2>

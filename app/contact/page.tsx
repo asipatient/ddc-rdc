@@ -10,7 +10,7 @@ import { getPublicSiteConfig } from "@/lib/site-settings";
 
 export const metadata = buildMetadata({
   title: "Contact",
-  description: "Contactez la DDC RDC à Bukavu, Sud-Kivu. Avenue Nyarwizimia N°19, Commune Ibanda. Téléphone, email et formulaire en ligne disponibles.",
+  description: "Contactez la DDC RDC à Bukavu, Sud-Kivu. Av. Nyarwizimia 019, Quartier Panzi, Commune d'Ibanda. Téléphone, email et formulaire en ligne disponibles.",
   path: "/contact/"
 });
 

@@ -6,7 +6,7 @@ export const teamMembers: TeamMember[] = [
     role: "Président Fondateur & Coordonnateur National",
     photo: "/images/team/patient-asifiwe.jpg",
     bio:
-      "Communicateur, entrepreneur social et acteur communautaire basé à Bukavu, il mobilise les jeunes et les femmes autour de la citoyenneté, du leadership, de l'innovation locale, de la culture et du développement communautaire.",
+      "Leader communautaire de Bukavu, fondateur de PROSE MEDIA CD et co-initiateur de PANZI FM. Il a créé la Dynamique Debout Congolais en 2022 pour former des acteurs et construire des réponses avec les jeunes et les femmes de la RDC.",
     roleDescription:
       "Rôle statutaire de garant de la mission : statut permanent et protégé par les Statuts, droit de veto suspensif et certification de la conformité des programmes avec la vision de l'association.",
     profileHref: "/profil-president-fondateur",

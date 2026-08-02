@@ -9,7 +9,7 @@ import { PublicationCard } from "@/components/PublicationCard";
 import { PulsatingPlayButton } from "@/components/PulsatingPlayButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { axes, flagshipPrograms, publications } from "@/lib/site-data";
+import { axes, flagshipPrograms, founderCallout, publications } from "@/lib/site-data";
 import { getPublicSiteConfig } from "@/lib/site-settings";
 import { buildMetadata } from "@/lib/metadata";
 import { site } from "@/data/site";
@@ -146,22 +146,41 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── CTA AGIR AVEC NOUS ──────────────────────────────────────── */}
+      {/* ── NOTRE APPEL ─────────────────────────────────────────────── */}
       <section className="bg-brand-blue py-16 text-white sm:py-20">
+        <ScrollReveal className="section-shell">
+          <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">
+            {founderCallout.eyebrow}
+          </p>
+          <blockquote className="mx-auto mt-8 max-w-4xl text-center">
+            <div className="space-y-6 text-2xl font-light italic leading-relaxed sm:text-3xl sm:leading-snug">
+              {founderCallout.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+              ))}
+            </div>
+            <footer className="mt-10 text-base font-bold not-italic tracking-wide text-brand-gold sm:text-lg">
+              {founderCallout.signature}
+            </footer>
+          </blockquote>
+        </ScrollReveal>
+      </section>
+
+      {/* ── CTA AGIR AVEC NOUS ──────────────────────────────────────── */}
+      <section className="bg-brand-mist py-16 sm:py-20">
         <ScrollReveal className="section-shell flex flex-col items-center gap-6 text-center lg:flex-row lg:justify-between lg:text-left">
           <div className="max-w-xl">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Agir avec nous</p>
-            <h2 className="mt-3 text-3xl font-black sm:text-4xl">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-green">Agir avec nous</p>
+            <h2 className="mt-3 text-3xl font-black text-brand-blue sm:text-4xl">
               Rejoignez le mouvement citoyen DDC RDC.
             </h2>
-            <p className="mt-4 text-base leading-8 text-white/75">
+            <p className="mt-4 text-base leading-8 text-slate-600">
               Membre, bénévole, partenaire ou donateur — chaque engagement compte pour transformer
               les communautés congolaises.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <ButtonLink href={siteConfig.donationUrl}>Faire un don</ButtonLink>
-            <ButtonLink href="/devenir-membre-benevole" variant="outline">
+            <ButtonLink href="/devenir-membre-benevole" variant="secondary">
               Devenir membre
             </ButtonLink>
           </div>

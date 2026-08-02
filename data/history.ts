@@ -3,11 +3,12 @@ export const founderProfile = {
   role: "Président Fondateur & Coordonnateur National",
   photo: "/images/team/patient-asifiwe.jpg",
   shortBio:
-    "Patient Asifiwe est un communicateur, entrepreneur social et acteur communautaire basé à Bukavu. Son parcours associe l'éducation, la communication, l'entrepreneuriat, l'engagement citoyen et la mobilisation communautaire.",
+    "Leader communautaire de Bukavu, fondateur de PROSE MEDIA CD et co-initiateur de PANZI FM — il a créé la Dynamique Debout Congolais en 2022 pour former des acteurs et construire des réponses avec les jeunes et les femmes de la RDC.",
   fullBio: [
-    "Patient Asifiwe est un communicateur, entrepreneur social et acteur communautaire basé à Bukavu, en République Démocratique du Congo. Son parcours associe l'éducation, la communication, l'entrepreneuriat social, l'engagement citoyen et la mobilisation communautaire.",
-    "Son engagement s'est construit progressivement à travers des expériences d'enseignement, de communication, de formation de jeunes, d'initiatives communautaires et de plaidoyer local. Cette trajectoire a nourri la vision d'une plateforme capable de former, connecter et accompagner les jeunes, les femmes et les communautés.",
-    "À travers la DDC RDC, il œuvre pour l'éveil citoyen, le leadership responsable, l'autonomisation des jeunes et des femmes, la cohésion sociale, l'innovation locale, la culture et la transformation durable des communautés."
+    "Patient Asifiwe est un leader communautaire de Bukavu, diplômé en Sciences de l'Information et de la Communication, option Éditions Multimédia. Entrepreneur dans l'imprimerie et les solutions digitales, il est fondateur de PROSE MEDIA CD — une entreprise dont la réputation dans la ville lui a valu le surnom de Prose, par lequel beaucoup le connaissent encore aujourd'hui.",
+    "Homme de terrain et de réflexion, il est co-initiateur de PANZI FM et figure reconnue du quartier Panzi, où jeunes et anciens le sollicitent pour des initiatives jugées sérieuses.",
+    "Mais c'est une question profonde qui a orienté toute sa trajectoire : pourquoi, dans un pays aux ressources immenses, la pauvreté et le chômage persistent-ils après de longues années d'études ? Pourquoi n'y a-t-il pas d'industries, pas de routes, pas de productions locales — alors que les ressources existent, que la main d'œuvre est là ? Les habits que nous portons, les radios, les véhicules — tout ça vient des hommes. Pourquoi pas nous ?",
+    "Cette interrogation — pas résignée, mais exigeante — l'a conduit à créer la Dynamique Debout Congolais en 2022 : un cadre pour transformer les consciences, former des acteurs et construire, avec les jeunes et les femmes de la RDC, les réponses que les institutions n'ont pas encore données."
   ],
   orientations: [
     "Communicateur et mobilisateur communautaire",
@@ -44,7 +45,7 @@ export const historyTimeline = [
     period: "2016",
     title: "Premières initiatives de formation des jeunes",
     description:
-      "Une première expérience structurée a permis de former 20 jeunes en informatique et en anglais. Cette donnée historique reste à consolider dans les archives institutionnelles."
+      "Dès 2016, avant même la fondation officielle de l'association, Patient Asifiwe organisait les premières formations pour les jeunes de son quartier — informatique, anglais, prise de responsabilité. Vingt jeunes formés. Une graine plantée."
   },
   {
     period: "Panzi",
