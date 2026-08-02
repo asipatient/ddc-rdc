@@ -22,7 +22,7 @@ export default async function TeamPage() {
       <PageHero
         kicker="Notre équipe"
         title="Une équipe engagée pour structurer, accompagner et rendre compte."
-        description="Cette page présente les responsabilités clés de la DDC RDC. Les biographies, photos et liens de contact peuvent être complétés progressivement."
+        description="Cette page présente les responsabilités clés et les profils de l'équipe dirigeante de la DDC RDC."
         cta={{ label: "Contacter l'équipe", href: "/contact" }}
       image="/images/ddc/IMG-20260131-WA0150.jpg"
       />
@@ -32,7 +32,6 @@ export default async function TeamPage() {
           <SectionHeading
             eyebrow="Leadership institutionnel"
             title="Une équipe identifiée, avec des rôles clairs au sein de l'association."
-            description="Les photos officielles fournies sont intégrées. Les biographies détaillées et liens personnels pourront être enrichis progressivement."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {teamMembers.map((member) => (
