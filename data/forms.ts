@@ -27,7 +27,7 @@ const founderAppealParagraphs = [
 const founderAppealSignature = "— Patient Asifiwe, Fondateur de la DDC RDC";
 
 export const memberVolunteerIntro =
-  "En nous envoyant à l'école, on nous disait avec foi : « Vous êtes l'avenir de demain ». Ce demain, il arrive quand ? Rejoins une organisation citoyenne indépendante.";
+  "En nous envoyant à l'école, on nous disait avec foi : « Vous êtes l'avenir de demain ». Aujourd'hui, nous sommes assez matures pour nous poser la question : ce demain, il arrive quand ?";
 
 export const memberVolunteerLetter = {
   greeting: "",
