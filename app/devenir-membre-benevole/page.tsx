@@ -25,8 +25,10 @@ export default function MemberVolunteerPage() {
       <section className="bg-white py-16 sm:py-20">
         <ScrollReveal>
           <div className="section-shell max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Message du fondateur</p>
-            <p className="mt-6 text-xl font-black text-brand-blue sm:text-2xl">{memberVolunteerLetter.greeting}</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Notre appel</p>
+            {memberVolunteerLetter.greeting ? (
+              <p className="mt-6 text-xl font-black text-brand-blue sm:text-2xl">{memberVolunteerLetter.greeting}</p>
+            ) : null}
             <div className="mt-6 space-y-5 text-base leading-8 text-slate-700 sm:text-lg">
               {memberVolunteerLetter.paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 56)} className="whitespace-pre-line">
