@@ -84,7 +84,7 @@
       "title": "École Citoyenne / CLAC",
       "slug": "ecole-citoyenne",
       "excerpt": "Former des citoyens responsables, informés et engagés.",
-      "content": "L'École Citoyenne forme des citoyens responsables, informés et engagés. Elle propose des cycles d'éducation civique, de culture démocratique et de participation communautaire adaptés aux réalités de Bukavu et de la RDC. Le programme CLAC en étend la portée vers les espaces culturels et associatifs.",
+      "content": "L'École Citoyenne forme des citoyens responsables, informés et engagés. Elle propose des cycles d'éducation civique, de culture démocratique et de participation communautaire adaptés aux réalités congolaises. Le programme CLAC en étend la portée vers les espaces culturels et associatifs.",
       "category": "Gouvernance, citoyenneté et transformation sociale",
       "image": "/images/ddc/osc-droits-socioeconomiques.jpg",
       "date": "2026-01-01",
@@ -99,7 +99,7 @@
       "icon": "book",
       "order": 1,
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "updatedAt": "2026-07-17T00:00:00.000Z",
+      "updatedAt": "2026-08-02T22:32:20.542Z",
       "publishedAt": "2026-01-01T00:00:00.000Z"
     },
     {
@@ -138,14 +138,14 @@
       "objectives": "Anticiper, prévenir et répondre aux vulnérabilités communautaires.",
       "axisId": "gouvernance-citoyennete-transformation-sociale",
       "beneficiaries": "Communautés locales, leaders de quartier, partenaires humanitaires.",
-      "targetAudience": "Communautés locales, leaders de quartier, partenaires humanitaires.",
+      "targetAudience": "Communautés locales, leaders communautaires, partenaires humanitaires.",
       "activities": "Veille communautaire, mécanismes de signalement, mobilisation rapide des acteurs locaux.",
       "ctaLabel": "Rejoindre le programme",
       "ctaHref": "/contact?motif=programme",
       "icon": "radar",
       "order": 3,
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "updatedAt": "2026-07-17T00:00:00.000Z",
+      "updatedAt": "2026-08-02T22:32:20.545Z",
       "publishedAt": "2026-01-01T00:00:00.000Z"
     },
     {
@@ -176,7 +176,7 @@
       "title": "Vert et Climat",
       "slug": "programme-vert-climat",
       "excerpt": "Protection de l'environnement et adaptation aux changements climatiques.",
-      "content": "Vert et Climat sensibilise, forme et mobilise les communautés autour de la protection de l'environnement et de l'adaptation aux changements climatiques. Le programme promeut des pratiques durables, des initiatives vertes locales et une culture de responsabilité environnementale ancrée dans les réalités du Sud-Kivu.",
+      "content": "Vert et Climat sensibilise, forme et mobilise les communautés autour de la protection de l'environnement et de l'adaptation aux changements climatiques. Le programme promeut des pratiques durables, des initiatives vertes locales et une culture de responsabilité environnementale ancrée dans les réalités locales.",
       "category": "Autonomisation économique et résilience",
       "image": "/images/ddc/salongo-communautaire.jpg",
       "date": "2026-01-01",
@@ -191,7 +191,7 @@
       "icon": "leaf",
       "order": 5,
       "createdAt": "2026-01-01T00:00:00.000Z",
-      "updatedAt": "2026-07-17T00:00:00.000Z",
+      "updatedAt": "2026-08-02T22:32:20.546Z",
       "publishedAt": "2026-01-01T00:00:00.000Z"
     },
     {
