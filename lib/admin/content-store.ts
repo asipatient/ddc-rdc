@@ -4,8 +4,12 @@ import { revalidatePath } from "next/cache";
 import { readMysqlAdminStore, writeMysqlAdminStore } from "@/lib/admin/mysql-store";
 import type { AdminStore, CollectionKey, SiteSettings } from "@/lib/admin/types";
 import { isMysqlConfigured } from "@/lib/server/mysql";
+import { isProjectFilesystemWritable } from "@/lib/server/runtime-fs";
 
 const storePath = path.join(process.cwd(), "data", "admin-store.json");
+
+const MYSQL_REQUIRED_MESSAGE =
+  "Écriture admin impossible : le filesystem du projet est en lecture seule (Vercel/Netlify). Configurez DATABASE_URL ou MYSQL_HOST/MYSQL_DATABASE/MYSQL_USER pour persister via MySQL.";
 
 export async function readAdminStore(): Promise<AdminStore> {
   if (isMysqlConfigured()) {
@@ -35,6 +39,11 @@ export async function writeAdminStore(store: AdminStore) {
   if (isMysqlConfigured()) {
     await writeMysqlAdminStore(store);
     return;
+  }
+
+  // Vercel/Netlify : data/admin-store.json n'est pas writable → EROFS / 500.
+  if (!isProjectFilesystemWritable()) {
+    throw new Error(MYSQL_REQUIRED_MESSAGE);
   }
 
   await fs.writeFile(storePath, `${JSON.stringify(store, null, 2)}\n`, "utf8");

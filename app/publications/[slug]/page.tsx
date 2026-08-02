@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays } from "lucide-react";
+import { ContentImage } from "@/components/ContentImage";
 import { site } from "@/lib/site-data";
 import { getPublicPublicationBySlug, getPublicPublications } from "@/lib/publications";
 import { PublicationCard } from "@/components/PublicationCard";
@@ -28,7 +28,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${publication.title} | ${site.shortName}`,
       description: publication.excerpt,
-      images: [{ url: publication.image || "/images/ddc/hero-reel-ddc.jpg", width: 1600, height: 900 }]
+      images: [
+        {
+          url:
+            publication.image && !publication.image.startsWith("data:")
+              ? publication.image
+              : "/images/ddc/hero-reel-ddc.jpg",
+          width: 1600,
+          height: 900
+        }
+      ]
     }
   };
 }
@@ -103,7 +112,7 @@ export default async function PublicationDetailPage({ params }: Props) {
         <section className="bg-white pt-10">
           <div className="section-shell">
             <div className="relative overflow-hidden rounded-lg bg-brand-mist">
-              <Image
+              <ContentImage
                 src={publication.image}
                 alt={publication.title}
                 width={1600}

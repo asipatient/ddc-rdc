@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import Image from "next/image";
 import { Mail } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
+import { ContentImage } from "@/components/ContentImage";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getPublicTeamMembers } from "@/lib/team";
@@ -39,7 +39,7 @@ export default async function TeamPage() {
               <article key={member.name} className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
                 <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-lg bg-brand-mist">
                   {member.photo ? (
-                    <Image src={member.photo} alt={member.name} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
+                    <ContentImage src={member.photo} alt={member.name} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
                   ) : (
                     <div className="text-center">
                       <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue">

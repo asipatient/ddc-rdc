@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
+import { ContentImage } from "@/components/ContentImage";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
 import { ProgramCard } from "@/components/ProgramCard";
@@ -41,7 +41,7 @@ export default async function AxesInterventionPage() {
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : undefined}>
                   <div className="relative min-h-72 overflow-hidden rounded-lg bg-brand-blueSoft">
-                    <Image src={axis.image} alt={axis.title} fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
+                    <ContentImage src={axis.image} alt={axis.title} fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
                   </div>
                 </div>
                 <div>

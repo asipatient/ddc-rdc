@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ContactForm } from "@/components/ContactForm";
+import { ContentImage } from "@/components/ContentImage";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -62,7 +62,7 @@ export default async function PartnersPage() {
               ? partners.map((partner) => (
                   <article key={partner.name} className="rounded-lg border border-slate-200 bg-white p-5 text-center shadow-sm">
                     <div className="relative mx-auto flex h-20 w-32 items-center justify-center rounded-md bg-brand-mist">
-                      {partner.logo ? <Image src={partner.logo} alt={partner.name} fill sizes="128px" className="object-contain p-3" /> : null}
+                      {partner.logo ? <ContentImage src={partner.logo} alt={partner.name} fill sizes="128px" className="object-contain p-3" /> : null}
                     </div>
                     <h2 className="mt-4 text-base font-black text-brand-blue">{partner.name}</h2>
                     <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-brand-green">{partner.partnershipType}</p>

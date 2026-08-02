@@ -38,6 +38,7 @@ import type {
   TeamMember,
   Testimonial
 } from "@/lib/admin/types";
+import { isProjectFilesystemWritable } from "@/lib/server/runtime-fs";
 
 const collectionPaths: Record<CollectionKey, string> = {
   articles: "/admin/articles",
@@ -614,6 +615,22 @@ export async function deleteArticleAction(id: string) {
   redirect("/admin/articles?deleted=1");
 }
 
+const mimeByExtension: Record<string, string> = {
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg",
+  png: "image/png",
+  webp: "image/webp",
+  gif: "image/gif",
+  svg: "image/svg+xml",
+  pdf: "application/pdf",
+  doc: "application/msword",
+  docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  xls: "application/vnd.ms-excel",
+  xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  ppt: "application/vnd.ms-powerpoint",
+  pptx: "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+};
+
 async function saveUploadedFile(formData: FormData, fieldName: string, folder: string, allowedExtensions: string[]) {
   const file = formData.get(fieldName);
 
@@ -632,12 +649,26 @@ async function saveUploadedFile(formData: FormData, fieldName: string, folder: s
     throw new Error("Type de fichier non autorisé.");
   }
 
+  const buffer = Buffer.from(await file.arrayBuffer());
+
+  // Vercel/Netlify : public/uploads n'est pas writable. On embarque le fichier
+  // en data URL (persisté avec l'item MySQL/JSON) au lieu d'écrire sur disque.
+  if (!isProjectFilesystemWritable()) {
+    if (file.size > 2 * 1024 * 1024) {
+      throw new Error(
+        "Sur Vercel/Netlify, les fichiers intégrés sont limités à 2 Mo. Utilisez une URL externe dans le champ image/fichier, ou hébergez le média ailleurs."
+      );
+    }
+
+    const mime = file.type || mimeByExtension[extension] || "application/octet-stream";
+    return `data:${mime};base64,${buffer.toString("base64")}`;
+  }
+
   const uploadsDir = path.join(process.cwd(), "public", "uploads", folder);
   await fs.mkdir(uploadsDir, { recursive: true });
 
   const filename = `${Date.now()}-${slugify(originalName.replace(/\.[^.]+$/, ""))}.${extension}`;
   const destination = path.join(uploadsDir, filename);
-  const buffer = Buffer.from(await file.arrayBuffer());
   await fs.writeFile(destination, buffer);
 
   return `/uploads/${folder}/${filename}`;
