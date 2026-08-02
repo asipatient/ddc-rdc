@@ -3,7 +3,7 @@ export const founderProfile = {
   role: "Président Fondateur & Coordonnateur National",
   photo: "/images/team/patient-asifiwe.jpg",
   leadershipImage: "/images/ddc/activite-formation-ddc.webp",
-  leadershipImageAlt: "Formation DDC RDC — activité citoyenne",
+  leadershipImageAlt: "Activité de formation DDC RDC",
   shortBio:
     "Leader communautaire de Bukavu, fondateur de PROSE MEDIA CD et co-initiateur de PANZI FM — il a créé la Dynamique Debout Congolais en 2022 pour former des acteurs et construire des réponses avec les jeunes et les femmes de la RDC.",
   fullBio: [
