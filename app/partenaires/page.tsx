@@ -56,7 +56,7 @@ export default async function PartnersPage() {
       <section className="bg-brand-mist py-16 sm:py-20">
         <ScrollReveal>
         <div className="section-shell">
-          <SectionHeading eyebrow="Partenaires et bailleurs" title="Espace réservé aux logos et références validées." />
+          <SectionHeading title="Nos partenaires actuels" />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {partners.length
               ? partners.map((partner) => (

@@ -482,6 +482,116 @@
       "status": "draft",
       "createdAt": "2026-01-01T00:00:00.000Z",
       "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "1779260150800",
+      "name": "COCORICO ASBL",
+      "partnershipType": "Partenariat institutionnel",
+      "logo": "",
+      "website": "",
+      "description": "Organisation de la société civile congolaise, partenaire institutionnel de la DDC RDC.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
+    },
+    {
+      "id": "1779260150801",
+      "name": "ONG Tumaini la Africa",
+      "partnershipType": "Partenariat institutionnel",
+      "logo": "",
+      "website": "",
+      "description": "Organisation non gouvernementale africaine, partenaire institutionnel de la DDC RDC.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
+    },
+    {
+      "id": "1779260150802",
+      "name": "ACNDC",
+      "partnershipType": "Partenariat institutionnel",
+      "logo": "",
+      "website": "",
+      "description": "Partenaire institutionnel de la DDC RDC.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
+    },
+    {
+      "id": "1779260150803",
+      "name": "SFDC ASBL",
+      "partnershipType": "Partenariat institutionnel",
+      "logo": "",
+      "website": "",
+      "description": "Partenaire institutionnel de la DDC RDC.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
+    },
+    {
+      "id": "1779260150804",
+      "name": "UEA/CRESS",
+      "partnershipType": "Partenariat académique",
+      "logo": "",
+      "website": "",
+      "description": "Université Évangélique en Afrique — Centre de Recherche en Sciences Sociales. Partenaire académique de la DDC RDC pour la recherche et le plaidoyer.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
+    },
+    {
+      "id": "1779260150805",
+      "name": "Mairie de Bukavu",
+      "partnershipType": "Partenariat institutionnel",
+      "logo": "",
+      "website": "",
+      "description": "Institution publique locale, partenaire institutionnel de la DDC RDC.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
+    },
+    {
+      "id": "1779260150806",
+      "name": "Commune d'Ibanda",
+      "partnershipType": "Partenariat institutionnel",
+      "logo": "",
+      "website": "",
+      "description": "Autorité locale, partenaire institutionnel de la DDC RDC.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
+    },
+    {
+      "id": "1779260150807",
+      "name": "PROSE MEDIA CD",
+      "partnershipType": "Partenariat technique",
+      "logo": "",
+      "website": "",
+      "description": "Entreprise spécialisée en communication, imprimerie et médias. Partenaire technique de la DDC RDC.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
+    },
+    {
+      "id": "1779260150808",
+      "name": "PROSE DIGITAL",
+      "partnershipType": "Partenariat technique",
+      "logo": "",
+      "website": "",
+      "description": "Entreprise de solutions digitales et développement informatique. Partenaire technique de la DDC RDC.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
+    },
+    {
+      "id": "1779260150809",
+      "name": "PRONET",
+      "partnershipType": "Partenariat technique",
+      "logo": "",
+      "website": "",
+      "description": "Entreprise partenaire technique de la DDC RDC.",
+      "status": "published",
+      "createdAt": "2026-08-03T01:37:00.000Z",
+      "updatedAt": "2026-08-03T01:37:00.000Z"
     }
   ],
   "impactMetrics": [
