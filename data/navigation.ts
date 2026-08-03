@@ -4,41 +4,28 @@ import { paypalDonationUrl } from "./donation";
 export const navigation: NavItem[] = [
   { label: "Accueil", href: "/" },
   {
-    label: "Qui sommes-nous ?",
+    label: "Qui sommes-nous",
     items: [
       { label: "À propos", href: "/a-propos" },
       { label: "Notre histoire", href: "/notre-histoire" },
       { label: "Vision & Mission", href: "/vision-mission" },
-      { label: "Notre équipe", href: "/equipe" },
-      { label: "Gouvernance", href: "/gouvernance" }
+      { label: "Équipe", href: "/equipe" }
     ]
   },
   {
     label: "Nos actions",
     items: [
-      { label: "Axes d'intervention", href: "/axes-intervention" },
       { label: "Programmes", href: "/programmes" },
       { label: "Réalisations", href: "/realisations" },
-      { label: "Impact", href: "/impact" },
-      { label: "Zones d'intervention", href: "/zones-intervention" }
+      { label: "Impact", href: "/impact" }
     ]
   },
+  { label: "Actualités", href: "/publications" },
   {
-    label: "Publications",
+    label: "S'engager",
     items: [
-      { label: "Actualités", href: "/publications?categorie=Actualit%C3%A9s" },
-      { label: "Rapports", href: "/publications?categorie=Rapports" },
-      { label: "Notes de plaidoyer", href: "/publications?categorie=Notes%20de%20plaidoyer" }
-    ]
-  },
-  {
-    label: "Agir avec nous",
-    items: [
-      { label: "Faire un don", href: paypalDonationUrl, external: true },
-      { label: "Devenir membre", href: "/devenir-membre-benevole?mode=membre" },
-      { label: "Devenir bénévole", href: "/devenir-membre-benevole?mode=benevole" },
+      { label: "Devenir membre ou bénévole", href: "/devenir-membre-benevole" },
       { label: "Devenir partenaire", href: "/partenaires" },
-      { label: "Proposer une initiative", href: "/contact?type=Projet%20communautaire" },
       { label: "Opportunités", href: "/opportunites" }
     ]
   },
@@ -47,41 +34,29 @@ export const navigation: NavItem[] = [
 
 export const footerColumns: Array<{ title: string; links: NavLink[] }> = [
   {
-    title: "Qui sommes-nous ?",
+    title: "Organisation",
     links: [
       { label: "À propos", href: "/a-propos" },
       { label: "Notre histoire", href: "/notre-histoire" },
-      { label: "Vision & Mission", href: "/vision-mission" },
-      { label: "Notre équipe", href: "/equipe" },
-      { label: "Gouvernance", href: "/gouvernance" }
+      { label: "Équipe", href: "/equipe" },
+      { label: "Contact", href: "/contact" }
     ]
   },
   {
     title: "Nos actions",
     links: [
-      { label: "Axes d'intervention", href: "/axes-intervention" },
       { label: "Programmes", href: "/programmes" },
       { label: "Réalisations", href: "/realisations" },
       { label: "Impact", href: "/impact" },
-      { label: "Zones d'intervention", href: "/zones-intervention" }
+      { label: "Actualités", href: "/publications" }
     ]
   },
   {
-    title: "Publications",
-    links: [
-      { label: "Actualités", href: "/publications?categorie=Actualit%C3%A9s" },
-      { label: "Rapports", href: "/publications?categorie=Rapports" },
-      { label: "Notes de plaidoyer", href: "/publications?categorie=Notes%20de%20plaidoyer" }
-    ]
-  },
-  {
-    title: "Agir avec nous",
+    title: "S'engager",
     links: [
       { label: "Faire un don", href: paypalDonationUrl, external: true },
       { label: "Devenir membre / bénévole", href: "/devenir-membre-benevole" },
-      { label: "Devenir partenaire", href: "/partenaires" },
-      { label: "Opportunités", href: "/opportunites" },
-      { label: "Contact", href: "/contact" }
+      { label: "Devenir partenaire", href: "/partenaires" }
     ]
   }
 ];
