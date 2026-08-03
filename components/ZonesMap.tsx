@@ -19,11 +19,19 @@ const bukavuIcon = L.divIcon({
   popupAnchor: [0, -38]
 });
 
-export function ZonesMap() {
+type ZonesMapProps = {
+  zoom?: number;
+  popupText?: string;
+};
+
+export function ZonesMap({
+  zoom = 7,
+  popupText = "DDC RDC — Siège social, Bukavu, Sud-Kivu"
+}: ZonesMapProps) {
   return (
     <MapContainer
       center={BUKAVU_POSITION}
-      zoom={7}
+      zoom={zoom}
       scrollWheelZoom={false}
       className="h-[300px] w-full rounded-lg sm:h-[400px]"
     >
@@ -32,7 +40,7 @@ export function ZonesMap() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={BUKAVU_POSITION} icon={bukavuIcon}>
-        <Popup>DDC RDC — Siège social, Bukavu, Sud-Kivu</Popup>
+        <Popup>{popupText}</Popup>
       </Marker>
     </MapContainer>
   );

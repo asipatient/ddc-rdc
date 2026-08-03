@@ -1,12 +1,12 @@
 import { buildMetadata } from "@/lib/metadata";
-import { ScrollReveal } from "@/components/ScrollReveal";
-import { Facebook, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
-import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ZonesMapLoader } from "@/components/ZonesMapLoader";
 import { contactIntro } from "@/lib/site-data";
 import { getPublicSiteConfig } from "@/lib/site-settings";
+import type { SocialLink } from "@/data/site";
 
 export const metadata = buildMetadata({
   title: "Contact",
@@ -14,17 +14,11 @@ export const metadata = buildMetadata({
   path: "/contact/"
 });
 
-const socialIcons = {
-  Facebook,
-  LinkedIn: Linkedin,
-  X: Mail,
-  YouTube: Youtube
-};
-
 export const dynamic = "force-dynamic";
 
 export default async function ContactPage() {
   const site = await getPublicSiteConfig();
+  const activeSocials = (site.contact.social as SocialLink[]).filter((s) => s.active);
 
   return (
     <>
@@ -33,7 +27,6 @@ export default async function ContactPage() {
         title="Entrer en relation avec la DDC RDC."
         description={contactIntro}
         cta={{ label: "Faire un don", href: site.donationUrl }}
-      
         image="/images/ddc/hero-reel-ddc.jpg"
       />
       <section className="bg-white py-16 sm:py-20">
@@ -54,12 +47,11 @@ export default async function ContactPage() {
                 {site.contact.email}
               </p>
             </div>
-            <div className="mt-8">
-              <h2 className="text-lg font-black text-brand-blue">Réseaux sociaux</h2>
-              <div className="mt-4 flex gap-3">
-                {(site.contact.social as import("@/data/site").SocialLink[])
-                  .filter((s) => s.active)
-                  .map((social) => (
+            {activeSocials.length > 0 ? (
+              <div className="mt-8">
+                <h2 className="text-lg font-black text-brand-blue">Réseaux sociaux</h2>
+                <div className="mt-4 flex gap-3">
+                  {activeSocials.map((social) => (
                     <a
                       key={social.platform}
                       href={social.url}
@@ -72,23 +64,19 @@ export default async function ContactPage() {
                       <Mail aria-hidden="true" className="h-5 w-5" />
                     </a>
                   ))}
+                </div>
               </div>
-            </div>
+            ) : null}
           </div>
           <ContactForm idPrefix="contact-page" />
         </div>
       </section>
       <section className="bg-brand-mist py-16 sm:py-20">
         <div className="section-shell">
-          <div className="flex min-h-72 items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white p-8 text-center">
-            <div>
-              <MapPin aria-hidden="true" className="mx-auto h-10 w-10 text-brand-green" />
-              <h2 className="mt-4 text-2xl font-black text-brand-blue">Carte de localisation</h2>
-              <p className="mt-3 max-w-xl text-sm leading-7 text-slate-600">
-                Emplacement réservé pour intégrer une carte interactive de l&apos;adresse officielle à Bukavu, Sud-Kivu.
-              </p>
-            </div>
-          </div>
+          <ZonesMapLoader
+            zoom={14}
+            popupText="DDC RDC — Av. Nyarwizimia 019, Commune d'Ibanda, Bukavu"
+          />
         </div>
       </section>
     </>

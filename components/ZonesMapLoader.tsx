@@ -2,6 +2,11 @@
 
 import dynamic from "next/dynamic";
 
+type ZonesMapLoaderProps = {
+  zoom?: number;
+  popupText?: string;
+};
+
 const ZonesMap = dynamic(() => import("@/components/ZonesMap").then((mod) => mod.ZonesMap), {
   ssr: false,
   loading: () => (
@@ -11,6 +16,6 @@ const ZonesMap = dynamic(() => import("@/components/ZonesMap").then((mod) => mod
   )
 });
 
-export function ZonesMapLoader() {
-  return <ZonesMap />;
+export function ZonesMapLoader({ zoom, popupText }: ZonesMapLoaderProps) {
+  return <ZonesMap zoom={zoom} popupText={popupText} />;
 }
