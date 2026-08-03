@@ -8,7 +8,7 @@ export const impactIndicators: ImpactIndicator[] = [
       "Estimation minimale basée uniquement sur les données chiffrées fournies. Données en cours de consolidation.",
     icon: "chart"
   },
-  { label: "Jeunes formés", value: "+20", note: "Première cohorte formée en 2016 à Bukavu, incluse dans le total de +970 bénéficiaires documentés depuis.", icon: "graduation" },
+  { label: "Jeunes formés", value: "+20", note: "Première cohorte formée en 2016, incluse dans le total de +970 bénéficiaires documentés depuis.", icon: "graduation" },
   { label: "Femmes accompagnées", value: "+50", note: "Femmes formées à l'entrepreneuriat local en 2024.", icon: "users" },
   { label: "Enfants sensibilisés", value: "+300", note: "Élèves sensibilisés entre octobre et novembre 2025.", icon: "child" },
   { label: "Activités réalisées", value: "+10", note: "Données en cours de consolidation.", icon: "calendar" }
@@ -42,16 +42,8 @@ export const interventionApproach: SupportArgument[] = [
 
 export const monitoringLearning = {
   intro:
-    "La DDC RDC entend renforcer progressivement ses mécanismes de suivi, d'évaluation, d'apprentissage et de redevabilité afin de mesurer les résultats de ses actions, capitaliser les expériences, documenter les changements et améliorer continuellement ses programmes.",
-  blocks: [
-    { title: "Indicateurs d'impact", description: "Tableaux de suivi mis à jour au fil de la consolidation des données.", icon: "chart" },
-    { title: "Rapports périodiques", description: "Rapports d'activités, notes de synthèse et bilans de programmes à publier.", icon: "file" },
-    { title: "Témoignages", description: "Récits de jeunes, femmes, partenaires et leaders communautaires à documenter.", icon: "users" },
-    { title: "Études de cas", description: "Capitalisation des initiatives porteuses de changement local.", icon: "search" },
-    { title: "Photos d'activités", description: "Galeries et archives visuelles à organiser par activité et programme.", icon: "newspaper" },
-    { title: "Données de terrain", description: "Collecte progressive d'informations quantitatives et qualitatives.", icon: "clipboard" },
-    { title: "Capitalisation", description: "Analyse des apprentissages pour améliorer les actions futures.", icon: "layers" }
-  ] satisfies SupportArgument[]
+    "La DDC RDC documente progressivement ses résultats à travers des rapports d'activités, des témoignages de bénéficiaires et des études de cas. Notre engagement : mesurer pour mieux agir.",
+  blocks: [] as SupportArgument[]
 };
 
 export const zonesIntervention = {
