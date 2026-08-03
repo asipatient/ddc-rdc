@@ -10,8 +10,7 @@ export const navigation: NavItem[] = [
       { label: "Notre histoire", href: "/notre-histoire" },
       { label: "Vision & Mission", href: "/vision-mission" },
       { label: "Notre équipe", href: "/equipe" },
-      { label: "Gouvernance", href: "/gouvernance" },
-      { label: "Principes directeurs", href: "/principes-directeurs" }
+      { label: "Gouvernance", href: "/gouvernance" }
     ]
   },
   {
@@ -29,9 +28,7 @@ export const navigation: NavItem[] = [
     items: [
       { label: "Actualités", href: "/publications?categorie=Actualit%C3%A9s" },
       { label: "Rapports", href: "/publications?categorie=Rapports" },
-      { label: "Notes de plaidoyer", href: "/publications?categorie=Notes%20de%20plaidoyer" },
-      { label: "Documents institutionnels", href: "/documents-institutionnels" },
-      { label: "Presse", href: "/presse" }
+      { label: "Notes de plaidoyer", href: "/publications?categorie=Notes%20de%20plaidoyer" }
     ]
   },
   {
@@ -74,9 +71,7 @@ export const footerColumns: Array<{ title: string; links: NavLink[] }> = [
     links: [
       { label: "Actualités", href: "/publications?categorie=Actualit%C3%A9s" },
       { label: "Rapports", href: "/publications?categorie=Rapports" },
-      { label: "Notes de plaidoyer", href: "/publications?categorie=Notes%20de%20plaidoyer" },
-      { label: "Documents institutionnels", href: "/documents-institutionnels" },
-      { label: "Presse", href: "/presse" }
+      { label: "Notes de plaidoyer", href: "/publications?categorie=Notes%20de%20plaidoyer" }
     ]
   },
   {

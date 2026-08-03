@@ -214,8 +214,7 @@ export const governanceItems: GovernanceItem[] = [
   },
   {
     title: "Président Fondateur",
-    description:
-      "Garant de la mission : statut permanent et protégé par les Statuts, droit de veto suspensif et certification de la conformité des programmes avec la vision de l'association.",
+    description: "Garant de la vision et de la mission de l'association.",
     status: "Garant de la mission"
   },
   {

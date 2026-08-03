@@ -58,10 +58,7 @@ export default async function ProgramsPage() {
               title="Former, documenter, mobiliser, créer des réseaux et appuyer les initiatives locales."
             />
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/moyens-action" variant="secondary">
-                Voir tous les moyens d&apos;action
-              </ButtonLink>
-              <ButtonLink href="/devenir-membre-benevole" variant="ghost">
+              <ButtonLink href="/devenir-membre-benevole" variant="secondary">
                 Rejoindre la DDC
               </ButtonLink>
             </div>
