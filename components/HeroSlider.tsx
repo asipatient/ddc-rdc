@@ -4,12 +4,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const heroImages = [
+  "/images/ddc/groupe-partenaires-ddc.jpg",
   "/images/ddc/hero1.jpg",
   "/images/ddc/hero2.jpg",
   "/images/ddc/hero3.jpg",
   "/images/ddc/hero4.jpg",
-  "/images/ddc/hero5.jpg",
-  "/images/ddc/hero6.jpg",
 ];
 
 export function HeroSlider() {

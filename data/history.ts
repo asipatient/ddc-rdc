@@ -7,10 +7,9 @@ export const founderProfile = {
   shortBio:
     "Leader communautaire de Bukavu, fondateur de PROSE MEDIA CD et co-initiateur de PANZI FM — il a créé la Dynamique Debout Congolais en 2022 pour former des acteurs et construire des réponses avec les jeunes et les femmes de la RDC.",
   fullBio: [
-    "Patient Asifiwe est un leader communautaire de Bukavu, diplômé en Sciences de l'Information et de la Communication, option Éditions Multimédia. Entrepreneur dans l'imprimerie et les solutions digitales, il est fondateur de PROSE MEDIA CD et PROSE DIGITAL, deux entreprises dont la réputation lui a valu le surnom de Prose, par lequel beaucoup le connaissent encore aujourd'hui.",
-    "Homme de terrain et de réflexion, il est co-initiateur de PANZI FM et figure reconnue, sollicité par jeunes et anciens pour des initiatives jugées sérieuses.",
-    "Mais c'est une question profonde qui a orienté toute sa trajectoire : pourquoi, dans un pays aux ressources immenses, la pauvreté et le chômage persistent-ils après de longues années d'études ? Pourquoi n'y a-t-il pas d'industries, pas de routes, pas de productions locales — alors que les ressources existent, que la main d'œuvre est là ? Les habits que nous portons, les radios, les véhicules — tout ça vient des hommes. Pourquoi pas nous ?",
-    "Cette interrogation — pas résignée, mais exigeante — l'a conduit à créer la Dynamique Debout Congolais en 2022 : un cadre pour transformer les consciences, former des acteurs et construire, avec les jeunes et les femmes de la RDC, les réponses que les institutions n'ont pas encore données."
+    "La DDC RDC est née d'une question que beaucoup de jeunes congolais se posent sans oser la formuler : pourquoi, dans un pays aux ressources immenses, la pauvreté et le chômage persistent-ils après de longues années d'études ? Pourquoi pas d'industries, pas de routes, pas de productions locales — alors que les ressources existent et que la main d'œuvre est là ?",
+    "Cette interrogation collective — pas résignée, mais exigeante — a conduit à la création de la Dynamique Debout Congolais en 2022 : un cadre pour transformer les consciences, former des acteurs et construire, avec les jeunes et les femmes de la RDC, les réponses que les institutions n'ont pas encore données.",
+    "Son fondateur, Patient Asifiwe, communicateur et entrepreneur social, a porté cette conviction depuis ses premières initiatives en 2016 jusqu'à la fondation officielle de l'ASBL."
   ],
   orientations: [
     "Communicateur et mobilisateur communautaire",
