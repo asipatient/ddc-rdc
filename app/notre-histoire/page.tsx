@@ -18,7 +18,7 @@ export default function HistoryPage() {
         title="Une organisation née d'une conviction, construite par des actes."
         description={historyIntro}
         cta={{ label: "Voir les réalisations", href: "/realisations" }}
-        image="/images/ddc/jeunesse-culture-echange.jpg"
+        image="/images/ddc/panel-ddc-rdc.jpg"
       />
 
       <section className="bg-brand-blue py-16 text-white sm:py-20">

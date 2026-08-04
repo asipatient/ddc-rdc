@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url:
             publication.image && !publication.image.startsWith("data:")
               ? publication.image
-              : "/images/ddc/hero-reel-ddc.jpg",
+              : "/images/ddc/groupe-partenaires-ddc.jpg",
           width: 1600,
           height: 900
         }

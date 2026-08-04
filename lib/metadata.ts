@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/data/site";
 
 const BASE_URL = site.url;
-const DEFAULT_OG_IMAGE = "/images/ddc/hero-reel-ddc.jpg";
+const DEFAULT_OG_IMAGE = "/images/ddc/groupe-partenaires-ddc.jpg";
 
 type BuildMetadataOptions = {
   title: string;

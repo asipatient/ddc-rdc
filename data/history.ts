@@ -2,8 +2,8 @@ export const founderProfile = {
   name: "Patient Asifiwe",
   role: "Président Fondateur & Coordonnateur National",
   photo: "/images/team/patient-asifiwe.jpg",
-  leadershipImage: "/images/ddc/activite-formation-ddc.webp",
-  leadershipImageAlt: "Activité de formation DDC RDC",
+  leadershipImage: "/images/ddc/panel-ddc-rdc.jpg",
+  leadershipImageAlt: "Panel DDC RDC — activité citoyenne",
   shortBio:
     "Leader communautaire de Bukavu, fondateur de PROSE MEDIA CD et co-initiateur de PANZI FM — il a créé la Dynamique Debout Congolais en 2022 pour former des acteurs et construire des réponses avec les jeunes et les femmes de la RDC.",
   fullBio: [
