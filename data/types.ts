@@ -62,6 +62,9 @@ export type Publication = {
   relatedAxis?: string;
   relatedProgram?: string;
   gallery?: string[];
+  keyFacts?: { value: string; label: string }[];
+  timeline?: { year: string; title: string; description?: string }[];
+  resources?: { title: string; type: string; url?: string }[];
 };
 
 export type ActivityArticle = {
@@ -86,6 +89,9 @@ export type ActivityArticle = {
   needsReview: boolean;
   createdAt: string;
   updatedAt: string;
+  keyFacts?: { value: string; label: string }[];
+  timeline?: { year: string; title: string; description?: string }[];
+  resources?: { title: string; type: string; url?: string }[];
 };
 
 export type Program = {

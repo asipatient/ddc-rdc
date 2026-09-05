@@ -21,6 +21,23 @@ const institutionalPublications: Publication[] = [
     date: "2026-04-28",
     category: "Événements",
     accent: "green",
+    location: "Bukavu",
+    relatedProgram: "École Citoyenne",
+    relatedAxis: "Gouvernance, citoyenneté et transformation sociale",
+    objectives: [
+      "Renforcer la participation des jeunes à la vie publique locale et nationale."
+    ],
+    keyFacts: [
+      { value: "2023", label: "Début du cycle" },
+      { value: "50+", label: "Jeunes et femmes concernés" },
+      { value: "300+", label: "Jeunes et femmes sensibilisés" },
+      { value: "120", label: "Participants à la conférence citoyenne 2025" }
+    ],
+    timeline: [
+      { year: "2023", title: "Formation sur les droits et devoirs du citoyen" },
+      { year: "2023", title: "Sensibilisation au processus électoral et à l'importance du vote" },
+      { year: "2025", title: "Conférence citoyenne", description: "\"Mémoire, lucidité et renaissance citoyenne\"" }
+    ],
     excerpt:
       "Un cycle de rencontres pour renforcer la participation des jeunes à la vie publique locale et nationale.",
     body: [

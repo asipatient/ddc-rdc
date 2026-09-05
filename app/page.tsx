@@ -70,31 +70,37 @@ export default async function HomePage() {
       <section className="bg-white py-14 sm:py-20">
         <div className="section-shell">
           <SectionHeading
-            eyebrow="Aperçu de notre impact"
+            eyebrow="REPÈRES & IMPACT"
             title="Des actions mesurables, ancrées dans la réalité communautaire."
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             
             {/* Repères institutionnels */}
-            <div className="rounded-2xl border border-slate-200 bg-brand-mist/50 p-6 sm:p-8">
+            <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-6 sm:p-8">
               <h3 className="text-lg font-black text-brand-blue flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-blue"></span>
                 Repères institutionnels
               </h3>
-              <div className="mt-8 space-y-6">
-                <div>
-                  <p className="text-4xl font-black text-brand-blue"><CountUp value="2016" /></p>
-                  <p className="mt-1 text-sm font-bold text-slate-700">Premières initiatives citoyennes</p>
+              <div className="mt-8 space-y-6 relative before:absolute before:inset-y-0 before:left-2.5 before:w-0.5 before:bg-slate-100">
+                <div className="relative flex gap-4">
+                  <div className="absolute left-2.5 top-2 -translate-x-1/2 w-2 h-2 rounded-full bg-slate-300 border-2 border-white ring-4 ring-white"></div>
+                  <div className="pl-6">
+                    <p className="text-xl font-black text-brand-blue">2016</p>
+                    <p className="mt-1 text-sm font-bold text-slate-700">Premières initiatives citoyennes</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-4xl font-black text-brand-blue"><CountUp value="2022" /></p>
-                  <p className="mt-1 text-sm font-bold text-slate-700">Fondation officielle DDC RDC</p>
+                <div className="relative flex gap-4">
+                  <div className="absolute left-2.5 top-2 -translate-x-1/2 w-2 h-2 rounded-full bg-brand-gold border-2 border-white ring-4 ring-white"></div>
+                  <div className="pl-6">
+                    <p className="text-xl font-black text-brand-blue">2022</p>
+                    <p className="mt-1 text-sm font-bold text-slate-700">Fondation officielle DDC RDC</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Résultats documentés */}
-            <div className="rounded-2xl border border-slate-200 bg-brand-mist/50 p-6 sm:p-8">
+            <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-6 sm:p-8">
               <h3 className="text-lg font-black text-brand-blue flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
                 Résultats documentés
@@ -112,14 +118,14 @@ export default async function HomePage() {
             </div>
 
             {/* Demain */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm flex flex-col">
+            <div className="rounded-2xl border-2 border-slate-100 bg-slate-50/50 p-6 sm:p-8 flex flex-col">
               <h3 className="text-lg font-black text-slate-600 flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-gold"></span>
                 Ambitions futures
               </h3>
               <div className="mt-8 flex-1">
-                <p className="text-5xl font-black text-brand-blue">26</p>
-                <p className="mt-2 text-lg font-bold text-brand-blue">Provinces — notre horizon</p>
+                <p className="text-4xl font-black text-brand-blue">26</p>
+                <p className="mt-1 text-sm font-bold text-slate-700">Provinces — notre horizon</p>
                 <p className="mt-4 text-sm leading-relaxed text-slate-600">
                   Notre ambition stratégique est d'étendre progressivement nos programmes éprouvés pour couvrir l'ensemble du territoire national et amplifier notre impact.
                 </p>

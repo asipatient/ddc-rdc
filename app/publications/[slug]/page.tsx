@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CalendarDays } from "lucide-react";
+import { ArrowLeft, CalendarDays, Clock, MapPin, ChevronRight, FileText } from "lucide-react";
 import { ContentImage } from "@/components/ContentImage";
 import { site } from "@/lib/site-data";
 import { getPublicPublicationBySlug, getPublicPublications } from "@/lib/publications";
 import { PublicationCard } from "@/components/PublicationCard";
 import { ShareButtons } from "@/components/ShareButtons";
+import { ButtonLink } from "@/components/ButtonLink";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -62,57 +63,58 @@ export default async function PublicationDetailPage({ params }: Props) {
     year: "numeric"
   }).format(new Date(publication.date));
   const displayDate = publication.period || date;
-  const infoBlocks: Array<{ title: string; items?: string[] }> = [];
 
-  if (publication.objectives) {
-    infoBlocks.push({ title: "Objectifs", items: publication.objectives });
-  }
-
-  if (publication.targetAudience) {
-    infoBlocks.push({ title: "Public cible", items: publication.targetAudience });
-  }
-
-  if (publication.impact) {
-    infoBlocks.push({ title: "Résultats / impact", items: publication.impact });
-  }
+  // Calcul du temps de lecture (environ 200 mots/min)
+  const wordCount = publication.body.join(" ").split(/\s+/).length;
+  const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 
   return (
     <article>
       <section className="bg-brand-blue text-white">
-        <div className="section-shell py-16 sm:py-20">
-          <Link href="/publications" className="focus-ring inline-flex items-center gap-2 rounded-md text-sm font-bold text-brand-gold">
-            <ArrowLeft aria-hidden="true" className="h-4 w-4" />
-            Retour aux publications
-          </Link>
-          <div className="mt-8 max-w-4xl">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-brand-gold">{publication.category}</p>
-            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl">{publication.title}</h1>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-white/80">{publication.excerpt}</p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {publication.status ? (
-                <span className="rounded-md bg-white/10 px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-white">
-                  {publication.status === "published" ? "Publié" : "Brouillon"}
-                </span>
-              ) : null}
+        <div className="section-shell py-12 sm:py-16">
+          <nav aria-label="Fil d'ariane" className="flex items-center space-x-2 text-sm font-medium text-brand-mist/60 mb-10">
+            <Link href="/publications" className="hover:text-white transition-colors focus-ring rounded-sm">Publications</Link>
+            <ChevronRight className="w-4 h-4" />
+            <span className="text-brand-gold">{publication.category}</span>
+          </nav>
+          
+          <div className="max-w-4xl">
+            <span className="inline-block rounded-full bg-brand-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand-gold">
+              {publication.category}
+            </span>
+            <h1 className="mt-6 text-4xl font-black leading-tight sm:text-5xl md:text-6xl text-white">{publication.title}</h1>
+            <p className="mt-8 max-w-3xl text-xl leading-relaxed text-white/90 font-medium">{publication.excerpt}</p>
+            
+            <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-medium text-white/70">
+              <div className="flex items-center gap-2">
+                <CalendarDays aria-hidden="true" className="h-4 w-4" />
+                <time dateTime={publication.date}>{displayDate}</time>
+              </div>
+              {publication.location && (
+                <div className="flex items-center gap-2">
+                  <MapPin aria-hidden="true" className="h-4 w-4" />
+                  <span>{publication.location}</span>
+                </div>
+              )}
+              <div className="flex items-center gap-2">
+                <Clock aria-hidden="true" className="h-4 w-4" />
+                <span>{readingTime} min de lecture</span>
+              </div>
             </div>
-            <p className="mt-6 flex items-center gap-2 text-sm font-medium text-white/70">
-              <CalendarDays aria-hidden="true" className="h-4 w-4" />
-              <time dateTime={publication.date}>{displayDate}</time>
-            </p>
           </div>
         </div>
       </section>
 
       {publication.image ? (
-        <section className="bg-white pt-10">
-          <div className="section-shell">
-            <div className="relative overflow-hidden rounded-lg bg-brand-mist">
+        <section className="bg-white">
+          <div className="section-shell max-w-6xl -mt-6 sm:-mt-10 relative z-10">
+            <div className="overflow-hidden rounded-xl bg-brand-mist shadow-xl ring-1 ring-slate-900/5">
               <ContentImage
                 src={publication.image}
                 alt={publication.title}
                 width={1600}
                 height={900}
-                className="aspect-[16/9] w-full object-cover"
+                className="aspect-[21/9] sm:aspect-[2.5/1] w-full object-cover"
                 priority
               />
             </div>
@@ -120,93 +122,147 @@ export default async function PublicationDetailPage({ params }: Props) {
         </section>
       ) : null}
 
-      <section className="bg-white py-16 sm:py-20">
-        <div className="section-shell max-w-4xl">
-          <div className="space-y-6 text-lg leading-9 text-slate-700">
-            {publication.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
+      <section className={`bg-white pb-16 sm:pb-24 ${publication.image ? 'pt-12 sm:pt-16' : 'pt-16 sm:pt-20'}`}>
+        <div className="section-shell max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            
+            {/* Colonne Principale */}
+            <div className="lg:col-span-8 space-y-16">
+              
+              {/* Corps éditorial */}
+              <div className="prose prose-lg prose-slate max-w-none prose-headings:font-black prose-headings:text-brand-blue prose-p:leading-loose prose-p:text-slate-700">
+                {publication.body.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
 
-          {infoBlocks.length ? (
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
-              {infoBlocks.map((block) => (
-                <InfoBlock key={block.title} title={block.title} items={block.items} />
-              ))}
+              {/* Ce que cette action cherche à changer */}
+              {publication.objectives && publication.objectives.length > 0 && (
+                <div className="border-t border-slate-100 pt-12">
+                  <h2 className="text-2xl font-black text-brand-blue">Ce que cette action cherche à changer</h2>
+                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                    {publication.objectives.map((obj, i) => (
+                      <div key={i} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+                        <div className="flex items-start gap-3">
+                          <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-black">{i + 1}</span>
+                          <p className="text-sm font-semibold text-slate-700 leading-relaxed">{obj}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Chronologie */}
+              {publication.timeline && publication.timeline.length > 0 && (
+                <div className="border-t border-slate-100 pt-12">
+                  <h2 className="text-2xl font-black text-brand-blue">Chronologie</h2>
+                  <div className="mt-8 relative before:absolute before:inset-y-0 before:left-[11px] before:w-0.5 before:bg-slate-100 space-y-8">
+                    {publication.timeline.map((event, i) => (
+                      <div key={i} className="relative flex gap-6">
+                        <div className="absolute left-[11px] top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-brand-blue ring-4 ring-white"></div>
+                        <div className="pl-8">
+                          <span className="text-sm font-black text-brand-gold uppercase tracking-widest">{event.year}</span>
+                          <h3 className="mt-1 text-lg font-bold text-slate-800">{event.title}</h3>
+                          {event.description && <p className="mt-2 text-slate-600 leading-relaxed">{event.description}</p>}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Ressources */}
+              {publication.resources && publication.resources.length > 0 && (
+                <div className="border-t border-slate-100 pt-12">
+                  <h2 className="text-2xl font-black text-brand-blue">Ressources associées</h2>
+                  <div className="mt-6 space-y-3">
+                    {publication.resources.map((res, i) => (
+                      <a key={i} href={res.url || "#"} className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 hover:border-brand-blue hover:shadow-sm transition-all focus-ring group">
+                        <div className="flex-shrink-0 p-2 rounded-lg bg-brand-mist text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                          <FileText className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-slate-800">{res.title}</p>
+                          <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">{res.type}</p>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Partage */}
+              <div className="border-t border-slate-100 pt-8 flex items-center justify-between flex-wrap gap-4">
+                <span className="font-bold text-slate-800">Partager cet article</span>
+                <ShareButtons url={shareUrl} title={publication.title} />
+              </div>
             </div>
-          ) : null}
 
-          {publication.location || publication.partners || publication.relatedAxis || publication.relatedProgram ? (
-            <div className="mt-8 rounded-lg border border-slate-200 p-6">
-              <h2 className="text-xl font-black text-brand-blue">Informations de référence</h2>
-              <dl className="mt-5 grid gap-4 text-sm leading-7 text-slate-600 md:grid-cols-2">
-                {publication.location ? (
-                  <div>
-                    <dt className="font-black text-brand-blue">Lieu</dt>
-                    <dd>{publication.location}</dd>
+            {/* Colonne Secondaire (Sticky) */}
+            <aside className="lg:col-span-4">
+              <div className="sticky top-24 space-y-8">
+                
+                {/* En Bref */}
+                {publication.keyFacts && publication.keyFacts.length > 0 && (
+                  <div className="rounded-2xl border border-slate-200 bg-brand-mist/30 p-6">
+                    <h3 className="text-sm font-black uppercase tracking-widest text-slate-500 mb-6">En bref</h3>
+                    <dl className="space-y-6">
+                      {publication.keyFacts.map((fact, i) => (
+                        <div key={i}>
+                          <dt className="text-2xl font-black text-brand-blue">{fact.value}</dt>
+                          <dd className="mt-1 text-sm font-semibold text-slate-600 leading-relaxed">{fact.label}</dd>
+                        </div>
+                      ))}
+                    </dl>
                   </div>
-                ) : null}
-                {publication.relatedAxis ? (
-                  <div>
-                    <dt className="font-black text-brand-blue">Axe lié</dt>
-                    <dd>{publication.relatedAxis}</dd>
-                  </div>
-                ) : null}
-                {publication.relatedProgram ? (
-                  <div>
-                    <dt className="font-black text-brand-blue">Programme lié</dt>
-                    <dd>{publication.relatedProgram}</dd>
-                  </div>
-                ) : null}
-                {publication.partners?.length ? (
-                  <div>
-                    <dt className="font-black text-brand-blue">Partenaires / co-organisateurs</dt>
-                    <dd>{publication.partners.join(", ")}</dd>
-                  </div>
-                ) : null}
-              </dl>
-            </div>
-          ) : null}
+                )}
 
-          <div className="mt-10 rounded-lg bg-brand-mist p-6">
-            <h2 className="text-xl font-black text-brand-blue">Pour aller plus loin</h2>
-            <p className="mt-3 leading-8 text-slate-600">
-              Cette page est prête pour recevoir des contenus détaillés, images, documents PDF, témoignages et liens de téléchargement lorsque les documents officiels seront disponibles.
-            </p>
-          </div>
-
-          <div className="mt-10 border-t border-slate-200 pt-8">
-            <ShareButtons url={shareUrl} title={publication.title} />
+                {/* Programme Associé */}
+                {publication.relatedProgram && (
+                  <div className="rounded-2xl bg-brand-blue p-6 text-white shadow-lg">
+                    <h3 className="text-xs font-black uppercase tracking-widest text-brand-gold mb-2">Programme associé</h3>
+                    <p className="text-xl font-bold">{publication.relatedProgram}</p>
+                    {publication.relatedAxis && (
+                      <p className="mt-2 text-sm font-medium text-white/70">Axe : {publication.relatedAxis}</p>
+                    )}
+                    <ButtonLink href="/programmes" variant="primary" className="mt-6 w-full justify-center bg-white text-brand-blue hover:bg-brand-mist">
+                      Découvrir le programme
+                    </ButtonLink>
+                  </div>
+                )}
+                
+              </div>
+            </aside>
+            
           </div>
         </div>
       </section>
 
-      {relatedPublications.length ? (
-        <section className="bg-brand-mist py-16 sm:py-20">
-          <div className="section-shell">
-            <h2 className="text-2xl font-black text-brand-blue">Articles similaires</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {/* Articles Similaires */}
+      {relatedPublications.length > 0 && (
+        <section className="bg-slate-50 py-16 sm:py-24 border-t border-slate-200">
+          <div className="section-shell max-w-6xl">
+            <div className="flex items-center justify-between mb-10">
+              <h2 className="text-2xl font-black text-brand-blue">À découvrir ensuite</h2>
+              <Link href="/publications" className="hidden sm:inline-flex items-center text-sm font-bold text-brand-blue hover:text-brand-gold transition-colors">
+                Voir toutes les publications
+                <ChevronRight className="ml-1 w-4 h-4" />
+              </Link>
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {relatedPublications.map((related) => (
                 <PublicationCard key={related.slug} publication={related} />
               ))}
             </div>
+            <div className="mt-8 text-center sm:hidden">
+              <ButtonLink href="/publications" variant="secondary" className="w-full justify-center">
+                Voir toutes les publications
+              </ButtonLink>
+            </div>
           </div>
         </section>
-      ) : null}
-    </article>
-  );
-}
-
-function InfoBlock({ title, items }: { title: string; items?: string[] }) {
-  if (!items?.length) return null;
-  return (
-    <article className="rounded-lg bg-brand-mist p-5">
-      <h2 className="text-lg font-black text-brand-blue">{title}</h2>
-      <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+      )}
     </article>
   );
 }
