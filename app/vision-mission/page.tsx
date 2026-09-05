@@ -33,7 +33,7 @@ export default function VisionMissionPage() {
  </article>
  <article className="rounded-lg border border-border bg-surface-elevated p-8 shadow-soft sm:p-10">
  <Target aria-hidden="true" className="h-10 w-10 text-brand-green" />
- <h2 className="mt-5 text-3xl font-bold text-brand-blue">Notre mission</h2>
+ <h2 className="mt-5 text-3xl font-bold text-brand-blue dark:text-foreground">Notre mission</h2>
  <p className="mt-5 leading-8 text-foreground-muted">{home.mission}</p>
  </article>
  </div>
@@ -56,7 +56,7 @@ export default function VisionMissionPage() {
  <div className="grid gap-4 md:grid-cols-2">
  {strategicPlan.items.map((item) => (
  <div key={item.title} className="rounded-lg bg-surface-elevated p-5 shadow-sm">
- <p className="text-sm font-bold leading-6 text-brand-blue">{item.title}</p>
+ <p className="text-sm font-bold leading-6 text-brand-blue dark:text-foreground-muted">{item.title}</p>
  <p className="mt-2 text-sm leading-7 text-foreground-muted">{item.description}</p>
  </div>
  ))}
@@ -75,7 +75,7 @@ export default function VisionMissionPage() {
  <div className="flex items-start gap-4">
  <MapPin aria-hidden="true" className="mt-1 h-6 w-6 flex-none text-brand-green" />
  <div>
- <h3 className="text-lg font-bold text-brand-blue">Présence à Bukavu et au-delà</h3>
+ <h3 className="text-lg font-bold text-brand-blue dark:text-foreground">Présence à Bukavu et au-delà</h3>
  <p className="mt-3 text-base leading-8 text-foreground-muted">
  Présente dans l&apos;ensemble de la ville de Bukavu, la DDC RDC compte des membres actifs dans au moins
  8 provinces de la RDC, avec l&apos;ouverture prochaine de bureaux provinciaux.

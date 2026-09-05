@@ -48,10 +48,10 @@ export default async function TeamPage() {
  </div>
  )}
  </div>
- <h2 className="mt-5 text-xl font-extrabold text-brand-blue">{member.name}</h2>
+ <h2 className="mt-5 text-xl font-extrabold text-brand-blue dark:text-foreground">{member.name}</h2>
  <p className="mt-1 text-sm font-bold text-brand-green">{member.role}</p>
  {member.roleDescription ? (
- <p className="mt-3 text-sm font-semibold leading-6 text-brand-blue">{member.roleDescription}</p>
+ <p className="mt-3 text-sm font-semibold leading-6 text-brand-blue dark:text-foreground-muted">{member.roleDescription}</p>
  ) : null}
  <p className="mt-4 text-sm leading-7 text-foreground-muted">{member.bio}</p>
  {member.contactHref && member.contactHref !=="#" ? (

@@ -42,7 +42,7 @@ export default function HistoryPage() {
  <article key={`${item.period}-${item.title}`} className="relative pb-8 last:pb-0">
  <span className="absolute -left-[31px] top-1 h-4 w-4 rounded-full border-4 border-white bg-brand-green shadow" />
  <p className="text-sm font-bold uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
- <h2 className="mt-2 text-2xl font-extrabold text-brand-blue">{item.title}</h2>
+ <h2 className="mt-2 text-2xl font-extrabold text-brand-blue dark:text-foreground">{item.title}</h2>
  <p className="mt-3 leading-8 text-foreground-muted">{item.description}</p>
  </article>
  ))}

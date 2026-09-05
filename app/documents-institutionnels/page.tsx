@@ -20,7 +20,7 @@ function DocumentGrid({ documents }: { documents: DocumentItem[] }) {
  <article key={`${document.category}-${document.title}`} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
  <FileText aria-hidden="true" className="h-7 w-7 text-brand-green" />
  <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{document.category}</p>
- <h2 className="mt-2 text-lg font-extrabold text-brand-blue">{document.title}</h2>
+ <h2 className="mt-2 text-lg font-extrabold text-brand-blue dark:text-foreground">{document.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{document.description}</p>
  <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">{document.status}</p>
  {document.href ? (
@@ -95,7 +95,7 @@ export default async function InstitutionalDocumentsPage() {
  <div className="grid gap-4 md:grid-cols-2">
  {strategicPlan.items.map((item) => (
  <div key={item.title} className="rounded-lg border border-border p-5">
- <p className="text-sm font-extrabold leading-6 text-brand-blue">{item.title}</p>
+ <p className="text-sm font-extrabold leading-6 text-brand-blue dark:text-foreground-muted">{item.title}</p>
  <p className="mt-2 text-sm leading-7 text-foreground-muted">{item.description}</p>
  </div>
  ))}

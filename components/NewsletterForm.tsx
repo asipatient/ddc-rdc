@@ -26,7 +26,7 @@ export function NewsletterForm({ compact = false }: { compact?: boolean }) {
  type="email"
  required
  placeholder="Votre adresse email"
- className="focus-ring min-h-11 w-full rounded-md border border-white/20 bg-surface-elevated px-4 text-sm text-brand-ink placeholder:text-slate-400"
+ className="focus-ring min-h-11 w-full rounded-md border border-white/20 bg-surface-elevated px-4 text-sm text-brand-ink dark:text-foreground placeholder:text-slate-400 dark:placeholder:text-slate-500"
  />
  <SubmitButton />
  </div>

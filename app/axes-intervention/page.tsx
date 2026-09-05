@@ -47,12 +47,12 @@ export default async function AxesInterventionPage() {
  <IconRenderer icon={axis.icon} className="h-6 w-6" />
  </div>
  <p className="mt-5 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-green">Axe {index + 1}</p>
- <h2 className="mt-3 text-3xl font-extrabold leading-tight text-brand-blue">{axis.title}</h2>
+ <h2 className="mt-3 text-3xl font-extrabold leading-tight text-brand-blue dark:text-foreground">{axis.title}</h2>
  <p className="mt-4 leading-8 text-foreground-muted">{axis.description}</p>
  <div className="mt-7 grid gap-4">
  {axisPrograms.map((program) => (
  <div key={program.slug} className="rounded-lg bg-brand-mist p-5">
- <h3 className="text-lg font-extrabold text-brand-blue">{program.title}</h3>
+ <h3 className="text-lg font-extrabold text-brand-blue dark:text-foreground">{program.title}</h3>
  <p className="mt-2 text-sm leading-7 text-foreground-muted">{program.description}</p>
  </div>
  ))}

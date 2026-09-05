@@ -38,7 +38,7 @@ export default function ZonesInterventionPage() {
  {zonesIntervention.levels.map((level) => (
  <div key={level} className="flex items-start gap-3 rounded-lg border border-border p-5">
  <MapPin aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
- <p className="text-sm font-bold leading-7 text-brand-blue">{level}</p>
+ <p className="text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted">{level}</p>
  </div>
  ))}
  </div>

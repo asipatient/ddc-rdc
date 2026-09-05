@@ -38,7 +38,7 @@ export default function GovernancePage() {
  ].map(([label, value]) => (
  <div key={label} className="border-t border-border pt-3">
  <p className="text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{label}</p>
- <p className="mt-1 text-base font-bold text-brand-blue">{value}</p>
+ <p className="mt-1 text-base font-bold text-brand-blue dark:text-foreground">{value}</p>
  </div>
  ))}
  </div>
@@ -58,7 +58,7 @@ export default function GovernancePage() {
  {governanceItems.map((item) => (
  <article key={item.title} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
  <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green">{item.status}</p>
- <h2 className="mt-3 text-xl font-extrabold text-brand-blue">{item.title}</h2>
+ <h2 className="mt-3 text-xl font-extrabold text-brand-blue dark:text-foreground">{item.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{item.description}</p>
  </article>
  ))}
@@ -83,7 +83,7 @@ export default function GovernancePage() {
  </div>
  <div className="grid gap-3 sm:grid-cols-2">
  {principles.slice(0, 10).map((principle) => (
- <div key={principle} className="rounded-lg bg-brand-mist p-4 text-sm font-bold leading-7 text-brand-blue shadow-sm">
+ <div key={principle} className="rounded-lg bg-brand-mist p-4 text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted shadow-sm">
  {principle}
  </div>
  ))}

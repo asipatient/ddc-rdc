@@ -12,7 +12,7 @@ export function ProgramCard({ program }: { program: Program }) {
  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-mist text-brand-blue transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white">
  <IconRenderer icon={program.icon} className="h-7 w-7" />
  </div>
- <h3 className="text-xl font-semibold leading-tight text-brand-blue">{program.title}</h3>
+ <h3 className="text-xl font-semibold leading-tight text-brand-blue dark:text-foreground">{program.title}</h3>
  </div>
  {program.targetAudience?.length ? (
  <div className="mt-5 flex flex-wrap gap-2">
@@ -40,7 +40,7 @@ export function ProgramCard({ program }: { program: Program }) {
 
  <Link
  href={learnMoreHref}
- className="focus-ring mt-6 inline-flex w-fit items-center gap-2 rounded-md text-sm font-bold text-brand-green group-hover:text-brand-blue transition-colors"
+ className="focus-ring mt-6 inline-flex w-fit items-center gap-2 rounded-md text-sm font-bold text-brand-green dark:text-brand-green group-hover:text-brand-blue dark:group-hover:text-foreground transition-colors"
  >
  En savoir plus sur l'axe
  <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />

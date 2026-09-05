@@ -11,50 +11,50 @@ export function MembershipForm() {
 
  return (
  <form action={formAction} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-soft">
- <h2 className="text-2xl font-bold text-brand-blue">Envoyer ma candidature</h2>
+ <h2 className="text-2xl font-bold text-brand-blue dark:text-foreground">Envoyer ma candidature</h2>
  <div className="hidden" aria-hidden="true">
  <label htmlFor="membership-website">Site web</label>
  <input id="membership-website" name="website" tabIndex={-1} autoComplete="off" />
  </div>
  <div className="mt-6 grid gap-4 sm:grid-cols-2">
  <div>
- <label htmlFor="membership-last-name" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-last-name" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Nom
  </label>
  <input id="membership-last-name" name="lastName" required minLength={2} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4" />
  </div>
  <div>
- <label htmlFor="membership-first-name" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-first-name" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Prénom
  </label>
  <input id="membership-first-name" name="firstName" required minLength={2} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4" />
  </div>
  <div>
- <label htmlFor="membership-email" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-email" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Email
  </label>
  <input id="membership-email" name="email" type="email" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4" />
  </div>
  <div>
- <label htmlFor="membership-phone" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-phone" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Téléphone
  </label>
  <input id="membership-phone" name="phone" type="tel" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4" />
  </div>
  <div>
- <label htmlFor="membership-city" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-city" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Ville
  </label>
  <input id="membership-city" name="city" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4" />
  </div>
  <div>
- <label htmlFor="membership-age" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-age" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Âge facultatif
  </label>
  <input id="membership-age" name="age" type="number" min={12} max={100} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4" />
  </div>
  <div>
- <label htmlFor="membership-type" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-type" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Type de candidature
  </label>
  <select id="membership-type" name="membershipType" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4">
@@ -64,7 +64,7 @@ export function MembershipForm() {
  </select>
  </div>
  <div>
- <label htmlFor="membership-domain" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-domain" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Domaine d&apos;intérêt
  </label>
  <select id="membership-domain" name="interestDomain" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4">
@@ -79,7 +79,7 @@ export function MembershipForm() {
  </select>
  </div>
  <div className="sm:col-span-2">
- <label htmlFor="membership-availability" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-availability" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Disponibilité
  </label>
  <select id="membership-availability" name="availability" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4">
@@ -94,7 +94,7 @@ export function MembershipForm() {
  </select>
  </div>
  <div className="sm:col-span-2">
- <label htmlFor="membership-motivation" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-motivation" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Motivation
  </label>
  <textarea
@@ -107,7 +107,7 @@ export function MembershipForm() {
  />
  </div>
  <div className="sm:col-span-2">
- <label htmlFor="membership-experience" className="text-sm font-bold text-brand-blue">
+ <label htmlFor="membership-experience" className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Expérience éventuelle
  </label>
  <textarea
@@ -120,7 +120,7 @@ export function MembershipForm() {
  </div>
  <SubmitButton />
  {state.message ? (
- <p className={`animate-fade-up mt-4 rounded-md p-4 text-sm font-semibold ${state.ok ?"bg-green-50 text-green-800" :"bg-red-50 text-red-800"}`}>
+ <p className={`animate-fade-up mt-4 rounded-md p-4 text-sm font-semibold ${state.ok ?"bg-green-50 text-green-800 dark:bg-green-900/30 dark:text-green-400" :"bg-red-50 text-red-800 dark:bg-red-900/30 dark:text-red-400"}`}>
  {state.message}
  </p>
  ) : null}

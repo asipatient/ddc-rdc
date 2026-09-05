@@ -24,7 +24,7 @@ export function ContactForm({
 
  return (
  <form action={formAction} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-soft">
- <h2 className="text-2xl font-bold text-brand-blue">{title}</h2>
+ <h2 className="text-2xl font-bold text-brand-blue dark:text-foreground">{title}</h2>
  <input type="hidden" name="sourceForm" value={sourceForm} />
  <div className="hidden" aria-hidden="true">
  <label htmlFor={fieldId("website")}>Site web</label>
@@ -32,37 +32,37 @@ export function ContactForm({
  </div>
  <div className="mt-6 grid gap-4 sm:grid-cols-2">
  <div>
- <label htmlFor={fieldId("name")} className="text-sm font-bold text-brand-blue">
+ <label htmlFor={fieldId("name")} className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Nom complet
  </label>
- <input id={fieldId("name")} name="name" placeholder="Votre nom" required minLength={2} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4 placeholder-slate-400" />
+ <input id={fieldId("name")} name="name" placeholder="Votre nom" required minLength={2} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4 placeholder-slate-400 dark:placeholder-slate-500" />
  </div>
  <div>
- <label htmlFor={fieldId("email")} className="text-sm font-bold text-brand-blue">
+ <label htmlFor={fieldId("email")} className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Email professionnel ou personnel
  </label>
- <input id={fieldId("email")} name="email" type="email" placeholder="nom@exemple.com" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4 placeholder-slate-400" />
+ <input id={fieldId("email")} name="email" type="email" placeholder="nom@exemple.com" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4 placeholder-slate-400 dark:placeholder-slate-500" />
  </div>
  <div>
- <label htmlFor={fieldId("phone")} className="text-sm font-bold text-brand-blue">
+ <label htmlFor={fieldId("phone")} className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Téléphone
  </label>
  <input id={fieldId("phone")} name="phone" type="tel" className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4" />
  </div>
  <div>
- <label htmlFor={fieldId("organization")} className="text-sm font-bold text-brand-blue">
+ <label htmlFor={fieldId("organization")} className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Organisation / Institution / Média (Optionnel)
  </label>
- <input id={fieldId("organization")} name="organization" placeholder="ex: Nom de l'ONG, Université..." className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4 placeholder-slate-400" />
+ <input id={fieldId("organization")} name="organization" placeholder="ex: Nom de l'ONG, Université..." className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4 placeholder-slate-400 dark:placeholder-slate-500" />
  </div>
  <div>
- <label htmlFor={fieldId("subject")} className="text-sm font-bold text-brand-blue">
+ <label htmlFor={fieldId("subject")} className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Objet de la demande
  </label>
- <input id={fieldId("subject")} name="subject" placeholder="Sujet principal de votre message" required minLength={3} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4 placeholder-slate-400" />
+ <input id={fieldId("subject")} name="subject" placeholder="Sujet principal de votre message" required minLength={3} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-border-strong px-4 placeholder-slate-400 dark:placeholder-slate-500" />
  </div>
  <div>
- <label htmlFor={fieldId("request-type")} className="text-sm font-bold text-brand-blue">
+ <label htmlFor={fieldId("request-type")} className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Type de demande
  </label>
  <select
@@ -83,7 +83,7 @@ export function ContactForm({
  </select>
  </div>
  <div className="sm:col-span-2">
- <label htmlFor={fieldId("message")} className="text-sm font-bold text-brand-blue">
+ <label htmlFor={fieldId("message")} className="text-sm font-bold text-brand-blue dark:text-foreground-muted">
  Message
  </label>
  <textarea
@@ -98,7 +98,7 @@ export function ContactForm({
  </div>
  <SubmitButton />
  {state.message ? (
- <p className={`animate-fade-up mt-4 rounded-md p-4 text-sm font-semibold ${state.ok ?"bg-green-50 text-green-800" :"bg-red-50 text-red-800"}`}>
+ <p className={`animate-fade-up mt-4 rounded-md p-4 text-sm font-semibold ${state.ok ?"bg-green-50 text-green-800 dark:bg-green-900/30 dark:text-green-400" :"bg-red-50 text-red-800 dark:bg-red-900/30 dark:text-red-400"}`}>
  {state.message}
  </p>
  ) : null}

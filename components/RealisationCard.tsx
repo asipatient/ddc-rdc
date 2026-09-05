@@ -47,19 +47,19 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
  {realisation.dateLabel}
  </p>
  <p className="mt-3 text-xs font-medium uppercase tracking-[0.14em] text-foreground-subtle">{realisation.category}</p>
- <h3 className="mt-3 text-xl font-semibold leading-tight text-brand-blue">{realisation.title}</h3>
+ <h3 className="mt-3 text-xl font-semibold leading-tight text-brand-blue dark:text-foreground">{realisation.title}</h3>
  <p className="mt-3 flex-1 text-sm leading-7 text-foreground-muted">{realisation.description}</p>
  {realisation.relatedProgram || realisation.relatedAxis ? (
  <dl className="mt-4 space-y-2 text-xs leading-6 text-foreground-muted">
  {realisation.relatedProgram ? (
  <div>
- <dt className="font-semibold text-brand-blue">Programme lié</dt>
+ <dt className="font-semibold text-brand-blue dark:text-foreground-muted">Programme lié</dt>
  <dd>{realisation.relatedProgram}</dd>
  </div>
  ) : null}
  {realisation.relatedAxis ? (
  <div>
- <dt className="font-semibold text-brand-blue">Axe lié</dt>
+ <dt className="font-semibold text-brand-blue dark:text-foreground-muted">Axe lié</dt>
  <dd>{realisation.relatedAxis}</dd>
  </div>
  ) : null}
@@ -67,13 +67,13 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
  ) : null}
  {impactText ? (
  <p className="mt-4 rounded-md bg-brand-mist p-3 text-xs font-semibold leading-6 text-foreground-muted">
- <span className="font-semibold text-brand-blue">Impact : </span>
+ <span className="font-semibold text-brand-blue dark:text-foreground-muted">Impact : </span>
  {impactText}
  </p>
  ) : null}
  <Link
  href={`/publications/${realisation.slug}`}
- className="focus-ring mt-5 inline-flex w-fit rounded-md text-sm font-bold text-brand-green hover:text-brand-blue"
+ className="focus-ring mt-5 inline-flex w-fit rounded-md text-sm font-bold text-brand-green dark:text-brand-green hover:text-brand-blue dark:hover:text-foreground"
  >
  Lire la fiche
  </Link>

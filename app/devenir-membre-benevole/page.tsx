@@ -27,7 +27,7 @@ export default function MemberVolunteerPage() {
  <div className="section-shell max-w-3xl">
  <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Notre appel</p>
  {memberVolunteerLetter.greeting ? (
- <p className="mt-6 text-xl font-extrabold text-brand-blue sm:text-2xl">{memberVolunteerLetter.greeting}</p>
+ <p className="mt-6 text-xl font-extrabold text-brand-blue dark:text-foreground sm:text-2xl">{memberVolunteerLetter.greeting}</p>
  ) : null}
  <div className="mt-6 space-y-5 text-base leading-8 text-foreground-muted sm:text-lg">
  {memberVolunteerLetter.paragraphs.map((paragraph) => (
@@ -52,7 +52,7 @@ export default function MemberVolunteerPage() {
  />
  <div className="mt-8 grid gap-3">
  {membershipInterestDomains.map((domain) => (
- <p key={domain} className="flex items-center gap-3 rounded-lg bg-surface-elevated p-4 text-sm font-bold text-brand-blue shadow-sm">
+ <p key={domain} className="flex items-center gap-3 rounded-lg bg-surface-elevated p-4 text-sm font-bold text-brand-blue dark:text-foreground-muted shadow-sm">
  <CheckCircle2 aria-hidden="true" className="h-5 w-5 flex-none text-brand-green" />
  {domain}
  </p>

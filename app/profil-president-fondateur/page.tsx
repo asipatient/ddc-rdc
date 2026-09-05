@@ -46,7 +46,7 @@ export default function FounderProfilePage() {
  </div>
  <div className="mt-8 grid gap-3 sm:grid-cols-2">
  {founderProfile.orientations.map((orientation) => (
- <p key={orientation} className="flex items-start gap-3 rounded-lg bg-brand-mist p-4 text-sm font-bold leading-7 text-brand-blue">
+ <p key={orientation} className="flex items-start gap-3 rounded-lg bg-brand-mist p-4 text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted">
  <CheckCircle2 aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
  {orientation}
  </p>
@@ -66,7 +66,7 @@ export default function FounderProfilePage() {
  {historyTimeline.slice(0, 8).map((item) => (
  <article key={`${item.period}-${item.title}`} className="rounded-lg bg-surface-elevated p-5 shadow-sm">
  <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
- <h2 className="mt-3 text-lg font-bold text-brand-blue">{item.title}</h2>
+ <h2 className="mt-3 text-lg font-bold text-brand-blue dark:text-foreground">{item.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{item.description}</p>
  </article>
  ))}
@@ -94,7 +94,7 @@ export default function FounderProfilePage() {
  .map((article) => (
  <article key={article.slug} className="rounded-lg border border-border p-5">
  <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green">{article.period}</p>
- <h2 className="mt-3 text-lg font-bold text-brand-blue">{article.title}</h2>
+ <h2 className="mt-3 text-lg font-bold text-brand-blue dark:text-foreground">{article.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{article.excerpt}</p>
  <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-bold text-brand-blue">
  À vérifier / clarifier

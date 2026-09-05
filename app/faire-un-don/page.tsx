@@ -66,10 +66,10 @@ export default async function DonatePage() {
  <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
  {donationPage.uses.map((use) => (
  <article key={use.title} className="rounded-lg bg-surface-elevated p-6 shadow-sm">
- <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue">
+ <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue dark:text-foreground-muted">
  <IconRenderer icon={use.icon} className="h-6 w-6" />
  </div>
- <h2 className="mt-5 text-xl font-extrabold text-brand-blue">{use.title}</h2>
+ <h2 className="mt-5 text-xl font-extrabold text-brand-blue dark:text-foreground">{use.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{use.text}</p>
  </article>
  ))}
@@ -103,7 +103,7 @@ export default async function DonatePage() {
  />
  <div className="mt-8 grid gap-3">
  {donationPage.transparency.map((item) => (
- <p key={item} className="rounded-lg border border-border p-4 text-sm font-bold leading-7 text-brand-blue">
+ <p key={item} className="rounded-lg border border-border p-4 text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted">
  {item}
  </p>
  ))}
