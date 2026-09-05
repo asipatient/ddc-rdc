@@ -52,7 +52,7 @@ export function ThemeToggle({ className }: { className?: string }) {
         localStorage.setItem(STORAGE_KEY, nextTheme);
       }}
       className={cn(
-        "focus-ring relative inline-flex h-11 w-11 items-center justify-center rounded-md border border-slate-200 bg-white text-brand-blue transition hover:border-brand-gold hover:bg-brand-blueSoft dark:border-slate-700 dark:bg-slate-900 dark:text-brand-gold dark:hover:border-brand-gold dark:hover:bg-slate-800",
+        "focus-ring relative inline-flex h-11 w-11 items-center justify-center rounded-md border border-border bg-surface text-foreground transition hover:border-brand hover:bg-surface-muted dark:text-brand",
         className
       )}
     >

@@ -30,7 +30,7 @@ export default async function PublicationsPage({
         cta={{ label: "Documents institutionnels", href: "/documents-institutionnels" }}
       image="/images/ddc/osc-droits-socioeconomiques.jpg"
       />
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-background py-16 sm:py-20">
         <ScrollReveal>
         <div className="section-shell">
           <SectionHeading

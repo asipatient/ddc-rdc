@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
@@ -32,10 +32,9 @@ export function BackToTop() {
       aria-label="Retour en haut de page"
       className={cn(
         "focus-ring fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full",
-        "bg-brand-blue text-white shadow-soft",
+        "bg-foreground text-background shadow-soft",
         "transition-all duration-300 ease-out",
-        "hover:-translate-y-1 hover:bg-brand-green",
-        "dark:bg-white dark:text-brand-blue dark:hover:bg-brand-gold",
+        "hover:-translate-y-1 hover:bg-brand hover:text-brand-ink",
         isVisible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0"

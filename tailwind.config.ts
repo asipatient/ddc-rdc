@@ -10,7 +10,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        background: "var(--background)",
+        surface: "var(--surface)",
+        "surface-muted": "var(--surface-muted)",
+        "surface-elevated": "var(--surface-elevated)",
+        foreground: "var(--foreground)",
+        "foreground-muted": "var(--foreground-muted)",
+        "foreground-subtle": "var(--foreground-subtle)",
+        border: "var(--border)",
+        "border-strong": "var(--border-strong)",
+        accent: {
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)"
+        },
+        success: "var(--success)",
+        warning: "var(--warning)",
+        error: "var(--error)",
         brand: {
+          DEFAULT: "var(--brand)",
+          hover: "var(--brand-hover)",
+          muted: "var(--brand-muted)",
           blue: "#0B3558",
           blueSoft: "#EAF2F8",
           blueLight: "#1A6BBF",

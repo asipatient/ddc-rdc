@@ -69,8 +69,8 @@ export function PublicationFilters({
             className={cn(
               "focus-ring rounded-md border px-4 py-2 text-sm font-bold transition",
               active === category
-                ? "border-brand-blue bg-brand-blue text-white ring-2 ring-brand-gold ring-offset-2"
-                : "border-slate-200 bg-white text-brand-blue hover:border-brand-gold"
+                ? "border-foreground bg-foreground text-background ring-2 ring-brand ring-offset-2 ring-offset-background"
+                : "border-border bg-surface text-foreground hover:border-brand"
             )}
           >
             {category}
@@ -79,14 +79,14 @@ export function PublicationFilters({
       </div>
 
       <div className="relative mt-6 max-w-md">
-        <Search aria-hidden="true" className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+        <Search aria-hidden="true" className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-foreground-subtle" />
         <input
           type="search"
           value={query}
           onChange={(event) => handleSearchChange(event.target.value)}
           placeholder="Rechercher un article..."
           aria-label="Rechercher un article"
-          className="focus-ring w-full rounded-md border border-slate-300 py-3 pl-11 pr-4 text-sm text-slate-700 placeholder:text-slate-400"
+          className="focus-ring w-full rounded-md border border-border bg-surface py-3 pl-11 pr-4 text-sm text-foreground placeholder:text-foreground-subtle"
         />
       </div>
 
@@ -97,18 +97,18 @@ export function PublicationFilters({
           ))}
         </div>
       ) : (
-        <div className="mt-8 flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-brand-mist/50 p-12 text-center">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-brand-blue shadow-sm">
+        <div className="mt-8 flex flex-col items-center justify-center rounded-2xl border border-border bg-surface-muted p-12 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-surface-elevated text-foreground shadow-sm">
             <Search className="h-8 w-8" />
           </div>
-          <h3 className="mt-6 text-xl font-black text-brand-blue">Aucune publication trouvée</h3>
-          <p className="mt-2 max-w-md text-sm leading-relaxed text-slate-600">
+          <h3 className="mt-6 text-xl font-black text-foreground">Aucune publication trouvée</h3>
+          <p className="mt-2 max-w-md text-sm leading-relaxed text-foreground-muted">
             Nous n'avons pas trouvé de document correspondant à votre recherche. Essayez de modifier vos filtres ou de revenir à la liste complète.
           </p>
           <button
             type="button"
             onClick={() => { setQuery(""); handleCategoryChange("Toutes"); }}
-            className="focus-ring mt-6 rounded-md bg-brand-blue px-6 py-3 text-sm font-bold text-white hover:bg-brand-green transition-colors"
+            className="focus-ring mt-6 rounded-md bg-foreground px-6 py-3 text-sm font-bold text-background hover:bg-brand transition-colors"
           >
             Voir toutes les publications
           </button>
@@ -135,7 +135,7 @@ function Pagination({
         type="button"
         onClick={() => onChange(Math.max(1, currentPage - 1))}
         disabled={currentPage === 1}
-        className="focus-ring rounded-md border border-slate-200 px-4 py-2 text-sm font-bold text-brand-blue hover:border-brand-gold disabled:cursor-not-allowed disabled:opacity-40"
+        className="focus-ring rounded-md border border-border px-4 py-2 text-sm font-bold text-foreground hover:border-brand disabled:cursor-not-allowed disabled:opacity-40"
       >
         Précédent
       </button>
@@ -148,8 +148,8 @@ function Pagination({
           className={cn(
             "focus-ring min-w-10 rounded-md border px-3 py-2 text-sm font-bold transition",
             pageNumber === currentPage
-              ? "border-brand-blue bg-brand-blue text-white"
-              : "border-slate-200 bg-white text-brand-blue hover:border-brand-gold"
+              ? "border-foreground bg-foreground text-background"
+              : "border-border bg-surface text-foreground hover:border-brand"
           )}
         >
           {pageNumber}
@@ -159,7 +159,7 @@ function Pagination({
         type="button"
         onClick={() => onChange(Math.min(totalPages, currentPage + 1))}
         disabled={currentPage === totalPages}
-        className="focus-ring rounded-md border border-slate-200 px-4 py-2 text-sm font-bold text-brand-blue hover:border-brand-gold disabled:cursor-not-allowed disabled:opacity-40"
+        className="focus-ring rounded-md border border-border px-4 py-2 text-sm font-bold text-foreground hover:border-brand disabled:cursor-not-allowed disabled:opacity-40"
       >
         Suivant
       </button>

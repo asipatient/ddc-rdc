@@ -1,60 +1,60 @@
-import type { Metadata } from "next";
-import { ScrollReveal } from "@/components/ScrollReveal";
-import { MapPin } from "lucide-react";
-import { ButtonLink } from "@/components/ButtonLink";
-import { PageHero } from "@/components/PageHero";
-import { SectionHeading } from "@/components/SectionHeading";
-import { ZonesMapLoader } from "@/components/ZonesMapLoader";
-import { zonesIntervention } from "@/lib/site-data";
+import type { Metadata } from"next";
+import { ScrollReveal } from"@/components/ScrollReveal";
+import { MapPin } from"lucide-react";
+import { ButtonLink } from"@/components/ButtonLink";
+import { PageHero } from"@/components/PageHero";
+import { SectionHeading } from"@/components/SectionHeading";
+import { ZonesMapLoader } from"@/components/ZonesMapLoader";
+import { zonesIntervention } from"@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Zones d'intervention",
-  description: "Ancrage territorial de la DDC RDC à Bukavu, Sud-Kivu, et vocation d'expansion."
+ title:"Zones d'intervention",
+ description:"Ancrage territorial de la DDC RDC à Bukavu, Sud-Kivu, et vocation d'expansion."
 };
 
 export default function ZonesInterventionPage() {
-  return (
-    <>
-      <PageHero
-        kicker="Zones d'intervention"
-        title={zonesIntervention.title}
-        description={zonesIntervention.description}
-        cta={{ label: "Proposer une initiative", href: "/contact?type=Projet%20communautaire" }}
-      image="/images/ddc/groupe-partenaires-ddc.jpg"
-      />
-      <section className="bg-white py-16 sm:py-20">
-        <ScrollReveal>
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="overflow-hidden rounded-lg border border-slate-200 shadow-sm">
-            <ZonesMapLoader />
-          </div>
-          <div>
-            <SectionHeading
-              eyebrow="Ancrage territorial"
-              title="Des initiatives adaptées aux réalités locales."
-              description="La DDC RDC part de l'expérience communautaire locale pour construire des actions extensibles, documentées et partenaires."
-            />
-            <div className="mt-8 grid gap-4">
-              {zonesIntervention.levels.map((level) => (
-                <div key={level} className="flex items-start gap-3 rounded-lg border border-slate-200 p-5">
-                  <MapPin aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
-                  <p className="text-sm font-bold leading-7 text-brand-blue">{level}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/programmes" variant="secondary">
-                Voir les programmes
-              </ButtonLink>
-              <ButtonLink href="/partenaires" variant="ghost">
-                Devenir partenaire
-              </ButtonLink>
-            </div>
-          </div>
-        </div>
-      </ScrollReveal>
+ return (
+ <>
+ <PageHero
+ kicker="Zones d'intervention"
+ title={zonesIntervention.title}
+ description={zonesIntervention.description}
+ cta={{ label:"Proposer une initiative", href:"/contact?type=Projet%20communautaire" }}
+ image="/images/ddc/groupe-partenaires-ddc.jpg"
+ />
+ <section className="bg-background py-16 sm:py-20">
+ <ScrollReveal>
+ <div className="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+ <div className="overflow-hidden rounded-lg border border-border shadow-sm">
+ <ZonesMapLoader />
+ </div>
+ <div>
+ <SectionHeading
+ eyebrow="Ancrage territorial"
+ title="Des initiatives adaptées aux réalités locales."
+ description="La DDC RDC part de l'expérience communautaire locale pour construire des actions extensibles, documentées et partenaires."
+ />
+ <div className="mt-8 grid gap-4">
+ {zonesIntervention.levels.map((level) => (
+ <div key={level} className="flex items-start gap-3 rounded-lg border border-border p-5">
+ <MapPin aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
+ <p className="text-sm font-bold leading-7 text-brand-blue">{level}</p>
+ </div>
+ ))}
+ </div>
+ <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+ <ButtonLink href="/programmes" variant="secondary">
+ Voir les programmes
+ </ButtonLink>
+ <ButtonLink href="/partenaires" variant="ghost">
+ Devenir partenaire
+ </ButtonLink>
+ </div>
+ </div>
+ </div>
+ </ScrollReveal>
 
-      </section>
-    </>
-  );
+ </section>
+ </>
+ );
 }

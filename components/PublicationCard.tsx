@@ -53,15 +53,15 @@ export function PublicationCard({ publication }: { publication: Publication }) {
         </div>
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
+        <div className="flex items-center gap-2 text-xs font-medium text-foreground-subtle">
           <CalendarDays aria-hidden="true" className="h-4 w-4" />
           <time dateTime={publication.date}>{publication.period || date}</time>
         </div>
-        <h3 className="mt-3 line-clamp-2 text-xl font-black leading-tight text-brand-blue">{publication.title}</h3>
-        <p className="mt-3 line-clamp-2 flex-1 text-sm leading-7 text-slate-600">{publication.excerpt}</p>
+        <h3 className="mt-3 line-clamp-2 text-xl font-black leading-tight text-foreground">{publication.title}</h3>
+        <p className="mt-3 line-clamp-2 flex-1 text-sm leading-7 text-foreground-muted">{publication.excerpt}</p>
         <Link
           href={`/publications/${publication.slug}`}
-          className="focus-ring mt-5 inline-flex w-fit items-center gap-1 rounded-md text-sm font-bold text-brand-green hover:text-brand-blue"
+          className="focus-ring mt-5 inline-flex w-fit items-center gap-1 rounded-md text-sm font-bold text-brand hover:text-brand-hover"
         >
           Lire
           <span aria-hidden="true">→</span>

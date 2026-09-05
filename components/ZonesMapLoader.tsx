@@ -1,21 +1,21 @@
 "use client";
 
-import dynamic from "next/dynamic";
+import dynamic from"next/dynamic";
 
 type ZonesMapLoaderProps = {
-  zoom?: number;
-  popupText?: string;
+ zoom?: number;
+ popupText?: string;
 };
 
 const ZonesMap = dynamic(() => import("@/components/ZonesMap").then((mod) => mod.ZonesMap), {
-  ssr: false,
-  loading: () => (
-    <div className="flex h-[300px] w-full items-center justify-center rounded-lg bg-brand-mist sm:h-[400px]">
-      <p className="text-sm font-semibold text-slate-500">Chargement de la carte…</p>
-    </div>
-  )
+ ssr: false,
+ loading: () => (
+ <div className="flex h-[300px] w-full items-center justify-center rounded-lg bg-brand-mist sm:h-[400px]">
+ <p className="text-sm font-semibold text-foreground-subtle">Chargement de la carte…</p>
+ </div>
+ )
 });
 
 export function ZonesMapLoader({ zoom, popupText }: ZonesMapLoaderProps) {
-  return <ZonesMap zoom={zoom} popupText={popupText} />;
+ return <ZonesMap zoom={zoom} popupText={popupText} />;
 }
