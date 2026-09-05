@@ -159,7 +159,7 @@ export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig })
               {navigation.map((item) =>
                 "items" in item ? (
                   <details key={item.label} className="site-mobile-menu-group rounded-md border px-4 py-3">
-                    <summary className="cursor-pointer text-sm font-black">{item.label}</summary>
+                    <summary className="cursor-pointer text-sm font-semibold">{item.label}</summary>
                     <div className="mt-3 grid gap-1">
                       {item.items.map((subItem) =>
                         subItem.external ? (
@@ -191,7 +191,7 @@ export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig })
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="site-mobile-menu-link focus-ring rounded-md border px-4 py-3 text-sm font-black"
+                    className="site-mobile-menu-link focus-ring rounded-md border px-4 py-3 text-sm font-semibold"
                   >
                     {item.label}
                   </Link>

@@ -12,7 +12,7 @@ export function SectionHeading({ eyebrow, title, description, align ="left", cla
  return (
  <div className={cn("max-w-3xl", align ==="center" &&"mx-auto text-center", className)}>
  {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
- <h2 className="mt-3 text-3xl font-black leading-tight text-brand-blue sm:text-4xl">{title}</h2>
+ <h2 className="mt-3 text-3xl font-bold leading-tight text-brand-blue dark:text-foreground sm:text-4xl">{title}</h2>
  {description ? <p className="mt-4 text-base leading-8 text-foreground-muted">{description}</p> : null}
  </div>
  );

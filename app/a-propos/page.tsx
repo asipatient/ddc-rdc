@@ -59,8 +59,8 @@ export default function AboutPage() {
  <div className="mt-7 grid gap-3">
  {historyTimeline.slice(2, 6).map((item) => (
  <div key={item.period} className="rounded-lg border border-border p-4">
- <p className="text-xs font-black uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
- <h2 className="mt-2 text-base font-black text-brand-blue">{item.title}</h2>
+ <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
+ <h2 className="mt-2 text-base font-bold text-brand-blue">{item.title}</h2>
  <p className="mt-2 text-sm leading-7 text-foreground-muted">{item.description}</p>
  </div>
  ))}
@@ -87,7 +87,7 @@ export default function AboutPage() {
  ["Notre ambition","Un Congo où un jeune diplômé de Bukavu a autant de chances qu'ailleurs. Pas dans cinquante ans. Maintenant."]
  ].map(([title, text]) => (
  <article key={title} className="rounded-lg bg-surface-elevated p-6 shadow-sm">
- <h2 className="text-xl font-black text-brand-blue">{title}</h2>
+ <h2 className="text-xl font-bold text-brand-blue">{title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{text}</p>
  </article>
  ))}

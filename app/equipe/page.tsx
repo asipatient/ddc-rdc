@@ -48,7 +48,7 @@ export default async function TeamPage() {
  </div>
  )}
  </div>
- <h2 className="mt-5 text-xl font-black text-brand-blue">{member.name}</h2>
+ <h2 className="mt-5 text-xl font-extrabold text-brand-blue">{member.name}</h2>
  <p className="mt-1 text-sm font-bold text-brand-green">{member.role}</p>
  {member.roleDescription ? (
  <p className="mt-3 text-sm font-semibold leading-6 text-brand-blue">{member.roleDescription}</p>

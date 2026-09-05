@@ -27,7 +27,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
   }).format(new Date(publication.date));
 
   return (
-    <article className="card group flex h-full flex-col overflow-hidden">
+    <article className="card group flex h-full flex-col overflow-hidden card-interactive">
       <div className={cn("relative flex aspect-[16/10] items-end overflow-hidden p-5 text-white", !publication.image && `bg-gradient-to-br ${accentClasses[publication.accent]}`)}>
         {publication.image ? (
           <>
@@ -57,7 +57,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
           <CalendarDays aria-hidden="true" className="h-4 w-4" />
           <time dateTime={publication.date}>{publication.period || date}</time>
         </div>
-        <h3 className="mt-3 line-clamp-2 text-xl font-black leading-tight text-foreground">{publication.title}</h3>
+        <h3 className="mt-3 line-clamp-2 text-xl font-bold leading-tight text-foreground">{publication.title}</h3>
         <p className="mt-3 line-clamp-2 flex-1 text-sm leading-7 text-foreground-muted">{publication.excerpt}</p>
         <Link
           href={`/publications/${publication.slug}`}

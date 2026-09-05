@@ -38,7 +38,7 @@ export default async function HomePage() {
  <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold">
  DDC RDC · DYNAMIQUE DEBOUT CONGOLAIS
  </p>
- <h1 className="mt-5 text-4xl font-black leading-[1.1] sm:text-5xl lg:text-6xl">
+ <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-6xl">
  Jeunesse et femmes debout pour transformer le Congo.
  </h1>
  </div>
@@ -76,7 +76,7 @@ export default async function HomePage() {
  <div className="mt-12 grid gap-6 lg:grid-cols-3">
  {/* Repères institutionnels */}
  <div className="rounded-2xl border border-border bg-surface-elevated shadow-sm p-6 sm:p-8">
- <h3 className="text-lg font-black text-foreground flex items-center gap-2">
+ <h3 className="text-lg font-extrabold text-foreground flex items-center gap-2">
  <span className="w-2.5 h-2.5 rounded-full bg-brand-blue"></span>
  Repères institutionnels
  </h3>
@@ -84,14 +84,14 @@ export default async function HomePage() {
  <div className="relative flex gap-4">
  <div className="absolute left-2.5 top-2 -translate-x-1/2 w-2 h-2 rounded-full bg-border-strong border-2 border-surface-elevated ring-4 ring-surface-elevated"></div>
  <div className="pl-6">
- <p className="text-xl font-black text-foreground">2016</p>
+ <p className="text-xl font-extrabold text-foreground">2016</p>
  <p className="mt-1 text-sm font-bold text-foreground-muted">Premières initiatives citoyennes</p>
  </div>
  </div>
  <div className="relative flex gap-4">
  <div className="absolute left-2.5 top-2 -translate-x-1/2 w-2 h-2 rounded-full bg-brand border-2 border-surface-elevated ring-4 ring-surface-elevated"></div>
  <div className="pl-6">
- <p className="text-xl font-black text-foreground">2022</p>
+ <p className="text-xl font-extrabold text-foreground">2022</p>
  <p className="mt-1 text-sm font-bold text-foreground-muted">Fondation officielle DDC RDC</p>
  </div>
  </div>
@@ -100,17 +100,17 @@ export default async function HomePage() {
 
  {/* Résultats documentés */}
  <div className="rounded-2xl border border-border bg-surface-elevated shadow-sm p-6 sm:p-8">
- <h3 className="text-lg font-black text-foreground flex items-center gap-2">
+ <h3 className="text-lg font-extrabold text-foreground flex items-center gap-2">
  <span className="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
  Résultats documentés
  </h3>
  <div className="mt-8 space-y-6">
  <div>
- <p className="text-4xl font-black text-foreground"><CountUp value="970+" /></p>
+ <p className="text-4xl font-extrabold text-foreground"><CountUp value="970+" /></p>
  <p className="mt-1 text-sm font-bold text-foreground-muted">Bénéficiaires et participants documentés</p>
  </div>
  <div>
- <p className="text-4xl font-black text-foreground"><CountUp value="10+" /></p>
+ <p className="text-4xl font-extrabold text-foreground"><CountUp value="10+" /></p>
  <p className="mt-1 text-sm font-bold text-foreground-muted">Activités réalisées</p>
  </div>
  </div>
@@ -118,12 +118,12 @@ export default async function HomePage() {
 
  {/* Demain */}
  <div className="rounded-2xl border border-border bg-surface-muted p-6 sm:p-8 flex flex-col">
- <h3 className="text-lg font-black text-foreground-muted flex items-center gap-2">
+ <h3 className="text-lg font-extrabold text-foreground-muted flex items-center gap-2">
  <span className="w-2.5 h-2.5 rounded-full bg-brand"></span>
  Ambitions futures
  </h3>
  <div className="mt-8 flex-1">
- <p className="text-4xl font-black text-foreground">26</p>
+ <p className="text-4xl font-extrabold text-foreground">26</p>
  <p className="mt-1 text-sm font-bold text-foreground-muted">Provinces — notre horizon</p>
  <p className="mt-4 text-sm leading-relaxed text-foreground-subtle">
  Notre ambition stratégique est d'étendre progressivement nos programmes éprouvés pour couvrir l'ensemble du territoire national et amplifier notre impact.
@@ -142,7 +142,7 @@ export default async function HomePage() {
  <section className="bg-brand-blue py-16 text-white sm:py-20">
  <div className="section-shell">
  <div className="text-center">
- <h2 className="text-3xl font-black sm:text-4xl">Que cherchez-vous ?</h2>
+ <h2 className="text-3xl font-extrabold sm:text-4xl">Que cherchez-vous ?</h2>
  <p className="mt-4 text-lg text-white/80">
  Trouvez rapidement les opportunités et ressources qui correspondent à votre profil.
  </p>
@@ -175,7 +175,7 @@ export default async function HomePage() {
  </section>
 
  {/* ── CE QUE NOUS CHANGEONS ─────────────────────────────────────── */}
- <section id="axes" className="bg-brand-mist py-16 sm:py-20">
+ <section id="axes" className="bg-surface-muted py-16 sm:py-20">
  <div className="section-shell">
  <ScrollReveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
  <SectionHeading
@@ -223,13 +223,13 @@ export default async function HomePage() {
  </section>
 
  {/* ── NOTRE APPEL ─────────────────────────────────────────────── */}
- <section className="bg-brand-blue py-16 text-white sm:py-20">
+ <section className="bg-surface-elevated border-y border-border/50 py-16 text-foreground sm:py-20">
  <ScrollReveal className="section-shell">
  <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">
  {founderCallout.eyebrow}
  </p>
  <blockquote className="mx-auto mt-8 max-w-4xl text-center">
- <div className="space-y-6 text-2xl font-light italic leading-relaxed sm:text-3xl sm:leading-snug">
+ <div className="space-y-6 text-2xl font-normal italic leading-relaxed sm:text-3xl sm:leading-snug">
  {founderCallout.paragraphs.map((paragraph) => (
  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
  ))}
@@ -242,11 +242,11 @@ export default async function HomePage() {
  </section>
 
  {/* ── CTA AGIR AVEC NOUS ──────────────────────────────────────── */}
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-surface-muted py-16 sm:py-20">
  <ScrollReveal className="section-shell flex flex-col items-center gap-6 text-center lg:flex-row lg:justify-between lg:text-left">
  <div className="max-w-xl">
- <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-green">Agir avec nous</p>
- <h2 className="mt-3 text-3xl font-black text-brand-blue sm:text-4xl">
+ <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-green dark:text-brand-gold">Agir avec nous</p>
+ <h2 className="mt-3 text-3xl font-extrabold text-brand-blue dark:text-foreground sm:text-4xl">
  Rejoignez le mouvement citoyen DDC RDC.
  </h2>
  <p className="mt-4 text-base leading-8 text-foreground-muted">

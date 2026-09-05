@@ -31,14 +31,14 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
  const impactText = getDisplayableImpact(realisation.impact);
 
  return (
- <article id={realisation.slug} className="card flex h-full flex-col overflow-hidden">
+ <article id={realisation.slug} className="card flex h-full flex-col overflow-hidden card-interactive group">
  <div ref={ref} className={`img-reveal relative aspect-[16/10] overflow-hidden bg-brand-blueSoft ${isVisible ?"visible" :""}`}>
  <ContentImage
  src={realisation.image}
  alt={realisation.title}
  fill
  sizes={compact ?"(min-width: 768px) 33vw, 100vw" :"(min-width: 1024px) 50vw, 100vw"}
- className="object-cover transition duration-300 hover:scale-105"
+ className="object-cover transition duration-300 group-hover:scale-105"
  />
  </div>
  <div className="flex flex-1 flex-col p-6">
@@ -47,19 +47,19 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
  {realisation.dateLabel}
  </p>
  <p className="mt-3 text-xs font-medium uppercase tracking-[0.14em] text-foreground-subtle">{realisation.category}</p>
- <h3 className="mt-3 text-xl font-black leading-tight text-brand-blue">{realisation.title}</h3>
+ <h3 className="mt-3 text-xl font-semibold leading-tight text-brand-blue">{realisation.title}</h3>
  <p className="mt-3 flex-1 text-sm leading-7 text-foreground-muted">{realisation.description}</p>
  {realisation.relatedProgram || realisation.relatedAxis ? (
  <dl className="mt-4 space-y-2 text-xs leading-6 text-foreground-muted">
  {realisation.relatedProgram ? (
  <div>
- <dt className="font-black text-brand-blue">Programme lié</dt>
+ <dt className="font-semibold text-brand-blue">Programme lié</dt>
  <dd>{realisation.relatedProgram}</dd>
  </div>
  ) : null}
  {realisation.relatedAxis ? (
  <div>
- <dt className="font-black text-brand-blue">Axe lié</dt>
+ <dt className="font-semibold text-brand-blue">Axe lié</dt>
  <dd>{realisation.relatedAxis}</dd>
  </div>
  ) : null}
@@ -67,7 +67,7 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
  ) : null}
  {impactText ? (
  <p className="mt-4 rounded-md bg-brand-mist p-3 text-xs font-semibold leading-6 text-foreground-muted">
- <span className="font-black text-brand-blue">Impact : </span>
+ <span className="font-semibold text-brand-blue">Impact : </span>
  {impactText}
  </p>
  ) : null}

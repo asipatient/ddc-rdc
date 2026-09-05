@@ -49,7 +49,7 @@ export default async function ContactPage() {
  </div>
  {activeSocials.length > 0 ? (
  <div className="mt-8">
- <h2 className="text-lg font-black text-brand-blue">Réseaux sociaux</h2>
+ <h2 className="text-lg font-bold text-brand-blue">Réseaux sociaux</h2>
  <div className="mt-4 flex gap-3">
  {activeSocials.map((social) => (
  <a

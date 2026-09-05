@@ -7,12 +7,12 @@ export function ProgramCard({ program }: { program: Program }) {
  const learnMoreHref = `/axes-intervention#${program.axisSlug}`;
 
  return (
- <article id={program.slug} className="card group flex h-full flex-col p-6 rounded-2xl border border-border bg-surface-elevated hover:border-brand-blue/30 shadow-sm hover:shadow-md transition-all">
+ <article id={program.slug} className="card group flex h-full flex-col p-6 rounded-2xl border border-border bg-surface-elevated hover:border-brand-blue/30 shadow-sm hover:shadow-md transition-all card-interactive">
  <div className="flex items-center gap-4">
  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-mist text-brand-blue transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white">
  <IconRenderer icon={program.icon} className="h-7 w-7" />
  </div>
- <h3 className="text-xl font-black leading-tight text-brand-blue">{program.title}</h3>
+ <h3 className="text-xl font-semibold leading-tight text-brand-blue">{program.title}</h3>
  </div>
  {program.targetAudience?.length ? (
  <div className="mt-5 flex flex-wrap gap-2">
@@ -26,11 +26,11 @@ export function ProgramCard({ program }: { program: Program }) {
  <p className="mt-5 flex-1 text-sm leading-relaxed text-foreground-muted">{program.description}</p>
  {program.objectives?.length ? (
  <div className="mt-5 border-t border-slate-100 pt-5">
- <p className="text-xs font-black uppercase tracking-[0.16em] text-brand-gold">Objectifs</p>
+ <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-gold">Objectifs</p>
  <ul className="mt-3 space-y-2">
  {program.objectives.map((obj) => (
  <li key={obj} className="text-sm text-foreground-muted flex gap-2">
- <span className="text-brand-green font-black mt-0.5">•</span>
+ <span className="text-brand-green font-semibold mt-0.5">•</span>
  <span>{obj}</span>
  </li>
  ))}

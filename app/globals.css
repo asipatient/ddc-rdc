@@ -50,7 +50,7 @@ html {
 
 body {
   background: var(--background);
-  color: #14213d; /* Keeping base body color intact for light mode */
+  color: #14213d;
   font-family: var(--font-jakarta), "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
@@ -59,17 +59,6 @@ body {
 .dark body {
   background: var(--background);
   color: var(--foreground-muted);
-}
-
-/*
- * Hiérarchie typographique des sous-titres. Les composants posent leur poids
- * via des classes Tailwind (font-black, font-extrabold...) directement sur
- * h2/h3 ; !important force la hiérarchie voulue sans devoir reprendre chaque
- * composant.
- */
-h2,
-h3 {
-  font-weight: 600 !important;
 }
 
 p,
@@ -118,7 +107,7 @@ textarea {
   }
 
   .card {
-    @apply rounded-lg border border-border bg-surface-elevated shadow-sm transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-brand hover:shadow-soft;
+    @apply rounded-lg border border-border bg-surface-elevated shadow-sm;
   }
 
   .focus-ring {
@@ -161,7 +150,7 @@ textarea {
     background-color: #f2b705;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 250ms ease;
+    transition: transform 250ms cubic-bezier(0.22, 0.61, 0.36, 1);
   }
 
   .site-header-nav-link:hover::after,
@@ -198,52 +187,22 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
 }
 
 @media (max-width: 640px) {
-  main#contenu > :not(.min-h-screen) :where(section, article) p:not(.eyebrow):not(.flex):not([class*="inline-flex"]):not([class*="text-center"]):not([class*="text-xs"]):not([class*="text-3xl"]):not([class*="text-4xl"]):not([class*="font-bold"]):not([class*="font-black"]):not([class*="uppercase"]),
-  main#contenu > :not(.min-h-screen) :where(section, article) li:not([class*="text-center"]):not([class*="font-bold"]):not([class*="font-black"]):not([class*="uppercase"]) {
+  main#contenu > :not(.min-h-screen) :where(section, article) p:not(.eyebrow):not(.flex):not([class*="inline-flex"]):not([class*="text-center"]):not([class*="text-xs"]):not([class*="text-3xl"]):not([class*="text-4xl"]):not([class*="font-bold"]):not([class*="uppercase"]),
+  main#contenu > :not(.min-h-screen) :where(section, article) li:not([class*="text-center"]):not([class*="font-bold"]):not([class*="uppercase"]) {
     text-align: left;
     text-align-last: auto;
   }
 }
 
 @media (min-width: 641px) {
-  main#contenu > :not(.min-h-screen) :where(section, article) p[class*="leading-7"]:not(.eyebrow):not([class*="text-center"]):not([class*="font-bold"]):not([class*="font-black"]):not([class*="uppercase"]) {
+  main#contenu > :not(.min-h-screen) :where(section, article) p[class*="leading-7"]:not(.eyebrow):not([class*="text-center"]):not([class*="font-bold"]):not([class*="uppercase"]) {
     text-align: justify;
     text-align-last: left;
     text-justify: inter-word;
   }
 }
 
-@layer utilities {
-
-}
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-up {
-  animation: fade-up 0.65s ease both;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.001ms !important;
-  }
-}
-
-/* --- Direction artistique : animations institutionnelles discrètes --- */
+/* --- Direction artistique : animations institutionnelles --- */
 
 @keyframes hero-kenburns {
   from { transform: scale(1.08); }
@@ -255,44 +214,11 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   will-change: transform;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  main [class*="rounded-2xl"][class*="border"],
-  main [class*="rounded-3xl"][class*="border"] {
-    transition:
-      transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
-      box-shadow 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
-      border-color 0.35s ease;
-  }
-
-  main [class*="rounded-2xl"][class*="border"]:hover,
-  main [class*="rounded-3xl"][class*="border"]:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 44px rgba(11, 53, 88, 0.12);
-  }
-
-  .dark main [class*="rounded-2xl"][class*="border"]:hover,
-  .dark main [class*="rounded-3xl"][class*="border"]:hover {
-    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
-  }
-
-  main [class*="rounded-2xl"] img,
-  main [class*="rounded-3xl"] img {
-    transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-  }
-
-  main [class*="rounded-2xl"]:hover > * img,
-  main [class*="rounded-3xl"]:hover > * img {
-    transform: scale(1.03);
-  }
-}
-
-/* --- Animations reprises du thème MyBiz (BootstrapMade), adaptées à la charte DDC --- */
-
-/* Entrée du hero : titre et texte descendent en fondu, boutons remontent en fondu */
+/* Animations ScrollReveal */
 @keyframes anim-fade-in-down {
   from {
     opacity: 0;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -20px, 0);
   }
   to {
     opacity: 1;
@@ -303,7 +229,7 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
 @keyframes anim-fade-in-up {
   from {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 20px, 0);
   }
   to {
     opacity: 1;
@@ -312,144 +238,40 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
 }
 
 .anim-fade-down {
-  animation: anim-fade-in-down 1s both;
+  animation: anim-fade-in-down 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 .anim-fade-up {
-  animation: anim-fade-in-up 1s both;
+  animation: anim-fade-in-up 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
-.anim-delay-200 {
-  animation-delay: 0.2s;
-}
+.anim-delay-200 { animation-delay: 0.2s; }
+.anim-delay-400 { animation-delay: 0.4s; }
+.anim-delay-600 { animation-delay: 0.6s; }
 
-.anim-delay-400 {
-  animation-delay: 0.4s;
-}
-
-.anim-delay-600 {
-  animation-delay: 0.6s;
-}
-
-/* Preloader : anneau qui tourne pendant le chargement, puis disparition en fondu */
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  overflow: hidden;
-  background: #ffffff;
-  transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
-}
-
-.dark #preloader {
-  background: #020617;
-}
-
-#preloader::before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid transparent;
-  border-color: #f2b705 transparent #0b3558 transparent;
+.play-btn-institutional {
+  width: 80px;
+  height: 80px;
+  background: rgba(242, 183, 5, 0.9);
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
-}
-
-.dark #preloader::before {
-  border-color: #f2b705 transparent #dbeafe transparent;
-}
-
-#preloader.preloader-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Bouton play pulsant : onde continue autour du bouton de lecture */
-.pulsating-play-btn {
-  --play-btn-size: 94px;
-  width: var(--play-btn-size);
-  height: var(--play-btn-size);
-  background: radial-gradient(#f2b705 50%, rgba(242, 183, 5, 0.25) 52%);
-  border-radius: 50%;
-  display: block;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 250ms cubic-bezier(0.22, 0.61, 0.36, 1), background-color 250ms ease;
   flex-shrink: 0;
 }
-
-.pulsating-play-btn::before {
-  content: "";
-  position: absolute;
-  width: calc(var(--play-btn-size) * 1.28);
-  height: calc(var(--play-btn-size) * 1.28);
-  animation: pulsate-play-btn 2s linear infinite;
-  opacity: 1;
-  border-radius: 50%;
-  border: 5px solid rgba(242, 183, 5, 0.7);
-  top: -14%;
-  left: -14%;
-  background: transparent;
+.play-btn-institutional:hover {
+  transform: scale(1.05);
+  background: rgba(242, 183, 5, 1);
 }
-
-.pulsating-play-btn::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
+.play-btn-institutional::after {
+  content: '';
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 15px solid #0b3558;
-  z-index: 100;
-  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.pulsating-play-btn:hover::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border: none;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #0b3558;
-  z-index: 200;
-  animation: none;
-  border-radius: 0;
-}
-
-.pulsating-play-btn:hover::after {
-  border-left: 15px solid #f2b705;
-  transform: scale(20);
-}
-
-@keyframes pulsate-play-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
+  border-left: 15px solid #0B131C;
+  margin-left: 5px;
 }
 
 /* Apparition automatique des images au scroll (ScrollRevealAuto) */
@@ -466,10 +288,11 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   opacity: 1;
   transform: none;
 }
+
 .img-reveal {
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .img-reveal.visible {
@@ -477,7 +300,7 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
   transform: translateY(0);
 }
 
-/* Spinner de soumission de formulaire, repris du loader MyBiz (BootstrapMade), adapté à la charte DDC */
+/* Spinner de soumission de formulaire */
 .form-spinner {
   display: inline-block;
   width: 16px;
@@ -490,21 +313,50 @@ main#contenu > :not(.min-h-screen) :where(section, article) :where(p, li):not(.e
 }
 
 @keyframes form-spinner-rotate {
-  to {
-    transform: rotate(360deg);
+  to { transform: rotate(360deg); }
+}
+
+/* Hover des cartes institutionnelles */
+.card-interactive {
+  transition: transform 300ms cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 300ms cubic-bezier(0.22, 0.61, 0.36, 1), border-color 300ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-interactive:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-color: var(--brand);
+  }
+  .dark .card-interactive:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+  .card-interactive img {
+    transition: transform 450ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .card-interactive:hover img {
+    transform: scale(1.02);
   }
 }
 
-@keyframes kenburns {
-  0% {
-    transform: scale(1);
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 
-100% {
-    transform: scale(1.06);
-}
-}
-
-.animate-kenburns {
-  animation: kenburns 8s ease-in-out forwards;
+  .hero-kenburns,
+  .sr-auto,
+  .img-reveal,
+  .anim-fade-up,
+  .anim-fade-down,
+  .card-interactive:hover,
+  .card-interactive:hover img,
+  .play-btn-institutional:hover {
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }

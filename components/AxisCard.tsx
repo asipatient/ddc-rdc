@@ -11,7 +11,7 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
  const { ref, isVisible } = useReveal<HTMLDivElement>();
 
  return (
- <article className="card group flex h-full flex-col overflow-hidden">
+ <article className="card group flex h-full flex-col overflow-hidden card-interactive">
  <div ref={ref} className={`img-reveal relative aspect-[16/10] overflow-hidden ${isVisible ?"visible" :""}`}>
  <ContentImage
  src={axis.image}
@@ -26,7 +26,7 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
  <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue transition-colors duration-300 group-hover:bg-brand-gold group-hover:text-white">
  <IconRenderer icon={axis.icon} className="h-6 w-6" />
  </div>
- <h3 className="mt-5 text-xl font-black leading-tight text-brand-blue">{axis.title}</h3>
+ <h3 className="mt-5 text-xl font-semibold leading-tight text-brand-blue">{axis.title}</h3>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{axis.description}</p>
  {(axis.problem || axis.action || axis.result) && (
  <div className="mt-6 flex-1 space-y-3 text-sm">
@@ -43,7 +43,7 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
  )}
 
  <div className="mt-6 border-t border-slate-100 pt-5">
- <p className="text-xs font-black uppercase tracking-[0.16em] text-brand-green">Programmes associés</p>
+ <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-green">Programmes associés</p>
  <ul className="mt-3 space-y-2">
  {programs.map((program) => (
  <li key={program.slug} className="text-sm font-semibold text-foreground-muted">

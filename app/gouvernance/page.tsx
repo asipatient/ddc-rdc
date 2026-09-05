@@ -58,7 +58,7 @@ export default function GovernancePage() {
  {governanceItems.map((item) => (
  <article key={item.title} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
  <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green">{item.status}</p>
- <h2 className="mt-3 text-xl font-black text-brand-blue">{item.title}</h2>
+ <h2 className="mt-3 text-xl font-extrabold text-brand-blue">{item.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{item.description}</p>
  </article>
  ))}

@@ -47,7 +47,7 @@ export function PageHero({ kicker, title, description, cta, image = DEFAULT_IMAG
         <div className="max-w-4xl">
           <div className="anim-fade-down">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold">{kicker}</p>
-            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
+            <h1 className="mt-4 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
           </div>
           <p className="anim-fade-down anim-delay-200 mt-6 max-w-3xl text-lg leading-9 text-white/80">{description}</p>
           {cta ? (

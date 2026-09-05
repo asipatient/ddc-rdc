@@ -9,7 +9,7 @@ type PulsatingPlayButtonProps = {
 
 /**
  * Bouton de lecture vidéo rond avec onde pulsante continue
- * (style pulsating-play-btn). Ouvre le lien dans un nouvel onglet.
+ * (style play-btn-institutional). Ouvre le lien dans un nouvel onglet.
  */
 export function PulsatingPlayButton({ href, label, size = 94, className }: PulsatingPlayButtonProps) {
   return (
@@ -19,7 +19,7 @@ export function PulsatingPlayButton({ href, label, size = 94, className }: Pulsa
       rel="noopener noreferrer"
       aria-label={label}
       title={label}
-      className={cn("pulsating-play-btn focus-ring", className)}
+      className={cn("play-btn-institutional focus-ring", className)}
       style={size !== 94 ? ({ "--play-btn-size": `${size}px` } as React.CSSProperties) : undefined}
     />
   );

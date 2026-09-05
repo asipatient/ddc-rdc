@@ -27,7 +27,7 @@ export default function MemberVolunteerPage() {
  <div className="section-shell max-w-3xl">
  <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Notre appel</p>
  {memberVolunteerLetter.greeting ? (
- <p className="mt-6 text-xl font-black text-brand-blue sm:text-2xl">{memberVolunteerLetter.greeting}</p>
+ <p className="mt-6 text-xl font-extrabold text-brand-blue sm:text-2xl">{memberVolunteerLetter.greeting}</p>
  ) : null}
  <div className="mt-6 space-y-5 text-base leading-8 text-foreground-muted sm:text-lg">
  {memberVolunteerLetter.paragraphs.map((paragraph) => (

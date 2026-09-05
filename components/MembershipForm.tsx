@@ -11,7 +11,7 @@ export function MembershipForm() {
 
  return (
  <form action={formAction} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-soft">
- <h2 className="text-2xl font-black text-brand-blue">Envoyer ma candidature</h2>
+ <h2 className="text-2xl font-bold text-brand-blue">Envoyer ma candidature</h2>
  <div className="hidden" aria-hidden="true">
  <label htmlFor="membership-website">Site web</label>
  <input id="membership-website" name="website" tabIndex={-1} autoComplete="off" />

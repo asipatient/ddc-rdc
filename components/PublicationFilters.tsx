@@ -101,7 +101,7 @@ export function PublicationFilters({
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-surface-elevated text-foreground shadow-sm">
             <Search className="h-8 w-8" />
           </div>
-          <h3 className="mt-6 text-xl font-black text-foreground">Aucune publication trouvée</h3>
+          <h3 className="mt-6 text-xl font-bold text-foreground">Aucune publication trouvée</h3>
           <p className="mt-2 max-w-md text-sm leading-relaxed text-foreground-muted">
             Nous n'avons pas trouvé de document correspondant à votre recherche. Essayez de modifier vos filtres ou de revenir à la liste complète.
           </p>

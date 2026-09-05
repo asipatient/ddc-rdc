@@ -45,12 +45,12 @@ export default async function ImpactPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-md bg-surface-muted text-brand">
                     <IconRenderer icon={indicator.icon} className="h-6 w-6" />
                   </div>
-                  <p className="mt-6 text-6xl font-black text-foreground tracking-tighter">
+                  <p className="mt-6 text-6xl font-extrabold text-foreground tracking-tighter">
                     <CountUp value={indicator.value} />
                   </p>
-                  <h2 className="mt-2 text-base font-black text-foreground">{indicator.label}</h2>
+                  <h2 className="mt-2 text-base font-extrabold text-foreground">{indicator.label}</h2>
                   {getImpactVerificationBadge(indicator.verificationStatus) ? (
-                    <p className="mt-3 inline-flex rounded-full bg-amber-100 px-3 py-1 text-xs font-black text-amber-800 dark:bg-amber-900/40 dark:text-amber-200">
+                    <p className="mt-3 inline-flex rounded-full bg-amber-100 px-3 py-1 text-xs font-extrabold text-amber-800 dark:bg-amber-900/40 dark:text-amber-200">
                       {getImpactVerificationBadge(indicator.verificationStatus)}
                     </p>
                   ) : null}
@@ -78,7 +78,7 @@ export default async function ImpactPage() {
                   <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-xl bg-surface-elevated shadow-sm text-brand">
                     <IconRenderer icon={block.icon} className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-black text-foreground">{block.title}</h3>
+                  <h3 className="text-xl font-extrabold text-foreground">{block.title}</h3>
                   <p className="mt-3 text-base leading-7 text-foreground-muted">{block.description}</p>
                 </article>
               ))}
@@ -94,7 +94,7 @@ export default async function ImpactPage() {
               {whySupportDdc.map((item) => (
                 <article key={item.title} className="rounded-lg border border-border p-5">
                   <IconRenderer icon={item.icon} className="h-5 w-5 text-brand" />
-                  <h2 className="mt-4 text-base font-black text-foreground">{item.title}</h2>
+                  <h2 className="mt-4 text-base font-extrabold text-foreground">{item.title}</h2>
                   <p className="mt-3 text-sm leading-7 text-foreground-muted">{item.description}</p>
                 </article>
               ))}
@@ -122,7 +122,7 @@ export default async function ImpactPage() {
               <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
                 {testimonials.map((testimonial) => (
                   <article key={testimonial.name} className="rounded-lg border border-white/10 bg-white/10 p-5">
-                    <h2 className="text-base font-black text-white">{testimonial.name}</h2>
+                    <h2 className="text-base font-extrabold text-white">{testimonial.name}</h2>
                     <p className="mt-1 text-xs font-semibold uppercase tracking-[0.1em] text-white/60">{testimonial.role}</p>
                     <p className="mt-3 text-sm leading-7 text-white/75">{testimonial.quote}</p>
                   </article>

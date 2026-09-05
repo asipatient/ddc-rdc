@@ -24,7 +24,7 @@ export default function HistoryPage() {
  <section className="bg-brand-blue py-16 text-white sm:py-20">
  <ScrollReveal className="section-shell max-w-3xl">
  <p className="eyebrow text-brand-gold">Notre origine</p>
- <blockquote className="mt-5 text-2xl font-black leading-tight sm:text-3xl">
+ <blockquote className="mt-5 text-2xl font-extrabold leading-tight sm:text-3xl">
  « {foundingQuote.text} »
  </blockquote>
  <p className="mt-6 border-t border-white/20 pt-4 text-sm font-bold">
@@ -41,8 +41,8 @@ export default function HistoryPage() {
  {historyTimeline.map((item) => (
  <article key={`${item.period}-${item.title}`} className="relative pb-8 last:pb-0">
  <span className="absolute -left-[31px] top-1 h-4 w-4 rounded-full border-4 border-white bg-brand-green shadow" />
- <p className="text-sm font-black uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
- <h2 className="mt-2 text-2xl font-black text-brand-blue">{item.title}</h2>
+ <p className="text-sm font-bold uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
+ <h2 className="mt-2 text-2xl font-extrabold text-brand-blue">{item.title}</h2>
  <p className="mt-3 leading-8 text-foreground-muted">{item.description}</p>
  </article>
  ))}

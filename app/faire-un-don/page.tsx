@@ -69,7 +69,7 @@ export default async function DonatePage() {
  <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue">
  <IconRenderer icon={use.icon} className="h-6 w-6" />
  </div>
- <h2 className="mt-5 text-xl font-black text-brand-blue">{use.title}</h2>
+ <h2 className="mt-5 text-xl font-extrabold text-brand-blue">{use.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{use.text}</p>
  </article>
  ))}
@@ -123,7 +123,7 @@ export default async function DonatePage() {
  <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
  <div>
  <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Partenariats institutionnels</p>
- <h2 className="mt-3 text-3xl font-black sm:text-4xl">Dons institutionnels, subventions et conventions.</h2>
+ <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Dons institutionnels, subventions et conventions.</h2>
  <p className="mt-5 max-w-3xl leading-8 text-white/80">{donationPage.institutionalPartnership}</p>
  <div className="mt-6 grid gap-3 text-sm text-white/80">
  <p className="flex items-center gap-3">

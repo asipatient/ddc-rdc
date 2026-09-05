@@ -24,7 +24,7 @@ export function ContactForm({
 
  return (
  <form action={formAction} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-soft">
- <h2 className="text-2xl font-black text-brand-blue">{title}</h2>
+ <h2 className="text-2xl font-bold text-brand-blue">{title}</h2>
  <input type="hidden" name="sourceForm" value={sourceForm} />
  <div className="hidden" aria-hidden="true">
  <label htmlFor={fieldId("website")}>Site web</label>

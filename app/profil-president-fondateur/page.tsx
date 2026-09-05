@@ -65,8 +65,8 @@ export default function FounderProfilePage() {
  <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
  {historyTimeline.slice(0, 8).map((item) => (
  <article key={`${item.period}-${item.title}`} className="rounded-lg bg-surface-elevated p-5 shadow-sm">
- <p className="text-xs font-black uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
- <h2 className="mt-3 text-lg font-black text-brand-blue">{item.title}</h2>
+ <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
+ <h2 className="mt-3 text-lg font-bold text-brand-blue">{item.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{item.description}</p>
  </article>
  ))}
@@ -93,10 +93,10 @@ export default function FounderProfilePage() {
  .filter((article) => article.status ==="draft")
  .map((article) => (
  <article key={article.slug} className="rounded-lg border border-border p-5">
- <p className="text-xs font-black uppercase tracking-[0.14em] text-brand-green">{article.period}</p>
- <h2 className="mt-3 text-lg font-black text-brand-blue">{article.title}</h2>
+ <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green">{article.period}</p>
+ <h2 className="mt-3 text-lg font-bold text-brand-blue">{article.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{article.excerpt}</p>
- <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-black text-brand-blue">
+ <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-bold text-brand-blue">
  À vérifier / clarifier
  </p>
  </article>

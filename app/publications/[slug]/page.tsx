@@ -82,7 +82,7 @@ export default async function PublicationDetailPage({ params }: Props) {
  <span className="inline-block rounded-full bg-brand-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand-gold">
  {publication.category}
  </span>
- <h1 className="mt-6 text-4xl font-black leading-tight sm:text-5xl md:text-6xl text-white">{publication.title}</h1>
+ <h1 className="mt-6 text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl text-white">{publication.title}</h1>
  <p className="mt-8 max-w-3xl text-xl leading-relaxed text-white/90 font-medium">{publication.excerpt}</p>
 
  <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-medium text-white/70">
@@ -130,7 +130,7 @@ export default async function PublicationDetailPage({ params }: Props) {
  <div className="lg:col-span-8 space-y-16">
 
  {/* Corps éditorial */}
- <div className="prose prose-lg max-w-none prose-headings:font-black prose-headings:text-foreground prose-p:leading-loose prose-p:text-foreground-muted prose-strong:text-foreground">
+ <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-foreground prose-p:leading-loose prose-p:text-foreground-muted prose-strong:text-foreground">
  {publication.body.map((paragraph, i) => (
  <p key={i}>{paragraph}</p>
  ))}
@@ -139,12 +139,12 @@ export default async function PublicationDetailPage({ params }: Props) {
  {/* Ce que cette action cherche à changer */}
  {publication.objectives && publication.objectives.length > 0 && (
  <div className="border-t border-border pt-12">
- <h2 className="text-2xl font-black text-foreground">Ce que cette action cherche à changer</h2>
+ <h2 className="text-2xl font-bold text-foreground">Ce que cette action cherche à changer</h2>
  <div className="mt-6 grid gap-4 sm:grid-cols-2">
  {publication.objectives.map((obj, i) => (
  <div key={i} className="rounded-xl border border-border bg-surface-elevated p-5 shadow-sm">
  <div className="flex items-start gap-3">
- <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-brand/20 text-brand text-xs font-black">{i + 1}</span>
+ <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-brand/20 text-brand text-xs font-bold">{i + 1}</span>
  <p className="text-sm font-semibold text-foreground-muted leading-relaxed">{obj}</p>
  </div>
  </div>
@@ -156,13 +156,13 @@ export default async function PublicationDetailPage({ params }: Props) {
  {/* Chronologie */}
  {publication.timeline && publication.timeline.length > 0 && (
  <div className="border-t border-border pt-12">
- <h2 className="text-2xl font-black text-foreground">Chronologie</h2>
+ <h2 className="text-2xl font-bold text-foreground">Chronologie</h2>
  <div className="mt-8 relative before:absolute before:inset-y-0 before:left-[11px] before:w-0.5 before:bg-border space-y-8">
  {publication.timeline.map((event, i) => (
  <div key={i} className="relative flex gap-6">
  <div className="absolute left-[11px] top-1.5 -translate-x-1/2 w-3 h-3 rounded-full bg-accent ring-4 ring-background"></div>
  <div className="pl-8">
- <span className="text-sm font-black text-brand uppercase tracking-widest">{event.year}</span>
+ <span className="text-sm font-bold text-brand uppercase tracking-widest">{event.year}</span>
  <h3 className="mt-1 text-lg font-bold text-foreground">{event.title}</h3>
  {event.description && <p className="mt-2 text-foreground-muted leading-relaxed">{event.description}</p>}
  </div>
@@ -175,7 +175,7 @@ export default async function PublicationDetailPage({ params }: Props) {
  {/* Ressources */}
  {publication.resources && publication.resources.length > 0 && (
  <div className="border-t border-border pt-12">
- <h2 className="text-2xl font-black text-foreground">Ressources associées</h2>
+ <h2 className="text-2xl font-bold text-foreground">Ressources associées</h2>
  <div className="mt-6 space-y-3">
  {publication.resources.map((res, i) => (
  <a key={i} href={res.url ||"#"} className="flex items-center gap-4 rounded-xl border border-border bg-surface-elevated p-4 hover:border-brand hover:shadow-sm transition-all focus-ring group">
@@ -206,11 +206,11 @@ export default async function PublicationDetailPage({ params }: Props) {
  {/* En Bref */}
  {publication.keyFacts && publication.keyFacts.length > 0 && (
  <div className="rounded-2xl border border-border bg-surface-muted p-6">
- <h3 className="text-sm font-black uppercase tracking-widest text-foreground-subtle mb-6">En bref</h3>
+ <h3 className="text-sm font-bold uppercase tracking-widest text-foreground-subtle mb-6">En bref</h3>
  <dl className="space-y-6">
  {publication.keyFacts.map((fact, i) => (
  <div key={i}>
- <dt className="text-2xl font-black text-foreground">{fact.value}</dt>
+ <dt className="text-2xl font-bold text-foreground">{fact.value}</dt>
  <dd className="mt-1 text-sm font-semibold text-foreground-muted leading-relaxed">{fact.label}</dd>
  </div>
  ))}
@@ -221,7 +221,7 @@ export default async function PublicationDetailPage({ params }: Props) {
  {/* Programme Associé */}
  {publication.relatedProgram && (
  <div className="rounded-2xl bg-brand-blue p-6 text-white shadow-lg">
- <h3 className="text-xs font-black uppercase tracking-widest text-brand-gold mb-2">Programme associé</h3>
+ <h3 className="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Programme associé</h3>
  <p className="text-xl font-bold">{publication.relatedProgram}</p>
  {publication.relatedAxis && (
  <p className="mt-2 text-sm font-medium text-white/70">Axe : {publication.relatedAxis}</p>
@@ -244,7 +244,7 @@ export default async function PublicationDetailPage({ params }: Props) {
  <section className="bg-surface-muted py-16 sm:py-24 border-t border-border">
  <div className="section-shell max-w-6xl">
  <div className="flex items-center justify-between mb-10">
- <h2 className="text-2xl font-black text-foreground">À découvrir ensuite</h2>
+ <h2 className="text-2xl font-bold text-foreground">À découvrir ensuite</h2>
  <Link href="/publications" className="hidden sm:inline-flex items-center text-sm font-bold text-brand hover:text-brand-hover transition-colors">
  Voir toutes les publications
  <ChevronRight className="ml-1 w-4 h-4" />

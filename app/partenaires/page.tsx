@@ -43,7 +43,7 @@ export default async function PartnersPage() {
  {partnerCategories.map((category) => (
  <article key={category.title} className="rounded-lg border border-border p-6 shadow-sm">
  <IconRenderer icon={category.icon} className="h-7 w-7 text-brand-green" />
- <h2 className="mt-5 text-xl font-black text-brand-blue">{category.title}</h2>
+ <h2 className="mt-5 text-xl font-bold text-brand-blue">{category.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{category.description}</p>
  </article>
  ))}
@@ -63,7 +63,7 @@ export default async function PartnersPage() {
  <div className="relative mx-auto flex h-20 w-32 items-center justify-center rounded-md bg-brand-mist">
  {partner.logo ? <ContentImage src={partner.logo} alt={partner.name} fill sizes="128px" className="object-contain p-3" /> : null}
  </div>
- <h2 className="mt-4 text-base font-black text-brand-blue">{partner.name}</h2>
+ <h2 className="mt-4 text-base font-bold text-brand-blue">{partner.name}</h2>
  <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-brand-green">{partner.partnershipType}</p>
  {partner.description ? <p className="mt-3 text-sm leading-6 text-foreground-muted">{partner.description}</p> : null}
  {partner.website ? (
@@ -88,7 +88,7 @@ export default async function PartnersPage() {
  <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
  <div>
  <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold">Contact institutionnel</p>
- <h2 className="mt-3 text-3xl font-black sm:text-4xl">Échanger avec la DDC RDC.</h2>
+ <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Échanger avec la DDC RDC.</h2>
  <div className="mt-6 grid gap-3 text-sm text-white/80">
  <p className="flex items-center gap-3">
  <MapPin aria-hidden="true" className="h-4 w-4 text-brand-gold" />
