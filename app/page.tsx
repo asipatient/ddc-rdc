@@ -73,15 +73,15 @@ export default async function HomePage() {
             eyebrow="Aperçu de notre impact"
             title="Des actions mesurables, ancrées dans la réalité communautaire."
           />
-          <div className="mt-12 grid gap-10 lg:grid-cols-2">
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
             
-            {/* Aujourd'hui */}
-            <div className="rounded-2xl border border-slate-200 bg-brand-mist/50 p-8 sm:p-10">
-              <h3 className="text-xl font-black text-brand-blue flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-brand-green"></span>
-                Réalisations actuelles
+            {/* Repères institutionnels */}
+            <div className="rounded-2xl border border-slate-200 bg-brand-mist/50 p-6 sm:p-8">
+              <h3 className="text-lg font-black text-brand-blue flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-brand-blue"></span>
+                Repères institutionnels
               </h3>
-              <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              <div className="mt-8 space-y-6">
                 <div>
                   <p className="text-4xl font-black text-brand-blue"><CountUp value="2016" /></p>
                   <p className="mt-1 text-sm font-bold text-slate-700">Premières initiatives citoyennes</p>
@@ -90,33 +90,43 @@ export default async function HomePage() {
                   <p className="text-4xl font-black text-brand-blue"><CountUp value="2022" /></p>
                   <p className="mt-1 text-sm font-bold text-slate-700">Fondation officielle DDC RDC</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Résultats documentés */}
+            <div className="rounded-2xl border border-slate-200 bg-brand-mist/50 p-6 sm:p-8">
+              <h3 className="text-lg font-black text-brand-blue flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
+                Résultats documentés
+              </h3>
+              <div className="mt-8 space-y-6">
                 <div>
                   <p className="text-4xl font-black text-brand-blue"><CountUp value="970+" /></p>
-                  <p className="mt-1 text-sm font-bold text-slate-700">Bénéficiaires rejoints</p>
+                  <p className="mt-1 text-sm font-bold text-slate-700">Bénéficiaires et participants documentés</p>
                 </div>
                 <div>
-                  <p className="text-4xl font-black text-brand-blue"><CountUp value="8" /></p>
-                  <p className="mt-1 text-sm font-bold text-slate-700">Programmes actifs</p>
+                  <p className="text-4xl font-black text-brand-blue"><CountUp value="10+" /></p>
+                  <p className="mt-1 text-sm font-bold text-slate-700">Activités réalisées</p>
                 </div>
               </div>
             </div>
 
             {/* Demain */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-8 sm:p-10 shadow-sm">
-              <h3 className="text-xl font-black text-slate-600 flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-brand-gold"></span>
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm flex flex-col">
+              <h3 className="text-lg font-black text-slate-600 flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-brand-gold"></span>
                 Ambitions futures
               </h3>
-              <div className="mt-8">
+              <div className="mt-8 flex-1">
                 <p className="text-5xl font-black text-brand-blue">26</p>
                 <p className="mt-2 text-lg font-bold text-brand-blue">Provinces — notre horizon</p>
-                <p className="mt-4 text-base leading-relaxed text-slate-600">
+                <p className="mt-4 text-sm leading-relaxed text-slate-600">
                   Notre ambition stratégique est d'étendre progressivement nos programmes éprouvés pour couvrir l'ensemble du territoire national et amplifier notre impact.
                 </p>
-                <ButtonLink href="/impact" variant="secondary" className="mt-8">
-                  Découvrir tous nos résultats
-                </ButtonLink>
               </div>
+              <ButtonLink href="/impact" variant="secondary" className="mt-6 w-full justify-center">
+                Voir l'impact
+              </ButtonLink>
             </div>
 
           </div>

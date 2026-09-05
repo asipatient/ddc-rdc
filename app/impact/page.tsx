@@ -67,7 +67,7 @@ export default async function ImpactPage() {
             <div className="max-w-3xl">
               <SectionHeading
                 eyebrow="Comment nous mesurons"
-                title="Un dispositif rigoureux pour rassurer les communautés, donateurs et partenaires."
+                title="Notre approche de suivi, d'évaluation et d'apprentissage."
                 description={monitoringLearning.intro}
               />
             </div>
