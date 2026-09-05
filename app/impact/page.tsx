@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
-import { paypalDonationUrl, whySupportDdc } from "@/lib/site-data";
+import { paypalDonationUrl, whySupportDdc, monitoringLearning } from "@/lib/site-data";
 import { getImpactVerificationBadge, getPublicImpactIndicators, getPublicImpactSection } from "@/lib/impact-content";
 import { getPublicTestimonials } from "@/lib/testimonials-content";
 
