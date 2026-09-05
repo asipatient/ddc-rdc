@@ -28,7 +28,22 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
         </div>
         <h3 className="mt-5 text-xl font-black leading-tight text-brand-blue">{axis.title}</h3>
         <p className="mt-3 text-sm leading-7 text-slate-600">{axis.description}</p>
-        <div className="mt-5">
+        
+        {(axis.problem || axis.action || axis.result) && (
+          <div className="mt-6 flex-1 space-y-3 text-sm">
+            {axis.problem && (
+              <p><strong className="text-brand-gold">Le problème :</strong> <span className="text-slate-600">{axis.problem}</span></p>
+            )}
+            {axis.action && (
+              <p><strong className="text-brand-green">Notre action :</strong> <span className="text-slate-600">{axis.action}</span></p>
+            )}
+            {axis.result && (
+              <p><strong className="text-brand-blue">Le résultat :</strong> <span className="text-slate-600">{axis.result}</span></p>
+            )}
+          </div>
+        )}
+
+        <div className="mt-6 border-t border-slate-100 pt-5">
           <p className="text-xs font-black uppercase tracking-[0.16em] text-brand-green">Programmes associés</p>
           <ul className="mt-3 space-y-2">
             {programs.map((program) => (

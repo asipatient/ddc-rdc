@@ -31,7 +31,7 @@ function normalizeCategory(value?: string): string {
 export async function getPublicPublications() {
   const store = await readAdminStore();
   const adminArticles = store.articles
-    .filter((article) => article.status === "published")
+    .filter((article) => article.status === "published" && !article.needsReview)
     .map((article, index): Publication => {
       const body = splitParagraphs(article.content);
 
@@ -40,8 +40,8 @@ export async function getPublicPublications() {
         title: article.title,
         date: article.date || article.publishedAt || article.createdAt,
         category: normalizeCategory(article.category),
-        excerpt: article.excerpt || "Résumé à compléter.",
-        body: body.length ? body : ["Contenu à compléter."],
+        excerpt: article.excerpt || "",
+        body: body.length ? body : [],
         accent: accents[index % accents.length],
         image: article.image || undefined,
         status: "published",
@@ -57,7 +57,7 @@ export async function getPublicPublications() {
       };
     });
   const adminNews = store.newsPosts
-    .filter((post) => post.status === "published")
+    .filter((post) => post.status === "published" && !post.needsReview)
     .map((post, index): Publication => {
       const body = splitParagraphs(post.content);
 
@@ -66,8 +66,8 @@ export async function getPublicPublications() {
         title: post.title,
         date: post.date || post.publishedAt || post.createdAt,
         category: normalizeCategory(post.category),
-        excerpt: post.excerpt || "Résumé à compléter.",
-        body: body.length ? body : ["Contenu à compléter."],
+        excerpt: post.excerpt || "",
+        body: body.length ? body : [],
         accent: accents[(index + adminArticles.length) % accents.length],
         image: post.image || undefined,
         status: "published",
@@ -81,7 +81,7 @@ export async function getPublicPublications() {
       };
     });
   const adminRealisations = store.realisations
-    .filter((realisation) => realisation.status === "published")
+    .filter((realisation) => realisation.status === "published" && !realisation.needsReview)
     .map((realisation, index): Publication => {
       const body = splitParagraphs(realisation.content);
 
@@ -90,8 +90,8 @@ export async function getPublicPublications() {
         title: realisation.title,
         date: realisation.date || realisation.publishedAt || realisation.createdAt,
         category: normalizeCategory(realisation.category),
-        excerpt: realisation.excerpt || "Résumé à compléter.",
-        body: body.length ? body : ["Contenu à compléter."],
+        excerpt: realisation.excerpt || "",
+        body: body.length ? body : [],
         accent: accents[(index + adminArticles.length + adminNews.length) % accents.length],
         image: realisation.image || undefined,
         status: "published",
@@ -107,7 +107,9 @@ export async function getPublicPublications() {
   const adminPublications = [...adminArticles, ...adminNews, ...adminRealisations];
 
   const bySlug = new Map<string, Publication>();
-  [...adminPublications, ...staticPublications].forEach((publication) => {
+  const filteredStatic = staticPublications.filter(p => !p.needsReview);
+
+  [...adminPublications, ...filteredStatic].forEach((publication) => {
     if (!bySlug.has(publication.slug)) {
       bySlug.set(publication.slug, { ...publication, category: normalizeCategory(publication.category) });
     }

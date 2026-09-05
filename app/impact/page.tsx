@@ -45,7 +45,7 @@ export default async function ImpactPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue">
                     <IconRenderer icon={indicator.icon} className="h-6 w-6" />
                   </div>
-                  <p className="mt-5 text-4xl font-black text-brand-blue">
+                  <p className="mt-6 text-6xl font-black text-brand-blue tracking-tighter">
                     <CountUp value={indicator.value} />
                   </p>
                   <h2 className="mt-2 text-base font-black text-brand-blue">{indicator.label}</h2>
@@ -61,14 +61,28 @@ export default async function ImpactPage() {
           </div>
         </ScrollReveal>
       </section>
-      <section className="bg-brand-mist py-16 sm:py-20">
+      <section className="bg-brand-mist py-16 sm:py-24">
         <ScrollReveal>
           <div className="section-shell">
-            <SectionHeading
-              eyebrow="Suivi, évaluation et apprentissage"
-              title="Un dispositif progressif pour rassurer les communautés, donateurs et partenaires."
-              description="La DDC RDC documente progressivement ses résultats à travers des rapports d'activités, des témoignages de bénéficiaires et des études de cas. Notre engagement : mesurer pour mieux agir."
-            />
+            <div className="max-w-3xl">
+              <SectionHeading
+                eyebrow="Comment nous mesurons"
+                title="Un dispositif rigoureux pour rassurer les communautés, donateurs et partenaires."
+                description={monitoringLearning.intro}
+              />
+            </div>
+            
+            <div className="mt-16 grid gap-8 md:grid-cols-3">
+              {monitoringLearning.blocks.map((block) => (
+                <article key={block.title} className="relative pl-16">
+                  <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm text-brand-green">
+                    <IconRenderer icon={block.icon} className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-black text-brand-blue">{block.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-slate-600">{block.description}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </ScrollReveal>
       </section>

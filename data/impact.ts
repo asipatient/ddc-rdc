@@ -43,7 +43,11 @@ export const interventionApproach: SupportArgument[] = [
 export const monitoringLearning = {
   intro:
     "La DDC RDC documente progressivement ses résultats à travers des rapports d'activités, des témoignages de bénéficiaires et des études de cas. Notre engagement : mesurer pour mieux agir.",
-  blocks: [] as SupportArgument[]
+  blocks: [
+    { title: "Collecte continue", description: "Enregistrement systématique des participations, évaluations pré/post formation et recueil de témoignages qualitatifs.", icon: "clipboard" },
+    { title: "Analyse de terrain", description: "Évaluation périodique des changements concrets dans la vie des bénéficiaires et l'évolution de leurs initiatives.", icon: "chart" },
+    { title: "Transparence et redevabilité", description: "Partage régulier des données consolidées avec les parties prenantes, les donateurs et le public via nos rapports.", icon: "search" }
+  ] as SupportArgument[]
 };
 
 export const zonesIntervention = {

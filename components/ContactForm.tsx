@@ -35,13 +35,13 @@ export function ContactForm({
           <label htmlFor={fieldId("name")} className="text-sm font-bold text-brand-blue">
             Nom complet
           </label>
-          <input id={fieldId("name")} name="name" required minLength={2} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-slate-300 px-4" />
+          <input id={fieldId("name")} name="name" placeholder="Votre nom" required minLength={2} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-slate-300 px-4 placeholder-slate-400" />
         </div>
         <div>
           <label htmlFor={fieldId("email")} className="text-sm font-bold text-brand-blue">
-            Email
+            Email professionnel ou personnel
           </label>
-          <input id={fieldId("email")} name="email" type="email" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-slate-300 px-4" />
+          <input id={fieldId("email")} name="email" type="email" placeholder="nom@exemple.com" required className="focus-ring mt-2 min-h-11 w-full rounded-md border border-slate-300 px-4 placeholder-slate-400" />
         </div>
         <div>
           <label htmlFor={fieldId("phone")} className="text-sm font-bold text-brand-blue">
@@ -51,15 +51,15 @@ export function ContactForm({
         </div>
         <div>
           <label htmlFor={fieldId("organization")} className="text-sm font-bold text-brand-blue">
-            Organisation
+            Organisation / Institution / Média (Optionnel)
           </label>
-          <input id={fieldId("organization")} name="organization" className="focus-ring mt-2 min-h-11 w-full rounded-md border border-slate-300 px-4" />
+          <input id={fieldId("organization")} name="organization" placeholder="ex: Nom de l'ONG, Université..." className="focus-ring mt-2 min-h-11 w-full rounded-md border border-slate-300 px-4 placeholder-slate-400" />
         </div>
         <div>
           <label htmlFor={fieldId("subject")} className="text-sm font-bold text-brand-blue">
-            Sujet
+            Objet de la demande
           </label>
-          <input id={fieldId("subject")} name="subject" required minLength={3} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-slate-300 px-4" />
+          <input id={fieldId("subject")} name="subject" placeholder="Sujet principal de votre message" required minLength={3} className="focus-ring mt-2 min-h-11 w-full rounded-md border border-slate-300 px-4 placeholder-slate-400" />
         </div>
         <div>
           <label htmlFor={fieldId("request-type")} className="text-sm font-bold text-brand-blue">

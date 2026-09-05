@@ -13,7 +13,7 @@ export async function getPublicTeamMembers() {
       name: member.name,
       role: member.role,
       photo: member.photo || "",
-      bio: member.shortBiography || member.biography || "Biographie à compléter.",
+      bio: member.shortBiography || member.biography || "",
       roleDescription: member.institutionalRole,
       contactLabel: member.email ? "Contacter" : member.linkedinUrl || member.facebookUrl ? "Voir le profil" : undefined,
       contactHref: member.email ? `mailto:${member.email}` : member.linkedinUrl || member.facebookUrl || undefined

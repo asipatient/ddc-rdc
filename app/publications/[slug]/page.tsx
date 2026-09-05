@@ -89,11 +89,6 @@ export default async function PublicationDetailPage({ params }: Props) {
             <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl">{publication.title}</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-white/80">{publication.excerpt}</p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {publication.needsReview ? (
-                <span className="rounded-md bg-brand-gold px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-brand-blue">
-                  À relire et valider
-                </span>
-              ) : null}
               {publication.status ? (
                 <span className="rounded-md bg-white/10 px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-white">
                   {publication.status === "published" ? "Publié" : "Brouillon"}
@@ -203,11 +198,12 @@ export default async function PublicationDetailPage({ params }: Props) {
 }
 
 function InfoBlock({ title, items }: { title: string; items?: string[] }) {
+  if (!items?.length) return null;
   return (
     <article className="rounded-lg bg-brand-mist p-5">
       <h2 className="text-lg font-black text-brand-blue">{title}</h2>
       <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
-        {(items?.length ? items : ["À compléter"]).map((item) => (
+        {items.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>

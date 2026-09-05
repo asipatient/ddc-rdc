@@ -40,13 +40,7 @@ export function getImpactVerificationBadge(status: ImpactIndicator["verification
     return null;
   }
 
-  if (status === "to_verify") {
-    return "À vérifier";
-  }
-
-  if (status === "consolidating") {
-    return "En consolidation";
-  }
+  return "consolidating";
 
   if (status === "incomplete") {
     return "À compléter";

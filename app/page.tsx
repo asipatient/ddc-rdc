@@ -47,12 +47,9 @@ export default async function HomePage() {
               et qui construisent, ensemble, le Congo qu&apos;ils méritent.
             </p>
             <div className="anim-fade-up anim-delay-400 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <ButtonLink href="/a-propos">Qui sommes-nous&nbsp;?</ButtonLink>
-              <ButtonLink href="/axes-intervention" variant="outline">
-                Nos axes d&apos;intervention
-              </ButtonLink>
-              <ButtonLink href={siteConfig.donationUrl} variant="outline">
-                Soutenir la DDC
+              <ButtonLink href="/impact">Voir notre impact</ButtonLink>
+              <ButtonLink href="/devenir-membre-benevole" variant="outline">
+                S'engager
               </ButtonLink>
             </div>
             <div className="anim-fade-up anim-delay-600 mt-10 flex items-center gap-5">
@@ -69,43 +66,107 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── POSITIONNEMENT RAPIDE ────────────────────────────────────── */}
-      <section className="bg-white py-14 sm:py-16">
-        <ScrollReveal className="section-shell grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              stat: "2016",
-              label: "Premières formations"
-            },
-            {
-              stat: "970+",
-              label: "Bénéficiaires rejoints"
-            },
-            {
-              stat: "8",
-              label: "Programmes actifs"
-            },
-            {
-              stat: "26",
-              label: "Provinces — notre horizon"
-            }
-          ].map((item, i) => (
-            <ScrollReveal key={item.label} delayMs={i * 100} className="rounded-lg bg-brand-mist p-8">
-              <p className="text-4xl font-black text-brand-blue"><CountUp value={item.stat} /></p>
-              <p className="mt-2 text-lg font-black text-brand-blue">{item.label}</p>
-            </ScrollReveal>
-          ))}
-        </ScrollReveal>
+      {/* ── POSITIONNEMENT RAPIDE / PREUVE D'IMPACT ──────────────────── */}
+      <section className="bg-white py-14 sm:py-20">
+        <div className="section-shell">
+          <SectionHeading
+            eyebrow="Aperçu de notre impact"
+            title="Des actions mesurables, ancrées dans la réalité communautaire."
+          />
+          <div className="mt-12 grid gap-10 lg:grid-cols-2">
+            
+            {/* Aujourd'hui */}
+            <div className="rounded-2xl border border-slate-200 bg-brand-mist/50 p-8 sm:p-10">
+              <h3 className="text-xl font-black text-brand-blue flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-brand-green"></span>
+                Réalisations actuelles
+              </h3>
+              <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                <div>
+                  <p className="text-4xl font-black text-brand-blue"><CountUp value="2016" /></p>
+                  <p className="mt-1 text-sm font-bold text-slate-700">Premières initiatives citoyennes</p>
+                </div>
+                <div>
+                  <p className="text-4xl font-black text-brand-blue"><CountUp value="2022" /></p>
+                  <p className="mt-1 text-sm font-bold text-slate-700">Fondation officielle DDC RDC</p>
+                </div>
+                <div>
+                  <p className="text-4xl font-black text-brand-blue"><CountUp value="970+" /></p>
+                  <p className="mt-1 text-sm font-bold text-slate-700">Bénéficiaires rejoints</p>
+                </div>
+                <div>
+                  <p className="text-4xl font-black text-brand-blue"><CountUp value="8" /></p>
+                  <p className="mt-1 text-sm font-bold text-slate-700">Programmes actifs</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Demain */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-8 sm:p-10 shadow-sm">
+              <h3 className="text-xl font-black text-slate-600 flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-brand-gold"></span>
+                Ambitions futures
+              </h3>
+              <div className="mt-8">
+                <p className="text-5xl font-black text-brand-blue">26</p>
+                <p className="mt-2 text-lg font-bold text-brand-blue">Provinces — notre horizon</p>
+                <p className="mt-4 text-base leading-relaxed text-slate-600">
+                  Notre ambition stratégique est d'étendre progressivement nos programmes éprouvés pour couvrir l'ensemble du territoire national et amplifier notre impact.
+                </p>
+                <ButtonLink href="/impact" variant="secondary" className="mt-8">
+                  Découvrir tous nos résultats
+                </ButtonLink>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </section>
 
-      {/* ── AXES D'INTERVENTION ─────────────────────────────────────── */}
+      {/* ── SEGMENTATION VISITEURS (Que cherchez-vous ?) ─────────────── */}
+      <section className="bg-brand-blue py-16 text-white sm:py-20">
+        <div className="section-shell">
+          <div className="text-center">
+            <h2 className="text-3xl font-black sm:text-4xl">Que cherchez-vous ?</h2>
+            <p className="mt-4 text-lg text-white/80">
+              Trouvez rapidement les opportunités et ressources qui correspondent à votre profil.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { label: "Je suis jeune", desc: "Programmes, formations et opportunités", href: "/programmes" },
+              { label: "Je suis une femme", desc: "Autonomisation, JASIRI, leadership", href: "/axes-intervention" },
+              { label: "Je suis partenaire", desc: "Partenariat, programmes, documents", href: "/partenaires" },
+              { label: "Je veux soutenir", desc: "Impact, don, engagement", href: siteConfig.donationUrl },
+              { label: "Je suis journaliste", desc: "Presse, publications, contact", href: "/presse" },
+              { label: "Je veux découvrir", desc: "Notre vision, notre mission", href: "/vision-mission" },
+            ].map((segment) => (
+              <a
+                key={segment.label}
+                href={segment.href}
+                className="group flex flex-col justify-between rounded-xl border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10"
+              >
+                <div>
+                  <h3 className="text-xl font-bold text-brand-gold">{segment.label}</h3>
+                  <p className="mt-2 text-sm text-white/70">{segment.desc}</p>
+                </div>
+                <div className="mt-6 flex items-center text-sm font-bold text-white group-hover:text-brand-gold">
+                  Explorer <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CE QUE NOUS CHANGEONS ─────────────────────────────────────── */}
       <section id="axes" className="bg-brand-mist py-16 sm:py-20">
         <div className="section-shell">
           <ScrollReveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <SectionHeading
-              eyebrow="Axes d'intervention"
-              title="Trois axes pour organiser nos programmes et clarifier nos priorités."
-              description="Chaque axe relie les besoins des publics cibles à des programmes concrets, adaptables et mesurables."
+              eyebrow="Ce que nous changeons"
+              title="Trois grands domaines pour organiser nos actions et maximiser notre impact."
+              description="Nous partons des problèmes réels pour construire des actions concrètes aboutissant à des résultats mesurables."
             />
             <ButtonLink href="/axes-intervention" variant="secondary">
               Explorer les axes
@@ -179,9 +240,9 @@ export default async function HomePage() {
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href={siteConfig.donationUrl}>Faire un don</ButtonLink>
+            <ButtonLink href={siteConfig.donationUrl}>Soutenir notre action</ButtonLink>
             <ButtonLink href="/devenir-membre-benevole" variant="secondary">
-              Devenir membre
+              S'engager
             </ButtonLink>
           </div>
         </ScrollReveal>
