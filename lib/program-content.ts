@@ -13,7 +13,7 @@ export async function getPublicProgramContent() {
     .map((axis) => ({
       slug: axis.slug,
       title: axis.title,
-      description: axis.content || axis.excerpt || "Description à compléter.",
+      description: axis.content || axis.excerpt || "",
       icon: normalizeIcon(axis.icon, "target"),
       image: axis.image || "/images/ddc/conference-citoyenne.jpg",
       programSlugs: (axis.programIds || []).map((program) => slugify(program)),
@@ -31,7 +31,7 @@ export async function getPublicProgramContent() {
       slug: program.slug,
       title: program.title,
       shortTitle: program.title,
-      description: program.content || program.excerpt || "Description à compléter.",
+      description: program.content || program.excerpt || "",
       excerpt: program.excerpt,
       icon: normalizeIcon(program.icon, "book"),
       axisSlug: axisSlugByKey.get(slugify(program.axisId || "")) || slugify(program.axisId || ""),

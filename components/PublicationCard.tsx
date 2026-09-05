@@ -50,11 +50,6 @@ export function PublicationCard({ publication }: { publication: Publication }) {
           >
             {publication.category}
           </span>
-          {publication.needsReview ? (
-            <span className="rounded-md bg-brand-gold px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-brand-blue">
-              À relire
-            </span>
-          ) : null}
         </div>
       </div>
       <div className="flex flex-1 flex-col p-6">

@@ -107,6 +107,9 @@ export type Axis = {
   slug: string;
   title: string;
   description: string;
+  problem?: string;
+  action?: string;
+  result?: string;
   icon: IconKey;
   image: string;
   programSlugs: string[];

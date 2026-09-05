@@ -11,8 +11,8 @@ export async function getPublicDocuments() {
     .map((document) => ({
       title: document.title,
       category: document.category || document.documentType || "Document",
-      status: document.fileUrl ? "Disponible" : "À compléter",
-      description: document.excerpt || document.content || "Description à compléter.",
+      status: document.fileUrl ? "Disponible" : "À venir",
+      description: document.excerpt || document.content || "",
       href: document.fileUrl
     }));
 

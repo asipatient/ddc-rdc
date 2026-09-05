@@ -36,7 +36,7 @@ export default async function PublicationsPage({
           <SectionHeading
             eyebrow="Bibliothèque"
             title="Explorer les contenus publiés par la DDC RDC."
-            description="Les articles issus des données annexes sont marqués à relire lorsque les chiffres, photos, partenaires ou documents doivent encore être consolidés."
+            description="Retrouvez ici l'ensemble des contenus, rapports d'activités, actualités et réflexions produits par la DDC RDC. Une base documentaire au service de la transparence et du plaidoyer."
           />
           <div className="mt-10">
             <PublicationFilters initialCategory={initialCategory} publications={publications} publicationCategories={publicationCategories} />

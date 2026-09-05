@@ -7,14 +7,14 @@ import { readAdminStore } from "@/lib/admin/content-store";
 export async function getPublicRealisations() {
   const store = await readAdminStore();
   const adminRealisations = store.realisations
-    .filter((realisation) => realisation.status === "published")
+    .filter((realisation) => realisation.status === "published" && !realisation.needsReview)
     .map((realisation): Realisation => ({
       slug: realisation.slug,
       dateLabel: realisation.date || realisation.publishedAt || realisation.createdAt,
       dateIso: realisation.date || realisation.publishedAt || realisation.createdAt,
       title: realisation.title,
       category: realisation.category || "Réalisations",
-      description: realisation.excerpt || "Résumé à compléter.",
+      description: realisation.excerpt || "",
       image: realisation.image || "/images/ddc/groupe-partenaires-ddc.jpg",
       impact: splitList(realisation.impact),
       relatedAxis: realisation.relatedAxis || realisation.axisId,

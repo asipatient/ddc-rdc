@@ -47,7 +47,7 @@ export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig })
               rel="noopener noreferrer"
               className="focus-ring mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-brand-gold px-5 py-3 text-sm font-bold text-brand-blue transition hover:bg-white"
             >
-              Faire un don
+              Soutenir notre action
             </a>
             <div className="mt-6 grid gap-3 text-sm text-white/75">
               <p className="flex items-center gap-3">

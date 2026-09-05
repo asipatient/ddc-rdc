@@ -97,7 +97,22 @@ export function PublicationFilters({
           ))}
         </div>
       ) : (
-        <p className="mt-8 rounded-lg bg-brand-mist p-5 text-sm font-semibold text-slate-600">Aucun article trouvé.</p>
+        <div className="mt-8 flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-brand-mist/50 p-12 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-brand-blue shadow-sm">
+            <Search className="h-8 w-8" />
+          </div>
+          <h3 className="mt-6 text-xl font-black text-brand-blue">Aucune publication trouvée</h3>
+          <p className="mt-2 max-w-md text-sm leading-relaxed text-slate-600">
+            Nous n'avons pas trouvé de document correspondant à votre recherche. Essayez de modifier vos filtres ou de revenir à la liste complète.
+          </p>
+          <button
+            type="button"
+            onClick={() => { setQuery(""); handleCategoryChange("Toutes"); }}
+            className="focus-ring mt-6 rounded-md bg-brand-blue px-6 py-3 text-sm font-bold text-white hover:bg-brand-green transition-colors"
+          >
+            Voir toutes les publications
+          </button>
+        </div>
       )}
 
       {totalPages > 1 ? <Pagination currentPage={currentPage} totalPages={totalPages} onChange={setPage} /> : null}
