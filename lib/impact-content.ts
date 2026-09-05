@@ -40,10 +40,8 @@ export function getImpactVerificationBadge(status: ImpactIndicator["verification
     return null;
   }
 
-  return "consolidating";
-
   if (status === "incomplete") {
-    return "À compléter";
+    return "En consolidation";
   }
 
   return "Provisoire";
