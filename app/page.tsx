@@ -31,15 +31,15 @@ export default async function HomePage() {
  {/* ── HERO ─────────────────────────────────────────────────────── */}
  <section className="relative isolate min-h-[88svh] overflow-hidden bg-brand-blue text-white">
  <HeroSlider />
-<div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(11,53,88,0.94)_0%,rgba(11,53,88,0.75)_45%,rgba(11,53,88,0.30)_75%,rgba(11,53,88,0.12)_100%)]" />
-<div className="section-shell relative flex min-h-[88svh] items-center py-24">
- <div className="max-w-2xl">
+ <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(11,53,88,0.95)_0%,rgba(11,53,88,0.90)_45%,rgba(11,53,88,0.70)_75%,rgba(11,53,88,0.30)_90%,rgba(11,53,88,0)_100%)] sm:bg-[linear-gradient(105deg,rgba(11,53,88,0.96)_0%,rgba(11,53,88,0.90)_35%,rgba(11,53,88,0.75)_60%,rgba(11,53,88,0.45)_80%,rgba(11,53,88,0.15)_95%,rgba(11,53,88,0)_100%)]" />
+ <div className="section-shell relative flex min-h-[88svh] items-center py-24">
+ <div className="max-w-2xl drop-shadow-sm">
  <div className="anim-fade-down">
  <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-gold">
  DDC RDC · DYNAMIQUE DEBOUT CONGOLAIS
  </p>
  <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-6xl">
- Une jeunesse debout pour une nation congolaise forte !
+ Une jeunesse debout pour une nation forte !
  </h1>
  </div>
  <p className="anim-fade-down anim-delay-200 mt-6 max-w-xl text-base leading-8 text-white/80 sm:text-lg">
