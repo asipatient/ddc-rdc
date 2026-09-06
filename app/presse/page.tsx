@@ -1,10 +1,10 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { Mail, Newspaper } from"lucide-react";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { officialContact, pressResources } from"@/lib/site-data";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { Mail, Newspaper } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { officialContact, pressResources } from "@/lib/site-data";
 
 export const metadata: Metadata = {
  title:"Presse",
@@ -39,7 +39,7 @@ export default function PressPage() {
  </ScrollReveal>
 
  </section>
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
  <div>

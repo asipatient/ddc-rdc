@@ -1,14 +1,14 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import Image from"next/image";
-import { CheckCircle2, Mail, MapPin, Phone } from"lucide-react";
-import { ButtonLink } from"@/components/ButtonLink";
-import { ExternalButton } from"@/components/ExternalButton";
-import { IconRenderer } from"@/components/IconRenderer";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { donationPage } from"@/lib/site-data";
-import { getPublicSiteConfig } from"@/lib/site-settings";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import Image from "next/image";
+import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { ExternalButton } from "@/components/ExternalButton";
+import { IconRenderer } from "@/components/IconRenderer";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { donationPage } from "@/lib/site-data";
+import { getPublicSiteConfig } from "@/lib/site-settings";
 
 export const metadata: Metadata = {
  title:"Faire un don",
@@ -59,7 +59,7 @@ export default async function DonatePage() {
  </ScrollReveal>
 
  </section>
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell">
  <SectionHeading eyebrow="Votre contribution peut soutenir" title="Des domaines liés aux priorités institutionnelles." />
@@ -88,7 +88,7 @@ export default async function DonatePage() {
  />
  <div className="mt-8 grid gap-3">
  {donationPage.contributionExamples.map((item) => (
- <p key={item} className="flex items-start gap-3 rounded-lg bg-brand-mist p-4 text-sm font-semibold leading-7 text-foreground-muted">
+ <p key={item} className="flex items-start gap-3 rounded-lg bg-brand-mist dark:bg-surface-muted p-4 text-sm font-semibold leading-7 text-foreground-muted">
  <CheckCircle2 aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
  {item}
  </p>

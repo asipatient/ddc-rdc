@@ -1,11 +1,11 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { Mail } from"lucide-react";
-import { ButtonLink } from"@/components/ButtonLink";
-import { ContentImage } from"@/components/ContentImage";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { getPublicTeamMembers } from"@/lib/team";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { Mail } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { ContentImage } from "@/components/ContentImage";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { getPublicTeamMembers } from "@/lib/team";
 
 export const metadata: Metadata = {
  title:"Notre équipe",
@@ -36,7 +36,7 @@ export default async function TeamPage() {
  <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
  {teamMembers.map((member) => (
  <article key={member.name} className="rounded-lg border border-border bg-surface-elevated p-5 shadow-sm">
- <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-lg bg-brand-mist">
+ <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-lg bg-brand-mist dark:bg-surface-muted">
  {member.photo ? (
  <ContentImage src={member.photo} alt={member.name} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
  ) : (

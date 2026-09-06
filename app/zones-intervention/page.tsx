@@ -1,11 +1,11 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { MapPin } from"lucide-react";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { ZonesMapLoader } from"@/components/ZonesMapLoader";
-import { zonesIntervention } from"@/lib/site-data";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { MapPin } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { ZonesMapLoader } from "@/components/ZonesMapLoader";
+import { zonesIntervention } from "@/lib/site-data";
 
 export const metadata: Metadata = {
  title:"Zones d'intervention",

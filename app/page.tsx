@@ -1,18 +1,18 @@
-import { HeroSlider } from"@/components/HeroSlider";
-import Image from"next/image";
-import { Mail, MapPin, Phone } from"lucide-react";
-import { AxisCard } from"@/components/AxisCard";
-import { CountUp } from"@/components/CountUp";
-import { ButtonLink } from"@/components/ButtonLink";
-import { ContactForm } from"@/components/ContactForm";
-import { PublicationCard } from"@/components/PublicationCard";
-import { PulsatingPlayButton } from"@/components/PulsatingPlayButton";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { SectionHeading } from"@/components/SectionHeading";
-import { axes, flagshipPrograms, founderCallout, publications } from"@/lib/site-data";
-import { getPublicSiteConfig } from"@/lib/site-settings";
-import { buildMetadata } from"@/lib/metadata";
-import { site } from"@/data/site";
+import { HeroSlider } from "@/components/HeroSlider";
+import Image from "next/image";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { AxisCard } from "@/components/AxisCard";
+import { CountUp } from "@/components/CountUp";
+import { ButtonLink } from "@/components/ButtonLink";
+import { ContactForm } from "@/components/ContactForm";
+import { PublicationCard } from "@/components/PublicationCard";
+import { PulsatingPlayButton } from "@/components/PulsatingPlayButton";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { SectionHeading } from "@/components/SectionHeading";
+import { axes, flagshipPrograms, founderCallout, publications } from "@/lib/site-data";
+import { getPublicSiteConfig } from "@/lib/site-settings";
+import { buildMetadata } from "@/lib/metadata";
+import { site } from "@/data/site";
 
 export const metadata = buildMetadata({
  title:"Accueil",

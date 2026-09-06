@@ -1,8 +1,8 @@
 "use client";
 
-import { Send } from"lucide-react";
-import { useFormState, useFormStatus } from"react-dom";
-import { submitNewsletterForm, type PublicFormState } from"@/app/actions/forms";
+import { Send } from "lucide-react";
+import { useFormState, useFormStatus } from "react-dom";
+import { submitNewsletterForm, type PublicFormState } from "@/app/actions/forms";
 
 const initialState: PublicFormState = { ok: false, message:"" };
 

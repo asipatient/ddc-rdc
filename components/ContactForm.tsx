@@ -1,8 +1,8 @@
 "use client";
 
-import { useFormState, useFormStatus } from"react-dom";
-import { submitContactForm, type PublicFormState } from"@/app/actions/forms";
-import { contactRequestTypes } from"@/lib/site-data";
+import { useFormState, useFormStatus } from "react-dom";
+import { submitContactForm, type PublicFormState } from "@/app/actions/forms";
+import { contactRequestTypes } from "@/lib/site-data";
 
 type ContactFormProps = {
  title?: string;

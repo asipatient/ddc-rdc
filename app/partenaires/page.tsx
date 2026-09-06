@@ -1,15 +1,15 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { Mail, MapPin, Phone } from"lucide-react";
-import { ButtonLink } from"@/components/ButtonLink";
-import { ContactForm } from"@/components/ContactForm";
-import { ContentImage } from"@/components/ContentImage";
-import { IconRenderer } from"@/components/IconRenderer";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { partnerCategories, partnerPlaceholders, partnersPage } from"@/lib/site-data";
-import { getPublicPartners } from"@/lib/partner-content";
-import { getPublicSiteConfig } from"@/lib/site-settings";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { ContactForm } from "@/components/ContactForm";
+import { ContentImage } from "@/components/ContentImage";
+import { IconRenderer } from "@/components/IconRenderer";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { partnerCategories, partnerPlaceholders, partnersPage } from "@/lib/site-data";
+import { getPublicPartners } from "@/lib/partner-content";
+import { getPublicSiteConfig } from "@/lib/site-settings";
 
 export const metadata: Metadata = {
  title:"Partenaires",
@@ -52,7 +52,7 @@ export default async function PartnersPage() {
  </ScrollReveal>
 
  </section>
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell">
  <SectionHeading title="Nos partenaires actuels" />
@@ -60,7 +60,7 @@ export default async function PartnersPage() {
  {partners.length
  ? partners.map((partner) => (
  <article key={partner.name} className="rounded-lg border border-border bg-surface-elevated p-5 text-center shadow-sm">
- <div className="relative mx-auto flex h-20 w-32 items-center justify-center rounded-md bg-brand-mist">
+ <div className="relative mx-auto flex h-20 w-32 items-center justify-center rounded-md bg-brand-mist dark:bg-surface-muted">
  {partner.logo ? <ContentImage src={partner.logo} alt={partner.name} fill sizes="128px" className="object-contain p-3" /> : null}
  </div>
  <h2 className="mt-4 text-base font-bold text-brand-blue dark:text-foreground">{partner.name}</h2>

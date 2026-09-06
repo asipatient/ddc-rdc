@@ -1,10 +1,10 @@
-import { buildMetadata } from"@/lib/metadata";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { Eye, MapPin, Target } from"lucide-react";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { home, strategicPlan } from"@/lib/site-data";
+import { buildMetadata } from "@/lib/metadata";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { Eye, MapPin, Target } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { home, strategicPlan } from "@/lib/site-data";
 
 export const metadata = buildMetadata({
  title:"Vision & Mission",
@@ -39,7 +39,7 @@ export default function VisionMissionPage() {
  </div>
  </section>
 
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
  <div>
  <SectionHeading
@@ -71,7 +71,7 @@ export default function VisionMissionPage() {
  title="Zones d'intervention"
  description="La DDC RDC est ancrée localement et porte une ambition nationale."
  />
- <div className="mt-10 rounded-lg border border-border bg-brand-mist p-8 shadow-sm">
+ <div className="mt-10 rounded-lg border border-border bg-brand-mist dark:bg-surface-muted p-8 shadow-sm">
  <div className="flex items-start gap-4">
  <MapPin aria-hidden="true" className="mt-1 h-6 w-6 flex-none text-brand-green" />
  <div>

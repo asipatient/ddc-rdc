@@ -1,7 +1,7 @@
-import Link from"next/link";
-import { ArrowRight } from"lucide-react";
-import { IconRenderer } from"@/components/IconRenderer";
-import type { Program } from"@/lib/site-data";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { IconRenderer } from "@/components/IconRenderer";
+import type { Program } from "@/lib/site-data";
 
 export function ProgramCard({ program }: { program: Program }) {
  const learnMoreHref = `/axes-intervention#${program.axisSlug}`;
@@ -9,7 +9,7 @@ export function ProgramCard({ program }: { program: Program }) {
  return (
  <article id={program.slug} className="card group flex h-full flex-col p-6 rounded-2xl border border-border bg-surface-elevated hover:border-brand-blue/30 shadow-sm hover:shadow-md transition-all card-interactive">
  <div className="flex items-center gap-4">
- <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-mist text-brand-blue transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white">
+ <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-mist dark:bg-surface-muted text-brand-blue transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white">
  <IconRenderer icon={program.icon} className="h-7 w-7" />
  </div>
  <h3 className="text-xl font-semibold leading-tight text-brand-blue dark:text-foreground">{program.title}</h3>

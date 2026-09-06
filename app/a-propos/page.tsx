@@ -1,10 +1,10 @@
-import { buildMetadata } from"@/lib/metadata";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import Image from"next/image";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { aboutIntro, founderProfile, historyTimeline, site } from"@/lib/site-data";
+import { buildMetadata } from "@/lib/metadata";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import Image from "next/image";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { aboutIntro, founderProfile, historyTimeline, site } from "@/lib/site-data";
 
 export const metadata = buildMetadata({
  title:"À propos",
@@ -40,7 +40,7 @@ export default function AboutPage() {
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
- <div className="relative overflow-hidden rounded-lg bg-brand-mist">
+ <div className="relative overflow-hidden rounded-lg bg-brand-mist dark:bg-surface-muted">
  <Image
  src={founderProfile.leadershipImage || founderProfile.photo}
  alt={founderProfile.leadershipImageAlt || founderProfile.name}
@@ -78,7 +78,7 @@ export default function AboutPage() {
  </ScrollReveal>
 
  </section>
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell grid gap-6 md:grid-cols-3">
  {[

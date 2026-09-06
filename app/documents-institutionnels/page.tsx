@@ -1,12 +1,12 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { FileText } from"lucide-react";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { institutionalDocuments, paypalDonationUrl, protectionEthicsDocuments, strategicPlan, transparencyDocuments } from"@/lib/site-data";
-import { getPublicDocuments } from"@/lib/document-content";
-import type { DocumentItem } from"@/data/types";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { FileText } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { institutionalDocuments, paypalDonationUrl, protectionEthicsDocuments, strategicPlan, transparencyDocuments } from "@/lib/site-data";
+import { getPublicDocuments } from "@/lib/document-content";
+import type { DocumentItem } from "@/data/types";
 
 export const metadata: Metadata = {
  title:"Documents institutionnels",
@@ -62,7 +62,7 @@ export default async function InstitutionalDocumentsPage() {
  </ScrollReveal>
 
  </section>
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell">
  <SectionHeading

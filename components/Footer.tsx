@@ -1,9 +1,9 @@
-import Image from"next/image";
-import Link from"next/link";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from"lucide-react";
-import { footerColumns, site } from"@/lib/site-data";
-import { NewsletterForm } from"@/components/NewsletterForm";
-import type { SocialLink } from"@/data/site";
+import Image from "next/image";
+import Link from "next/link";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { footerColumns, site } from "@/lib/site-data";
+import { NewsletterForm } from "@/components/NewsletterForm";
+import type { SocialLink } from "@/data/site";
 
 // Icône X (Twitter) — Lucide n'a pas d'icône X native, on utilise un SVG inline léger
 function XIcon({ className }: { className?: string }) {

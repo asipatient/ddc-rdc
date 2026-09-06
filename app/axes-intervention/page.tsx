@@ -1,10 +1,10 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { ButtonLink } from"@/components/ButtonLink";
-import { ContentImage } from"@/components/ContentImage";
-import { IconRenderer } from"@/components/IconRenderer";
-import { PageHero } from"@/components/PageHero";
-import { getPublicProgramContent } from"@/lib/program-content";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { ButtonLink } from "@/components/ButtonLink";
+import { ContentImage } from "@/components/ContentImage";
+import { IconRenderer } from "@/components/IconRenderer";
+import { PageHero } from "@/components/PageHero";
+import { getPublicProgramContent } from "@/lib/program-content";
 
 export const metadata: Metadata = {
  title:"Axes d'intervention",
@@ -51,7 +51,7 @@ export default async function AxesInterventionPage() {
  <p className="mt-4 leading-8 text-foreground-muted">{axis.description}</p>
  <div className="mt-7 grid gap-4">
  {axisPrograms.map((program) => (
- <div key={program.slug} className="rounded-lg bg-brand-mist p-5">
+ <div key={program.slug} className="rounded-lg bg-brand-mist dark:bg-surface-muted p-5">
  <h3 className="text-lg font-extrabold text-brand-blue dark:text-foreground">{program.title}</h3>
  <p className="mt-2 text-sm leading-7 text-foreground-muted">{program.description}</p>
  </div>
@@ -65,7 +65,7 @@ export default async function AxesInterventionPage() {
  </ScrollReveal>
 
  </section>
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell">
  <ButtonLink href="/contact?type=Projet%20communautaire" variant="secondary">

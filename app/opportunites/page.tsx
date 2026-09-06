@@ -1,10 +1,10 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { CalendarDays } from"lucide-react";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { opportunities } from"@/lib/site-data";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { CalendarDays } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { opportunities } from "@/lib/site-data";
 
 export const metadata: Metadata = {
  title:"Appels à projets / Opportunités",

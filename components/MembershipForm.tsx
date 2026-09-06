@@ -1,8 +1,8 @@
 "use client";
 
-import { useFormState, useFormStatus } from"react-dom";
-import { submitMembershipForm, type PublicFormState } from"@/app/actions/forms";
-import { availabilityOptions, membershipInterestDomains } from"@/lib/site-data";
+import { useFormState, useFormStatus } from "react-dom";
+import { submitMembershipForm, type PublicFormState } from "@/app/actions/forms";
+import { availabilityOptions, membershipInterestDomains } from "@/lib/site-data";
 
 const initialState: PublicFormState = { ok: false, message:"" };
 

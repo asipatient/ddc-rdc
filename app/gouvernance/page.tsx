@@ -1,9 +1,9 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { governanceItems, legalIdentity, principles } from"@/lib/site-data";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { governanceItems, legalIdentity, principles } from "@/lib/site-data";
 
 export const metadata: Metadata = {
  title:"Gouvernance interne",
@@ -46,7 +46,7 @@ export default function GovernancePage() {
  </ScrollReveal>
 
  </section>
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell">
  <SectionHeading
@@ -83,7 +83,7 @@ export default function GovernancePage() {
  </div>
  <div className="grid gap-3 sm:grid-cols-2">
  {principles.slice(0, 10).map((principle) => (
- <div key={principle} className="rounded-lg bg-brand-mist p-4 text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted shadow-sm">
+ <div key={principle} className="rounded-lg bg-brand-mist dark:bg-surface-muted p-4 text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted shadow-sm">
  {principle}
  </div>
  ))}

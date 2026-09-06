@@ -1,13 +1,13 @@
-import type { Metadata } from"next";
-import Link from"next/link";
-import { notFound } from"next/navigation";
-import { ArrowLeft, CalendarDays, Clock, MapPin, ChevronRight, FileText } from"lucide-react";
-import { ContentImage } from"@/components/ContentImage";
-import { site } from"@/lib/site-data";
-import { getPublicPublicationBySlug, getPublicPublications } from"@/lib/publications";
-import { PublicationCard } from"@/components/PublicationCard";
-import { ShareButtons } from"@/components/ShareButtons";
-import { ButtonLink } from"@/components/ButtonLink";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowLeft, CalendarDays, Clock, MapPin, ChevronRight, FileText } from "lucide-react";
+import { ContentImage } from "@/components/ContentImage";
+import { site } from "@/lib/site-data";
+import { getPublicPublicationBySlug, getPublicPublications } from "@/lib/publications";
+import { PublicationCard } from "@/components/PublicationCard";
+import { ShareButtons } from "@/components/ShareButtons";
+import { ButtonLink } from "@/components/ButtonLink";
 
 type Props = {
  params: Promise<{ slug: string }>;
@@ -108,7 +108,7 @@ export default async function PublicationDetailPage({ params }: Props) {
  {publication.image ? (
  <section className="bg-surface-elevated">
  <div className="section-shell max-w-6xl -mt-6 sm:-mt-10 relative z-10">
- <div className="overflow-hidden rounded-xl bg-brand-mist shadow-xl ring-1 ring-slate-900/5">
+ <div className="overflow-hidden rounded-xl bg-brand-mist dark:bg-surface-muted shadow-xl ring-1 ring-slate-900/5">
  <ContentImage
  src={publication.image}
  alt={publication.title}

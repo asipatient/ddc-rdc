@@ -1,11 +1,11 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import Image from"next/image";
-import { CheckCircle2 } from"lucide-react";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { activityArticles, founderProfile, historyTimeline } from"@/lib/site-data";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import Image from "next/image";
+import { CheckCircle2 } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { activityArticles, founderProfile, historyTimeline } from "@/lib/site-data";
 
 export const metadata: Metadata = {
  title:"Profil du Président Fondateur",
@@ -24,7 +24,7 @@ export default function FounderProfilePage() {
  />
  <section className="bg-background py-16 sm:py-20">
  <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
- <div className="relative overflow-hidden rounded-lg bg-brand-mist">
+ <div className="relative overflow-hidden rounded-lg bg-brand-mist dark:bg-surface-muted">
  <Image
  src={founderProfile.photo}
  alt={founderProfile.name}
@@ -46,7 +46,7 @@ export default function FounderProfilePage() {
  </div>
  <div className="mt-8 grid gap-3 sm:grid-cols-2">
  {founderProfile.orientations.map((orientation) => (
- <p key={orientation} className="flex items-start gap-3 rounded-lg bg-brand-mist p-4 text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted">
+ <p key={orientation} className="flex items-start gap-3 rounded-lg bg-brand-mist dark:bg-surface-muted p-4 text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted">
  <CheckCircle2 aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
  {orientation}
  </p>
@@ -55,7 +55,7 @@ export default function FounderProfilePage() {
  </div>
  </div>
  </section>
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <div className="section-shell">
  <SectionHeading
  eyebrow="Parcours"

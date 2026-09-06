@@ -1,12 +1,12 @@
-import { buildMetadata } from"@/lib/metadata";
-import { Mail, MapPin, Phone } from"lucide-react";
-import { ContactForm } from"@/components/ContactForm";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { ZonesMapLoader } from"@/components/ZonesMapLoader";
-import { contactIntro } from"@/lib/site-data";
-import { getPublicSiteConfig } from"@/lib/site-settings";
-import type { SocialLink } from"@/data/site";
+import { buildMetadata } from "@/lib/metadata";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { ZonesMapLoader } from "@/components/ZonesMapLoader";
+import { contactIntro } from "@/lib/site-data";
+import { getPublicSiteConfig } from "@/lib/site-settings";
+import type { SocialLink } from "@/data/site";
 
 export const metadata = buildMetadata({
  title:"Contact",
@@ -33,7 +33,7 @@ export default async function ContactPage() {
  <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
  <div>
  <SectionHeading eyebrow="Coordonnées officielles" title="Une équipe disponible pour orienter les demandes." />
- <div className="mt-8 space-y-4 rounded-lg bg-brand-mist p-6">
+ <div className="mt-8 space-y-4 rounded-lg bg-brand-mist dark:bg-surface-muted p-6">
  <p className="flex items-start gap-3 text-sm font-semibold leading-7 text-foreground-muted">
  <MapPin aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
  {site.contact.address}
@@ -71,7 +71,7 @@ export default async function ContactPage() {
  <ContactForm idPrefix="contact-page" />
  </div>
  </section>
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <div className="section-shell">
  <ZonesMapLoader
  zoom={14}

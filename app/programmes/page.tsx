@@ -1,11 +1,11 @@
-import { buildMetadata } from"@/lib/metadata";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { ProgramCard } from"@/components/ProgramCard";
-import { SectionHeading } from"@/components/SectionHeading";
-import { actionMeans, paypalDonationUrl } from"@/lib/site-data";
-import { getPublicProgramContent } from"@/lib/program-content";
+import { buildMetadata } from "@/lib/metadata";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { ProgramCard } from "@/components/ProgramCard";
+import { SectionHeading } from "@/components/SectionHeading";
+import { actionMeans, paypalDonationUrl } from "@/lib/site-data";
+import { getPublicProgramContent } from "@/lib/program-content";
 
 export const metadata = buildMetadata({
  title:"Programmes",
@@ -27,7 +27,7 @@ export default async function ProgramsPage() {
  cta={{ label:"Soutenir nos actions", href: paypalDonationUrl }}
  image="/images/ddc/activisme-vbg.jpg"
  />
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell space-y-12">
  {axes.map((axis) => {

@@ -1,10 +1,10 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { CheckCircle2 } from"lucide-react";
-import { MembershipForm } from"@/components/MembershipForm";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { memberVolunteerIntro, memberVolunteerLetter, membershipInterestDomains } from"@/lib/site-data";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { CheckCircle2 } from "lucide-react";
+import { MembershipForm } from "@/components/MembershipForm";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { memberVolunteerIntro, memberVolunteerLetter, membershipInterestDomains } from "@/lib/site-data";
 
 export const metadata: Metadata = {
  title:"Devenir membre / bénévole",
@@ -41,7 +41,7 @@ export default function MemberVolunteerPage() {
  </ScrollReveal>
  </section>
 
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
  <div>

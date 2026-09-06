@@ -1,6 +1,6 @@
 "use client";
 
-import dynamic from"next/dynamic";
+import dynamic from "next/dynamic";
 
 type ZonesMapLoaderProps = {
  zoom?: number;
@@ -10,7 +10,7 @@ type ZonesMapLoaderProps = {
 const ZonesMap = dynamic(() => import("@/components/ZonesMap").then((mod) => mod.ZonesMap), {
  ssr: false,
  loading: () => (
- <div className="flex h-[300px] w-full items-center justify-center rounded-lg bg-brand-mist sm:h-[400px]">
+ <div className="flex h-[300px] w-full items-center justify-center rounded-lg bg-brand-mist dark:bg-surface-muted sm:h-[400px]">
  <p className="text-sm font-semibold text-foreground-subtle">Chargement de la carte…</p>
  </div>
  )

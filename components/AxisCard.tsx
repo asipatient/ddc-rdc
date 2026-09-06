@@ -1,11 +1,11 @@
 "use client";
 
-import Link from"next/link";
-import { ArrowRight } from"lucide-react";
-import { ContentImage } from"@/components/ContentImage";
-import { IconRenderer } from"@/components/IconRenderer";
-import { useReveal } from"@/hooks/useReveal";
-import type { Axis, Program } from"@/lib/site-data";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { ContentImage } from "@/components/ContentImage";
+import { IconRenderer } from "@/components/IconRenderer";
+import { useReveal } from "@/hooks/useReveal";
+import type { Axis, Program } from "@/lib/site-data";
 
 export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }) {
  const { ref, isVisible } = useReveal<HTMLDivElement>();

@@ -1,8 +1,8 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { CheckCircle2 } from"lucide-react";
-import { PageHero } from"@/components/PageHero";
-import { principles } from"@/lib/site-data";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { CheckCircle2 } from "lucide-react";
+import { PageHero } from "@/components/PageHero";
+import { principles } from "@/lib/site-data";
 
 export const metadata: Metadata = {
  title:"Principes directeurs",
@@ -18,7 +18,7 @@ export default function PrinciplesPage() {
  description="Chaque initiative doit respecter la dignité humaine, l'inclusion, la transparence, la paix, la justice sociale et la neutralité politique partisane."
  image="/images/ddc/osc-droits-socioeconomiques.jpg"
  />
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
  {principles.map((principle) => (

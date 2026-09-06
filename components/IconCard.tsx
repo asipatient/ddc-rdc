@@ -1,5 +1,5 @@
-import type { IconKey } from"@/lib/site-data";
-import { IconRenderer } from"@/components/IconRenderer";
+import type { IconKey } from "@/lib/site-data";
+import { IconRenderer } from "@/components/IconRenderer";
 
 type IconCardProps = {
  title: string;

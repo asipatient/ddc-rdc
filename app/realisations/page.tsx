@@ -26,7 +26,7 @@ export default async function RealisationsPage() {
         cta={{ label: "Agir avec nous", href: "/partenaires" }}
         image="/images/ddc/IMG-20260131-WA0150.jpg"
       />
-      <section className="bg-brand-mist py-16 sm:py-20">
+      <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
         <ScrollReveal>
           <div className="section-shell">
             <SectionHeading eyebrow="Galerie d'activités" title="Cartes de réalisations avec photos disponibles." />

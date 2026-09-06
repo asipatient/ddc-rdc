@@ -1,9 +1,9 @@
-import type { Metadata } from"next";
-import { ScrollReveal } from"@/components/ScrollReveal";
-import { ButtonLink } from"@/components/ButtonLink";
-import { PageHero } from"@/components/PageHero";
-import { SectionHeading } from"@/components/SectionHeading";
-import { foundingQuote, historyIntro, historyTimeline } from"@/lib/site-data";
+import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { ButtonLink } from "@/components/ButtonLink";
+import { PageHero } from "@/components/PageHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { foundingQuote, historyIntro, historyTimeline } from "@/lib/site-data";
 
 export const metadata: Metadata = {
  title:"Notre histoire",
@@ -51,7 +51,7 @@ export default function HistoryPage() {
  </ScrollReveal>
  </section>
 
- <section className="bg-brand-mist py-16 sm:py-20">
+ <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
  <SectionHeading

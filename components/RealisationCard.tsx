@@ -1,10 +1,10 @@
 "use client";
 
-import Link from"next/link";
-import { CalendarDays } from"lucide-react";
-import { ContentImage } from"@/components/ContentImage";
-import { useReveal } from"@/hooks/useReveal";
-import type { Realisation } from"@/lib/site-data";
+import Link from "next/link";
+import { CalendarDays } from "lucide-react";
+import { ContentImage } from "@/components/ContentImage";
+import { useReveal } from "@/hooks/useReveal";
+import type { Realisation } from "@/lib/site-data";
 
 const IMPACT_PLACEHOLDERS = new Set([
 "à compléter",
@@ -66,7 +66,7 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
  </dl>
  ) : null}
  {impactText ? (
- <p className="mt-4 rounded-md bg-brand-mist p-3 text-xs font-semibold leading-6 text-foreground-muted">
+ <p className="mt-4 rounded-md bg-brand-mist dark:bg-surface-muted p-3 text-xs font-semibold leading-6 text-foreground-muted">
  <span className="font-semibold text-brand-blue dark:text-foreground-muted">Impact : </span>
  {impactText}
  </p>
