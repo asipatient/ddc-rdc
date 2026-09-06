@@ -6,7 +6,7 @@ export const teamMembers: TeamMember[] = [
     role: "Président Fondateur & Coordonnateur National",
     photo: "/images/team/patient-asifiwe.jpg",
     bio:
-      "Leader communautaire ville de Bukavu et expert en Communication, Patient Asifiwe est fondateur de PROSE MEDIA CD et PROSE DIGITAL, ainsi que de la Dynamique Debout Congolais. Surnommé Prose par ses pairs, il est co-initiateur de PANZI FM et figure reconnue de l'engagement citoyen à Bukavu.",
+      "Leader communautaire ville de Bukavu et expert en Communication, Patient Asifiwe est fondateur de PROSE MEDIA CD, ainsi que de la Dynamique Debout Congolais. Surnommé Prose par ses pairs, il est co-initiateur de PANZI FM et figure reconnue de l'engagement citoyen à Bukavu.",
     roleDescription:
       "Garant de la mission : statut permanent et protégé par les Statuts, droit de veto suspensif et certification des programmes.",
     profileHref: "/profil-president-fondateur",

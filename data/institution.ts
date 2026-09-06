@@ -1,8 +1,8 @@
 import type { GovernanceItem, IconKey } from "./types";
 
 export const aboutIntro = [
-  "La DDC RDC est née d'un constat : les jeunes et les femmes congolaises sont trop souvent absents des espaces où se prennent les décisions qui les concernent. Absents de la gouvernance, de l'économie, de la culture — pas par manque de capacité, mais par manque d'opportunités et de cadre.",
-  "L'association existe pour changer ça. Elle crée les espaces où la jeunesse pense, où les femmes agissent, et où les communautés construisent leurs propres solutions — partout au Congo."
+  "La DDC RDC est née d'une conviction : la jeunesse congolaise est le moteur essentiel de la transformation de notre pays. Pourtant, elle reste trop souvent éloignée des espaces de décision. De même, les femmes, forces vives de nos communautés, et de nombreux citoyens sont freinés par le manque d'opportunités.",
+  "Notre organisation existe pour bâtir une nation congolaise forte. En plaçant la jeunesse au cœur de notre priorité institutionnelle, nous créons des espaces où les jeunes pensent, où les femmes agissent librement, et où chaque communauté construit des solutions durables pour son avenir."
 ];
 
 export const interventionAreas = [

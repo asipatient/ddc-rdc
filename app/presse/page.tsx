@@ -17,13 +17,13 @@ export default function PressPage() {
  <PageHero
  kicker="Presse et médias"
  title="Un espace média pour suivre les prises de parole de la DDC RDC."
- description="Cette page pourra accueillir les communiqués, dossiers de presse, photos officielles, contacts presse, interventions médiatiques et articles parlant de la DDC."
+ description="Retrouvez ici les communiqués, dossiers de presse, photos officielles, contacts presse, interventions médiatiques et articles parlant de la DDC RDC."
  image="/images/ddc/osc-droits-socioeconomiques.jpg"
  />
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell">
- <SectionHeading eyebrow="Ressources presse" title="Éléments à publier ou compléter." />
+ <SectionHeading eyebrow="Ressources presse" title="Documentation et médias." />
  <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
  {pressResources.map((resource) => (
  <article key={resource.title} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
@@ -31,7 +31,9 @@ export default function PressPage() {
  <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{resource.category}</p>
  <h2 className="mt-2 text-lg font-bold text-brand-blue dark:text-foreground">{resource.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{resource.description}</p>
- <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">{resource.status}</p>
+ <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
+   {["À publier", "À venir", "À ajouter", "À documenter"].includes(resource.status) ? "Aucun contenu presse public disponible à ce jour" : resource.status}
+ </p>
  </article>
  ))}
  </div>

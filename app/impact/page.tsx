@@ -37,7 +37,7 @@ export default async function ImpactPage() {
             <SectionHeading
               eyebrow="Indicateurs"
               title={impactSection.title}
-              description="Les chiffres disponibles sont présentés avec prudence. Les badges indiquent clairement les données provisoires, à vérifier ou en consolidation."
+              description="Nos indicateurs d'impact, avec une évaluation prudente et en cours de structuration."
             />
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {impactIndicators.map((indicator) => (

@@ -81,29 +81,6 @@ export default function FounderProfilePage() {
  </div>
  </div>
  </section>
- <section className="bg-background py-16 sm:py-20">
- <div className="section-shell">
- <SectionHeading
- eyebrow="Éléments à documenter"
- title="Renforcement des capacités, réseaux et initiatives à clarifier."
- description="Ces éléments sont conservés comme repères du parcours et restent à relire avant toute publication institutionnelle définitive."
- />
- <div className="mt-10 grid gap-5 md:grid-cols-3">
- {activityArticles
- .filter((article) => article.status ==="draft")
- .map((article) => (
- <article key={article.slug} className="rounded-lg border border-border p-5">
- <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green">{article.period}</p>
- <h2 className="mt-3 text-lg font-bold text-brand-blue dark:text-foreground">{article.title}</h2>
- <p className="mt-3 text-sm leading-7 text-foreground-muted">{article.excerpt}</p>
- <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-bold text-brand-blue">
- À vérifier / clarifier
- </p>
- </article>
- ))}
- </div>
- </div>
- </section>
  </>
  );
 }

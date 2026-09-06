@@ -99,7 +99,7 @@ export const strategicPlan = {
     {
       title: "Zones d'intervention",
       description:
-        "Présente dans l'ensemble de la ville de Bukavu, la DDC RDC compte des membres actifs dans au moins 8 provinces de la RDC, avec l'ouverture prochaine de bureaux provinciaux."
+        "Avec un ancrage à Bukavu (Sud-Kivu) et une présence active dans 8 provinces, notre horizon stratégique vise un déploiement dans les 26 provinces de la RDC."
     },
     {
       title: "Publics cibles",

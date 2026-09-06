@@ -29,7 +29,7 @@ export default async function RealisationsPage() {
       <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
         <ScrollReveal>
           <div className="section-shell">
-            <SectionHeading eyebrow="Galerie d'activités" title="Cartes de réalisations avec photos disponibles." />
+            <SectionHeading eyebrow="Galerie d'activités" title="Réalisations documentées." />
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {realisations.map((realisation) => (
                 <RealisationCard key={realisation.slug} realisation={realisation} />

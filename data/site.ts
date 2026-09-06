@@ -16,9 +16,9 @@ export const site = {
   legalName: "DDC RDC",
   locale: "fr",
   futureLocales: ["en"],
-  slogan: "Jeunesse, femmes et communautés debout pour un Congo juste, inclusif et durable.",
+  slogan: "Une jeunesse debout pour une nation congolaise forte !",
   description:
-    "La DDC RDC mobilise la jeunesse et les femmes congolaises pour construire des communautés responsables, résilientes, créatives, inclusives et engagées dans la transformation démocratique, sociale, économique, culturelle et environnementale de la République Démocratique du Congo.",
+    "La DDC RDC mobilise en priorité la jeunesse congolaise pour construire des communautés responsables, résilientes, créatives, inclusives et engagées dans la transformation démocratique, sociale, économique, culturelle et environnementale de la République Démocratique du Congo.",
   url: "https://ddcrdc.org",
   logo: "/images/logos/logo-ddc.png",
   logoMark: "/images/logos/logo-ddc-mark.png",
@@ -43,21 +43,21 @@ export const site = {
 };
 
 export const home = {
-  heroTitle: "Mobiliser la jeunesse et les femmes pour transformer les communautés congolaises.",
+  heroTitle: "Une jeunesse debout pour une nation congolaise forte !",
   heroSubtitle:
-    "La DDC RDC mobilise la jeunesse et les femmes congolaises pour construire des communautés responsables, résilientes, créatives, inclusives et engagées dans la transformation démocratique, sociale, économique, culturelle et environnementale de la République Démocratique du Congo.",
+    "La DDC RDC accompagne la jeunesse congolaise dans sa formation citoyenne, sa participation à la vie publique et le développement de ses initiatives.",
   reason:
-    "La Dynamique Debout Congolais, DDC RDC, est une plateforme institutionnelle congolaise d'éveil citoyen, de leadership, d'autonomisation économique, de recherche, de culture, d'environnement, de paix et de développement communautaire.",
+    "La Dynamique Debout Congolais (DDC RDC) est une plateforme institutionnelle congolaise d'éveil citoyen, de leadership, d'autonomisation économique, de recherche, de culture, d'environnement, de paix et de développement communautaire.",
   reasonFollowUp:
-    "Elle agit au plus près des réalités locales afin de permettre aux jeunes, aux femmes, aux enfants et aux communautés de réfléchir, se former, proposer des initiatives et participer activement à la construction de solutions durables.",
+    "La jeunesse congolaise est notre priorité institutionnelle. Nous agissons au plus près des réalités locales pour permettre aux jeunes, ainsi qu'aux femmes, aux enfants et aux communautés, de réfléchir, se former, proposer des initiatives et participer activement à la construction de solutions durables.",
   vision:
-    "Un Congo où chaque jeune est compétent et a sa chance ; où chaque femme peut entreprendre, diriger et décider ; où les communautés ne subissent plus, mais elles agissent. Ce Congo-là existe. Il commence ici, avec nous.",
+    "Une nation congolaise forte où la jeunesse est compétente et engagée ; où les communautés ne subissent plus, mais construisent leurs propres solutions. Ce Congo-là existe. Il commence ici, avec nous.",
   mission:
-    "La DDC RDC forme des citoyens qui pensent, accompagne des femmes qui entreprennent, et mobilise des communautés qui refusent la résignation.",
+    "La DDC RDC forme une jeunesse qui pense, agit et innove, tout en accompagnant les initiatives des communautés qui refusent la résignation.",
   generalObjective:
-    "L'objectif général de la DDC RDC est de faire émerger une jeunesse et une femme congolaise responsables, compétentes, engagées et conscientes de leur rôle dans la consolidation de la démocratie, capables de contribuer activement au développement économique, social, institutionnel, environnemental et culturel de la République Démocratique du Congo.",
+    "L'objectif général de la DDC RDC est de faire émerger une jeunesse congolaise responsable, compétente et engagée, capable de contribuer activement au développement économique, social, institutionnel, environnemental et culturel, et de consolider une nation congolaise forte.",
   partnership:
     "La DDC RDC collabore avec les autorités publiques, les institutions éducatives, les organisations de la société civile, les mouvements communautaires, les partenaires techniques et financiers, les institutions de recherche, les médias, les acteurs culturels, les entreprises sociales et toute structure poursuivant des objectifs compatibles avec les siens.",
   donate:
-    "Votre soutien permet à la DDC RDC de former des jeunes, accompagner des femmes, protéger les enfants, soutenir les initiatives communautaires, documenter les changements, promouvoir la culture démocratique et renforcer la résilience locale."
+    "Votre soutien permet à la DDC RDC de former la jeunesse, accompagner les femmes, protéger les enfants, soutenir les initiatives communautaires, documenter les changements, promouvoir la culture démocratique et renforcer la résilience locale."
 };

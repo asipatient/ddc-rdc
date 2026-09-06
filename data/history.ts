@@ -20,7 +20,7 @@ export const founderProfile = {
 };
 
 export const historyIntro =
-  "Depuis 2022, la DDC RDC construit pas à pas une réponse citoyenne aux défis de la jeunesse et des femmes congolaises.";
+  "Depuis 2022, la DDC RDC construit pas à pas une réponse citoyenne, en plaçant la jeunesse congolaise au cœur de son action pour bâtir une nation forte.";
 
 export const foundingQuote = {
   text:

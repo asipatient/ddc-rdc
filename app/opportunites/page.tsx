@@ -17,7 +17,7 @@ export default function OpportunitiesPage() {
  <PageHero
  kicker="Opportunités"
  title="Appels, formations, bénévolat, partenariats et événements."
- description="Cette page permettra de publier les opportunités pour les jeunes, les femmes, les bénévoles, les partenaires et les communautés locales."
+ description="Retrouvez ici les opportunités pour les jeunes, les femmes, les bénévoles, les partenaires et les communautés locales."
  cta={{ label:"Rejoindre la DDC", href:"/devenir-membre-benevole" }}
  image="/images/ddc/IMG-20260131-WA0181.jpg"
  />
@@ -26,7 +26,7 @@ export default function OpportunitiesPage() {
  <div className="section-shell">
  <SectionHeading
  eyebrow="Appels à projets / Opportunités"
- title="Espaces prêts pour les publications à venir."
+ title="Toutes les opportunités."
  description="Aucune opportunité ouverte en ce moment. Suivez-nous sur Facebook et X (@ddcrdc) pour être informé en premier des prochaines opportunités."
  />
  <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -36,7 +36,9 @@ export default function OpportunitiesPage() {
  <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{opportunity.audience}</p>
  <h2 className="mt-2 text-lg font-bold text-brand-blue dark:text-foreground">{opportunity.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{opportunity.description}</p>
- <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">{opportunity.status}</p>
+ <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
+   {["À annoncer", "À venir", "À programmer", "Calendrier à publier"].includes(opportunity.status) ? "Aucune opportunité ouverte à ce jour." : opportunity.status}
+ </p>
  </article>
  ))}
  </div>

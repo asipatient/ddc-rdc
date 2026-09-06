@@ -39,12 +39,14 @@ export default async function HomePage() {
  DDC RDC · DYNAMIQUE DEBOUT CONGOLAIS
  </p>
  <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-6xl">
- Jeunesse et femmes debout pour transformer le Congo.
+ Une jeunesse debout pour une nation congolaise forte !
  </h1>
  </div>
  <p className="anim-fade-down anim-delay-200 mt-6 max-w-xl text-base leading-8 text-white/80 sm:text-lg">
- Depuis Bukavu, la DDC RDC rassemble des jeunes et des femmes qui refusent la résignation —
- et qui construisent, ensemble, le Congo qu&apos;ils méritent.
+ La DDC RDC accompagne la jeunesse congolaise dans sa formation citoyenne, sa participation à la vie publique et le développement de ses initiatives.
+ </p>
+ <p className="anim-fade-down anim-delay-300 mt-4 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
+ En RDC, nous développons des programmes qui donnent aux jeunes des espaces pour apprendre, participer et agir dans leurs communautés.
  </p>
  <div className="anim-fade-up anim-delay-400 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
  <ButtonLink href="/impact">Voir notre impact</ButtonLink>

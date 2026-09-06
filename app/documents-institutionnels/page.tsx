@@ -22,7 +22,9 @@ function DocumentGrid({ documents }: { documents: DocumentItem[] }) {
  <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{document.category}</p>
  <h2 className="mt-2 text-lg font-extrabold text-brand-blue dark:text-foreground">{document.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{document.description}</p>
- <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">{document.status}</p>
+ <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
+ {["À venir", "À publier", "Document à ajouter", "Document à publier", "Fichiers à ajouter", "À ajouter", "À documenter"].includes(document.status) ? "Aucun document public disponible à ce jour" : document.status}
+ </p>
  {document.href ? (
  <a href={document.href} className="focus-ring mt-4 block w-fit rounded-md text-sm font-bold text-brand-green hover:text-brand-blue">
  Ouvrir le document
@@ -44,7 +46,7 @@ export default async function InstitutionalDocumentsPage() {
  <PageHero
  kicker="Documents institutionnels"
  title="Un espace de transparence pour les textes, rapports et politiques de la DDC."
- description="Les documents officiels seront publiés progressivement. Les emplacements actuels indiquent clairement les contenus à ajouter ou compléter."
+ description="Les documents officiels sont publiés progressivement au fur et à mesure de leur consolidation."
  cta={{ label:"Faire un don", href: paypalDonationUrl }}
  image="/images/ddc/osc-droits-socioeconomiques.jpg"
  />
@@ -67,7 +69,7 @@ export default async function InstitutionalDocumentsPage() {
  <div className="section-shell">
  <SectionHeading
  eyebrow="Transparence et redevabilité"
- title="Rapports et documents publics à publier."
+ title="Rapports et documents publics."
  description="Cette section est conçue pour rassurer les partenaires, bailleurs, membres et communautés sur la gestion et la documentation des actions."
  />
  <div className="mt-10">
@@ -115,7 +117,9 @@ export default async function InstitutionalDocumentsPage() {
  <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
  {protectionEthicsDocuments.map((document) => (
  <article key={document.title} className="rounded-lg border border-white/10 bg-white/10 p-5">
- <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-gold">{document.status}</p>
+ <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-gold">
+ {["À venir", "À publier", "Document à ajouter", "Document à publier", "Fichiers à ajouter", "À ajouter", "À documenter"].includes(document.status) ? "Aucun document public disponible à ce jour" : document.status}
+ </p>
  <h2 className="mt-3 text-lg font-extrabold text-white">{document.title}</h2>
  <p className="mt-3 text-sm leading-7 text-white/75">{document.description}</p>
  </article>

@@ -35,8 +35,7 @@ const jsonLd = {
   foundingDate: "2022-01-05",
   url: "https://ddcrdc.org",
   logo: "https://ddcrdc.org/images/logos/logo-ddc.png",
-  description:
-    "Association Sans But Lucratif (ASBL) de droit congolais, engagée pour l'autonomisation des jeunes, des femmes et des communautés au Sud-Kivu, RDC.",
+  description: site.description,
   address: {
     "@type": "PostalAddress",
     streetAddress: "Av. Nyarwizimia 019, Quartier Panzi, Commune d'Ibanda",
@@ -58,8 +57,7 @@ export const metadata: Metadata = {
     default: `${site.shortName} — ${site.slogan}`,
     template: `%s | ${site.shortName}`
   },
-  description:
-    "La DDC RDC mobilise la jeunesse et les femmes de Bukavu pour bâtir des communautés responsables, inclusives et engagées dans la transformation de la RDC.",
+  description: site.description,
   keywords: [
     "DDC RDC",
     "Dynamique Debout Congolais",

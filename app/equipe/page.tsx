@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Mail } from "lucide-react";
+import { Mail, User2 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ContentImage } from "@/components/ContentImage";
 import { PageHero } from "@/components/PageHero";
@@ -40,11 +40,8 @@ export default async function TeamPage() {
  {member.photo ? (
  <ContentImage src={member.photo} alt={member.name} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
  ) : (
- <div className="text-center">
- <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue">
- <Mail aria-hidden="true" className="h-6 w-6" />
- </div>
- <p className="mt-3 text-sm font-bold text-foreground-subtle">Photo à ajouter</p>
+ <div className="flex h-full w-full flex-col items-center justify-center rounded-2xl bg-surface-muted p-4 text-center">
+ <User2 aria-hidden="true" className="h-12 w-12 text-border-strong" />
  </div>
  )}
  </div>
