@@ -39,7 +39,7 @@ export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig })
  <div className="grid gap-10 lg:grid-cols-[1.2fr_1.8fr]">
  <div>
  <Link href="/" className="focus-ring inline-flex rounded-md" aria-label="Accueil DDC RDC">
- <Logo className="h-11 w-auto sm:h-12" />
+ <Logo variant="footer" className="h-11 w-auto sm:h-12" />
  </Link>
  <p className="mt-5 max-w-md text-sm leading-7 text-white/80">{siteConfig.slogan}</p>
  <a
