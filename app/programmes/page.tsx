@@ -25,7 +25,7 @@ export default async function ProgramsPage() {
  title="Huit programmes phares alignés sur les trois axes d'intervention."
  description="Les programmes de la DDC RDC transforment les priorités institutionnelles en parcours de formation, recherche, incubation, alerte, culture, inclusion et action communautaire."
  cta={{ label:"Soutenir nos actions", href: paypalDonationUrl }}
- image="/images/ddc/activisme-vbg.jpg"
+ image="/images/ddc/activite-formation-ddc.webp"
  />
  <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
  <ScrollReveal>

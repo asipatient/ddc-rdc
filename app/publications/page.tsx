@@ -28,7 +28,7 @@ export default async function PublicationsPage({
         title="Articles d'activités, rapports, études et notes de plaidoyer."
         description="Un espace de diffusion pour documenter les initiatives, partager les apprentissages, suivre les activités réalisées et soutenir le plaidoyer citoyen."
         cta={{ label: "Documents institutionnels", href: "/documents-institutionnels" }}
-      image="/images/ddc/osc-droits-socioeconomiques.jpg"
+      image="/images/ddc/jeunesse-culture-echange.jpg"
       />
       <section className="bg-background py-16 sm:py-20">
         <ScrollReveal>

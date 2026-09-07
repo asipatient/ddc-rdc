@@ -24,7 +24,7 @@ export default async function RealisationsPage() {
         title="Ce que nous avons fait. Ce que nous continuons de construire."
         description="Cette page rassemble les actions déjà menées par la DDC RDC avec les communautés, les jeunes, les femmes, les enfants et les organisations de la société civile."
         cta={{ label: "Agir avec nous", href: "/partenaires" }}
-        image="/images/ddc/IMG-20260131-WA0150.jpg"
+        image="/images/ddc/salongo-communautaire.jpg"
       />
       <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
         <ScrollReveal>

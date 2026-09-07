@@ -29,7 +29,7 @@ export default async function PartnersPage() {
  title="Construire des partenariats sérieux, transparents et orientés impact."
  description={partnersPage.intro}
  cta={{ label:"Proposer un partenariat", href:"#formulaire-partenaire" }}
- image="/images/ddc/IMG-20260131-WA0150.jpg"
+ image="/images/ddc/groupe-partenaires-ddc.jpg"
  />
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>
@@ -56,29 +56,31 @@ export default async function PartnersPage() {
  <ScrollReveal>
  <div className="section-shell">
  <SectionHeading title="Nos partenaires actuels" />
- <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
- {partners.length
- ? partners.map((partner) => (
- <article key={partner.name} className="rounded-lg border border-border bg-surface-elevated p-5 text-center shadow-sm">
- <div className="relative mx-auto flex h-20 w-32 items-center justify-center rounded-md bg-brand-mist dark:bg-surface-muted">
- {partner.logo ? <ContentImage src={partner.logo} alt={partner.name} fill sizes="128px" className="object-contain p-3" /> : null}
- </div>
- <h2 className="mt-4 text-base font-bold text-brand-blue dark:text-foreground">{partner.name}</h2>
- <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-brand-green">{partner.partnershipType}</p>
- {partner.description ? <p className="mt-3 text-sm leading-6 text-foreground-muted">{partner.description}</p> : null}
- {partner.website ? (
- <a href={partner.website} className="focus-ring mt-3 inline-flex rounded-md text-sm font-bold text-brand-blue hover:text-brand-green">
- Site web
- </a>
- ) : null}
- </article>
- ))
- : partnerPlaceholders.map((partner) => (
- <div key={partner} className="flex h-28 items-center justify-center rounded-lg border border-dashed border-border-strong bg-surface-elevated px-5 text-center text-sm font-bold text-foreground-subtle">
- {partner}
- </div>
- ))}
- </div>
+          <div className="mt-8">
+            {partners.length ? (
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {partners.map((partner) => (
+                  <article key={partner.name} className="rounded-lg border border-border bg-surface-elevated p-5 text-center shadow-sm">
+                    <div className="relative mx-auto flex h-20 w-32 items-center justify-center rounded-md bg-brand-mist dark:bg-surface-muted">
+                      {partner.logo ? <ContentImage src={partner.logo} alt={partner.name} fill sizes="128px" className="object-contain p-3" /> : null}
+                    </div>
+                    <h2 className="mt-4 text-base font-bold text-brand-blue dark:text-foreground">{partner.name}</h2>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-brand-green">{partner.partnershipType}</p>
+                    {partner.description ? <p className="mt-3 text-sm leading-6 text-foreground-muted">{partner.description}</p> : null}
+                    {partner.website ? (
+                      <a href={partner.website} className="focus-ring mt-3 inline-flex rounded-md text-sm font-bold text-brand-blue hover:text-brand-green">
+                        Site web
+                      </a>
+                    ) : null}
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm leading-7 text-foreground-muted">
+                Nous structurons actuellement notre réseau de partenaires institutionnels, techniques et financiers. Utilisez le formulaire ci-dessous pour nous contacter et construire avec nous des solutions durables.
+              </p>
+            )}
+          </div>
  </div>
  </ScrollReveal>
 

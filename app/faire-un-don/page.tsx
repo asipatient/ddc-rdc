@@ -28,7 +28,7 @@ export default async function DonatePage() {
  title={donationPage.title}
  description={donationPage.trustMessage}
  cta={{ label:"Faire un don via PayPal", href:"#paypal" }}
- image="/images/ddc/activisme-vbg.jpg"
+ image="/images/ddc/hero1.jpg"
  />
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>

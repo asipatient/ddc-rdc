@@ -13,27 +13,37 @@ export const metadata: Metadata = {
  description:"Statuts, règlement intérieur, rapports, politiques internes, plans stratégiques et documents de plaidoyer de la DDC RDC."
 };
 
-function DocumentGrid({ documents }: { documents: DocumentItem[] }) {
- return (
- <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
- {documents.map((document) => (
- <article key={`${document.category}-${document.title}`} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
- <FileText aria-hidden="true" className="h-7 w-7 text-brand-green" />
- <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{document.category}</p>
- <h2 className="mt-2 text-lg font-extrabold text-brand-blue dark:text-foreground">{document.title}</h2>
- <p className="mt-3 text-sm leading-7 text-foreground-muted">{document.description}</p>
- <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
- {["À venir", "À publier", "Document à ajouter", "Document à publier", "Fichiers à ajouter", "À ajouter", "À documenter"].includes(document.status) ? "Aucun document public disponible à ce jour" : document.status}
- </p>
- {document.href ? (
- <a href={document.href} className="focus-ring mt-4 block w-fit rounded-md text-sm font-bold text-brand-green hover:text-brand-blue">
- Ouvrir le document
- </a>
- ) : null}
- </article>
- ))}
- </div>
- );
+function DocumentGrid({ documents, emptyMessage }: { documents: DocumentItem[], emptyMessage: string }) {
+  const publishedDocs = documents.filter(doc => !["À venir", "À publier", "Document à ajouter", "Document à publier", "Fichiers à ajouter", "À ajouter", "À documenter"].includes(doc.status));
+
+  if (publishedDocs.length === 0) {
+    return (
+      <p className="text-sm leading-7 text-foreground-muted">
+        {emptyMessage}
+      </p>
+    );
+  }
+
+  return (
+    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {publishedDocs.map((document) => (
+        <article key={`${document.category}-${document.title}`} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
+          <FileText aria-hidden="true" className="h-7 w-7 text-brand-green" />
+          <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{document.category}</p>
+          <h2 className="mt-2 text-lg font-extrabold text-brand-blue dark:text-foreground">{document.title}</h2>
+          <p className="mt-3 text-sm leading-7 text-foreground-muted">{document.description}</p>
+          <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
+            {document.status}
+          </p>
+          {document.href ? (
+            <a href={document.href} className="focus-ring mt-4 block w-fit rounded-md text-sm font-bold text-brand-green hover:text-brand-blue">
+              Ouvrir le document
+            </a>
+          ) : null}
+        </article>
+      ))}
+    </div>
+  );
 }
 
 export const dynamic ="force-dynamic";
@@ -48,7 +58,7 @@ export default async function InstitutionalDocumentsPage() {
  title="Un espace de transparence pour les textes, rapports et politiques de la DDC."
  description="Les documents officiels sont publiés progressivement au fur et à mesure de leur consolidation."
  cta={{ label:"Faire un don", href: paypalDonationUrl }}
- image="/images/ddc/osc-droits-socioeconomiques.jpg"
+ image="/images/ddc/hero6.jpg"
  />
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>
@@ -58,7 +68,10 @@ export default async function InstitutionalDocumentsPage() {
  title="Statuts, règlement intérieur, rapports, plans stratégiques et plaidoyer."
  />
  <div className="mt-10">
- <DocumentGrid documents={documents.length ? documents : institutionalDocuments} />
+          <DocumentGrid 
+            documents={documents.length ? documents : institutionalDocuments} 
+            emptyMessage="Les documents institutionnels officiels (statuts, règlement intérieur) sont en cours de mise en ligne."
+          />
  </div>
  </div>
  </ScrollReveal>
@@ -73,7 +86,10 @@ export default async function InstitutionalDocumentsPage() {
  description="Cette section est conçue pour rassurer les partenaires, bailleurs, membres et communautés sur la gestion et la documentation des actions."
  />
  <div className="mt-10">
- <DocumentGrid documents={transparencyDocuments} />
+          <DocumentGrid 
+            documents={transparencyDocuments} 
+            emptyMessage="La publication des rapports d'activités et documents de redevabilité interviendra à la clôture de l'exercice en cours."
+          />
  </div>
  </div>
  </ScrollReveal>
@@ -114,17 +130,33 @@ export default async function InstitutionalDocumentsPage() {
  title="Un espace pour les politiques internes de protection, données, signalement et anti-corruption."
  className="[&_h2]:text-white"
  />
- <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
- {protectionEthicsDocuments.map((document) => (
- <article key={document.title} className="rounded-lg border border-white/10 bg-white/10 p-5">
- <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-gold">
- {["À venir", "À publier", "Document à ajouter", "Document à publier", "Fichiers à ajouter", "À ajouter", "À documenter"].includes(document.status) ? "Aucun document public disponible à ce jour" : document.status}
- </p>
- <h2 className="mt-3 text-lg font-extrabold text-white">{document.title}</h2>
- <p className="mt-3 text-sm leading-7 text-white/75">{document.description}</p>
- </article>
- ))}
- </div>
+          <div className="mt-10">
+            {(() => {
+              const publishedProtectionDocs = protectionEthicsDocuments.filter(doc => !["À venir", "À publier", "Document à ajouter", "Document à publier", "Fichiers à ajouter", "À ajouter", "À documenter"].includes(doc.status));
+
+              if (publishedProtectionDocs.length === 0) {
+                return (
+                  <p className="text-white/75 text-sm leading-7">
+                    Nos politiques de protection, de sauvegarde et de prévention sont en cours de consolidation et seront rendues publiques prochainement.
+                  </p>
+                );
+              }
+
+              return (
+                <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                  {publishedProtectionDocs.map((document) => (
+                    <article key={document.title} className="rounded-lg border border-white/10 bg-white/10 p-5">
+                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-gold">
+                        {document.status}
+                      </p>
+                      <h2 className="mt-3 text-lg font-extrabold text-white">{document.title}</h2>
+                      <p className="mt-3 text-sm leading-7 text-white/75">{document.description}</p>
+                    </article>
+                  ))}
+                </div>
+              );
+            })()}
+          </div>
  </div>
  </ScrollReveal>
 

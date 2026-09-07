@@ -8,7 +8,7 @@ export const flagshipPrograms: Program[] = [
     icon: "book",
     axisSlug: "gouvernance-citoyennete-transformation-sociale",
     description:
-      "L'École Citoyenne est dédiée à la formation civique, au leadership éthique et à la participation active de la jeunesse et des femmes à la gouvernance."
+      "L'École Citoyenne forme la jeunesse et les femmes au leadership éthique, à la citoyenneté et à la participation active à la gouvernance locale."
   },
   {
     slug: "think-tank-ddc",
@@ -17,7 +17,7 @@ export const flagshipPrograms: Program[] = [
     icon: "search",
     axisSlug: "gouvernance-citoyennete-transformation-sociale",
     description:
-      "Le Think Tank DDC est chargé de la recherche, de l'analyse stratégique et de la formulation de propositions en matière de gouvernance, de politiques publiques et de transformation sociale."
+      "Le Think Tank mène des réflexions stratégiques et formule des propositions concrètes pour influencer les politiques publiques et la gouvernance."
   },
   {
     slug: "programme-alerte-communautaire",
@@ -26,7 +26,7 @@ export const flagshipPrograms: Program[] = [
     icon: "radar",
     axisSlug: "gouvernance-citoyennete-transformation-sociale",
     description:
-      "Le Programme d'Alerte Communautaire est axé sur la prévention des risques, les mécanismes d'alerte précoce, la veille citoyenne, la protection des populations et la réponse aux crises, incluant des interventions humanitaires ponctuelles."
+      "Ce programme vise à structurer des mécanismes d'alerte précoce et de veille citoyenne pour anticiper les risques et protéger les populations."
   },
   {
     slug: "projec",
@@ -35,7 +35,7 @@ export const flagshipPrograms: Program[] = [
     icon: "briefcase",
     axisSlug: "autonomisation-economique-resilience",
     description:
-      "Le PROJEC est un dispositif d'incubation, de formation technique, professionnelle et entrepreneuriale, orienté vers la micro-industrie, l'artisanat et l'innovation locale."
+      "Le PROJEC forme et accompagne les jeunes et les femmes dans leurs initiatives entrepreneuriales, artisanales et d'innovation locale."
   },
   {
     slug: "programme-vert-climat",
@@ -44,7 +44,7 @@ export const flagshipPrograms: Program[] = [
     icon: "leaf",
     axisSlug: "autonomisation-economique-resilience",
     description:
-      "Le Programme Vert et Climat est dédié à la protection de l'environnement, à la promotion des pratiques écologiques et au développement de solutions durables adaptées aux réalités locales."
+      "Le Programme Vert et Climat accompagne les communautés dans la protection de l'environnement et le développement de solutions écologiques locales."
   },
   {
     slug: "jasiri-leadership-feminin",
@@ -53,7 +53,7 @@ export const flagshipPrograms: Program[] = [
     icon: "shield",
     axisSlug: "identite-inclusion-capital-humain",
     description:
-      "Le Programme JASIRI est consacré à l'autonomisation des femmes, à la promotion de leur leadership et à la lutte contre les violences basées sur le genre."
+      "JASIRI promeut l'autonomisation et le leadership des femmes, et mène des actions de sensibilisation contre les violences basées sur le genre."
   },
   {
     slug: "kongo-culture",
@@ -62,7 +62,7 @@ export const flagshipPrograms: Program[] = [
     icon: "palette",
     axisSlug: "identite-inclusion-capital-humain",
     description:
-      "Le Programme Kongo Culture est dédié à la promotion, à la valorisation et à la protection du patrimoine culturel congolais sous toutes ses formes, en lien avec les dynamiques culturelles africaines et les réalités contemporaines."
+      "Kongo Culture valorise et protège le patrimoine culturel congolais, en faisant de la culture un levier d'identité, de dialogue et de cohésion sociale."
   },
   {
     slug: "creative-child",
@@ -71,7 +71,7 @@ export const flagshipPrograms: Program[] = [
     icon: "sparkles",
     axisSlug: "identite-inclusion-capital-humain",
     description:
-      "Le Programme Creative Child est orienté vers l'identification et le développement des talents des enfants, ainsi que la promotion de leur éducation culturelle, citoyenne et créative."
+      "Creative Child sensibilise et encourage l'éducation culturelle, citoyenne et créative des enfants."
   }
 ];
 

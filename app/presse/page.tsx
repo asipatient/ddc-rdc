@@ -18,25 +18,41 @@ export default function PressPage() {
  kicker="Presse et médias"
  title="Un espace média pour suivre les prises de parole de la DDC RDC."
  description="Retrouvez ici les communiqués, dossiers de presse, photos officielles, contacts presse, interventions médiatiques et articles parlant de la DDC RDC."
- image="/images/ddc/osc-droits-socioeconomiques.jpg"
+ image="/images/ddc/App-1.JPG"
  />
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell">
  <SectionHeading eyebrow="Ressources presse" title="Documentation et médias." />
- <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
- {pressResources.map((resource) => (
- <article key={resource.title} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
- <Newspaper aria-hidden="true" className="h-7 w-7 text-brand-green" />
- <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{resource.category}</p>
- <h2 className="mt-2 text-lg font-bold text-brand-blue dark:text-foreground">{resource.title}</h2>
- <p className="mt-3 text-sm leading-7 text-foreground-muted">{resource.description}</p>
- <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
-   {["À publier", "À venir", "À ajouter", "À documenter"].includes(resource.status) ? "Aucun contenu presse public disponible à ce jour" : resource.status}
- </p>
- </article>
- ))}
- </div>
+          <div className="mt-10">
+            {(() => {
+              const publishedPressDocs = pressResources.filter(res => !["À publier", "À venir", "À ajouter", "À documenter"].includes(res.status) && res.status !== "Disponible via contact officiel");
+
+              if (publishedPressDocs.length === 0) {
+                return (
+                  <p className="text-sm leading-7 text-foreground-muted">
+                    L'espace de ressources documentaires pour la presse (communiqués, photos officielles) est en cours de structuration. N'hésitez pas à nous contacter directement pour toute demande de documentation.
+                  </p>
+                );
+              }
+
+              return (
+                <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                  {publishedPressDocs.map((resource) => (
+                    <article key={resource.title} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
+                      <Newspaper aria-hidden="true" className="h-7 w-7 text-brand-green" />
+                      <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{resource.category}</p>
+                      <h2 className="mt-2 text-lg font-bold text-brand-blue dark:text-foreground">{resource.title}</h2>
+                      <p className="mt-3 text-sm leading-7 text-foreground-muted">{resource.description}</p>
+                      <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
+                        {resource.status}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              );
+            })()}
+          </div>
  </div>
  </ScrollReveal>
 

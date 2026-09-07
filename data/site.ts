@@ -43,11 +43,11 @@ export const site = {
 };
 
 export const home = {
-  heroTitle: "Une jeunesse debout pour une nation congolaise forte !",
+  heroTitle: "Une jeunesse debout pour une nation forte !",
   heroSubtitle:
     "La DDC RDC accompagne la jeunesse congolaise dans sa formation citoyenne, sa participation à la vie publique et le développement de ses initiatives.",
   reason:
-    "La Dynamique Debout Congolais (DDC RDC) est une plateforme institutionnelle congolaise d'éveil citoyen, de leadership, d'autonomisation économique, de recherche, de culture, d'environnement, de paix et de développement communautaire.",
+    "La Dynamique Debout Congolais (DDC RDC) est une plateforme d'action citoyenne qui mobilise en priorité la jeunesse, mais aussi les femmes et les communautés, pour relever les défis démocratiques, sociaux, économiques et environnementaux du pays.",
   reasonFollowUp:
     "La jeunesse congolaise est notre priorité institutionnelle. Nous agissons au plus près des réalités locales pour permettre aux jeunes, ainsi qu'aux femmes, aux enfants et aux communautés, de réfléchir, se former, proposer des initiatives et participer activement à la construction de solutions durables.",
   vision:

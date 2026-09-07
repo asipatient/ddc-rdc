@@ -23,7 +23,7 @@ export default async function AxesInterventionPage() {
  title="Trois axes pour structurer l'action de la DDC RDC."
  description="Ces axes organisent les interventions autour de la gouvernance citoyenne, de la résilience économique et du développement du capital humain."
  cta={{ label:"Voir les programmes", href:"/programmes" }}
- image="/images/ddc/activisme-vbg.jpg"
+ image="/images/ddc/hero3.jpg"
  />
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>

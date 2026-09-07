@@ -29,7 +29,7 @@ export default async function ImpactPage() {
         title={impactSection.subtitle}
         description={impactSection.text}
         cta={{ label: "Soutenir l'impact", href: paypalDonationUrl }}
-        image="/images/ddc/osc-droits-socioeconomiques.jpg"
+        image="/images/ddc/hero-reel-ddc.jpg"
       />
       <section className="bg-background py-16 sm:py-20">
         <ScrollReveal>

@@ -21,7 +21,7 @@ export default function VisionMissionPage() {
  kicker="Vision & Mission"
  title="Debout pour le Congo. Maintenant."
  description="La DDC RDC articule son action autour d'une vision de transformation démocratique, sociale, économique, culturelle et environnementale."
- image="/images/ddc/osc-droits-socioeconomiques.jpg"
+ image="/images/ddc/hero4.jpg"
  />
 
  <section className="bg-background py-16 sm:py-20">

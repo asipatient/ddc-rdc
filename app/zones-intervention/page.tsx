@@ -20,7 +20,7 @@ export default function ZonesInterventionPage() {
  title={zonesIntervention.title}
  description={zonesIntervention.description}
  cta={{ label:"Proposer une initiative", href:"/contact?type=Projet%20communautaire" }}
- image="/images/ddc/groupe-partenaires-ddc.jpg"
+ image="/images/ddc/App-1 (23).jpg"
  />
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>

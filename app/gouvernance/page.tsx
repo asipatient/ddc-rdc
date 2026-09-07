@@ -18,7 +18,7 @@ export default function GovernancePage() {
  title="Cinq organes complémentaires, chacun avec un rôle clair et distinct."
  description="La gouvernance de la DDC RDC repose sur ses statuts : une architecture rigoureuse qui sépare la souveraineté, la garantie de mission, la direction, l'exécution et le contrôle financier."
 
- image="/images/ddc/osc-droits-socioeconomiques.jpg"
+ image="/images/ddc/hero2.jpg"
  />
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>
