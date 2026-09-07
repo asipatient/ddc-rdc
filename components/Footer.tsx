@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { footerColumns, site } from "@/lib/site-data";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { Logo } from "@/components/Logo";
 import type { SocialLink } from "@/data/site";
 
 // Icône X (Twitter) — Lucide n'a pas d'icône X native, on utilise un SVG inline léger
@@ -38,7 +39,7 @@ export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig })
  <div className="grid gap-10 lg:grid-cols-[1.2fr_1.8fr]">
  <div>
  <Link href="/" className="focus-ring inline-flex rounded-md" aria-label="Accueil DDC RDC">
- <Image src={siteConfig.logo} alt="Logo DDC RDC" width={64} height={64} className="h-16 w-16 rounded-md object-contain brightness-0 invert" />
+ <Logo className="h-11 w-auto sm:h-12" />
  </Link>
  <p className="mt-5 max-w-md text-sm leading-7 text-white/80">{siteConfig.slogan}</p>
  <a

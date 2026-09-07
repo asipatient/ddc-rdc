@@ -7,6 +7,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { navigation, site } from "@/lib/site-data";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Logo } from "@/components/Logo";
 
 type HeaderSiteConfig = typeof site;
 
@@ -102,14 +103,7 @@ export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig })
     <header className="site-header sticky top-0 z-40 border-b backdrop-blur">
       <div className="section-shell flex min-h-20 items-center justify-between gap-3">
         <Link href="/" className="focus-ring flex shrink-0 items-center gap-3 rounded-md" aria-label="Accueil DDC RDC - Dynamique Debout Congolais">
-          <Image
-            src={siteConfig.logoHorizontal ?? siteConfig.logo}
-            alt="Logo DDC RDC - Dynamique Debout Congolais"
-            width={220}
-            height={88}
-            className="site-header-logo h-11 w-auto object-contain sm:h-12 dark:brightness-0 dark:invert"
-            priority
-          />
+          <Logo className="site-header-logo h-11 w-auto sm:h-12" priority />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigation principale">
