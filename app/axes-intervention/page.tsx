@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ContentImage } from "@/components/ContentImage";
@@ -6,10 +6,11 @@ import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
 import { getPublicProgramContent } from "@/lib/program-content";
 
-export const metadata: Metadata = {
- title:"Axes d'intervention",
- description:"Les trois axes d'intervention de la DDC RDC et les programmes associés."
-};
+export const metadata = buildMetadata({
+  title: "Axes d'intervention",
+  description: "Les trois axes d'intervention de la DDC RDC et les programmes associés.",
+  path: "/axes-intervention"
+});
 
 export const dynamic ="force-dynamic";
 
