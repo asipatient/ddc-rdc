@@ -19,9 +19,21 @@ export default function AboutPage() {
  kicker="À propos"
  title="Née d'une conviction. Portée par une génération."
  description="La DDC RDC est une réponse citoyenne à une question simple : pourquoi pas nous ?"
- cta={{ label:"Rejoindre la DDC", href:"/devenir-membre-benevole" }}
+ cta={{ label: "Découvrir notre histoire", href: "/notre-histoire" }}
  image="/images/ddc/osc-droits-socioeconomiques.jpg"
  />
+ <section className="bg-brand-mist dark:bg-surface-muted py-12 sm:py-16">
+   <ScrollReveal>
+     <div className="section-shell max-w-4xl text-center">
+       <h2 className="text-sm font-bold uppercase tracking-[0.14em] text-brand-blue dark:text-brand-gold">
+         Qu&apos;est-ce que la DDC RDC aujourd&apos;hui ?
+       </h2>
+       <p className="mt-5 text-xl sm:text-2xl font-medium leading-relaxed text-foreground">
+         La DDC RDC est une plateforme institutionnelle congolaise d&apos;éveil citoyen, de leadership, d&apos;autonomisation économique, de recherche, de culture, d&apos;environnement, de paix et de développement communautaire.
+       </p>
+     </div>
+   </ScrollReveal>
+ </section>
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -83,7 +95,7 @@ export default function AboutPage() {
  <div className="section-shell grid gap-6 md:grid-cols-3">
  {[
  ["Notre posture","La DDC RDC ne fait pas de politique. Elle forme des citoyens qui, eux, transforment la politique."],
- ["Notre méthode","On ne vient pas avec des solutions toutes faites. On travaille avec les communautés pour qu'elles construisent les leurs."],
+ ["Notre méthode", "Nous ne venons pas avec des solutions toutes faites. Nous travaillons avec les communautés pour qu'elles construisent les leurs."],
  ["Notre ambition","Un Congo où un jeune diplômé de Bukavu a autant de chances qu'ailleurs. Pas dans cinquante ans. Maintenant."]
  ].map(([title, text]) => (
  <article key={title} className="rounded-lg bg-surface-elevated p-6 shadow-sm">
