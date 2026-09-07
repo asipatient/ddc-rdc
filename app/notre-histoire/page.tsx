@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { foundingQuote, historyIntro, historyTimeline } from "@/lib/site-data";
 
-export const metadata: Metadata = {
- title:"Notre histoire",
- description:"Évolution de l'engagement citoyen ayant conduit à la création et à la structuration de la DDC RDC."
-};
+export const metadata = buildMetadata({
+  title: "Notre histoire",
+  description: "Évolution de l'engagement citoyen ayant conduit à la création et à la structuration de la DDC RDC.",
+  path: "/notre-histoire"
+});
 
 export default function HistoryPage() {
  return (
@@ -42,7 +43,7 @@ export default function HistoryPage() {
  <article key={`${item.period}-${item.title}`} className="relative pb-8 last:pb-0">
  <span className="absolute -left-[31px] top-1 h-4 w-4 rounded-full border-4 border-white bg-brand-green shadow" />
  <p className="text-sm font-bold uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
- <h2 className="mt-2 text-2xl font-extrabold text-brand-blue dark:text-foreground">{item.title}</h2>
+ <h3 className="mt-2 text-2xl font-extrabold text-brand-blue dark:text-foreground">{item.title}</h3>
  <p className="mt-3 leading-8 text-foreground-muted">{item.description}</p>
  </article>
  ))}
