@@ -7,9 +7,9 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { aboutIntro, founderProfile, historyTimeline, site } from "@/lib/site-data";
 
 export const metadata = buildMetadata({
- title:"À propos",
- description:"La Dynamique Debout Congolais (DDC RDC) est fondée à Bukavu, Sud-Kivu, engagée pour l'autonomisation des jeunes, des femmes et des communautés congolaises.",
- path:"/a-propos/"
+  title: "À propos",
+  description: "La Dynamique Debout Congolais (DDC RDC) est une organisation engagée pour l'autonomisation des jeunes, des femmes et le développement des communautés à travers la RDC.",
+  path: "/a-propos/"
 });
 
 export default function AboutPage() {
@@ -94,15 +94,16 @@ export default function AboutPage() {
  <ScrollReveal>
  <div className="section-shell grid gap-6 md:grid-cols-3">
  {[
- ["Notre posture","La DDC RDC ne fait pas de politique. Elle forme des citoyens qui, eux, transforment la politique."],
- ["Notre méthode", "Nous ne venons pas avec des solutions toutes faites. Nous travaillons avec les communautés pour qu'elles construisent les leurs."],
- ["Notre ambition","Un Congo où un jeune diplômé de Bukavu a autant de chances qu'ailleurs. Pas dans cinquante ans. Maintenant."]
- ].map(([title, text]) => (
- <article key={title} className="rounded-lg bg-surface-elevated p-6 shadow-sm">
- <h2 className="text-xl font-bold text-brand-blue">{title}</h2>
- <p className="mt-3 text-sm leading-7 text-foreground-muted">{text}</p>
- </article>
- ))}
+  { title: "Notre posture", text: "La DDC RDC ne fait pas de politique. Elle forme des citoyens qui, eux, transforment la politique." },
+  { title: "Notre méthode", text: "Nous ne venons pas avec des solutions toutes faites. Nous travaillons avec les communautés pour qu'elles construisent les leurs." },
+  { title: "Notre ambition", text: "Une République Démocratique du Congo où chaque jeune peut développer ses capacités, prendre sa place dans la société et contribuer pleinement à l'avenir du pays.", subtext: "Notre ambition est nationale : contribuer à une RDC plus forte, où les citoyens et les communautés disposent des moyens d'agir, d'innover et de construire des solutions durables." }
+  ].map(({title, text, subtext}) => (
+  <article key={title} className="rounded-lg bg-surface-elevated p-6 shadow-sm">
+  <h2 className="text-xl font-bold text-brand-blue">{title}</h2>
+  <p className="mt-3 text-sm leading-7 text-foreground-muted">{text}</p>
+  {subtext && <p className="mt-3 text-sm leading-7 text-foreground-muted">{subtext}</p>}
+  </article>
+  ))}
  </div>
  <div className="section-shell mt-10 flex flex-col gap-3 sm:flex-row">
  <ButtonLink href="/vision-mission" variant="secondary">
