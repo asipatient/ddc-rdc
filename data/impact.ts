@@ -51,14 +51,26 @@ export const monitoringLearning = {
 };
 
 export const zonesIntervention = {
-  title: "Ancrage à Bukavu, ambition nationale et africaine",
+  title: "Une présence nationale, au plus près des communautés",
   description:
-    "Ancrée à Bukavu, au Sud-Kivu, la DDC RDC développe des initiatives adaptées aux réalités locales tout en portant une ambition nationale et africaine en matière de citoyenneté, leadership, innovation sociale, culture, environnement et développement communautaire.",
+    "La DDC RDC inscrit son action dans une ambition nationale, avec des membres actifs dans plusieurs provinces et un ancrage historique à Bukavu. Notre présence territoriale se construit progressivement au plus près des réalités et des initiatives des communautés.",
   levels: [
-    "Bukavu et Sud-Kivu",
-    "Expansion locale et provinciale",
-    "Vocation nationale en République Démocratique du Congo",
-    "Ouverture africaine autour de la citoyenneté, culture et innovation sociale"
+    {
+      title: "Action à ambition nationale",
+      description: "Une vision qui inscrit les actions de la DDC RDC dans les enjeux et les dynamiques de la République Démocratique du Congo."
+    },
+    {
+      title: "Membres actifs dans plusieurs provinces",
+      description: "Une présence humaine qui s'étend aujourd'hui à au moins 8 provinces de la RDC."
+    },
+    {
+      title: "Ancrage institutionnel à Bukavu",
+      description: "Le siège social est établi à Bukavu, dans la province du Sud-Kivu."
+    },
+    {
+      title: "Renforcement progressif",
+      description: "L'ouverture prochaine de bureaux provinciaux doit permettre de structurer progressivement la présence territoriale de la DDC RDC."
+    }
   ]
 };
 

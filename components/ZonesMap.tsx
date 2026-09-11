@@ -25,7 +25,7 @@ type ZonesMapProps = {
 };
 
 export function ZonesMap({
-  zoom = 7,
+  zoom = 5,
   popupText = "DDC RDC — Siège social, Bukavu, Sud-Kivu"
 }: ZonesMapProps) {
   return (

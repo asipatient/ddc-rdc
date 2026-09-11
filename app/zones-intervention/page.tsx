@@ -7,10 +7,14 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ZonesMapLoader } from "@/components/ZonesMapLoader";
 import { zonesIntervention } from "@/lib/site-data";
 
-export const metadata: Metadata = {
- title:"Zones d'intervention",
- description:"Ancrage territorial de la DDC RDC à Bukavu, Sud-Kivu, et vocation d'expansion."
-};
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Zones d'intervention",
+  description:
+    "La DDC RDC inscrit son action dans une ambition nationale et compte des membres actifs dans plusieurs provinces de la République Démocratique du Congo.",
+  path: "/zones-intervention",
+});
 
 export default function ZonesInterventionPage() {
  return (
@@ -29,19 +33,36 @@ export default function ZonesInterventionPage() {
  <ZonesMapLoader />
  </div>
  <div>
- <SectionHeading
- eyebrow="Ancrage territorial"
- title="Des initiatives adaptées aux réalités locales."
- description="La DDC RDC part de l'expérience communautaire locale pour construire des actions extensibles, documentées et partenaires."
- />
- <div className="mt-8 grid gap-4">
- {zonesIntervention.levels.map((level) => (
- <div key={level} className="flex items-start gap-3 rounded-lg border border-border p-5">
- <MapPin aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green dark:text-brand-gold" />
- <p className="text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted">{level}</p>
- </div>
- ))}
- </div>
+  <SectionHeading
+    eyebrow="Notre présence territoriale"
+    title="Une présence qui se construit dans les territoires"
+    description="La DDC RDC compte des membres actifs dans au moins 8 provinces de la République Démocratique du Congo : Sud-Kivu, Kinshasa, Nord-Kivu, Kongo Central, Ituri, Haut-Katanga, Maniema et Tanganyika."
+  />
+  <p className="mt-4 max-w-3xl text-base leading-8 text-foreground-muted">
+    L’ouverture prochaine de bureaux provinciaux viendra renforcer
+    progressivement cette présence territoriale.
+  </p>
+  <div className="mt-8 grid gap-4">
+    {zonesIntervention.levels.map((level) => (
+      <div
+        key={level.title}
+        className="flex items-start gap-3 rounded-lg border border-border p-5"
+      >
+        <MapPin
+          aria-hidden="true"
+          className="mt-1 h-5 w-5 flex-none text-brand-green dark:text-brand-gold"
+        />
+        <div>
+          <h3 className="text-sm font-bold leading-7 text-brand-blue dark:text-foreground">
+            {level.title}
+          </h3>
+          <p className="mt-1 text-sm leading-6 text-foreground-muted">
+            {level.description}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
  <ButtonLink href="/programmes" variant="secondary">
  Voir les programmes
