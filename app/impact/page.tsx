@@ -5,13 +5,13 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { IconRenderer } from "@/components/IconRenderer";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
-import { paypalDonationUrl, whySupportDdc, monitoringLearning } from "@/lib/site-data";
+import { paypalDonationUrl, whySupportDdc, monitoringLearning, documentedImpactFacts } from "@/lib/site-data";
 import { getImpactVerificationBadge, getPublicImpactIndicators, getPublicImpactSection } from "@/lib/impact-content";
 import { getPublicTestimonials } from "@/lib/testimonials-content";
 
 export const metadata = buildMetadata({
   title: "Impact",
-  description: "Découvrez les résultats d'impact de la DDC RDC : bénéficiaires formés, femmes autonomisées, enfants sensibilisés et initiatives communautaires réalisées à Bukavu.",
+  description: "Découvrez les résultats d'impact de la DDC RDC : bénéficiaires accompagnés, enfants sensibilisés et initiatives communautaires documentées au plus près des réalités de la RDC.",
   path: "/impact/"
 });
 
@@ -26,7 +26,7 @@ export default async function ImpactPage() {
     <>
       <PageHero
         kicker="Notre impact"
-        title={impactSection.subtitle}
+        title={impactSection.title}
         description={impactSection.text}
         cta={{ label: "Soutenir l'impact", href: paypalDonationUrl }}
         image="/images/ddc/hero-reel-ddc.jpg"
@@ -36,7 +36,7 @@ export default async function ImpactPage() {
           <div className="section-shell">
             <SectionHeading
               eyebrow="Indicateurs"
-              title={impactSection.title}
+              title={impactSection.subtitle}
               description="Nos indicateurs d'impact, avec une évaluation prudente et en cours de structuration."
             />
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -61,7 +61,40 @@ export default async function ImpactPage() {
           </div>
         </ScrollReveal>
       </section>
+
       <section className="bg-surface-muted py-16 sm:py-24">
+        <ScrollReveal>
+          <div className="section-shell">
+            <div className="max-w-3xl">
+              <SectionHeading
+                eyebrow="Faits documentés"
+                title="Une traçabilité de nos interventions sur le terrain"
+                description="Chaque chiffre présenté ici repose sur des activités documentées, avec des éléments de contexte permettant de mieux comprendre où, quand et dans quel cadre notre action a été menée."
+              />
+              <p className="mt-4 text-base leading-7 text-foreground-subtle">
+                Les indicateurs synthétisent les données actuellement consolidées. Les faits documentés ci-dessous donnent un aperçu des activités et résultats qui permettent d’en suivre la réalité sur le terrain.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-4 md:grid-cols-2">
+              {documentedImpactFacts.map((fact, index) => (
+                <div key={index} className="rounded-lg border border-border bg-surface-elevated p-5 shadow-sm">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand/10 text-brand font-bold">
+                      {index + 1}
+                    </div>
+                    <p className="text-base leading-7 text-foreground">
+                      {fact}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      <section className="bg-background py-16 sm:py-24">
         <ScrollReveal>
           <div className="section-shell">
             <div className="max-w-3xl">
