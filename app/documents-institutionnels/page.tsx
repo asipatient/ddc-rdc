@@ -28,15 +28,15 @@ function DocumentGrid({ documents, emptyMessage }: { documents: DocumentItem[], 
     <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {publishedDocs.map((document) => (
         <article key={`${document.category}-${document.title}`} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
-          <FileText aria-hidden="true" className="h-7 w-7 text-brand-green" />
+          <FileText aria-hidden="true" className="h-7 w-7 text-brand-green dark:text-brand-gold" />
           <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{document.category}</p>
           <h2 className="mt-2 text-lg font-extrabold text-brand-blue dark:text-foreground">{document.title}</h2>
           <p className="mt-3 text-sm leading-7 text-foreground-muted">{document.description}</p>
-          <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
+          <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue dark:text-foreground-muted">
             {document.status}
           </p>
           {document.href ? (
-            <a href={document.href} className="focus-ring mt-4 block w-fit rounded-md text-sm font-bold text-brand-green hover:text-brand-blue">
+            <a href={document.href} className="focus-ring mt-4 block w-fit rounded-md text-sm font-bold text-brand-green hover:text-brand-blue dark:text-foreground-muted">
               Ouvrir le document
             </a>
           ) : null}

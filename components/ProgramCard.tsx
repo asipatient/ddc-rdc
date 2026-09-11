@@ -17,7 +17,7 @@ export function ProgramCard({ program }: { program: Program }) {
  {program.targetAudience?.length ? (
  <div className="mt-5 flex flex-wrap gap-2">
  {program.targetAudience.map((audience) => (
- <span key={audience} className="inline-flex items-center rounded-md bg-brand-green/10 px-2.5 py-1 text-xs font-bold uppercase tracking-[0.1em] text-brand-green">
+ <span key={audience} className="inline-flex items-center rounded-md bg-brand-green/10 px-2.5 py-1 text-xs font-bold uppercase tracking-[0.1em] text-brand-green dark:text-brand-gold">
  {audience}
  </span>
  ))}
@@ -30,7 +30,7 @@ export function ProgramCard({ program }: { program: Program }) {
  <ul className="mt-3 space-y-2">
  {program.objectives.map((obj) => (
  <li key={obj} className="text-sm text-foreground-muted flex gap-2">
- <span className="text-brand-green font-semibold mt-0.5">•</span>
+ <span className="text-brand-green dark:text-brand-gold font-semibold mt-0.5">•</span>
  <span>{obj}</span>
  </li>
  ))}
@@ -40,7 +40,7 @@ export function ProgramCard({ program }: { program: Program }) {
 
  <Link
  href={learnMoreHref}
- className="focus-ring mt-6 inline-flex w-fit items-center gap-2 rounded-md text-sm font-bold text-brand-green dark:text-brand-green group-hover:text-brand-blue dark:group-hover:text-foreground transition-colors"
+ className="focus-ring mt-6 inline-flex w-fit items-center gap-2 rounded-md text-sm font-bold text-brand-green dark:text-foreground-muted group-hover:text-brand-blue dark:group-hover:text-foreground transition-colors"
  >
  En savoir plus sur l'axe
  <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />

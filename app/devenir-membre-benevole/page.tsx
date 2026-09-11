@@ -36,7 +36,7 @@ export default function MemberVolunteerPage() {
  </p>
  ))}
  </div>
- <p className="mt-8 text-base font-bold text-brand-green">{memberVolunteerLetter.signature}</p>
+ <p className="mt-8 text-base font-bold text-brand-green dark:text-brand-gold">{memberVolunteerLetter.signature}</p>
  </div>
  </ScrollReveal>
  </section>
@@ -53,7 +53,7 @@ export default function MemberVolunteerPage() {
  <div className="mt-8 grid gap-3">
  {membershipInterestDomains.map((domain) => (
  <p key={domain} className="flex items-center gap-3 rounded-lg bg-surface-elevated p-4 text-sm font-bold text-brand-blue dark:text-foreground-muted shadow-sm">
- <CheckCircle2 aria-hidden="true" className="h-5 w-5 flex-none text-brand-green" />
+ <CheckCircle2 aria-hidden="true" className="h-5 w-5 flex-none text-brand-green dark:text-brand-gold" />
  {domain}
  </p>
  ))}

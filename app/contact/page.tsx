@@ -35,15 +35,15 @@ export default async function ContactPage() {
  <SectionHeading eyebrow="Coordonnées officielles" title="Une équipe disponible pour orienter les demandes." />
  <div className="mt-8 space-y-4 rounded-lg bg-brand-mist dark:bg-surface-muted p-6">
  <p className="flex items-start gap-3 text-sm font-semibold leading-7 text-foreground-muted">
- <MapPin aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
+ <MapPin aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green dark:text-brand-gold" />
  {site.contact.address}
  </p>
  <p className="flex items-center gap-3 text-sm font-semibold text-foreground-muted">
- <Phone aria-hidden="true" className="h-5 w-5 text-brand-green" />
+ <Phone aria-hidden="true" className="h-5 w-5 text-brand-green dark:text-brand-gold" />
  {site.contact.phone}
  </p>
  <p className="flex items-center gap-3 text-sm font-semibold text-foreground-muted">
- <Mail aria-hidden="true" className="h-5 w-5 text-brand-green" />
+ <Mail aria-hidden="true" className="h-5 w-5 text-brand-green dark:text-brand-gold" />
  {site.contact.email}
  </p>
  </div>
@@ -57,7 +57,7 @@ export default async function ContactPage() {
  href={social.url}
  target="_blank"
  rel="noopener noreferrer"
- className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-md border border-border text-brand-blue transition hover:bg-brand-blue hover:text-white"
+ className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-md border border-border text-brand-blue dark:text-foreground transition hover:bg-brand-blue hover:text-white"
  aria-label={social.label}
  title={social.label}
  >

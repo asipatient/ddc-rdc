@@ -40,11 +40,11 @@ export default function PressPage() {
                 <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                   {publishedPressDocs.map((resource) => (
                     <article key={resource.title} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
-                      <Newspaper aria-hidden="true" className="h-7 w-7 text-brand-green" />
+                      <Newspaper aria-hidden="true" className="h-7 w-7 text-brand-green dark:text-brand-gold" />
                       <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{resource.category}</p>
                       <h2 className="mt-2 text-lg font-bold text-brand-blue dark:text-foreground">{resource.title}</h2>
                       <p className="mt-3 text-sm leading-7 text-foreground-muted">{resource.description}</p>
-                      <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
+                      <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue dark:text-foreground-muted">
                         {resource.status}
                       </p>
                     </article>
@@ -68,13 +68,13 @@ export default function PressPage() {
  />
  <div className="mt-7 rounded-lg bg-surface-elevated p-6 shadow-sm">
  <p className="flex items-center gap-3 text-sm font-bold text-brand-blue dark:text-foreground-muted">
- <Mail aria-hidden="true" className="h-5 w-5 text-brand-green" />
+ <Mail aria-hidden="true" className="h-5 w-5 text-brand-green dark:text-brand-gold" />
  {officialContact.email}
  </p>
  </div>
  </div>
  <div className="rounded-lg border border-dashed border-border-strong bg-surface-elevated p-8 text-center">
- <Newspaper aria-hidden="true" className="mx-auto h-10 w-10 text-brand-green" />
+ <Newspaper aria-hidden="true" className="mx-auto h-10 w-10 text-brand-green dark:text-brand-gold" />
  <h2 className="mt-4 text-2xl font-bold text-brand-blue dark:text-foreground">Dossier de presse</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">
  Dossier de presse disponible sur demande. Pour toute demande médiatique, contactez-nous à {officialContact.email} ou au {officialContact.phone}.

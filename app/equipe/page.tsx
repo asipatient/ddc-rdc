@@ -46,13 +46,13 @@ export default async function TeamPage() {
  )}
  </div>
  <h2 className="mt-5 text-xl font-extrabold text-brand-blue dark:text-foreground">{member.name}</h2>
- <p className="mt-1 text-sm font-bold text-brand-green">{member.role}</p>
+ <p className="mt-1 text-sm font-bold text-brand-green dark:text-foreground-muted">{member.role}</p>
  {member.roleDescription ? (
  <p className="mt-3 text-sm font-semibold leading-6 text-brand-blue dark:text-foreground-muted">{member.roleDescription}</p>
  ) : null}
  <p className="mt-4 text-sm leading-7 text-foreground-muted">{member.bio}</p>
  {member.contactHref && member.contactHref !=="#" ? (
- <a href={member.contactHref} className="focus-ring mt-4 inline-flex rounded-md text-sm font-bold text-brand-blue hover:text-brand-green">
+ <a href={member.contactHref} className="focus-ring mt-4 inline-flex rounded-md text-sm font-bold text-brand-blue dark:text-foreground-muted hover:text-brand-green">
  {member.contactLabel}
  </a>
  ) : null}

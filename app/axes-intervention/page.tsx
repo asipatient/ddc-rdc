@@ -44,10 +44,10 @@ export default async function AxesInterventionPage() {
  </div>
  </div>
  <div>
- <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue">
+ <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue dark:text-foreground">
  <IconRenderer icon={axis.icon} className="h-6 w-6" />
  </div>
- <p className="mt-5 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-green">Axe {index + 1}</p>
+ <p className="mt-5 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-green dark:text-brand-gold">Axe {index + 1}</p>
  <h2 className="mt-3 text-3xl font-extrabold leading-tight text-brand-blue dark:text-foreground">{axis.title}</h2>
  <p className="mt-4 leading-8 text-foreground-muted">{axis.description}</p>
  <div className="mt-7 grid gap-4">

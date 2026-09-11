@@ -226,7 +226,7 @@ export default async function PublicationDetailPage({ params }: Props) {
  {publication.relatedAxis && (
  <p className="mt-2 text-sm font-medium text-white/70">Axe : {publication.relatedAxis}</p>
  )}
- <ButtonLink href="/programmes" variant="primary" className="mt-6 w-full justify-center bg-surface-elevated text-brand-blue hover:bg-surface-muted">
+ <ButtonLink href="/programmes" variant="primary" className="mt-6 w-full justify-center bg-surface-elevated text-brand-blue dark:text-foreground hover:bg-surface-muted">
  Découvrir le programme
  </ButtonLink>
  </div>

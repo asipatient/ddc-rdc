@@ -45,11 +45,11 @@ export default function OpportunitiesPage() {
                 <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
                   {openOpportunities.map((opportunity) => (
                     <article key={opportunity.title} className="rounded-lg border border-border p-6 shadow-sm">
-                      <CalendarDays aria-hidden="true" className="h-7 w-7 text-brand-green" />
+                      <CalendarDays aria-hidden="true" className="h-7 w-7 text-brand-green dark:text-brand-gold" />
                       <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{opportunity.audience}</p>
                       <h2 className="mt-2 text-lg font-bold text-brand-blue dark:text-foreground">{opportunity.title}</h2>
                       <p className="mt-3 text-sm leading-7 text-foreground-muted">{opportunity.description}</p>
-                      <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue">
+                      <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue dark:text-foreground-muted">
                         {opportunity.status}
                       </p>
                     </article>

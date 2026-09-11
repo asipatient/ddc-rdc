@@ -23,7 +23,7 @@ export default function PrinciplesPage() {
  <div className="section-shell grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
  {principles.map((principle) => (
  <div key={principle} className="flex items-start gap-3 rounded-lg bg-surface-elevated p-5 shadow-sm">
- <CheckCircle2 aria-hidden="true" className="mt-0.5 h-5 w-5 flex-none text-brand-green" />
+ <CheckCircle2 aria-hidden="true" className="mt-0.5 h-5 w-5 flex-none text-brand-green dark:text-brand-gold" />
  <p className="text-sm font-bold leading-7 text-brand-blue dark:text-foreground-muted">{principle}</p>
  </div>
  ))}

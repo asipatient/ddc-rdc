@@ -32,7 +32,7 @@ export default function VisionMissionPage() {
  <p className="mt-5 leading-8 text-white/80">{home.vision}</p>
  </article>
  <article className="rounded-lg border border-border bg-surface-elevated p-8 shadow-soft sm:p-10">
- <Target aria-hidden="true" className="h-10 w-10 text-brand-green" />
+ <Target aria-hidden="true" className="h-10 w-10 text-brand-green dark:text-brand-gold" />
  <h2 className="mt-5 text-3xl font-bold text-brand-blue dark:text-foreground">Notre mission</h2>
  <p className="mt-5 leading-8 text-foreground-muted">{home.mission}</p>
  </article>
@@ -73,7 +73,7 @@ export default function VisionMissionPage() {
  />
  <div className="mt-10 rounded-lg border border-border bg-brand-mist dark:bg-surface-muted p-8 shadow-sm">
  <div className="flex items-start gap-4">
- <MapPin aria-hidden="true" className="mt-1 h-6 w-6 flex-none text-brand-green" />
+ <MapPin aria-hidden="true" className="mt-1 h-6 w-6 flex-none text-brand-green dark:text-brand-gold" />
  <div>
  <h3 className="text-lg font-bold text-brand-blue dark:text-foreground">Présence à Bukavu et au-delà</h3>
  <p className="mt-3 text-base leading-8 text-foreground-muted">

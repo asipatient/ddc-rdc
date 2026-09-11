@@ -46,7 +46,7 @@ function SubmitButton() {
  <button
  type="submit"
  disabled={pending}
- className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-brand-gold px-4 py-3 text-sm font-bold text-brand-blue transition hover:bg-surface-elevated disabled:cursor-not-allowed disabled:opacity-60"
+ className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-brand-gold px-4 py-3 text-sm font-bold text-brand-blue dark:text-foreground-muted transition hover:bg-surface-elevated disabled:cursor-not-allowed disabled:opacity-60"
  >
  {pending ? <span className="form-spinner" aria-hidden="true" /> : <Send aria-hidden="true" className="h-4 w-4" />}
  {pending ?"Envoi..." :"S'inscrire"}

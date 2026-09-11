@@ -23,7 +23,7 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
  <div className="absolute inset-0 bg-brand-blue/25" />
  </div>
  <div className="flex flex-1 flex-col p-6">
- <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue transition-colors duration-300 group-hover:bg-brand-gold group-hover:text-white">
+ <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue dark:text-foreground transition-colors duration-300 group-hover:bg-brand-gold group-hover:text-white">
  <IconRenderer icon={axis.icon} className="h-6 w-6" />
  </div>
  <h3 className="mt-5 text-xl font-semibold leading-tight text-brand-blue dark:text-foreground">{axis.title}</h3>
@@ -34,7 +34,7 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
  <p><strong className="text-brand-gold">Le problème :</strong> <span className="text-foreground-muted">{axis.problem}</span></p>
  )}
  {axis.action && (
- <p><strong className="text-brand-green">Notre action :</strong> <span className="text-foreground-muted">{axis.action}</span></p>
+ <p><strong className="text-brand-green dark:text-brand-gold">Notre action :</strong> <span className="text-foreground-muted">{axis.action}</span></p>
  )}
  {axis.result && (
  <p><strong className="text-brand-blue dark:text-foreground-muted">Le résultat :</strong> <span className="text-foreground-muted">{axis.result}</span></p>
@@ -43,7 +43,7 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
  )}
 
  <div className="mt-6 border-t border-slate-100 pt-5">
- <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-green">Programmes associés</p>
+ <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-green dark:text-brand-gold">Programmes associés</p>
  <ul className="mt-3 space-y-2">
  {programs.map((program) => (
  <li key={program.slug} className="text-sm font-semibold text-foreground-muted">
@@ -54,7 +54,7 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
  </div>
  <Link
  href={`/axes-intervention#${axis.slug}`}
- className="focus-ring mt-6 inline-flex w-fit items-center gap-2 rounded-md text-sm font-bold text-brand-green dark:text-brand-green hover:text-brand-blue dark:hover:text-foreground"
+ className="focus-ring mt-6 inline-flex w-fit items-center gap-2 rounded-md text-sm font-bold text-brand-green dark:text-foreground-muted hover:text-brand-blue dark:hover:text-foreground"
  >
  Découvrir cet axe
  <ArrowRight aria-hidden="true" className="h-4 w-4" />

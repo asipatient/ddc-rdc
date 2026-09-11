@@ -42,7 +42,7 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
  />
  </div>
  <div className="flex flex-1 flex-col p-6">
- <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-brand-green">
+ <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-brand-green dark:text-brand-gold">
  <CalendarDays aria-hidden="true" className="h-4 w-4" />
  {realisation.dateLabel}
  </p>
@@ -73,7 +73,7 @@ export function RealisationCard({ realisation, compact = false }: { realisation:
  ) : null}
  <Link
  href={`/publications/${realisation.slug}`}
- className="focus-ring mt-5 inline-flex w-fit rounded-md text-sm font-bold text-brand-green dark:text-brand-green hover:text-brand-blue dark:hover:text-foreground"
+ className="focus-ring mt-5 inline-flex w-fit rounded-md text-sm font-bold text-brand-green dark:text-foreground-muted hover:text-brand-blue dark:hover:text-foreground"
  >
  Lire la fiche
  </Link>

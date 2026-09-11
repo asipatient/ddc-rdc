@@ -4,7 +4,7 @@ export default function NotFound() {
  return (
  <section className="bg-background py-24">
  <div className="section-shell max-w-3xl text-center">
- <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-green">Page introuvable</p>
+ <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-green dark:text-brand-gold">Page introuvable</p>
  <h1 className="mt-4 text-4xl font-extrabold text-brand-blue dark:text-foreground">La page demandée n&apos;existe pas.</h1>
  <p className="mt-4 leading-8 text-foreground-muted">Vous pouvez revenir à l&apos;accueil ou consulter les publications disponibles.</p>
  <div className="mt-8">

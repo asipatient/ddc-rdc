@@ -71,8 +71,8 @@ export default function AboutPage() {
  <div className="mt-7 grid gap-3">
  {historyTimeline.slice(2, 6).map((item) => (
  <div key={item.period} className="rounded-lg border border-border p-4">
- <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green">{item.period}</p>
- <h2 className="mt-2 text-base font-bold text-brand-blue">{item.title}</h2>
+ <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-green dark:text-brand-gold">{item.period}</p>
+ <h2 className="mt-2 text-base font-bold text-brand-blue dark:text-foreground">{item.title}</h2>
  <p className="mt-2 text-sm leading-7 text-foreground-muted">{item.description}</p>
  </div>
  ))}
@@ -99,7 +99,7 @@ export default function AboutPage() {
   { title: "Notre ambition", text: "Une République Démocratique du Congo où chaque jeune peut développer ses capacités, prendre sa place dans la société et contribuer pleinement à l'avenir du pays.", subtext: "Notre ambition est nationale : contribuer à une RDC plus forte, où les citoyens et les communautés disposent des moyens d'agir, d'innover et de construire des solutions durables." }
   ].map(({title, text, subtext}) => (
   <article key={title} className="rounded-lg bg-surface-elevated p-6 shadow-sm">
-  <h2 className="text-xl font-bold text-brand-blue">{title}</h2>
+  <h2 className="text-xl font-bold text-brand-blue dark:text-foreground">{title}</h2>
   <p className="mt-3 text-sm leading-7 text-foreground-muted">{text}</p>
   {subtext && <p className="mt-3 text-sm leading-7 text-foreground-muted">{subtext}</p>}
   </article>

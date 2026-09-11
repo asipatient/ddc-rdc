@@ -275,15 +275,15 @@ export default async function HomePage() {
  />
  <div className="mt-8 space-y-4 text-sm text-foreground-muted">
  <p className="flex items-center gap-3">
- <MapPin aria-hidden="true" className="h-5 w-5 text-brand-green" />
+ <MapPin aria-hidden="true" className="h-5 w-5 text-brand-green dark:text-brand-gold" />
  {siteConfig.contact.address}
  </p>
  <p className="flex items-center gap-3">
- <Phone aria-hidden="true" className="h-5 w-5 text-brand-green" />
+ <Phone aria-hidden="true" className="h-5 w-5 text-brand-green dark:text-brand-gold" />
  {siteConfig.contact.phone}
  </p>
  <p className="flex items-center gap-3">
- <Mail aria-hidden="true" className="h-5 w-5 text-brand-green" />
+ <Mail aria-hidden="true" className="h-5 w-5 text-brand-green dark:text-brand-gold" />
  {siteConfig.contact.email}
  </p>
  </div>

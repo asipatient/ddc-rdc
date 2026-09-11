@@ -89,7 +89,7 @@ export default async function DonatePage() {
  <div className="mt-8 grid gap-3">
  {donationPage.contributionExamples.map((item) => (
  <p key={item} className="flex items-start gap-3 rounded-lg bg-brand-mist dark:bg-surface-muted p-4 text-sm font-semibold leading-7 text-foreground-muted">
- <CheckCircle2 aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green" />
+ <CheckCircle2 aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-brand-green dark:text-brand-gold" />
  {item}
  </p>
  ))}

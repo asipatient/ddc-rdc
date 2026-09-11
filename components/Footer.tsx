@@ -46,7 +46,7 @@ export function Footer({ siteConfig = site }: { siteConfig?: FooterSiteConfig })
  href={siteConfig.donationUrl}
  target="_blank"
  rel="noopener noreferrer"
- className="focus-ring mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-brand-gold px-5 py-3 text-sm font-bold text-brand-blue transition hover:bg-surface-elevated"
+ className="focus-ring mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-brand-gold px-5 py-3 text-sm font-bold text-brand-blue dark:text-foreground-muted transition hover:bg-surface-elevated"
  >
  Soutenir notre action
  </a>

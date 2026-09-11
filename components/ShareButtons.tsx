@@ -21,13 +21,13 @@ export function ShareButtons({ url, title }: { url: string; title: string }) {
 
  return (
  <div className="flex flex-wrap items-center gap-3">
- <span className="text-sm font-bold text-brand-blue">Partager :</span>
+ <span className="text-sm font-bold text-brand-blue dark:text-foreground-muted">Partager :</span>
  <a
  href={facebookHref}
  target="_blank"
  rel="noopener noreferrer"
  aria-label="Partager sur Facebook"
- className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-brand-blue transition hover:border-brand-gold hover:text-brand-green"
+ className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-brand-blue dark:text-foreground transition hover:border-brand-gold hover:text-brand-green"
  >
  <Facebook aria-hidden="true" className="h-4 w-4" />
  </a>
@@ -36,7 +36,7 @@ export function ShareButtons({ url, title }: { url: string; title: string }) {
  target="_blank"
  rel="noopener noreferrer"
  aria-label="Partager sur X"
- className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-brand-blue transition hover:border-brand-gold hover:text-brand-green"
+ className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-brand-blue dark:text-foreground transition hover:border-brand-gold hover:text-brand-green"
  >
  <Twitter aria-hidden="true" className="h-4 w-4" />
  </a>
@@ -44,7 +44,7 @@ export function ShareButtons({ url, title }: { url: string; title: string }) {
  type="button"
  onClick={handleCopyLink}
  aria-label="Copier le lien"
- className="focus-ring inline-flex h-10 items-center gap-2 rounded-md border border-border px-3 text-sm font-bold text-brand-blue transition hover:border-brand-gold hover:text-brand-green"
+ className="focus-ring inline-flex h-10 items-center gap-2 rounded-md border border-border px-3 text-sm font-bold text-brand-blue dark:text-foreground-muted transition hover:border-brand-gold hover:text-brand-green"
  >
  {copied ? <Check aria-hidden="true" className="h-4 w-4" /> : <Copy aria-hidden="true" className="h-4 w-4" />}
  {copied ?"Lien copié !" :"Copier le lien"}

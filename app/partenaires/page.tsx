@@ -42,7 +42,7 @@ export default async function PartnersPage() {
  <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
  {partnerCategories.map((category) => (
  <article key={category.title} className="rounded-lg border border-border p-6 shadow-sm">
- <IconRenderer icon={category.icon} className="h-7 w-7 text-brand-green" />
+ <IconRenderer icon={category.icon} className="h-7 w-7 text-brand-green dark:text-brand-gold" />
  <h2 className="mt-5 text-xl font-bold text-brand-blue dark:text-foreground">{category.title}</h2>
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{category.description}</p>
  </article>
@@ -65,10 +65,10 @@ export default async function PartnersPage() {
                       {partner.logo ? <ContentImage src={partner.logo} alt={partner.name} fill sizes="128px" className="object-contain p-3" /> : null}
                     </div>
                     <h2 className="mt-4 text-base font-bold text-brand-blue dark:text-foreground">{partner.name}</h2>
-                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-brand-green">{partner.partnershipType}</p>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-brand-green dark:text-brand-gold">{partner.partnershipType}</p>
                     {partner.description ? <p className="mt-3 text-sm leading-6 text-foreground-muted">{partner.description}</p> : null}
                     {partner.website ? (
-                      <a href={partner.website} className="focus-ring mt-3 inline-flex rounded-md text-sm font-bold text-brand-blue hover:text-brand-green">
+                      <a href={partner.website} className="focus-ring mt-3 inline-flex rounded-md text-sm font-bold text-brand-blue dark:text-foreground-muted hover:text-brand-green">
                         Site web
                       </a>
                     ) : null}
