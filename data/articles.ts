@@ -4,6 +4,35 @@ const reviewDate = "2026-05-18T00:00:00.000Z";
 
 export const activityArticles: ActivityArticle[] = [
   {
+    id: "article-2016-01",
+    title: "Première formation de jeunes en informatique et anglais",
+    slug: "premiere-formation-jeunes-informatique-anglais-2016",
+    date: "2016-01-01",
+    period: "2016",
+    category: "Événements",
+    excerpt: "Première cohorte documentée de jeunes formés en informatique et en anglais en 2016.",
+    content: [
+      "En 2016, la DDC RDC a organisé une première formation destinée à une cohorte de jeunes.",
+      "Cette initiative a porté sur l'informatique et l'apprentissage de l'anglais et a concerné 20 jeunes."
+    ],
+    objectives: [
+      "Initier les jeunes à l'informatique.",
+      "Renforcer l'apprentissage de l'anglais."
+    ],
+    targetAudience: ["Jeunes"],
+    impact: ["20 jeunes formés."],
+    location: "",
+    partners: [],
+    relatedAxis: "",
+    relatedProgram: "",
+    image: "",
+    gallery: [],
+    status: "published",
+    needsReview: true,
+    createdAt: reviewDate,
+    updatedAt: reviewDate
+  },
+  {
     id: "article-001",
     title: "Formation communautaire sur les droits et devoirs du citoyen",
     slug: "formation-droits-devoirs-citoyen-janvier-2023",

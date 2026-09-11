@@ -8,7 +8,7 @@ import { getPublicRealisations } from "@/lib/realisations";
 
 export const metadata = buildMetadata({
   title: "Réalisations",
-  description: "Les réalisations documentées de la DDC RDC : ateliers interculturels, activités citoyennes, sensibilisation des enfants et mobilisation communautaire à Bukavu.",
+  description: "Les réalisations documentées de la DDC RDC : ateliers interculturels, actions citoyennes, sensibilisation et mobilisation communautaire au plus près du terrain.",
   path: "/realisations/"
 });
 
