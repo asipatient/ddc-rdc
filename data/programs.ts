@@ -26,7 +26,7 @@ export const flagshipPrograms: Program[] = [
     icon: "radar",
     axisSlug: "gouvernance-citoyennete-transformation-sociale",
     description:
-      "Ce programme vise à structurer des mécanismes d'alerte précoce et de veille citoyenne pour anticiper les risques et protéger les populations."
+      "Ce programme structure des mécanismes d'alerte précoce et de veille citoyenne pour anticiper les risques et protéger les populations."
   },
   {
     slug: "projec",
@@ -62,7 +62,7 @@ export const flagshipPrograms: Program[] = [
     icon: "palette",
     axisSlug: "identite-inclusion-capital-humain",
     description:
-      "Kongo Culture valorise et protège le patrimoine culturel congolais, en faisant de la culture un levier d'identité, de dialogue et de cohésion sociale."
+      "Kongo Culture protège et valorise le patrimoine congolais pour en faire un levier de dialogue et de cohésion sociale."
   },
   {
     slug: "creative-child",
@@ -71,7 +71,7 @@ export const flagshipPrograms: Program[] = [
     icon: "sparkles",
     axisSlug: "identite-inclusion-capital-humain",
     description:
-      "Creative Child sensibilise et encourage l'éducation culturelle, citoyenne et créative des enfants."
+      "Creative Child accompagne les enfants à travers une éducation culturelle, citoyenne et créative."
   }
 ];
 

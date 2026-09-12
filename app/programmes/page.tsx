@@ -22,9 +22,9 @@ export default async function ProgramsPage() {
  <>
  <PageHero
  kicker="Programmes"
- title="Huit programmes phares alignés sur les trois axes d'intervention."
- description="Les programmes de la DDC RDC transforment les priorités institutionnelles en parcours de formation, recherche, incubation, alerte, culture, inclusion et action communautaire."
- cta={{ label:"Soutenir nos actions", href: paypalDonationUrl }}
+ title="Nos 8 programmes d'action."
+ description="La DDC RDC déploie huit programmes sur le terrain pour former, accompagner et mobiliser les jeunes, les femmes et les communautés."
+ cta={{ label:"Nous soutenir", href: paypalDonationUrl }}
  image="/images/ddc/activite-formation-ddc.webp"
  />
  <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
@@ -54,7 +54,7 @@ export default async function ProgramsPage() {
  <div>
  <SectionHeading
  eyebrow="Moyens d'action"
- title="Former, documenter, mobiliser, créer des réseaux et appuyer les initiatives locales."
+ title="Former, mobiliser et appuyer les initiatives locales."
  />
  <div className="mt-7 flex flex-col gap-3 sm:flex-row">
  <ButtonLink href="/devenir-membre-benevole" variant="secondary">

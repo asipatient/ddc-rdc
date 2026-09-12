@@ -9,7 +9,7 @@ export function ProgramCard({ program }: { program: Program }) {
  return (
  <article id={program.slug} className="card group flex h-full flex-col p-6 rounded-2xl border border-border bg-surface-elevated hover:border-brand-blue/30 shadow-sm hover:shadow-md transition-all card-interactive">
  <div className="flex items-center gap-4">
- <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-mist dark:bg-surface-muted text-brand-blue transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white">
+ <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-mist dark:bg-surface-muted text-brand-blue dark:text-foreground transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white dark:group-hover:bg-accent dark:group-hover:text-white">
  <IconRenderer icon={program.icon} className="h-7 w-7" />
  </div>
  <h3 className="text-xl font-semibold leading-tight text-brand-blue dark:text-foreground">{program.title}</h3>
@@ -42,7 +42,7 @@ export function ProgramCard({ program }: { program: Program }) {
  href={learnMoreHref}
  className="focus-ring mt-6 inline-flex w-fit items-center gap-2 rounded-md text-sm font-bold text-brand-green dark:text-foreground-muted group-hover:text-brand-blue dark:group-hover:text-foreground transition-colors"
  >
- En savoir plus sur l'axe
+ Découvrir cet axe
  <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
  </Link>
  </article>
