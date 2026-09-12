@@ -8,9 +8,9 @@ import { actionMeans, paypalDonationUrl } from "@/lib/site-data";
 import { getPublicProgramContent } from "@/lib/program-content";
 
 export const metadata = buildMetadata({
- title:"Programmes",
- description:"JASIRI, PROJEC, École Citoyenne, Alerte Précoce — découvrez les 8 programmes fondateurs de la DDC RDC pour la jeunesse, les femmes et les communautés du Congo.",
- path:"/programmes/"
+ title: "Programmes",
+ description: "JASIRI, PROJEC, École Citoyenne, Programme d'Alerte Communautaire — découvrez les 8 programmes de la DDC RDC pour la jeunesse, les femmes et les communautés en RDC.",
+ path: "/programmes/"
 });
 
 export const dynamic ="force-dynamic";
