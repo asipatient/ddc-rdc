@@ -22,7 +22,7 @@ export default async function AxesInterventionPage() {
  <PageHero
  kicker="Axes d'intervention"
  title="Trois axes pour structurer l'action de la DDC RDC."
- description="Ces axes organisent les interventions autour de la gouvernance citoyenne, de la résilience économique et du développement du capital humain."
+ description="Ces trois axes structurent l’action de la DDC RDC autour de la citoyenneté et du leadership, de l’autonomie et de l’entrepreneuriat, ainsi que de la culture et de l’inclusion."
  cta={{ label:"Voir les programmes", href:"/programmes" }}
  image="/images/ddc/hero3.jpg"
  />
