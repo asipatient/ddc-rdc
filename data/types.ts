@@ -111,6 +111,7 @@ export type Program = {
 
 export type Axis = {
   slug: string;
+  shortTitle: string;
   title: string;
   description: string;
   problem?: string;

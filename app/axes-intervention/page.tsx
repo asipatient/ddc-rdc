@@ -8,7 +8,7 @@ import { getPublicProgramContent } from "@/lib/program-content";
 
 export const metadata = buildMetadata({
   title: "Axes d'intervention",
-  description: "Les trois axes d'intervention de la DDC RDC et les programmes associés.",
+  description: "Citoyenneté & leadership, Autonomie & entrepreneuriat, Culture & inclusion : découvrez les trois axes d'intervention de la DDC RDC.",
   path: "/axes-intervention"
 });
 
@@ -48,7 +48,10 @@ export default async function AxesInterventionPage() {
  <IconRenderer icon={axis.icon} className="h-6 w-6" />
  </div>
  <p className="mt-5 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-green dark:text-brand-gold">Axe {index + 1}</p>
- <h2 className="mt-3 text-3xl font-extrabold leading-tight text-brand-blue dark:text-foreground">{axis.title}</h2>
+ <h2 className="mt-3 text-3xl font-extrabold leading-tight text-brand-blue dark:text-foreground">{axis.shortTitle || axis.title}</h2>
+ {axis.shortTitle && (
+   <p className="mt-2 text-lg font-semibold text-brand-green dark:text-brand-gold">{axis.title}</p>
+ )}
  <p className="mt-4 leading-8 text-foreground-muted">{axis.description}</p>
  <div className="mt-7 grid gap-4">
  {axisPrograms.map((program) => (

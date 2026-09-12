@@ -3,7 +3,8 @@ import type { Axis } from "./types";
 export const axes: Axis[] = [
   {
     slug: "gouvernance-citoyennete-transformation-sociale",
-    title: "Gouvernance, citoyenneté et transformation sociale",
+    shortTitle: "Citoyenneté & leadership",
+    title: "Citoyenneté, démocratie et implication citoyenne",
     icon: "landmark",
     image: "/images/ddc/osc-droits-socioeconomiques.jpg",
     description:
@@ -15,7 +16,8 @@ export const axes: Axis[] = [
   },
   {
     slug: "autonomisation-economique-resilience",
-    title: "Autonomisation économique et résilience",
+    shortTitle: "Autonomie & entrepreneuriat",
+    title: "Autonomisation économique, entrepreneuriat et solutions écologiques",
     icon: "briefcase",
     image: "/images/ddc/salongo-communautaire.jpg",
     description:
@@ -27,11 +29,12 @@ export const axes: Axis[] = [
   },
   {
     slug: "identite-inclusion-capital-humain",
-    title: "Identité, inclusion et capital humain",
+    shortTitle: "Culture & inclusion",
+    title: "Culture, inclusion et développement des capacités",
     icon: "handshake",
     image: "/images/ddc/jeunesse-culture-echange.jpg",
     description:
-      "Valoriser le patrimoine culturel, renforcer l'inclusion et développer les capacités des enfants, des femmes et des communautés pour contribuer à une société congolaise plus cohésive.",
+      "Valoriser le patrimoine culturel, renforcer l’inclusion et développer les capacités des enfants, des femmes et des communautés pour contribuer à une société congolaise plus cohésive.",
     problem: "Marginalisation de certains groupes et dévalorisation du patrimoine culturel local.",
     action: "Nous promouvons l'inclusion, l'éducation de qualité et la valorisation culturelle.",
     result: "Une société plus cohésive, fière de son identité et offrant des chances égales à tous.",

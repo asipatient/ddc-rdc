@@ -12,6 +12,7 @@ export async function getPublicProgramContent() {
     .sort((a, b) => (a.order || 999) - (b.order || 999))
     .map((axis) => ({
       slug: axis.slug,
+      shortTitle: axis.shortTitle || axis.title,
       title: axis.title,
       description: axis.content || axis.excerpt || "",
       icon: normalizeIcon(axis.icon, "target"),

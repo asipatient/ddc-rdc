@@ -61,6 +61,7 @@ export type AdminProgram = BaseContent & {
 };
 
 export type AdminAxis = BaseContent & {
+  shortTitle?: string;
   programIds?: string[];
   icon?: string;
   order?: number;
