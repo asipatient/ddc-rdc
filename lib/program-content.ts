@@ -10,16 +10,19 @@ export async function getPublicProgramContent() {
   const adminAxes: Axis[] = store.axes
     .filter((axis) => axis.status === "published")
     .sort((a, b) => (a.order || 999) - (b.order || 999))
-    .map((axis) => ({
-      slug: axis.slug,
-      shortTitle: axis.shortTitle || axis.title,
-      title: axis.title,
-      description: axis.content || axis.excerpt || "",
-      icon: normalizeIcon(axis.icon, "target"),
-      image: axis.image || "/images/ddc/conference-citoyenne.jpg",
-      programSlugs: (axis.programIds || []).map((program) => slugify(program)),
-      order: axis.order
-    }));
+    .map((axis) => {
+      const staticAxis = staticAxes.find((a) => a.slug === axis.slug);
+      return {
+        slug: axis.slug,
+        shortTitle: staticAxis?.shortTitle || axis.shortTitle || axis.title,
+        title: staticAxis?.title || axis.title,
+        description: axis.content || axis.excerpt || staticAxis?.description || "",
+        icon: normalizeIcon(axis.icon, "target"),
+        image: axis.image || "/images/ddc/conference-citoyenne.jpg",
+        programSlugs: (axis.programIds || []).map((program) => slugify(program)),
+        order: axis.order
+      };
+    });
   const axisSlugByKey = new Map<string, string>();
   adminAxes.forEach((axis) => {
     axisSlugByKey.set(axis.slug, axis.slug);

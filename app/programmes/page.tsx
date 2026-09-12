@@ -35,7 +35,7 @@ export default async function ProgramsPage() {
 
  return (
  <div key={axis.slug} id={axis.slug}>
- <SectionHeading eyebrow="Axe d'intervention" title={axis.title} description={axis.description} />
+ <SectionHeading eyebrow="Axe d'intervention" title={axis.shortTitle || axis.title} description={axis.description} />
  <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
  {axisPrograms.map((program) => (
  <ProgramCard key={program.slug} program={program} />
