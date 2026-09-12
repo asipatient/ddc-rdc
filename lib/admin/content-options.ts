@@ -14,15 +14,15 @@ export const programOptions = [
 export const axisOptions = [
   { label: "À compléter", value: "" },
   {
-    label: "Gouvernance, citoyenneté et transformation sociale",
+    label: "Citoyenneté & leadership",
     value: "Gouvernance, citoyenneté et transformation sociale"
   },
   {
-    label: "Autonomisation économique et résilience",
+    label: "Autonomie & entrepreneuriat",
     value: "Autonomisation économique et résilience"
   },
   {
-    label: "Identité, inclusion et capital humain",
+    label: "Culture & inclusion",
     value: "Identité, inclusion et capital humain"
   }
 ];

@@ -79,17 +79,17 @@ export const strategicPlan = {
   note: "Dix priorités qui structurent la feuille de route triennale de la DDC RDC.",
   items: [
     {
-      title: "Gouvernance, citoyenneté et transformation sociale",
+      title: "Citoyenneté & leadership",
       description:
         "Renforcer la culture démocratique, la participation citoyenne et la redevabilité au sein des communautés congolaises."
     },
     {
-      title: "Autonomisation économique et résilience",
+      title: "Autonomie & entrepreneuriat",
       description:
         "Développer l'entrepreneuriat jeune, la production locale et les capacités économiques des femmes via les programmes PROJEC et JASIRI."
     },
     {
-      title: "Identité, inclusion et capital humain",
+      title: "Culture & inclusion",
       description:
         "Valoriser la culture congolaise, promouvoir l'inclusion et investir dans la formation des ressources humaines de l'association."
     },

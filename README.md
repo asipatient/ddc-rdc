@@ -85,13 +85,13 @@ paramètres du site.
 
 | Programme | Axe |
 |---|---|
-| JASIRI | Identité, inclusion et capital humain |
-| PROJEC | Autonomisation économique et résilience |
-| École Citoyenne / CLAC | Gouvernance et citoyenneté |
-| Alerte Précoce | Gouvernance et citoyenneté |
-| Vert et Climat | Autonomisation économique et résilience |
-| Creative Child | Identité, inclusion et capital humain |
-| Kongo Culture | Identité, inclusion et capital humain |
+| JASIRI | Culture & inclusion |
+| PROJEC | Autonomie & entrepreneuriat |
+| D-DRC | Citoyenneté & leadership |
+| École Citoyenne | Citoyenneté & leadership |
+| Vert et Climat | Autonomie & entrepreneuriat |
+| Creative Child | Culture & inclusion |
+| Kongo Culture | Culture & inclusion |
 | Think Tank DDC | Gouvernance et citoyenneté |
 
 ---
