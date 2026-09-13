@@ -25,19 +25,19 @@ export default async function ImpactPage() {
   return (
     <>
       <PageHero
-        kicker="Notre impact"
+        kicker="Résultats documentés"
         title={impactSection.title}
         description={impactSection.text}
-        cta={{ label: "Soutenir l'impact", href: paypalDonationUrl }}
+        cta={{ label: "Soutenir notre action", href: paypalDonationUrl }}
         image="/images/ddc/hero-reel-ddc.jpg"
       />
       <section className="bg-background py-16 sm:py-20">
         <ScrollReveal>
           <div className="section-shell">
             <SectionHeading
-              eyebrow="Indicateurs"
+              eyebrow="Indicateurs clés"
               title={impactSection.subtitle}
-              description="Nos indicateurs d'impact, avec une évaluation prudente et en cours de structuration."
+              description="Nos indicateurs, évalués avec prudence à partir des documents actuellement disponibles."
             />
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {impactIndicators.map((indicator) => (
@@ -68,11 +68,11 @@ export default async function ImpactPage() {
             <div className="max-w-3xl">
               <SectionHeading
                 eyebrow="Faits documentés"
-                title="Une traçabilité de nos interventions sur le terrain"
-                description="Chaque chiffre présenté ici repose sur des activités documentées, avec des éléments de contexte permettant de mieux comprendre où, quand et dans quel cadre notre action a été menée."
+                title="Traçabilité de nos interventions"
+                description="Chaque chiffre présenté s'appuie sur une activité documentée. Ce contexte permet de situer précisément notre action."
               />
               <p className="mt-4 text-base leading-7 text-foreground-subtle">
-                Les indicateurs synthétisent les données actuellement consolidées. Les faits documentés ci-dessous donnent un aperçu des activités et résultats qui permettent d’en suivre la réalité sur le terrain.
+                Les indicateurs ci-dessus synthétisent nos données consolidées. Les faits suivants précisent les activités qui nourrissent ces résultats.
               </p>
             </div>
 
@@ -100,7 +100,7 @@ export default async function ImpactPage() {
             <div className="max-w-3xl">
               <SectionHeading
                 eyebrow="Comment nous mesurons"
-                title="Notre approche de suivi, d'évaluation et d'apprentissage."
+                title="Méthodologie de suivi et d'évaluation"
                 description={monitoringLearning.intro}
               />
             </div>
@@ -122,10 +122,10 @@ export default async function ImpactPage() {
       <section className="bg-background py-16 sm:py-20">
         <ScrollReveal>
           <div className="section-shell">
-            <SectionHeading eyebrow="Pourquoi soutenir la DDC ?" title="Des priorités lisibles pour orienter les appuis." />
+            <SectionHeading eyebrow="Pourquoi soutenir la DDC ?" title="Les domaines dans lesquels votre appui fait la différence." />
             <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
               {whySupportDdc.map((item) => (
-                <article key={item.title} className="rounded-lg border border-border p-5">
+                <article key={item.title} className="rounded-lg border border-border bg-surface-elevated p-5">
                   <IconRenderer icon={item.icon} className="h-5 w-5 text-brand" />
                   <h2 className="mt-4 text-base font-extrabold text-foreground">{item.title}</h2>
                   <p className="mt-3 text-sm leading-7 text-foreground-muted">{item.description}</p>

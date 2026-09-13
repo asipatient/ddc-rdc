@@ -753,9 +753,9 @@
     "logo": "/images/logos/logo-ddc.png",
     "favicon": "/favicon.png",
     "footerText": "Tous droits réservés.",
-    "impactTitle": "Notre impact",
-    "impactSubtitle": "Ce que notre engagement a produit — documenté avec honnêteté.",
-    "impactText": "Fruit de notre engagement",
+    "impactTitle": "Résultats de notre action",
+    "impactSubtitle": "Ce que notre action a produit, documenté avec rigueur.",
+    "impactText": "Chaque chiffre présenté ici reflète une réalité de terrain. Nous documentons nos résultats pour garantir la transparence de notre engagement.",
     "impactButtonLabel": "Voir l’impact",
     "impactButtonHref": "/impact",
     "socialLinks": [

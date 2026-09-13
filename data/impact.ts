@@ -19,7 +19,7 @@ export const documentedImpactFacts = [
   "Plus de 50 jeunes et femmes formés sur les droits et devoirs du citoyen en janvier 2023.",
   "Plus de 300 jeunes et femmes sensibilisés sur le processus électoral et l'importance du vote en septembre 2023.",
   "50 femmes formées à l'entrepreneuriat local, notamment fabrication de savons bleus et briquettes écologiques, en 2024.",
-  "50 acteurs de la société civile capacités sur le rôle des OSC dans la défense des droits socio-économiques en juin 2025.",
+  "50 acteurs de la société civile dont les capacités ont été renforcées sur le rôle des OSC dans la défense des droits socio-économiques en juin 2025.",
   "120 jeunes, autorités locales et leaders d'opinion mobilisés lors de la conférence citoyenne du 30 juin 2025.",
   "Plus de 100 femmes, jeunes filles et hommes mobilisés et sensibilisés lors du lancement du Programme JASIRI en juillet 2025.",
   "Plus de 300 élèves sensibilisés à la valorisation des talents créatifs et innovants entre octobre et novembre 2025."
@@ -42,11 +42,11 @@ export const interventionApproach: SupportArgument[] = [
 
 export const monitoringLearning = {
   intro:
-    "La DDC RDC documente progressivement ses résultats à travers des rapports d'activités, des témoignages de bénéficiaires et des études de cas. Notre engagement : mesurer pour mieux agir.",
+    "Nous documentons nos résultats à partir de rapports d'activités, de listes de présence et de témoignages. Ce processus est en cours de structuration pour fiabiliser nos données.",
   blocks: [
-    { title: "Collecte continue", description: "Enregistrement systématique des participations, évaluations pré/post formation et recueil de témoignages qualitatifs.", icon: "clipboard" },
-    { title: "Analyse de terrain", description: "Évaluation périodique des changements concrets dans la vie des bénéficiaires et l'évolution de leurs initiatives.", icon: "chart" },
-    { title: "Transparence et redevabilité", description: "Partage régulier des données consolidées avec les parties prenantes, les donateurs et le public via nos rapports.", icon: "search" }
+    { title: "Collecte des données", description: "Nous enregistrons les participations aux activités et recueillons les retours des participants après les formations.", icon: "clipboard" },
+    { title: "Suivi de terrain", description: "Nous observons l'évolution des initiatives soutenues par nos programmes pour comprendre leurs effets réels.", icon: "chart" },
+    { title: "Partage des résultats", description: "Nous mettons à disposition les données consolidées via nos rapports d'activités à l'attention de nos partenaires et du public.", icon: "search" }
   ] as SupportArgument[]
 };
 

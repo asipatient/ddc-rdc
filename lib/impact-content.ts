@@ -27,9 +27,9 @@ export async function getPublicImpactSection() {
   const settings = store.siteSettings;
 
   return {
-    title: settings.impactTitle || "Notre impact",
-    subtitle: settings.impactSubtitle || "Ce que notre engagement a produit — documenté avec honnêteté.",
-    text: settings.impactText || "Les valeurs provisoires sont clairement identifiées afin d’éviter toute annonce non vérifiée.",
+    title: settings.impactTitle || "Résultats de notre action",
+    subtitle: settings.impactSubtitle || "Ce que notre action a produit, documenté avec rigueur.",
+    text: settings.impactText || "Chaque chiffre présenté ici reflète une réalité de terrain. Nous documentons nos résultats pour garantir la transparence de notre engagement.",
     buttonLabel: settings.impactButtonLabel || "Voir l’impact",
     buttonHref: settings.impactButtonHref || "/impact"
   };
