@@ -4,6 +4,21 @@ import { realisations as staticRealisations } from "@/data/realisations";
 import type { Realisation } from "@/data/types";
 import { readAdminStore } from "@/lib/admin/content-store";
 
+const AXIS_TAXONOMY_MAP: Record<string, string> = {
+  "Gouvernance, citoyenneté et transformation sociale": "Citoyenneté & leadership",
+  "Autonomisation économique et résilience": "Autonomie & entrepreneuriat",
+  "Identité, inclusion et capital humain": "Culture & inclusion"
+};
+
+function mapTaxonomy(relatedAxis?: string): string {
+  if (!relatedAxis) return "";
+  // Gérer les cas où plusieurs axes sont séparés par " / "
+  return relatedAxis
+    .split(" / ")
+    .map((axis) => AXIS_TAXONOMY_MAP[axis.trim()] || axis.trim())
+    .join(" / ");
+}
+
 export async function getPublicRealisations() {
   const store = await readAdminStore();
   const adminRealisations = store.realisations
@@ -17,14 +32,19 @@ export async function getPublicRealisations() {
       description: realisation.excerpt || "",
       image: realisation.image || "/images/ddc/groupe-partenaires-ddc.jpg",
       impact: splitList(realisation.impact),
-      relatedAxis: realisation.relatedAxis || realisation.axisId,
+      relatedAxis: mapTaxonomy(realisation.relatedAxis || realisation.axisId),
       relatedProgram: realisation.relatedProgram || realisation.programId
     }));
 
   const bySlug = new Map<string, Realisation>();
   [...adminRealisations, ...staticRealisations].forEach((realisation) => {
     if (!bySlug.has(realisation.slug)) {
-      bySlug.set(realisation.slug, realisation);
+      // Pour les réalisations statiques, on s'assure d'appliquer le même mapping public
+      const mappedRealisation = {
+        ...realisation,
+        relatedAxis: mapTaxonomy(realisation.relatedAxis)
+      };
+      bySlug.set(realisation.slug, mappedRealisation);
     }
   });
 

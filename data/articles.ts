@@ -40,7 +40,7 @@ export const activityArticles: ActivityArticle[] = [
     period: "03 - 04 janvier 2023",
     category: "Événements",
     excerpt:
-      "Formation de deux jours à Bukavu destinée aux jeunes et aux femmes, portant sur les droits, devoirs citoyens et mécanismes de participation responsable à la vie communautaire.",
+      "Formation de deux jours à Bukavu sur les droits et devoirs du citoyen, réunissant des jeunes et des femmes.",
     content: [
       "Cette activité a permis d'ouvrir un espace d'éducation civique destiné aux jeunes et aux femmes de Bukavu. Elle a porté sur les droits, les devoirs et les formes de participation responsable à la vie communautaire.",
       "La démarche a privilégié un langage accessible, des échanges directs et une orientation pratique afin d'encourager les participants à devenir des relais de citoyenneté dans leurs milieux de vie.",
@@ -72,7 +72,7 @@ export const activityArticles: ActivityArticle[] = [
     period: "03 septembre 2023",
     category: "Événements",
     excerpt:
-      "Conférence de sensibilisation organisée à Panzi pour renforcer la compréhension du processus électoral et encourager la participation citoyenne responsable.",
+      "Conférence à Panzi pour expliquer le processus électoral et l'importance d'un vote responsable.",
     content: [
       "La conférence a réuni des jeunes et des femmes autour des enjeux de participation électorale, de responsabilité citoyenne et de compréhension du processus démocratique.",
       "L'activité a été menée dans une logique non partisane, centrée sur l'information, la citoyenneté et l'importance d'un vote responsable.",
@@ -108,7 +108,7 @@ export const activityArticles: ActivityArticle[] = [
     period: "2024",
     category: "Événements",
     excerpt:
-      "Mobilisation de jeunes leaders, sages, notables, acteurs de la société civile et autorités locales autour de la protection communautaire et de l'amélioration des conditions de vie à Panzi.",
+      "Dialogue avec les acteurs locaux et les autorités sur la sécurité et les conditions de vie à Panzi.",
     content: [
       "Cette initiative a mobilisé des jeunes leaders, sages, notables, acteurs de la société civile et autorités locales autour des défis de protection communautaire à Panzi.",
       "La démarche a mis l'accent sur la prévention, le dialogue, le plaidoyer, la collaboration communautaire et la recherche de solutions adaptées aux réalités locales.",
@@ -140,7 +140,7 @@ export const activityArticles: ActivityArticle[] = [
     period: "17 mai 2024",
     category: "Événements",
     excerpt:
-      "Conférence magistrale organisée autour des perspectives de développement du quartier Panzi et d'un plaidoyer sur les services essentiels, les infrastructures et la reconnaissance institutionnelle.",
+      "Conférence sur les priorités de développement de Panzi, abordant l'accès à l'eau, l'électricité, la sécurité et les infrastructures.",
     content: [
       "Organisée au Centre d'Excellence Denis Mukwege à Panzi, cette conférence a ouvert une réflexion prospective sur les potentiels de développement local de Panzi.",
       "Les échanges ont porté sur l'accès à l'eau, l'électricité, les routes, la sécurité, les infrastructures et la reconnaissance institutionnelle de Panzi."
@@ -232,7 +232,7 @@ export const activityArticles: ActivityArticle[] = [
     period: "Septembre 2024",
     category: "Événements",
     excerpt:
-      "Mobilisation communautaire pour le débouchage des caniveaux, l'amélioration du cadre de vie, la prévention des risques d'inondation et la sensibilisation environnementale.",
+      "Travaux communautaires (Salongo) à Panzi pour déboucher les caniveaux et prévenir les risques d'inondation.",
     content: [
       "Cette activité a mobilisé des habitants et acteurs communautaires autour de l'assainissement, du débouchage des caniveaux et de l'amélioration du cadre de vie à Panzi.",
       "Elle s'inscrit dans une logique de prévention des risques, de sensibilisation environnementale et de responsabilité collective.",
@@ -264,11 +264,11 @@ export const activityArticles: ActivityArticle[] = [
     period: "20 juin 2025",
     category: "Événements",
     excerpt:
-      "Atelier destiné à renforcer les capacités des organisations de la société civile dans la défense des droits socio-économiques en contexte de crise institutionnelle.",
+      "Atelier avec les organisations de la société civile sur la défense des droits socio-économiques en contexte de crise.",
     content: [
       "L'atelier a réuni des acteurs de la société civile afin de réfléchir au rôle des OSC dans la défense des droits socio-économiques en période de crise.",
       "Les échanges ont porté sur le repositionnement des organisations, la responsabilité citoyenne et les formes de plaidoyer adaptées aux réalités locales.",
-      "Les données disponibles mentionnent 50 acteurs de la société civile capacités."
+      "Les données disponibles mentionnent 50 acteurs de la société civile dont les capacités ont été renforcées."
     ],
     objectives: [
       "Renforcer les capacités des OSC.",
@@ -360,7 +360,7 @@ export const activityArticles: ActivityArticle[] = [
     period: "12 septembre 2025",
     category: "Événements",
     excerpt:
-      "Atelier de coopération entre chercheurs, scientifiques et acteurs de la société civile pour renforcer l'action collective contre les violences basées sur le genre.",
+      "Atelier réunissant chercheurs et société civile pour échanger sur la prévention et la lutte contre les violences basées sur le genre.",
     content: [
       "Cet atelier a créé un cadre de dialogue entre chercheurs, scientifiques et acteurs de la société civile autour de la prévention et de la lutte contre les violences basées sur le genre.",
       "La démarche a privilégié la coopération, la production de connaissances utiles et le renforcement des stratégies d'action collective."
@@ -418,7 +418,7 @@ export const activityArticles: ActivityArticle[] = [
     period: "30 octobre - 20 novembre 2025",
     category: "Événements",
     excerpt:
-      "Projet de sensibilisation sur la valorisation des talents créatifs et innovants des jeunes dès l'enfance, mené dans des écoles de Bukavu.",
+      "Sensibilisation à la créativité et à l'innovation, organisée dans plusieurs écoles de Bukavu.",
     content: [
       "Le projet a sensibilisé des élèves à la valorisation des talents créatifs et innovants dès l'enfance.",
       "Menée dans des écoles de Bukavu, l'activité a mis en avant la confiance, la créativité, l'expression des talents et l'orientation positive des enfants.",
@@ -481,7 +481,7 @@ export const activityArticles: ActivityArticle[] = [
     period: "24 - 25 janvier 2026",
     category: "Événements",
     excerpt:
-      "Atelier de deux jours organisé à Bukavu pour renforcer le dialogue interculturel et intergénérationnel, valoriser la mémoire collective et promouvoir la culture comme levier de paix.",
+      "Atelier à Bukavu sur le dialogue intergénérationnel et le rôle de la culture pour la cohésion sociale.",
     content: [
       "Cet atelier de deux jours a réuni des participants autour du dialogue interculturel et intergénérationnel.",
       "L'activité a valorisé la mémoire collective, les identités positives et la culture comme levier de paix, de cohésion sociale et de vivre-ensemble communautaire."

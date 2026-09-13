@@ -21,15 +21,15 @@ export default async function RealisationsPage() {
     <>
       <PageHero
         kicker="Nos réalisations"
-        title="Ce que nous avons fait. Ce que nous continuons de construire."
-        description="Cette page rassemble les actions déjà menées par la DDC RDC avec les communautés, les jeunes, les femmes, les enfants et les organisations de la société civile."
+        title="Nos réalisations concrètes sur le terrain."
+        description="Cette page présente nos actions documentées auprès des communautés, des jeunes, des femmes et de la société civile."
         cta={{ label: "Agir avec nous", href: "/partenaires" }}
         image="/images/ddc/salongo-communautaire.jpg"
       />
       <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
         <ScrollReveal>
           <div className="section-shell">
-            <SectionHeading eyebrow="Galerie d'activités" title="Réalisations documentées." />
+            <SectionHeading eyebrow="Activités et résultats" title="Réalisations documentées" />
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {realisations.map((realisation) => (
                 <RealisationCard key={realisation.slug} realisation={realisation} />
@@ -37,10 +37,10 @@ export default async function RealisationsPage() {
             </div>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/publications" variant="secondary">
-                Voir les actualités
+                Lire nos actualités
               </ButtonLink>
               <ButtonLink href="/impact" variant="ghost">
-                Voir l&apos;impact
+                Consulter nos résultats
               </ButtonLink>
             </div>
           </div>
