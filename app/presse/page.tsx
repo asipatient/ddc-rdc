@@ -1,94 +1,122 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Mail, Newspaper } from "lucide-react";
+import { Mail, Download } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
-import { officialContact, pressResources } from "@/lib/site-data";
+import { DocumentRow } from "@/components/DocumentRow";
+import { CopyBoilerplate } from "@/components/CopyBoilerplate";
+import { getPublicPublications } from "@/lib/publications";
+import { officialContact } from "@/data/contact";
+import { site } from "@/data/site";
 
 export const metadata: Metadata = {
- title:"Presse",
- description:"Communiqués, dossiers de presse, photos officielles et contacts médias de la DDC RDC."
+  title: "Espace Presse & Médias | DDC RDC",
+  description: "Contacts médias, communiqués officiels et ressources de la Dynamique Debout Congolais (DDC RDC)."
 };
 
-export default function PressPage() {
- return (
- <>
- <PageHero
- kicker="Presse et médias"
- title="Un espace média pour suivre les prises de parole de la DDC RDC."
- description="Retrouvez ici les communiqués, dossiers de presse, photos officielles, contacts presse, interventions médiatiques et articles parlant de la DDC RDC."
- image="/images/ddc/App-1.JPG"
- />
- <section className="bg-background py-16 sm:py-20">
- <ScrollReveal>
- <div className="section-shell">
- <SectionHeading eyebrow="Ressources presse" title="Documentation et médias." />
-          <div className="mt-10">
-            {(() => {
-              const publishedPressDocs = pressResources.filter(res => !["À publier", "À venir", "À ajouter", "À documenter"].includes(res.status) && res.status !== "Disponible via contact officiel");
+export const dynamic = "force-dynamic";
 
-              if (publishedPressDocs.length === 0) {
-                return (
-                  <p className="text-sm leading-7 text-foreground-muted">
-                    L'espace de ressources documentaires pour la presse (communiqués, photos officielles) est en cours de structuration. N'hésitez pas à nous contacter directement pour toute demande de documentation.
-                  </p>
-                );
-              }
+export default async function PressPage() {
+  const publications = await getPublicPublications();
+  const communiques = publications.filter(p => p.category === "Communiqués");
 
-              return (
-                <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                  {publishedPressDocs.map((resource) => (
-                    <article key={resource.title} className="rounded-lg border border-border bg-surface-elevated p-6 shadow-sm">
-                      <Newspaper aria-hidden="true" className="h-7 w-7 text-brand-green dark:text-brand-gold" />
-                      <p className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-foreground-subtle">{resource.category}</p>
-                      <h2 className="mt-2 text-lg font-bold text-brand-blue dark:text-foreground">{resource.title}</h2>
-                      <p className="mt-3 text-sm leading-7 text-foreground-muted">{resource.description}</p>
-                      <p className="mt-4 inline-flex rounded-md bg-brand-goldSoft px-3 py-2 text-xs font-medium text-brand-blue dark:text-foreground-muted">
-                        {resource.status}
-                      </p>
-                    </article>
-                  ))}
-                </div>
-              );
-            })()}
+  return (
+    <>
+      <PageHero
+        kicker="Presse et médias"
+        title="Espace Presse & Médias"
+        description="Retrouvez les informations officielles de la DDC RDC, nos communiqués et les ressources utiles aux médias."
+        image="/images/ddc/App-1.JPG"
+      />
+      <section className="bg-background py-16 sm:py-20">
+        <ScrollReveal>
+          <div className="section-shell">
+            <SectionHeading eyebrow="Contact" title="Contact presse" />
+            <p className="mt-4 text-foreground-muted max-w-3xl">
+              Pour une demande d'interview, d'information ou de mise en relation, contactez-nous directement.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-6">
+              <div className="flex items-center gap-3 rounded-lg bg-surface-elevated p-6 shadow-sm flex-1 sm:max-w-md">
+                <Mail aria-hidden="true" className="h-6 w-6 text-brand-blue dark:text-brand-gold shrink-0" />
+                <a href={`mailto:${officialContact.email}`} className="text-lg font-bold text-foreground hover:text-brand transition-colors">
+                  {officialContact.email}
+                </a>
+              </div>
+              <div className="flex items-center">
+                <ButtonLink href="/contact?type=Presse" variant="primary">
+                  Formulaire de contact
+                </ButtonLink>
+              </div>
+            </div>
           </div>
- </div>
- </ScrollReveal>
+        </ScrollReveal>
+      </section>
 
- </section>
- <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
- <ScrollReveal>
- <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
- <div>
- <SectionHeading
- eyebrow="Contact presse"
- title="Canal officiel pour les demandes médias."
- description="Les journalistes, médias et plateformes de communication peuvent écrire à la DDC RDC via le contact officiel."
- />
- <div className="mt-7 rounded-lg bg-surface-elevated p-6 shadow-sm">
- <p className="flex items-center gap-3 text-sm font-bold text-brand-blue dark:text-foreground-muted">
- <Mail aria-hidden="true" className="h-5 w-5 text-brand-green dark:text-brand-gold" />
- {officialContact.email}
- </p>
- </div>
- </div>
- <div className="rounded-lg border border-dashed border-border-strong bg-surface-elevated p-8 text-center">
- <Newspaper aria-hidden="true" className="mx-auto h-10 w-10 text-brand-green dark:text-brand-gold" />
- <h2 className="mt-4 text-2xl font-bold text-brand-blue dark:text-foreground">Dossier de presse</h2>
- <p className="mt-3 text-sm leading-7 text-foreground-muted">
- Dossier de presse disponible sur demande. Pour toute demande médiatique, contactez-nous à {officialContact.email} ou au {officialContact.phone}.
- </p>
- <div className="mt-6">
- <ButtonLink href="/contact?type=Presse" variant="secondary">
- Contacter la presse
- </ButtonLink>
- </div>
- </div>
- </div>
- </ScrollReveal>
+      <section className="bg-surface-muted py-16 sm:py-20 border-y border-border">
+        <ScrollReveal>
+          <div className="section-shell">
+            <SectionHeading eyebrow="Officiel" title="Communiqués de presse" />
+            <p className="mt-4 mb-10 text-foreground-muted max-w-3xl">
+              Retrouvez ici les prises de parole et informations officielles de la DDC RDC destinées aux médias.
+            </p>
+            
+            {communiques.length === 0 ? (
+              <div className="rounded-xl border border-border bg-background p-10 text-center">
+                <p className="text-foreground-subtle font-medium">Aucun communiqué de presse n'est actuellement publié.</p>
+              </div>
+            ) : (
+              <div className="flex flex-col gap-4">
+                {communiques.map((publication) => (
+                  <DocumentRow key={publication.slug} publication={publication} />
+                ))}
+              </div>
+            )}
+          </div>
+        </ScrollReveal>
+      </section>
 
- </section>
- </>
- );
+      <section className="bg-background py-16 sm:py-20">
+        <ScrollReveal>
+          <div className="section-shell">
+            <SectionHeading eyebrow="Kit média" title="Ressources pour les médias" />
+            <p className="mt-4 mb-10 text-foreground-muted max-w-3xl">
+              Ressources en libre accès pour présenter la DDC RDC dans vos publications.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-foreground">À propos de la DDC RDC</h3>
+                <CopyBoilerplate text={site.description} />
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-foreground">Logo officiel</h3>
+                <div className="rounded-lg border border-border bg-white p-8 flex items-center justify-center min-h-[160px]">
+                  <Image 
+                    src="/images/logos/ddc-logo-rect.svg" 
+                    alt="Logo Dynamique Debout Congolais" 
+                    width={240} 
+                    height={80} 
+                    className="w-auto h-auto max-w-[200px]"
+                  />
+                </div>
+                <div className="flex justify-end">
+                  <a 
+                    href="/images/logos/ddc-logo-rect.svg" 
+                    download
+                    className="focus-ring inline-flex items-center gap-2 rounded-md bg-surface-elevated px-4 py-2 text-sm font-bold text-foreground hover:bg-brand-blue hover:text-white transition-colors dark:hover:bg-brand-gold dark:hover:text-brand-blue shadow-sm border border-border"
+                  >
+                    <Download aria-hidden="true" className="h-4 w-4" />
+                    Télécharger le logo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+    </>
+  );
 }
