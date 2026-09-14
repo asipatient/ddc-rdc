@@ -14,7 +14,11 @@ const LOGO_MAP: Record<string, string> = {
   "ACNDC": "/images/partners/acndc.webp",
   "SADI RDC": "/images/partners/sadi.webp",
   "SFDC ASBL": "/images/partners/sfdc.webp",
-  "UEA/CRESS": "/images/partners/cress-uea.webp"
+  "UEA/CRESS": "/images/partners/cress-uea.webp",
+  "ONG Tumaini la Africa": "/images/partners/tumaini-la-afrika.webp",
+  "PRONET": "/images/partners/pronet.svg",
+  "PROSE DIGITAL": "/images/partners/prose-digital.svg",
+  "PROSE MEDIA CD": "/images/partners/prose-media-cd.svg"
 };
 
 const TYPE_MAP: Record<string, string> = {
