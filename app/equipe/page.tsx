@@ -56,12 +56,6 @@ export default async function TeamPage() {
                 <h3 className="text-2xl font-extrabold text-brand-blue dark:text-foreground">{president.name}</h3>
                 <p className="mt-2 text-lg font-bold text-brand-green dark:text-brand-gold">{president.role}</p>
                 
-                {president.roleDescription && (
-                  <div className="mt-5 w-full bg-brand-mist dark:bg-surface-muted rounded-md p-3">
-                    <p className="text-sm font-semibold text-brand-blue dark:text-foreground-muted">{president.roleDescription}</p>
-                  </div>
-                )}
-                
                 <p className="mt-6 text-base leading-7 text-foreground-muted">
                   Fondateur de la DDC RDC et Coordonnateur National, Patient Asifiwe contribue à l’orientation et à la coordination de l’action de l’association. Son rôle s’inscrit dans le cadre des responsabilités définies par les Statuts.
                 </p>
