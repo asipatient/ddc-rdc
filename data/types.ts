@@ -182,10 +182,3 @@ export type GovernanceItem = {
   description: string;
   status: string;
 };
-
-export type Opportunity = {
-  title: string;
-  audience: string;
-  status: string;
-  description: string;
-};

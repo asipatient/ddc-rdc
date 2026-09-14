@@ -1,4 +1,4 @@
-import type { DocumentItem, Opportunity } from "./types";
+import type { DocumentItem } from "./types";
 
 export const transparencyDocuments: DocumentItem[] = [
   {
@@ -67,55 +67,4 @@ export const pressResources: DocumentItem[] = [
   { title: "Contacts presse", category: "Médias", status: "Disponible via contact officiel", description: "Canal de contact pour journalistes et médias." },
   { title: "Interventions médiatiques", category: "Médias", status: "À documenter", description: "Radio, télévision, presse écrite, podcasts et plateformes numériques." },
   { title: "Articles parlant de la DDC", category: "Revue de presse", status: "À venir", description: "Liens et références aux mentions médiatiques." }
-];
-
-export const opportunities: Opportunity[] = [
-  {
-    title: "Appels à candidatures",
-    audience: "Jeunes, femmes, communautés",
-    status: "Aucun appel ouvert pour le moment",
-    description: "Espace réservé aux candidatures pour formations, programmes et parcours de leadership."
-  },
-  {
-    title: "Formations ouvertes",
-    audience: "Jeunes et femmes",
-    status: "À annoncer",
-    description: "Espace destiné aux sessions de formation citoyenne, économique, culturelle et environnementale."
-  },
-  {
-    title: "Opportunités pour jeunes",
-    audience: "Jeunes leaders",
-    status: "À venir",
-    description: "Mentorat, clubs citoyens, initiatives locales, volontariat et propositions d'actions."
-  },
-  {
-    title: "Opportunités pour femmes",
-    audience: "Femmes leaders",
-    status: "À venir",
-    description: "Leadership, autonomisation économique, protection, plaidoyer et participation citoyenne."
-  },
-  {
-    title: "Appels à bénévoles",
-    audience: "Citoyens et diaspora",
-    status: "Candidatures spontanées possibles",
-    description: "Appui aux activités, communication, recherche, logistique et mobilisation communautaire."
-  },
-  {
-    title: "Appels à partenariats",
-    audience: "Institutions et organisations",
-    status: "Ouvert",
-    description: "Collaboration technique, financière, académique, communautaire, média, culturelle ou environnementale."
-  },
-  {
-    title: "Consultations communautaires",
-    audience: "Communautés locales",
-    status: "À programmer",
-    description: "Espaces de dialogue pour identifier les priorités, besoins et propositions locales."
-  },
-  {
-    title: "Événements",
-    audience: "Publics cibles et partenaires",
-    status: "Calendrier à publier",
-    description: "Conférences, forums, ateliers, panels, expositions et activités communautaires."
-  }
 ];

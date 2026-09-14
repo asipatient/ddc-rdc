@@ -7,7 +7,6 @@ export type {
   ImpactIndicator,
   NavItem,
   NavLink,
-  Opportunity,
   PartnerCategory,
   Program,
   Publication,
@@ -45,7 +44,6 @@ export {
 } from "@/data/impact";
 export {
   institutionalDocuments,
-  opportunities,
   pressResources,
   protectionEthicsDocuments,
   transparencyDocuments
