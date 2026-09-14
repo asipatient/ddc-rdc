@@ -38,43 +38,38 @@ export default async function TeamPage() {
                 eyebrow="Présidence"
                 title="Présidence et coordination nationale"
               />
-              <div className="mt-10 rounded-2xl border border-border bg-surface-elevated overflow-hidden shadow-sm lg:flex">
-                <div className="relative aspect-square lg:aspect-auto lg:w-1/3 bg-brand-mist dark:bg-surface-muted">
+              <div className="mt-10 mx-auto max-w-2xl rounded-xl border border-border bg-surface-elevated p-8 sm:p-10 shadow-sm text-center flex flex-col items-center">
+                <div className="relative mb-6 flex h-36 w-36 items-center justify-center overflow-hidden rounded-full bg-brand-mist dark:bg-surface-muted ring-4 ring-background">
                   {president.photo ? (
                     <ContentImage 
                       src={president.photo} 
                       alt={`Photo de ${president.name}`}
                       fill 
-                      sizes="(min-width: 1024px) 33vw, 100vw" 
+                      sizes="144px" 
                       className="object-cover" 
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center text-border-strong">
-                      <User2 aria-hidden="true" className="h-16 w-16" />
-                    </div>
+                    <User2 aria-hidden="true" className="h-16 w-16 text-border-strong" />
                   )}
                 </div>
-                <div className="p-8 lg:p-12 lg:w-2/3 flex flex-col justify-center">
-                  <h3 className="text-2xl font-extrabold text-brand-blue dark:text-foreground">{president.name}</h3>
-                  <p className="mt-2 text-lg font-bold text-brand-green dark:text-brand-gold">{president.role}</p>
-                  
-                  {president.roleDescription && (
-                    <div className="mt-6 border-l-2 border-brand-green pl-4">
-                      <p className="text-sm font-semibold text-foreground">{president.roleDescription}</p>
-                    </div>
-                  )}
-                  
-                  {president.bio && (
-                    <p className="mt-6 text-base leading-7 text-foreground-muted">
-                      {president.bio}
-                    </p>
-                  )}
-                  
-                  <div className="mt-8">
-                    <ButtonLink href="/profil-president-fondateur" variant="primary">
-                      Lire le profil complet
-                    </ButtonLink>
+                
+                <h3 className="text-2xl font-extrabold text-brand-blue dark:text-foreground">{president.name}</h3>
+                <p className="mt-2 text-lg font-bold text-brand-green dark:text-brand-gold">{president.role}</p>
+                
+                {president.roleDescription && (
+                  <div className="mt-5 w-full bg-brand-mist dark:bg-surface-muted rounded-md p-3">
+                    <p className="text-sm font-semibold text-brand-blue dark:text-foreground-muted">{president.roleDescription}</p>
                   </div>
+                )}
+                
+                <p className="mt-6 text-base leading-7 text-foreground-muted">
+                  Fondateur de la DDC RDC et Coordonnateur National, Patient Asifiwe contribue à l’orientation et à la coordination de l’action de l’association. Son rôle s’inscrit dans le cadre des responsabilités définies par les Statuts.
+                </p>
+                
+                <div className="mt-8">
+                  <ButtonLink href="/profil-president-fondateur" variant="primary">
+                    Lire le profil complet
+                  </ButtonLink>
                 </div>
               </div>
             </div>
