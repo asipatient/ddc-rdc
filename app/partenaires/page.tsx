@@ -24,67 +24,68 @@ export default async function PartnersPage() {
 
  return (
  <>
- <PageHero
- kicker="Partenaires et bailleurs"
- title="Construire des partenariats sérieux, transparents et orientés impact."
- description={partnersPage.intro}
- cta={{ label:"Proposer un partenariat", href:"#formulaire-partenaire" }}
- image="/images/ddc/groupe-partenaires-ddc.jpg"
- />
- <section className="bg-background py-16 sm:py-20">
- <ScrollReveal>
- <div className="section-shell">
- <SectionHeading
- eyebrow="Catégories de partenariat"
- title="Une collaboration ouverte aux institutions, bailleurs, universités, médias et acteurs communautaires."
- description={partnersPage.promise}
- />
- <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
- {partnerCategories.map((category) => (
- <article key={category.title} className="rounded-lg border border-border p-6 shadow-sm">
- <IconRenderer icon={category.icon} className="h-7 w-7 text-brand-green dark:text-brand-gold" />
- <h2 className="mt-5 text-xl font-bold text-brand-blue dark:text-foreground">{category.title}</h2>
- <p className="mt-3 text-sm leading-7 text-foreground-muted">{category.description}</p>
- </article>
- ))}
- </div>
- </div>
- </ScrollReveal>
-
- </section>
- <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
- <ScrollReveal>
- <div className="section-shell">
- <SectionHeading title="Nos partenaires actuels" />
-          <div className="mt-8">
-            {partners.length ? (
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {partners.map((partner) => (
-                  <article key={partner.name} className="rounded-lg border border-border bg-surface-elevated p-5 text-center shadow-sm">
-                    <div className="relative mx-auto flex h-20 w-32 items-center justify-center rounded-md bg-brand-mist dark:bg-surface-muted">
-                      {partner.logo ? <ContentImage src={partner.logo} alt={partner.name} fill sizes="128px" className="object-contain p-3" /> : null}
+  <PageHero
+    kicker="Partenaires et bailleurs"
+    title="S’allier pour amplifier l’impact."
+    description={partnersPage.intro}
+    cta={{ label:"Proposer un partenariat", href:"#formulaire-partenaire" }}
+    image="/images/ddc/groupe-partenaires-ddc.jpg"
+  />
+  <section className="bg-background py-16 sm:py-20">
+    <ScrollReveal>
+      <div className="section-shell">
+        <SectionHeading title="Nos partenaires actuels" />
+        <div className="mt-10">
+          {partners.length ? (
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {partners.map((partner) => (
+                <article key={partner.name} className="flex flex-col items-center rounded-lg border border-border bg-surface-elevated p-6 text-center shadow-sm">
+                  {partner.logo ? (
+                    <div className="relative mb-5 flex h-28 w-full items-center justify-center rounded-md bg-white p-4 shadow-sm">
+                      <ContentImage src={partner.logo} alt={`Logo de ${partner.name}`} fill sizes="(max-width: 768px) 100vw, 300px" className="object-contain p-2" />
                     </div>
-                    <h2 className="mt-4 text-base font-bold text-brand-blue dark:text-foreground">{partner.name}</h2>
-                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-brand-green dark:text-brand-gold">{partner.partnershipType}</p>
-                    {partner.description ? <p className="mt-3 text-sm leading-6 text-foreground-muted">{partner.description}</p> : null}
-                    {partner.website ? (
-                      <a href={partner.website} className="focus-ring mt-3 inline-flex rounded-md text-sm font-bold text-brand-blue dark:text-foreground-muted hover:text-brand-green">
-                        Site web
-                      </a>
-                    ) : null}
-                  </article>
-                ))}
-              </div>
-            ) : (
-              <p className="text-sm leading-7 text-foreground-muted">
-                Nous structurons actuellement notre réseau de partenaires institutionnels, techniques et financiers. Utilisez le formulaire ci-dessous pour nous contacter et construire avec nous des solutions durables.
-              </p>
-            )}
-          </div>
- </div>
- </ScrollReveal>
+                  ) : null}
+                  <h2 className="text-lg font-bold text-brand-blue dark:text-foreground">{partner.name}</h2>
+                  <p className="mt-2 text-xs font-bold uppercase tracking-[0.12em] text-brand-green dark:text-brand-gold">{partner.partnershipType}</p>
+                  {partner.description ? <p className="mt-4 text-sm leading-6 text-foreground-muted">{partner.description}</p> : null}
+                  {partner.website ? (
+                    <a href={partner.website} className="focus-ring mt-4 inline-flex rounded-md text-sm font-bold text-brand-blue dark:text-foreground-muted hover:text-brand-green">
+                      Visiter le site web
+                    </a>
+                  ) : null}
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm leading-7 text-foreground-muted">
+              Nous structurons actuellement notre réseau de partenaires institutionnels, techniques et financiers. Utilisez le formulaire ci-dessous pour nous contacter et construire avec nous des solutions durables.
+            </p>
+          )}
+        </div>
+      </div>
+    </ScrollReveal>
+  </section>
 
- </section>
+  <section className="bg-brand-mist py-16 dark:bg-surface-muted sm:py-20">
+    <ScrollReveal>
+      <div className="section-shell">
+        <SectionHeading
+          eyebrow="Ouverture à de nouvelles collaborations"
+          title="S'associer à une dynamique de changement durable."
+          description={partnersPage.promise}
+        />
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {partnerCategories.map((category) => (
+            <article key={category.title} className="rounded-lg border border-border bg-background p-6 shadow-sm">
+              <IconRenderer icon={category.icon} className="h-7 w-7 text-brand-green dark:text-brand-gold" />
+              <h2 className="mt-5 text-xl font-bold text-brand-blue dark:text-foreground">{category.title}</h2>
+              <p className="mt-3 text-sm leading-7 text-foreground-muted">{category.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </ScrollReveal>
+  </section>
  <section className="bg-brand-blue py-16 text-white sm:py-20">
  <ScrollReveal>
  <div className="section-shell grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">

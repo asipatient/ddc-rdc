@@ -2,9 +2,9 @@ import type { PartnerCategory } from "./types";
 
 export const partnersPage = {
   intro:
-    "La DDC RDC est ouverte aux partenariats avec les institutions publiques, les organisations de la société civile, les agences de coopération, les bailleurs de fonds, les universités, les médias, les entreprises sociales, les acteurs culturels, les structures communautaires et les organisations internationales partageant ses valeurs.",
+    "La DDC RDC s'entoure d'institutions, d'organisations de la société civile et de partenaires techniques engagés pour déployer des actions concrètes et durables sur le terrain.",
   promise:
-    "Chaque partenariat recherché doit renforcer l'impact local, la transparence, la participation inclusive et la capacité des jeunes, des femmes et des communautés à agir durablement."
+    "Nous sommes ouverts à de nouvelles collaborations permettant de renforcer l'impact local, la transparence et la capacité d'action des communautés."
 };
 
 export const partnerCategories: PartnerCategory[] = [
