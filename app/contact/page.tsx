@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ZonesMapLoader } from "@/components/ZonesMapLoader";
-import { contactIntro } from "@/lib/site-data";
+import { contactIntro, contactRequestTypes } from "@/lib/site-data";
 import { getPublicSiteConfig } from "@/lib/site-settings";
 import type { SocialLink } from "@/data/site";
 
@@ -16,9 +16,16 @@ export const metadata = buildMetadata({
 
 export const dynamic ="force-dynamic";
 
-export default async function ContactPage() {
+type Props = {
+ searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export default async function ContactPage({ searchParams }: Props) {
  const site = await getPublicSiteConfig();
  const activeSocials = (site.contact.social as SocialLink[]).filter((s) => s.active);
+ const resolvedSearchParams = await searchParams;
+ const typeParam = typeof resolvedSearchParams.type === "string" ? resolvedSearchParams.type : "";
+ const defaultType = contactRequestTypes.includes(typeParam) ? typeParam : "";
 
  return (
  <>
@@ -68,7 +75,7 @@ export default async function ContactPage() {
  </div>
  ) : null}
  </div>
- <ContactForm idPrefix="contact-page" />
+ <ContactForm idPrefix="contact-page" defaultType={defaultType} />
  </div>
  </section>
  <section className="bg-brand-mist dark:bg-surface-muted py-16 sm:py-20">
