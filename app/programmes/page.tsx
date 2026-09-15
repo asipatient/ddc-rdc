@@ -48,6 +48,24 @@ export default async function ProgramsPage() {
  </ScrollReveal>
 
  </section>
+
+ <section className="bg-surface py-16 sm:py-20 border-y border-border">
+ <ScrollReveal>
+ <div className="section-shell">
+ <SectionHeading
+ align="center"
+ title="Découvrez les résultats de notre action"
+ description="Consultez les résultats documentés de nos interventions, les indicateurs disponibles et notre méthode de suivi."
+ />
+ <div className="mt-8 flex justify-center">
+ <ButtonLink href="/impact" variant="primary">
+ Voir nos résultats
+ </ButtonLink>
+ </div>
+ </div>
+ </ScrollReveal>
+ </section>
+
  <section className="bg-background py-16 sm:py-20">
  <ScrollReveal>
  <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
