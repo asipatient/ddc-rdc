@@ -27,7 +27,7 @@ export default async function DonatePage() {
  kicker="Faire un don"
  title={donationPage.title}
  description={donationPage.trustMessage}
- cta={{ label:"Faire un don via PayPal", href:"#paypal" }}
+ cta={{ label:"Faire un don via PayPal", href:paypalDonationUrl }}
  image="/images/ddc/hero1.jpg"
  />
  <section className="bg-background py-16 sm:py-20">
@@ -158,3 +158,4 @@ export default async function DonatePage() {
  </>
  );
 }
+
