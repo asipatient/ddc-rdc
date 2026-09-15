@@ -1,4 +1,4 @@
-export const membershipInterestDomains = [
+﻿export const membershipInterestDomains = [
   "Citoyenneté",
   "Leadership",
   "Entrepreneuriat",
@@ -27,7 +27,7 @@ const founderAppealParagraphs = [
 const founderAppealSignature = "— Patient Asifiwe, Fondateur de la DDC RDC";
 
 export const memberVolunteerIntro =
-  "En nous envoyant à l'école, on nous disait avec foi : « Vous êtes l'avenir de demain ». Aujourd'hui, nous sommes assez matures pour nous poser la question : ce demain, il arrive quand ?";
+  "Rejoignez une organisation citoyenne indépendante et contribuez activement au développement de nos communautés.";
 
 export const memberVolunteerLetter = {
   greeting: "",
