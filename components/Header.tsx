@@ -124,7 +124,7 @@ export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig })
 
         <div className="hidden items-center gap-2 xl:flex">
           <ThemeToggle />
-          <ButtonLink href={siteConfig.donationUrl} className="px-4">
+          <ButtonLink href={siteConfig.donationPageUrl} className="px-4">
             Soutenir notre action
           </ButtonLink>
           <ButtonLink href="/devenir-membre-benevole" variant="secondary" className="px-4">
@@ -193,7 +193,7 @@ export function Header({ siteConfig = site }: { siteConfig?: HeaderSiteConfig })
               )}
             </div>
             <div className="mt-4">
-              <ButtonLink href={siteConfig.donationUrl} className="w-full">
+              <ButtonLink href={siteConfig.donationPageUrl} className="w-full">
                 Soutenir notre action
               </ButtonLink>
             </div>

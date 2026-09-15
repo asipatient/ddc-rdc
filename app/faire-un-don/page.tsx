@@ -108,9 +108,12 @@ export default async function DonatePage() {
  </p>
  ))}
  </div>
- <div className="mt-7">
+ <div className="mt-7 flex flex-wrap gap-3">
  <ButtonLink href="/documents-institutionnels" variant="secondary">
  Voir les documents
+ </ButtonLink>
+ <ButtonLink href="/impact" variant="ghost">
+ Voir notre impact documenté
  </ButtonLink>
  </div>
  </div>
@@ -141,7 +144,9 @@ export default async function DonatePage() {
  </div>
  </div>
  <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
- <ExternalButton href={paypalDonationUrl}>Faire un don via PayPal</ExternalButton>
+ <ButtonLink href="/contact" className="bg-brand-gold text-brand-blue hover:bg-brand-gold/90 border-transparent">
+ Nous contacter
+ </ButtonLink>
  <ButtonLink href="/partenaires" variant="outline">
  Devenir partenaire
  </ButtonLink>

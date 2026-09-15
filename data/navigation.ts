@@ -54,7 +54,7 @@ export const footerColumns: Array<{ title: string; links: NavLink[] }> = [
   {
     title: "S'engager",
     links: [
-      { label: "Faire un don", href: paypalDonationUrl, external: true },
+      { label: "Faire un don", href: "/faire-un-don" },
       { label: "Devenir membre / bénévole", href: "/devenir-membre-benevole" },
       { label: "Devenir partenaire", href: "/partenaires" }
     ]
