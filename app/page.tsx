@@ -13,6 +13,7 @@ import { axes, flagshipPrograms, founderCallout, publications } from "@/lib/site
 import { getPublicSiteConfig } from "@/lib/site-settings";
 import { buildMetadata } from "@/lib/metadata";
 import { site } from "@/data/site";
+import { impactIndicators } from "@/data/impact";
 
 export const metadata = buildMetadata({
  title:"Accueil",
@@ -43,10 +44,7 @@ export default async function HomePage() {
  </h1>
  </div>
  <p className="anim-fade-down anim-delay-200 mt-6 max-w-xl text-base leading-8 text-white/80 sm:text-lg">
- La DDC RDC accompagne la jeunesse congolaise dans sa formation citoyenne, sa participation à la vie publique et le développement de ses initiatives.
- </p>
- <p className="anim-fade-down anim-delay-300 mt-4 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
- En RDC, nous développons des programmes qui donnent aux jeunes des espaces pour apprendre, participer et agir dans leurs communautés.
+ La DDC RDC accompagne les jeunes et les femmes dans leur engagement citoyen pour transformer les communautés et contribuer au développement de la nation.
  </p>
  <div className="anim-fade-up anim-delay-400 mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
  <ButtonLink href="/impact">Voir notre impact</ButtonLink>
@@ -108,11 +106,11 @@ export default async function HomePage() {
  </h3>
  <div className="mt-8 space-y-6">
  <div>
- <p className="text-4xl font-extrabold text-foreground"><CountUp value="970+" /></p>
+ <p className="text-4xl font-extrabold text-foreground"><CountUp value={(impactIndicators.find(i => i.label.includes('Bénéficiaires'))?.value?.replace('+', '') || '970') + '+'} /></p>
  <p className="mt-1 text-sm font-bold text-foreground-muted">Bénéficiaires et participants documentés</p>
  </div>
  <div>
- <p className="text-4xl font-extrabold text-foreground"><CountUp value="10+" /></p>
+ <p className="text-4xl font-extrabold text-foreground"><CountUp value={(impactIndicators.find(i => i.label.includes('Activités'))?.value?.replace('+', '') || '10') + '+'} /></p>
  <p className="mt-1 text-sm font-bold text-foreground-muted">Activités réalisées</p>
  </div>
  </div>
@@ -131,9 +129,14 @@ export default async function HomePage() {
  Notre ambition stratégique est d'étendre progressivement nos programmes éprouvés pour couvrir l'ensemble du territoire national et amplifier notre impact.
  </p>
  </div>
- <ButtonLink href="/impact" variant="secondary" className="mt-6 w-full justify-center">
+ <div className="mt-6 flex flex-col sm:flex-row gap-3">
+ <ButtonLink href="/impact" variant="secondary" className="w-full justify-center">
  Voir l'impact
  </ButtonLink>
+ <ButtonLink href="/realisations" variant="outline" className="w-full justify-center">
+ Nos réalisations
+ </ButtonLink>
+ </div>
  </div>
 
  </div>
@@ -154,7 +157,7 @@ export default async function HomePage() {
  { label:"Je suis jeune", desc:"Programmes, formations et opportunités", href:"/programmes" },
  { label:"Je suis une femme", desc:"Autonomisation, JASIRI, leadership", href:"/axes-intervention" },
  { label:"Je suis partenaire", desc:"Partenariat, programmes, documents", href:"/partenaires" },
- { label:"Je veux soutenir", desc:"Impact, don, engagement", href: siteConfig.donationUrl },
+ { label:"Je veux soutenir", desc:"Impact, don, engagement", href: "/faire-un-don" },
  { label:"Je suis journaliste", desc:"Presse, publications, contact", href:"/presse" },
  { label:"Je veux découvrir", desc:"Notre vision, notre mission", href:"/vision-mission" },
  ].map((segment) => (
@@ -257,7 +260,7 @@ export default async function HomePage() {
  </p>
  </div>
  <div className="flex flex-col gap-3 sm:flex-row">
- <ButtonLink href={siteConfig.donationUrl}>Soutenir notre action</ButtonLink>
+ <ButtonLink href="/faire-un-don">Soutenir notre action</ButtonLink>
  <ButtonLink href="/devenir-membre-benevole" variant="secondary">
  S'engager
  </ButtonLink>

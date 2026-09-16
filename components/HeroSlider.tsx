@@ -11,10 +11,25 @@ const heroImages = [
   "/images/ddc/hero4.jpg",
 ];
 
+const altTexts = [
+  "Groupe de partenaires et membres de la DDC RDC",
+  "Actions citoyennes sur le terrain",
+  "Engagement des jeunes dans les communautés",
+  "Sensibilisation et formation des femmes",
+  "Équipe en action sur le terrain"
+];
+
 export function HeroSlider() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      return; // Do not start the automatic slider
+    }
+
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % heroImages.length);
     }, 6000);
@@ -29,13 +44,13 @@ export function HeroSlider() {
       {heroImages.map((image, index) => (
         <div
           key={image}
-          className={`absolute inset-0 transition-opacity duration-[1400ms] ${
+          className={`absolute inset-0 transition-opacity duration-[1400ms] motion-reduce:transition-none ${
             index === current ? "opacity-100" : "opacity-0"
           }`}
         >
           <Image
             src={image}
-            alt={`Hero ${index + 1}`}
+            alt={altTexts[index]}
             fill
             className="object-cover object-[50%_40%]"
             priority={index === 0}
