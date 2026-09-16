@@ -36,6 +36,17 @@ export function ScrollReveal({
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+    if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') {
+      setIsVisible(true);
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mediaQuery.matches) {
+      setIsVisible(true);
+      return;
+    }
+
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -43,10 +54,11 @@ export function ScrollReveal({
           if (entry.isIntersecting) {
             setIsVisible(true);
             observer.unobserve(entry.target);
+            observer.disconnect();
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -32px 0px" }
+      { threshold: 0, rootMargin: "0px 0px -32px 0px" }
     );
 
     observer.observe(node);
