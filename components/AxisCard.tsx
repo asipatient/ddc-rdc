@@ -26,7 +26,8 @@ export function AxisCard({ axis, programs }: { axis: Axis; programs: Program[] }
  <div className="flex h-12 w-12 items-center justify-center rounded-md bg-brand-goldSoft text-brand-blue dark:text-foreground transition-colors duration-300 group-hover:bg-brand-gold group-hover:text-white">
  <IconRenderer icon={axis.icon} className="h-6 w-6" />
  </div>
- <h3 className="mt-5 text-xl font-semibold leading-tight text-brand-blue dark:text-foreground">{axis.title}</h3>
+ <h3 className="mt-5 text-xl font-extrabold leading-tight text-brand-blue dark:text-foreground">{axis.shortTitle || axis.title}</h3>
+ {axis.shortTitle && <p className="mt-1 text-sm font-semibold text-brand-green dark:text-brand-gold">{axis.title}</p>}
  <p className="mt-3 text-sm leading-7 text-foreground-muted">{axis.description}</p>
  {(axis.problem || axis.action || axis.result) && (
  <div className="mt-6 flex-1 space-y-3 text-sm">
