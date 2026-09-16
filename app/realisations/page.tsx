@@ -6,13 +6,6 @@ import { RealisationCard } from "@/components/RealisationCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getPublicRealisations } from "@/lib/realisations";
 
-const isImpactDocumented = (impact: string[] | undefined) => {
-  if (!impact || impact.length === 0) return false;
-  const firstLine = impact[0].toLowerCase();
-  if (firstLine.includes("compléter") || firstLine.includes("complǸter")) return false;
-  return true;
-};
-
 
 export const metadata = buildMetadata({
   title: "Réalisations",
